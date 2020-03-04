@@ -13,6 +13,7 @@
 		09F2C04C240EE1B5004A6F47 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09F2C04A240EE1B5004A6F47 /* Main.storyboard */; };
 		09F2C04E240EE1B9004A6F47 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 09F2C04D240EE1B9004A6F47 /* Assets.xcassets */; };
 		09F2C051240EE1B9004A6F47 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09F2C04F240EE1B9004A6F47 /* LaunchScreen.storyboard */; };
+		84DB87CA2410428800958E75 /* StartQuiz.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84DB87C92410428800958E75 /* StartQuiz.storyboard */; };
 		D5F4B4AC241033770051F4B8 /* EmployeeLogin.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D5F4B4AB241033770051F4B8 /* EmployeeLogin.storyboard */; };
 /* End PBXBuildFile section */
 
@@ -25,6 +26,7 @@
 		09F2C04D240EE1B9004A6F47 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		09F2C050240EE1B9004A6F47 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		09F2C052240EE1B9004A6F47 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		84DB87C92410428800958E75 /* StartQuiz.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = StartQuiz.storyboard; sourceTree = "<group>"; };
 		D5F4B4AB241033770051F4B8 /* EmployeeLogin.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = EmployeeLogin.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -274,6 +276,7 @@
 			isa = PBXGroup;
 			children = (
 				09F2C04A240EE1B5004A6F47 /* Main.storyboard */,
+				84DB87C92410428800958E75 /* StartQuiz.storyboard */,
 				D5F4B4AB241033770051F4B8 /* EmployeeLogin.storyboard */,
 			);
 			path = Main;
@@ -363,6 +366,7 @@
 				D5F4B4AC241033770051F4B8 /* EmployeeLogin.storyboard in Resources */,
 				09F2C051240EE1B9004A6F47 /* LaunchScreen.storyboard in Resources */,
 				09F2C04E240EE1B9004A6F47 /* Assets.xcassets in Resources */,
+				84DB87CA2410428800958E75 /* StartQuiz.storyboard in Resources */,
 				09F2C04C240EE1B5004A6F47 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
