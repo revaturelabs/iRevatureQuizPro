@@ -12,6 +12,7 @@ class RevatureButton: UIButton {
 
     override init(frame: CGRect){
         super.init(frame: frame)
+        setupButton()
     }
     
     //Calls all functions needed to apply styles
@@ -22,20 +23,30 @@ class RevatureButton: UIButton {
     }
     
     func setupButton(){
-        applyContentSytles()
-        applyLayoutStyles()
-    }
-    
-    func applyContentSytles(){
         setTitleColor(.revatureOrange, for: .normal)
+        backgroundColor = UIColor.white
         titleLabel?.font = UIFont(name: "Helvetica", size: 17)
-        
+        layer.cornerRadius = 25.0
+        layer.borderWidth = 3
+        layer.borderColor = UIColor.revatureOrange.cgColor
+        widthAnchor.constraint(equalToConstant: 250).isActive = true
+        heightAnchor.constraint(equalToConstant: 50).isActive = true
+
     }
     
-    func applyLayoutStyles(){
-        layer.cornerRadius = 25.0
-        layer.borderWidth = 3.0
-        layer.borderColor = UIColor.revatureOrange.cgColor
+    
+    override var isEnabled: Bool {
+        didSet{
+            if !self.isEnabled {
+                self.alpha = 0.5
+                
+            }
+            else {
+                self.alpha = 1
+                
+            }
+            
+        }
     }
     
 }
