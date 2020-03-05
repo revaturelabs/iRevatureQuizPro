@@ -7,21 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0940FE1724115E50006F0E52 /* arm64-apple-ios.swiftdoc in Resources */ = {isa = PBXBuildFile; fileRef = 0940FE0824115E50006F0E52 /* arm64-apple-ios.swiftdoc */; };
-		0940FE1824115E50006F0E52 /* x86_64-apple-ios-simulator.swiftdoc in Resources */ = {isa = PBXBuildFile; fileRef = 0940FE0924115E50006F0E52 /* x86_64-apple-ios-simulator.swiftdoc */; };
-		0940FE1924115E50006F0E52 /* x86_64-apple-ios-simulator.swiftmodule in Resources */ = {isa = PBXBuildFile; fileRef = 0940FE0A24115E50006F0E52 /* x86_64-apple-ios-simulator.swiftmodule */; };
-		0940FE1A24115E50006F0E52 /* x86_64.swiftdoc in Resources */ = {isa = PBXBuildFile; fileRef = 0940FE0B24115E50006F0E52 /* x86_64.swiftdoc */; };
-		0940FE1B24115E50006F0E52 /* arm64.swiftmodule in Resources */ = {isa = PBXBuildFile; fileRef = 0940FE0C24115E50006F0E52 /* arm64.swiftmodule */; };
-		0940FE1C24115E50006F0E52 /* x86_64.swiftmodule in Resources */ = {isa = PBXBuildFile; fileRef = 0940FE0D24115E50006F0E52 /* x86_64.swiftmodule */; };
-		0940FE1D24115E50006F0E52 /* arm.swiftdoc in Resources */ = {isa = PBXBuildFile; fileRef = 0940FE0E24115E50006F0E52 /* arm.swiftdoc */; };
-		0940FE1E24115E50006F0E52 /* armv7-apple-ios.swiftmodule in Resources */ = {isa = PBXBuildFile; fileRef = 0940FE0F24115E50006F0E52 /* armv7-apple-ios.swiftmodule */; };
-		0940FE1F24115E50006F0E52 /* arm64-apple-ios.swiftmodule in Resources */ = {isa = PBXBuildFile; fileRef = 0940FE1024115E50006F0E52 /* arm64-apple-ios.swiftmodule */; };
-		0940FE2024115E50006F0E52 /* arm.swiftmodule in Resources */ = {isa = PBXBuildFile; fileRef = 0940FE1124115E50006F0E52 /* arm.swiftmodule */; };
-		0940FE2124115E50006F0E52 /* armv7.swiftdoc in Resources */ = {isa = PBXBuildFile; fileRef = 0940FE1224115E50006F0E52 /* armv7.swiftdoc */; };
-		0940FE2224115E50006F0E52 /* arm64.swiftdoc in Resources */ = {isa = PBXBuildFile; fileRef = 0940FE1324115E50006F0E52 /* arm64.swiftdoc */; };
-		0940FE2324115E50006F0E52 /* armv7-apple-ios.swiftdoc in Resources */ = {isa = PBXBuildFile; fileRef = 0940FE1424115E50006F0E52 /* armv7-apple-ios.swiftdoc */; };
-		0940FE2424115E50006F0E52 /* armv7.swiftmodule in Resources */ = {isa = PBXBuildFile; fileRef = 0940FE1524115E50006F0E52 /* armv7.swiftmodule */; };
-		0940FE2524115E50006F0E52 /* libEasySQLite.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0940FE1624115E50006F0E52 /* libEasySQLite.a */; };
+		0940FE6E2411611D006F0E52 /* MetatagTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0940FE6D2411611D006F0E52 /* MetatagTable.swift */; };
+		0940FE8124116145006F0E52 /* arm64-apple-ios.swiftdoc in Resources */ = {isa = PBXBuildFile; fileRef = 0940FE7224116145006F0E52 /* arm64-apple-ios.swiftdoc */; };
+		0940FE8224116145006F0E52 /* x86_64-apple-ios-simulator.swiftdoc in Resources */ = {isa = PBXBuildFile; fileRef = 0940FE7324116145006F0E52 /* x86_64-apple-ios-simulator.swiftdoc */; };
+		0940FE8324116145006F0E52 /* x86_64-apple-ios-simulator.swiftmodule in Resources */ = {isa = PBXBuildFile; fileRef = 0940FE7424116145006F0E52 /* x86_64-apple-ios-simulator.swiftmodule */; };
+		0940FE8424116145006F0E52 /* x86_64.swiftdoc in Resources */ = {isa = PBXBuildFile; fileRef = 0940FE7524116145006F0E52 /* x86_64.swiftdoc */; };
+		0940FE8524116145006F0E52 /* arm64.swiftmodule in Resources */ = {isa = PBXBuildFile; fileRef = 0940FE7624116145006F0E52 /* arm64.swiftmodule */; };
+		0940FE8624116145006F0E52 /* x86_64.swiftmodule in Resources */ = {isa = PBXBuildFile; fileRef = 0940FE7724116145006F0E52 /* x86_64.swiftmodule */; };
+		0940FE8724116145006F0E52 /* arm.swiftdoc in Resources */ = {isa = PBXBuildFile; fileRef = 0940FE7824116145006F0E52 /* arm.swiftdoc */; };
+		0940FE8824116145006F0E52 /* armv7-apple-ios.swiftmodule in Resources */ = {isa = PBXBuildFile; fileRef = 0940FE7924116145006F0E52 /* armv7-apple-ios.swiftmodule */; };
+		0940FE8924116145006F0E52 /* arm64-apple-ios.swiftmodule in Resources */ = {isa = PBXBuildFile; fileRef = 0940FE7A24116145006F0E52 /* arm64-apple-ios.swiftmodule */; };
+		0940FE8A24116145006F0E52 /* arm.swiftmodule in Resources */ = {isa = PBXBuildFile; fileRef = 0940FE7B24116145006F0E52 /* arm.swiftmodule */; };
+		0940FE8B24116145006F0E52 /* armv7.swiftdoc in Resources */ = {isa = PBXBuildFile; fileRef = 0940FE7C24116145006F0E52 /* armv7.swiftdoc */; };
+		0940FE8C24116145006F0E52 /* arm64.swiftdoc in Resources */ = {isa = PBXBuildFile; fileRef = 0940FE7D24116145006F0E52 /* arm64.swiftdoc */; };
+		0940FE8D24116145006F0E52 /* armv7-apple-ios.swiftdoc in Resources */ = {isa = PBXBuildFile; fileRef = 0940FE7E24116145006F0E52 /* armv7-apple-ios.swiftdoc */; };
+		0940FE8E24116145006F0E52 /* armv7.swiftmodule in Resources */ = {isa = PBXBuildFile; fileRef = 0940FE7F24116145006F0E52 /* armv7.swiftmodule */; };
+		0940FE8F24116145006F0E52 /* libEasySQLite.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0940FE8024116145006F0E52 /* libEasySQLite.a */; };
 		0944AED62410369000688C9B /* CreateEvent.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0944AED52410369000688C9B /* CreateEvent.storyboard */; };
 		0944AED8241036BF00688C9B /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0944AED7241036BF00688C9B /* UIColorExtension.swift */; };
 		0944AEDA2410419100688C9B /* RevatureTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0944AED92410419100688C9B /* RevatureTableViewCell.swift */; };
@@ -46,21 +47,22 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		0940FE0824115E50006F0E52 /* arm64-apple-ios.swiftdoc */ = {isa = PBXFileReference; lastKnownFileType = file; path = "arm64-apple-ios.swiftdoc"; sourceTree = "<group>"; };
-		0940FE0924115E50006F0E52 /* x86_64-apple-ios-simulator.swiftdoc */ = {isa = PBXFileReference; lastKnownFileType = file; path = "x86_64-apple-ios-simulator.swiftdoc"; sourceTree = "<group>"; };
-		0940FE0A24115E50006F0E52 /* x86_64-apple-ios-simulator.swiftmodule */ = {isa = PBXFileReference; lastKnownFileType = file; path = "x86_64-apple-ios-simulator.swiftmodule"; sourceTree = "<group>"; };
-		0940FE0B24115E50006F0E52 /* x86_64.swiftdoc */ = {isa = PBXFileReference; lastKnownFileType = file; path = x86_64.swiftdoc; sourceTree = "<group>"; };
-		0940FE0C24115E50006F0E52 /* arm64.swiftmodule */ = {isa = PBXFileReference; lastKnownFileType = file; path = arm64.swiftmodule; sourceTree = "<group>"; };
-		0940FE0D24115E50006F0E52 /* x86_64.swiftmodule */ = {isa = PBXFileReference; lastKnownFileType = file; path = x86_64.swiftmodule; sourceTree = "<group>"; };
-		0940FE0E24115E50006F0E52 /* arm.swiftdoc */ = {isa = PBXFileReference; lastKnownFileType = file; path = arm.swiftdoc; sourceTree = "<group>"; };
-		0940FE0F24115E50006F0E52 /* armv7-apple-ios.swiftmodule */ = {isa = PBXFileReference; lastKnownFileType = file; path = "armv7-apple-ios.swiftmodule"; sourceTree = "<group>"; };
-		0940FE1024115E50006F0E52 /* arm64-apple-ios.swiftmodule */ = {isa = PBXFileReference; lastKnownFileType = file; path = "arm64-apple-ios.swiftmodule"; sourceTree = "<group>"; };
-		0940FE1124115E50006F0E52 /* arm.swiftmodule */ = {isa = PBXFileReference; lastKnownFileType = file; path = arm.swiftmodule; sourceTree = "<group>"; };
-		0940FE1224115E50006F0E52 /* armv7.swiftdoc */ = {isa = PBXFileReference; lastKnownFileType = file; path = armv7.swiftdoc; sourceTree = "<group>"; };
-		0940FE1324115E50006F0E52 /* arm64.swiftdoc */ = {isa = PBXFileReference; lastKnownFileType = file; path = arm64.swiftdoc; sourceTree = "<group>"; };
-		0940FE1424115E50006F0E52 /* armv7-apple-ios.swiftdoc */ = {isa = PBXFileReference; lastKnownFileType = file; path = "armv7-apple-ios.swiftdoc"; sourceTree = "<group>"; };
-		0940FE1524115E50006F0E52 /* armv7.swiftmodule */ = {isa = PBXFileReference; lastKnownFileType = file; path = armv7.swiftmodule; sourceTree = "<group>"; };
-		0940FE1624115E50006F0E52 /* libEasySQLite.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libEasySQLite.a; sourceTree = "<group>"; };
+		0940FE6D2411611D006F0E52 /* MetatagTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetatagTable.swift; sourceTree = "<group>"; };
+		0940FE7224116145006F0E52 /* arm64-apple-ios.swiftdoc */ = {isa = PBXFileReference; lastKnownFileType = file; path = "arm64-apple-ios.swiftdoc"; sourceTree = "<group>"; };
+		0940FE7324116145006F0E52 /* x86_64-apple-ios-simulator.swiftdoc */ = {isa = PBXFileReference; lastKnownFileType = file; path = "x86_64-apple-ios-simulator.swiftdoc"; sourceTree = "<group>"; };
+		0940FE7424116145006F0E52 /* x86_64-apple-ios-simulator.swiftmodule */ = {isa = PBXFileReference; lastKnownFileType = file; path = "x86_64-apple-ios-simulator.swiftmodule"; sourceTree = "<group>"; };
+		0940FE7524116145006F0E52 /* x86_64.swiftdoc */ = {isa = PBXFileReference; lastKnownFileType = file; path = x86_64.swiftdoc; sourceTree = "<group>"; };
+		0940FE7624116145006F0E52 /* arm64.swiftmodule */ = {isa = PBXFileReference; lastKnownFileType = file; path = arm64.swiftmodule; sourceTree = "<group>"; };
+		0940FE7724116145006F0E52 /* x86_64.swiftmodule */ = {isa = PBXFileReference; lastKnownFileType = file; path = x86_64.swiftmodule; sourceTree = "<group>"; };
+		0940FE7824116145006F0E52 /* arm.swiftdoc */ = {isa = PBXFileReference; lastKnownFileType = file; path = arm.swiftdoc; sourceTree = "<group>"; };
+		0940FE7924116145006F0E52 /* armv7-apple-ios.swiftmodule */ = {isa = PBXFileReference; lastKnownFileType = file; path = "armv7-apple-ios.swiftmodule"; sourceTree = "<group>"; };
+		0940FE7A24116145006F0E52 /* arm64-apple-ios.swiftmodule */ = {isa = PBXFileReference; lastKnownFileType = file; path = "arm64-apple-ios.swiftmodule"; sourceTree = "<group>"; };
+		0940FE7B24116145006F0E52 /* arm.swiftmodule */ = {isa = PBXFileReference; lastKnownFileType = file; path = arm.swiftmodule; sourceTree = "<group>"; };
+		0940FE7C24116145006F0E52 /* armv7.swiftdoc */ = {isa = PBXFileReference; lastKnownFileType = file; path = armv7.swiftdoc; sourceTree = "<group>"; };
+		0940FE7D24116145006F0E52 /* arm64.swiftdoc */ = {isa = PBXFileReference; lastKnownFileType = file; path = arm64.swiftdoc; sourceTree = "<group>"; };
+		0940FE7E24116145006F0E52 /* armv7-apple-ios.swiftdoc */ = {isa = PBXFileReference; lastKnownFileType = file; path = "armv7-apple-ios.swiftdoc"; sourceTree = "<group>"; };
+		0940FE7F24116145006F0E52 /* armv7.swiftmodule */ = {isa = PBXFileReference; lastKnownFileType = file; path = armv7.swiftmodule; sourceTree = "<group>"; };
+		0940FE8024116145006F0E52 /* libEasySQLite.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libEasySQLite.a; sourceTree = "<group>"; };
 		0944AED52410369000688C9B /* CreateEvent.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CreateEvent.storyboard; sourceTree = "<group>"; };
 		0944AED7241036BF00688C9B /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		0944AED92410419100688C9B /* RevatureTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RevatureTableViewCell.swift; sourceTree = "<group>"; };
@@ -91,47 +93,62 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0940FE2524115E50006F0E52 /* libEasySQLite.a in Frameworks */,
+				0940FE8F24116145006F0E52 /* libEasySQLite.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0940FE0524115E50006F0E52 /* StaticLibraries */ = {
+		0940FE2624115EEB006F0E52 /* Metatag */ = {
 			isa = PBXGroup;
 			children = (
-				0940FE0624115E50006F0E52 /* EasySQLite */,
+				0940FE6D2411611D006F0E52 /* MetatagTable.swift */,
+			);
+			path = Metatag;
+			sourceTree = "<group>";
+		};
+		0940FE2924116019006F0E52 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		0940FE6F24116145006F0E52 /* StaticLibraries */ = {
+			isa = PBXGroup;
+			children = (
+				0940FE7024116145006F0E52 /* EasySQLite */,
 			);
 			path = StaticLibraries;
 			sourceTree = "<group>";
 		};
-		0940FE0624115E50006F0E52 /* EasySQLite */ = {
+		0940FE7024116145006F0E52 /* EasySQLite */ = {
 			isa = PBXGroup;
 			children = (
-				0940FE0724115E50006F0E52 /* EasySQLite.swiftmodule */,
-				0940FE1624115E50006F0E52 /* libEasySQLite.a */,
+				0940FE7124116145006F0E52 /* EasySQLite.swiftmodule */,
+				0940FE8024116145006F0E52 /* libEasySQLite.a */,
 			);
 			path = EasySQLite;
 			sourceTree = "<group>";
 		};
-		0940FE0724115E50006F0E52 /* EasySQLite.swiftmodule */ = {
+		0940FE7124116145006F0E52 /* EasySQLite.swiftmodule */ = {
 			isa = PBXGroup;
 			children = (
-				0940FE0824115E50006F0E52 /* arm64-apple-ios.swiftdoc */,
-				0940FE0924115E50006F0E52 /* x86_64-apple-ios-simulator.swiftdoc */,
-				0940FE0A24115E50006F0E52 /* x86_64-apple-ios-simulator.swiftmodule */,
-				0940FE0B24115E50006F0E52 /* x86_64.swiftdoc */,
-				0940FE0C24115E50006F0E52 /* arm64.swiftmodule */,
-				0940FE0D24115E50006F0E52 /* x86_64.swiftmodule */,
-				0940FE0E24115E50006F0E52 /* arm.swiftdoc */,
-				0940FE0F24115E50006F0E52 /* armv7-apple-ios.swiftmodule */,
-				0940FE1024115E50006F0E52 /* arm64-apple-ios.swiftmodule */,
-				0940FE1124115E50006F0E52 /* arm.swiftmodule */,
-				0940FE1224115E50006F0E52 /* armv7.swiftdoc */,
-				0940FE1324115E50006F0E52 /* arm64.swiftdoc */,
-				0940FE1424115E50006F0E52 /* armv7-apple-ios.swiftdoc */,
-				0940FE1524115E50006F0E52 /* armv7.swiftmodule */,
+				0940FE7224116145006F0E52 /* arm64-apple-ios.swiftdoc */,
+				0940FE7324116145006F0E52 /* x86_64-apple-ios-simulator.swiftdoc */,
+				0940FE7424116145006F0E52 /* x86_64-apple-ios-simulator.swiftmodule */,
+				0940FE7524116145006F0E52 /* x86_64.swiftdoc */,
+				0940FE7624116145006F0E52 /* arm64.swiftmodule */,
+				0940FE7724116145006F0E52 /* x86_64.swiftmodule */,
+				0940FE7824116145006F0E52 /* arm.swiftdoc */,
+				0940FE7924116145006F0E52 /* armv7-apple-ios.swiftmodule */,
+				0940FE7A24116145006F0E52 /* arm64-apple-ios.swiftmodule */,
+				0940FE7B24116145006F0E52 /* arm.swiftmodule */,
+				0940FE7C24116145006F0E52 /* armv7.swiftdoc */,
+				0940FE7D24116145006F0E52 /* arm64.swiftdoc */,
+				0940FE7E24116145006F0E52 /* armv7-apple-ios.swiftdoc */,
+				0940FE7F24116145006F0E52 /* armv7.swiftmodule */,
 			);
 			path = EasySQLite.swiftmodule;
 			sourceTree = "<group>";
@@ -147,9 +164,10 @@
 		09F2C038240EE1B5004A6F47 = {
 			isa = PBXGroup;
 			children = (
-				0940FE0524115E50006F0E52 /* StaticLibraries */,
+				0940FE6F24116145006F0E52 /* StaticLibraries */,
 				09F2C043240EE1B5004A6F47 /* iRevatureQuizPro */,
 				09F2C042240EE1B5004A6F47 /* Products */,
+				0940FE2924116019006F0E52 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -204,6 +222,7 @@
 		09F2C05C240EE287004A6F47 /* Entities */ = {
 			isa = PBXGroup;
 			children = (
+				0940FE2624115EEB006F0E52 /* Metatag */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -480,26 +499,26 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0940FE2024115E50006F0E52 /* arm.swiftmodule in Resources */,
-				0940FE2224115E50006F0E52 /* arm64.swiftdoc in Resources */,
+				0940FE8A24116145006F0E52 /* arm.swiftmodule in Resources */,
+				0940FE8C24116145006F0E52 /* arm64.swiftdoc in Resources */,
 				D5F4B4AC241033770051F4B8 /* EmployeeLogin.storyboard in Resources */,
 				09F2C051240EE1B9004A6F47 /* LaunchScreen.storyboard in Resources */,
-				0940FE1C24115E50006F0E52 /* x86_64.swiftmodule in Resources */,
+				0940FE8624116145006F0E52 /* x86_64.swiftmodule in Resources */,
 				09F2C04E240EE1B9004A6F47 /* Assets.xcassets in Resources */,
-				0940FE1D24115E50006F0E52 /* arm.swiftdoc in Resources */,
+				0940FE8724116145006F0E52 /* arm.swiftdoc in Resources */,
 				84DB87CC241049EB00958E75 /* StartQuiz.storyboard in Resources */,
-				0940FE2324115E50006F0E52 /* armv7-apple-ios.swiftdoc in Resources */,
-				0940FE1F24115E50006F0E52 /* arm64-apple-ios.swiftmodule in Resources */,
+				0940FE8D24116145006F0E52 /* armv7-apple-ios.swiftdoc in Resources */,
+				0940FE8924116145006F0E52 /* arm64-apple-ios.swiftmodule in Resources */,
 				09F2C04C240EE1B5004A6F47 /* Main.storyboard in Resources */,
-				0940FE2424115E50006F0E52 /* armv7.swiftmodule in Resources */,
+				0940FE8E24116145006F0E52 /* armv7.swiftmodule in Resources */,
 				0944AED62410369000688C9B /* CreateEvent.storyboard in Resources */,
-				0940FE1724115E50006F0E52 /* arm64-apple-ios.swiftdoc in Resources */,
-				0940FE1A24115E50006F0E52 /* x86_64.swiftdoc in Resources */,
-				0940FE2124115E50006F0E52 /* armv7.swiftdoc in Resources */,
-				0940FE1E24115E50006F0E52 /* armv7-apple-ios.swiftmodule in Resources */,
-				0940FE1B24115E50006F0E52 /* arm64.swiftmodule in Resources */,
-				0940FE1824115E50006F0E52 /* x86_64-apple-ios-simulator.swiftdoc in Resources */,
-				0940FE1924115E50006F0E52 /* x86_64-apple-ios-simulator.swiftmodule in Resources */,
+				0940FE8124116145006F0E52 /* arm64-apple-ios.swiftdoc in Resources */,
+				0940FE8424116145006F0E52 /* x86_64.swiftdoc in Resources */,
+				0940FE8B24116145006F0E52 /* armv7.swiftdoc in Resources */,
+				0940FE8824116145006F0E52 /* armv7-apple-ios.swiftmodule in Resources */,
+				0940FE8524116145006F0E52 /* arm64.swiftmodule in Resources */,
+				0940FE8224116145006F0E52 /* x86_64-apple-ios-simulator.swiftdoc in Resources */,
+				0940FE8324116145006F0E52 /* x86_64-apple-ios-simulator.swiftmodule in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -518,6 +537,7 @@
 				0944AEDC241041CE00688C9B /* CreateEventCell.swift in Sources */,
 				5F901D8024114A5200986FF5 /* DropdownPicker.swift in Sources */,
 				09F2C045240EE1B5004A6F47 /* AppDelegate.swift in Sources */,
+				0940FE6E2411611D006F0E52 /* MetatagTable.swift in Sources */,
 				09F2C047240EE1B5004A6F47 /* SceneDelegate.swift in Sources */,
 				5F901D7E2411485100986FF5 /* OrangeToolbar.swift in Sources */,
 				D540960D2411538E00791C7E /* RevatureTextField.swift in Sources */,
@@ -601,6 +621,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LIBRARY_SEARCH_PATHS = "";
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -655,6 +676,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LIBRARY_SEARCH_PATHS = "";
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -675,12 +697,10 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/StaticLibraries/EasySQLite",
-				);
+				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/StaticLibraries/EasySQLite";
 				PRODUCT_BUNDLE_IDENTIFIER = com.revature.iRevatureQuizPro;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_INCLUDE_PATHS = "$(PROJECT_DIR)/StaticLibraries/EasySQLite";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -697,12 +717,10 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/StaticLibraries/EasySQLite",
-				);
+				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/StaticLibraries/EasySQLite";
 				PRODUCT_BUNDLE_IDENTIFIER = com.revature.iRevatureQuizPro;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_INCLUDE_PATHS = "$(PROJECT_DIR)/StaticLibraries/EasySQLite";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

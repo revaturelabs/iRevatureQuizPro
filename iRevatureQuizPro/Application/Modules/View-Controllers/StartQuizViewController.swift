@@ -15,6 +15,7 @@ class StartQuizViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        addGradientToView(view: self.view)
     }
 
     @IBAction func backbutton(_ sender: Any) {

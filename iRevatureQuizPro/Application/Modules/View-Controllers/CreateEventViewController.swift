@@ -19,6 +19,7 @@ class CreateEventViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        addGradientToView(view: self.view)
         eventInputTable.dataSource = self
         eventInputTable.delegate = self
     }
