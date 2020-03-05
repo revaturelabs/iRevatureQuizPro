@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -16,7 +16,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <navigationBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1uX-jB-jiK">
-                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                <rect key="frame" x="0.0" y="44" width="508" height="44"/>
                                 <color key="backgroundColor" red="1" green="0.37647058820000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="barTintColor" red="1" green="0.37647058820000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <items>
@@ -28,12 +28,12 @@
                                 </items>
                             </navigationBar>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quiz" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cGP-7V-8Kd">
-                                <rect key="frame" x="189.5" y="56" width="35" height="21"/>
+                                <rect key="frame" x="189.66666666666666" y="56" width="35" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" text="By proceeding you also agree to the Terms of Service and Private Policy" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="6Pv-Xr-nWl">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="By proceeding you also agree to the Terms of Service and Private Policy" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="6Pv-Xr-nWl">
                                 <rect key="frame" x="20" y="795" width="374" height="67"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
@@ -58,14 +58,14 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a4F-Pb-2OK">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a4F-Pb-2OK">
                                 <rect key="frame" x="100" y="706" width="214" height="46"/>
                                 <color key="backgroundColor" red="0.94901960780000005" green="0.52156862749999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="46" id="STc-Hh-kr7"/>
                                     <constraint firstAttribute="width" constant="214" id="e13-bY-ab7"/>
                                 </constraints>
-                                <state key="normal" title="Button">
+                                <state key="normal" title="Submit">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                             </button>
@@ -98,6 +98,7 @@
                             <constraint firstItem="1uX-jB-jiK" firstAttribute="leading" secondItem="B9u-Ps-AoO" secondAttribute="leading" id="kh2-vj-UWo"/>
                             <constraint firstItem="Y8j-gy-x3j" firstAttribute="top" secondItem="pzE-VR-dBa" secondAttribute="bottom" constant="37" id="o81-qF-VkI"/>
                             <constraint firstItem="jIc-Za-hGT" firstAttribute="centerX" secondItem="l3M-mh-BoA" secondAttribute="centerX" id="pP4-G8-VtL"/>
+                            <constraint firstItem="6Pv-Xr-nWl" firstAttribute="bottom" secondItem="B9u-Ps-AoO" secondAttribute="bottom" id="pQV-g1-wGp"/>
                             <constraint firstItem="1uX-jB-jiK" firstAttribute="trailing" secondItem="B9u-Ps-AoO" secondAttribute="trailing" id="rXs-hF-7mJ"/>
                             <constraint firstItem="pzE-VR-dBa" firstAttribute="centerX" secondItem="l3M-mh-BoA" secondAttribute="centerX" id="vfl-VB-FeO"/>
                             <constraint firstItem="1uX-jB-jiK" firstAttribute="top" secondItem="B9u-Ps-AoO" secondAttribute="top" id="yAY-W0-LTC"/>
