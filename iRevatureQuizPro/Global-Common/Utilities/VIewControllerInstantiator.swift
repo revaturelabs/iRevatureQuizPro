@@ -12,6 +12,11 @@ import UIKit
 //Add Stoyboard Names
 enum AppStoryboard: String {
     case Main
+    case AttendeeSignUp
+    case EmployeeLogin
+    case EventManagement
+    case QuizManagement
+    case StartQuiz
 }
 
 extension AppStoryboard {

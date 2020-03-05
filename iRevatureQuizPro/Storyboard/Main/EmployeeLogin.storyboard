@@ -7,10 +7,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Employee Login View Controller-->
         <scene sceneID="48W-T1-snW">
             <objects>
-                <viewController id="7TK-xN-2Qu" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="EmployeeLoginViewController_ID" id="7TK-xN-2Qu" customClass="EmployeeLoginViewController" customModule="iRevatureQuizPro" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="jV6-XP-fW7">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -27,9 +27,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Log In" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mtC-bs-e7R">
-                                <rect key="frame" x="30" y="424" width="51" height="20"/>
+                                <rect key="frame" x="20" y="417" width="72" height="28"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="24"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -55,11 +55,6 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OdK-NO-KZD" customClass="RevatureButton" customModule="iRevatureQuizPro" customModuleProvider="target">
-                                <rect key="frame" x="181" y="731" width="53" height="32"/>
-                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="17"/>
-                                <state key="normal" title="Sign In"/>
-                            </button>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OqZ-cC-Sa0">
                                 <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
@@ -71,26 +66,43 @@
                                 <items>
                                     <navigationItem title="Log In" id="WcB-FT-w7b">
                                         <barButtonItem key="leftBarButtonItem" style="plain" id="Hi4-I5-49y">
-                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="LyV-40-u8K">
-                                                <rect key="frame" x="20" y="7" width="92" height="30"/>
+                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="LyV-40-u8K">
+                                                <rect key="frame" x="20" y="11" width="20" height="22"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <state key="normal" title="&lt;"/>
+                                                <color key="tintColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                                <state key="normal" image="arrow.left" catalog="system"/>
+                                                <connections>
+                                                    <action selector="backButton:" destination="7TK-xN-2Qu" eventType="touchDown" id="tbQ-zE-j09"/>
+                                                </connections>
                                             </button>
                                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OdK-NO-KZD" customClass="RevatureButton" customModule="iRevatureQuizPro" customModuleProvider="target">
+                                <rect key="frame" x="134" y="729" width="147" height="32"/>
+                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="17"/>
+                                <state key="normal" title="Sign In"/>
+                                <connections>
+                                    <action selector="signInButton:" destination="7TK-xN-2Qu" eventType="touchDown" id="uGv-Hx-DPe"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="OdK-NO-KZD" firstAttribute="top" secondItem="k3s-wz-9pi" secondAttribute="bottom" constant="115" id="PO4-0E-VEk"/>
-                            <constraint firstItem="CnB-m9-IGY" firstAttribute="trailing" secondItem="OdK-NO-KZD" secondAttribute="trailing" constant="180" id="SPv-q5-BSD"/>
-                            <constraint firstItem="OdK-NO-KZD" firstAttribute="leading" secondItem="CnB-m9-IGY" secondAttribute="leading" constant="181" id="gIn-nS-u4w"/>
+                            <constraint firstItem="OdK-NO-KZD" firstAttribute="leading" secondItem="CnB-m9-IGY" secondAttribute="leading" constant="134" id="Xez-V8-JFZ"/>
+                            <constraint firstItem="CnB-m9-IGY" firstAttribute="trailing" secondItem="OdK-NO-KZD" secondAttribute="trailing" constant="133" id="XgY-pI-jDX"/>
                             <constraint firstItem="deC-Lu-KGI" firstAttribute="top" secondItem="OdK-NO-KZD" secondAttribute="bottom" constant="42" id="nDV-YM-8dG"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="CnB-m9-IGY"/>
                     </view>
+                    <connections>
+                        <outlet property="emailTextField" destination="sbj-oO-9Vm" id="QRd-2D-MaF"/>
+                        <outlet property="keepMeLoggedInSwitch" destination="nRR-m0-HKP" id="4zL-95-Neo"/>
+                        <outlet property="passwordTextField" destination="ntv-DJ-Moz" id="HBs-Da-8kY"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="k4X-Hz-Kgg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -98,6 +110,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="arrow.left" catalog="system" width="64" height="48"/>
         <image name="logo" width="180" height="56"/>
     </resources>
 </document>

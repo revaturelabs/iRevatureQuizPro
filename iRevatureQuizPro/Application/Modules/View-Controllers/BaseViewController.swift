@@ -12,6 +12,12 @@ class BaseViewController: UIViewController {
     
     let revOrange = UIColor.init(red:1, green: 96/255, blue: 0, alpha: 1)
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        // Do any additional setup after loading the view.
+        addGradientToView(view: self.view)
+    }
+    
     func addGradientToView(view: UIView)
     {
         //gradient layer
