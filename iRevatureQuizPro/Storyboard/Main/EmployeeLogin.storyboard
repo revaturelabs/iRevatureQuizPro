@@ -66,10 +66,14 @@
                                 <items>
                                     <navigationItem title="Log In" id="WcB-FT-w7b">
                                         <barButtonItem key="leftBarButtonItem" style="plain" id="Hi4-I5-49y">
-                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="LyV-40-u8K">
-                                                <rect key="frame" x="20" y="7" width="92" height="30"/>
+                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="LyV-40-u8K">
+                                                <rect key="frame" x="20" y="11" width="20" height="22"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <state key="normal" title="&lt;"/>
+                                                <color key="tintColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                                <state key="normal" image="arrow.left" catalog="system"/>
+                                                <connections>
+                                                    <action selector="backButton:" destination="7TK-xN-2Qu" eventType="touchDown" id="tbQ-zE-j09"/>
+                                                </connections>
                                             </button>
                                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </barButtonItem>
@@ -106,6 +110,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="arrow.left" catalog="system" width="64" height="48"/>
         <image name="logo" width="180" height="56"/>
     </resources>
 </document>
