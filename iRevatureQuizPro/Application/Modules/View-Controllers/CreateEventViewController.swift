@@ -20,10 +20,15 @@ class CreateEventViewController: BaseViewController {
         super.viewDidLoad()
         
         addGradientToView(view: self.view)
-        eventInputTable.dataSource = self
-        eventInputTable.delegate = self
+
     }
     
+    @IBAction func backButton(_ sender: Any) {
+        let storyboard = UIStoryboard(name: "EventManagement", bundle: nil)
+        let nextVC = storyboard.instantiateViewController(withIdentifier: "TabBarController_ID")
+        nextVC.modalPresentationStyle = .fullScreen
+        present(nextVC,animated: false, completion: nil)
+    }
     
 }
 

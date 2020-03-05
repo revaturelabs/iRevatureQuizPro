@@ -7,20 +7,120 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Main Story Board View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="iRevatureQuizPro" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MainStoryBoardViewController_ID" id="BYZ-38-t0r" customClass="MainStoryBoardViewController" customModule="iRevatureQuizPro" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W5y-86-J8Y" customClass="RevatureButton" customModule="iRevatureQuizPro" customModuleProvider="target">
+                                <rect key="frame" x="82" y="388" width="250" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="1QA-KU-3xN"/>
+                                    <constraint firstAttribute="width" constant="250" id="dgx-Gh-cHq"/>
+                                </constraints>
+                                <state key="normal" title="Member Login">
+                                    <color key="titleColor" red="1" green="0.37647058820000001" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="1" green="0.37647058820000001" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="memberLoginButton:" destination="BYZ-38-t0r" eventType="touchDown" id="Qay-Lv-6P9"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WGR-sg-SUd" customClass="RevatureButton" customModule="iRevatureQuizPro" customModuleProvider="target">
+                                <rect key="frame" x="82" y="446" width="250" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="G2e-iG-mX5"/>
+                                    <constraint firstAttribute="width" constant="250" id="UXd-BI-9VE"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="250" id="ZVB-qx-C1f"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="bGM-lD-IHE"/>
+                                </constraints>
+                                <state key="normal" title="Associate Login"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="1" green="0.37647058820000001" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="associateLogin:" destination="BYZ-38-t0r" eventType="touchDown" id="YGL-s2-4gU"/>
+                                    <action selector="memberLoginButton:" destination="BYZ-38-t0r" eventType="touchDown" id="dL2-Tj-bRs"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="iRevature Quiz Pro" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xi8-zN-n16">
+                                <rect key="frame" x="99" y="259" width="216" height="28"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="28" id="GW3-ec-oRX"/>
+                                    <constraint firstAttribute="width" constant="216" id="K9r-sc-F7g"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="QcI-cy-f1E">
+                                <rect key="frame" x="53" y="87" width="308" height="164"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="308" id="WHQ-Dz-efv"/>
+                                    <constraint firstAttribute="height" constant="164" id="xSr-42-H3e"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x8g-NG-WBD" customClass="RevatureButton" customModule="iRevatureQuizPro" customModuleProvider="target">
+                                <rect key="frame" x="82" y="504" width="250" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="M4h-Lj-jJL"/>
+                                    <constraint firstAttribute="height" constant="50" id="uJy-Og-3FY"/>
+                                </constraints>
+                                <state key="normal" title="Attendee Sign Up"/>
+                                <connections>
+                                    <action selector="attendeeSignUp:" destination="BYZ-38-t0r" eventType="touchDown" id="P2S-5G-T70"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="x8g-NG-WBD" secondAttribute="trailing" constant="82" id="1lg-V3-L7L"/>
+                            <constraint firstItem="Xi8-zN-n16" firstAttribute="top" secondItem="QcI-cy-f1E" secondAttribute="bottom" constant="8" id="51O-Rr-gWE"/>
+                            <constraint firstItem="W5y-86-J8Y" firstAttribute="top" secondItem="Xi8-zN-n16" secondAttribute="bottom" constant="101" id="7u4-Pb-8GQ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="WGR-sg-SUd" secondAttribute="trailing" constant="82" id="BXt-zQ-hca"/>
+                            <constraint firstItem="WGR-sg-SUd" firstAttribute="top" secondItem="W5y-86-J8Y" secondAttribute="bottom" constant="8" id="IM6-fv-Gb4"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Xi8-zN-n16" secondAttribute="trailing" constant="99" id="SnT-HB-qbs"/>
+                            <constraint firstItem="x8g-NG-WBD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="82" id="TGy-9J-SU5"/>
+                            <constraint firstItem="QcI-cy-f1E" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="53" id="TlN-9O-1Uz"/>
+                            <constraint firstItem="QcI-cy-f1E" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="43" id="UcZ-ae-i7j"/>
+                            <constraint firstItem="x8g-NG-WBD" firstAttribute="top" secondItem="WGR-sg-SUd" secondAttribute="bottom" constant="8" id="VtL-AJ-zWS"/>
+                            <constraint firstItem="W5y-86-J8Y" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="82" id="YWW-jd-WIW"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" relation="lessThanOrEqual" secondItem="x8g-NG-WBD" secondAttribute="bottom" constant="308" id="cdU-sp-Jrn"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="QcI-cy-f1E" secondAttribute="trailing" constant="53" id="h5a-Jt-j50"/>
+                            <constraint firstItem="Xi8-zN-n16" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="99" id="kRP-hz-z3h"/>
+                            <constraint firstItem="WGR-sg-SUd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="82" id="m4h-gZ-Oru"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="W5y-86-J8Y" secondAttribute="trailing" constant="82" id="xcp-az-N6I"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="139" y="138"/>
+            <point key="canvasLocation" x="137.68115942028987" y="137.94642857142856"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="logo" width="180" height="56"/>
+    </resources>
 </document>
