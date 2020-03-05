@@ -100,12 +100,12 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0940FE2624115EEB006F0E52 /* Metatags */ = {
+		0940FE2624115EEB006F0E52 /* Metatag */ = {
 			isa = PBXGroup;
 			children = (
 				0940FE6D2411611D006F0E52 /* MetatagTable.swift */,
 			);
-			path = Metatags;
+			path = Metatag;
 			sourceTree = "<group>";
 		};
 		0940FE2924116019006F0E52 /* Frameworks */ = {
@@ -222,7 +222,7 @@
 		09F2C05C240EE287004A6F47 /* Entities */ = {
 			isa = PBXGroup;
 			children = (
-				0940FE2624115EEB006F0E52 /* Metatags */,
+				0940FE2624115EEB006F0E52 /* Metatag */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
