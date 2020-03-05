@@ -7,7 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		090A813C24119492008D7A12 /* MetatagStatements.swift in Sources */ = {isa = PBXBuildFile; fileRef = 090A813B24119492008D7A12 /* MetatagStatements.swift */; };
+		090A813E241195F5008D7A12 /* MetatagReturnStructs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 090A813D241195F5008D7A12 /* MetatagReturnStructs.swift */; };
+		090A81402411969C008D7A12 /* DatabaseInteractions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 090A813F2411969C008D7A12 /* DatabaseInteractions.swift */; };
 		091D7CCC24116C0E004928D1 /* VIewControllerInstantiator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 091D7CCB24116C0E004928D1 /* VIewControllerInstantiator.swift */; };
+		091DC3972411972300C5D577 /* DatabaseInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 091DC3962411972300C5D577 /* DatabaseInformation.swift */; };
 		0940FE6E2411611D006F0E52 /* MetatagTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0940FE6D2411611D006F0E52 /* MetatagTable.swift */; };
 		0940FE8124116145006F0E52 /* arm64-apple-ios.swiftdoc in Resources */ = {isa = PBXBuildFile; fileRef = 0940FE7224116145006F0E52 /* arm64-apple-ios.swiftdoc */; };
 		0940FE8224116145006F0E52 /* x86_64-apple-ios-simulator.swiftdoc in Resources */ = {isa = PBXBuildFile; fileRef = 0940FE7324116145006F0E52 /* x86_64-apple-ios-simulator.swiftdoc */; };
@@ -29,6 +33,8 @@
 		0944AEDA2410419100688C9B /* RevatureTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0944AED92410419100688C9B /* RevatureTableViewCell.swift */; };
 		0944AEDC241041CE00688C9B /* CreateEventCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0944AEDB241041CE00688C9B /* CreateEventCell.swift */; };
 		0944AEDE2410540400688C9B /* CreateEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0944AEDD2410540400688C9B /* CreateEventViewController.swift */; };
+		09A4679824119C8700A4BB90 /* DatabaseError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09A4679724119C8700A4BB90 /* DatabaseError.swift */; };
+		09A4679A2411A81100A4BB90 /* MetatagAccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09A467992411A81100A4BB90 /* MetatagAccess.swift */; };
 		09F2C045240EE1B5004A6F47 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F2C044240EE1B5004A6F47 /* AppDelegate.swift */; };
 		09F2C047240EE1B5004A6F47 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F2C046240EE1B5004A6F47 /* SceneDelegate.swift */; };
 		09F2C049240EE1B5004A6F47 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F2C048240EE1B5004A6F47 /* ViewController.swift */; };
@@ -48,7 +54,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		090A813B24119492008D7A12 /* MetatagStatements.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetatagStatements.swift; sourceTree = "<group>"; };
+		090A813D241195F5008D7A12 /* MetatagReturnStructs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetatagReturnStructs.swift; sourceTree = "<group>"; };
+		090A813F2411969C008D7A12 /* DatabaseInteractions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseInteractions.swift; sourceTree = "<group>"; };
 		091D7CCB24116C0E004928D1 /* VIewControllerInstantiator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VIewControllerInstantiator.swift; sourceTree = "<group>"; };
+		091DC3962411972300C5D577 /* DatabaseInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseInformation.swift; sourceTree = "<group>"; };
 		0940FE6D2411611D006F0E52 /* MetatagTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetatagTable.swift; sourceTree = "<group>"; };
 		0940FE7224116145006F0E52 /* arm64-apple-ios.swiftdoc */ = {isa = PBXFileReference; lastKnownFileType = file; path = "arm64-apple-ios.swiftdoc"; sourceTree = "<group>"; };
 		0940FE7324116145006F0E52 /* x86_64-apple-ios-simulator.swiftdoc */ = {isa = PBXFileReference; lastKnownFileType = file; path = "x86_64-apple-ios-simulator.swiftdoc"; sourceTree = "<group>"; };
@@ -70,6 +80,8 @@
 		0944AED92410419100688C9B /* RevatureTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RevatureTableViewCell.swift; sourceTree = "<group>"; };
 		0944AEDB241041CE00688C9B /* CreateEventCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateEventCell.swift; sourceTree = "<group>"; };
 		0944AEDD2410540400688C9B /* CreateEventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateEventViewController.swift; sourceTree = "<group>"; };
+		09A4679724119C8700A4BB90 /* DatabaseError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseError.swift; sourceTree = "<group>"; };
+		09A467992411A81100A4BB90 /* MetatagAccess.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetatagAccess.swift; sourceTree = "<group>"; };
 		09F2C041240EE1B5004A6F47 /* iRevatureQuizPro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iRevatureQuizPro.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		09F2C044240EE1B5004A6F47 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		09F2C046240EE1B5004A6F47 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -106,6 +118,8 @@
 			isa = PBXGroup;
 			children = (
 				0940FE6D2411611D006F0E52 /* MetatagTable.swift */,
+				090A813B24119492008D7A12 /* MetatagStatements.swift */,
+				090A813D241195F5008D7A12 /* MetatagReturnStructs.swift */,
 			);
 			path = Metatag;
 			sourceTree = "<group>";
@@ -210,6 +224,7 @@
 		09F2C05A240EE287004A6F47 /* Respository */ = {
 			isa = PBXGroup;
 			children = (
+				090A813F2411969C008D7A12 /* DatabaseInteractions.swift */,
 			);
 			path = Respository;
 			sourceTree = "<group>";
@@ -217,6 +232,8 @@
 		09F2C05B240EE287004A6F47 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				091DC3962411972300C5D577 /* DatabaseInformation.swift */,
+				09A4679724119C8700A4BB90 /* DatabaseError.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -232,6 +249,7 @@
 		09F2C05D240EE287004A6F47 /* Data-Access */ = {
 			isa = PBXGroup;
 			children = (
+				09A467992411A81100A4BB90 /* MetatagAccess.swift */,
 			);
 			path = "Data-Access";
 			sourceTree = "<group>";
@@ -534,11 +552,16 @@
 			files = (
 				0944AEDA2410419100688C9B /* RevatureTableViewCell.swift in Sources */,
 				84DB87D024114A1000958E75 /* BaseViewController.swift in Sources */,
+				09A4679A2411A81100A4BB90 /* MetatagAccess.swift in Sources */,
 				5F901D8224114E0C00986FF5 /* UITextFieldExtension.swift in Sources */,
+				09A4679824119C8700A4BB90 /* DatabaseError.swift in Sources */,
+				090A813E241195F5008D7A12 /* MetatagReturnStructs.swift in Sources */,
 				09F2C049240EE1B5004A6F47 /* ViewController.swift in Sources */,
 				84DB87D4241159C300958E75 /* StartQuizViewController.swift in Sources */,
+				090A813C24119492008D7A12 /* MetatagStatements.swift in Sources */,
 				0944AEDC241041CE00688C9B /* CreateEventCell.swift in Sources */,
 				5F901D8024114A5200986FF5 /* DropdownPicker.swift in Sources */,
+				091DC3972411972300C5D577 /* DatabaseInformation.swift in Sources */,
 				09F2C045240EE1B5004A6F47 /* AppDelegate.swift in Sources */,
 				0940FE6E2411611D006F0E52 /* MetatagTable.swift in Sources */,
 				09F2C047240EE1B5004A6F47 /* SceneDelegate.swift in Sources */,
@@ -547,6 +570,7 @@
 				5F901D7C2411445600986FF5 /* DatePicker.swift in Sources */,
 				0944AED8241036BF00688C9B /* UIColorExtension.swift in Sources */,
 				84F34FA42410437100D250BB /* iRevatureButton.swift in Sources */,
+				090A81402411969C008D7A12 /* DatabaseInteractions.swift in Sources */,
 				0944AEDE2410540400688C9B /* CreateEventViewController.swift in Sources */,
 				091D7CCC24116C0E004928D1 /* VIewControllerInstantiator.swift in Sources */,
 			);

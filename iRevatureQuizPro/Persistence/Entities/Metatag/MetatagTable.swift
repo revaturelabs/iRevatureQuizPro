@@ -8,17 +8,23 @@
 
 import EasySQLite
 
-struct MetatagTable {
+//=====================================
+    //Metatag Table information
+//=====================================
+struct PMetatag {
+    //Table's name
     private static let tableName = "metatag"
     
-    private enum ColumnName: String {
+    //Table's Column Names
+    enum ColumnName: String {
         case id = "tag_id"
         case name = "tag_name"
     }
     
+    //Table
     static var table: ESLTable {
         var table = ESLTable(tableName: tableName)
-        table.addColumn(columnName: ColumnName.id.rawValue, dataType: .INTEGER, constraints: .AUTOINCREMENT, .UNIQUE, .NOTNULL)
+        table.addColumn(columnName: ColumnName.id.rawValue, dataType: .INTEGER, constraints: .PRIMARYKEY, .AUTOINCREMENT)
         table.addColumn(columnName: ColumnName.name.rawValue, dataType: .CHAR, constraints: .UNIQUE, .NOTNULL)
         
         return table
