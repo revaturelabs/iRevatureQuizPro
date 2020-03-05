@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CreateEventViewController: ViewController {
+class CreateEventViewController: BaseViewController {
     
     @IBOutlet weak var eventInputTable: UITableView!
     
