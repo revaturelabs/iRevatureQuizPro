@@ -423,6 +423,88 @@
 				"description": "Add quiz"
 			},
 			"response": []
+		},
+		{
+			"name": "https://dev3-ms.revature.com/apigateway/quiz/secure/questions",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "encryptedToken",
+						"value": "7rL8RebbpebrWj1OwMowZwC2xR6f7J7J68tKw8DZbuzpt+Mgk7Bt0WBcKMVCIdsS3wZMo4FeRAps9x/lOZYFUhztWLuoVAyWx9eWFFZC3KonSuNomkK/YHkdzNRLvKzBLb6tIWH/FJ4hyM1d5LZBA6orn27nGZ1h8tBEHfEcFf7lMb6T4mSifGuX58fT61CeZeYa8QFqgutVOMHz9HZCRXz5uqsT+F8Oq3bWhZ4AHw9IJcUFZpTnMe/FlDzKQgenSIq63biD8qMbqjeQixUyJp4MGyCWwofz+YOtpHaglXzSRDqQQ07mMjQCjXxc3hEvrcxTyfDKmJ3FclyeGZ/7awQH+yz3G8FxNwe6N5olxr9rkq9VDHyl5zhVrsRo1a+FcccTrDGtszIyQSDylnPF6mXmGvEBaoLrVTjB8/R2QkVV3KTLRKIy5SiYix4MCez3HLjZuWoHme1WPuSIVZvsVfHuLXcVzRmaZGBF1VHHf74BMOZF2acMd9KhFHoqbM15v/KS/lfRI+YHFWCk1LkepvncCDO5v/1XyzUgIadBxGM=",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"size\": 50,\n\t\"page\": 1,\n\t\"sortOrder\":\"asc\",\n\t\"orderBy\": \"title\",\n\n\t\"ownedContent\": false,\n\t\"isOrdered\": false\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://dev3-ms.revature.com/apigateway/quiz/secure/questions",
+					"protocol": "https",
+					"host": [
+						"dev3-ms",
+						"revature",
+						"com"
+					],
+					"path": [
+						"apigateway",
+						"quiz",
+						"secure",
+						"questions"
+					]
+				},
+				"description": "Get questions, set number and order in body"
+			},
+			"response": []
+		},
+		{
+			"name": "https://dev3-ms.revature.com/apigateway/quiz/secure/question/4217",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "encryptedToken",
+						"value": "7rL8RebbpebrWj1OwMowZwC2xR6f7J7J68tKw8DZbuzpt+Mgk7Bt0WBcKMVCIdsS3wZMo4FeRAps9x/lOZYFUhztWLuoVAyWx9eWFFZC3KonSuNomkK/YHkdzNRLvKzBLb6tIWH/FJ4hyM1d5LZBA6orn27nGZ1h8tBEHfEcFf7lMb6T4mSifGuX58fT61CeZeYa8QFqgutVOMHz9HZCRXz5uqsT+F8Oq3bWhZ4AHw9IJcUFZpTnMe/FlDzKQgenSIq63biD8qMbqjeQixUyJp4MGyCWwofz+YOtpHaglXzSRDqQQ07mMjQCjXxc3hEvrcxTyfDKmJ3FclyeGZ/7awQH+yz3G8FxNwe6N5olxr9rkq9VDHyl5zhVrsRo1a+FcccTrDGtszIyQSDylnPF6mXmGvEBaoLrVTjB8/R2QkVV3KTLRKIy5SiYix4MCez3HLjZuWoHme1WPuSIVZvsVfHuLXcVzRmaZGBF1VHHf74BMOZF2acMd9KhFHoqbM15v/KS/lfRI+YHFWCk1LkepvncCDO5v/1XyzUgIadBxGM=",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://dev3-ms.revature.com/apigateway/quiz/secure/question/4217",
+					"protocol": "https",
+					"host": [
+						"dev3-ms",
+						"revature",
+						"com"
+					],
+					"path": [
+						"apigateway",
+						"quiz",
+						"secure",
+						"question",
+						"4217"
+					]
+				},
+				"description": "Request quiz using id, replace 4217 with different id numbers"
+			},
+			"response": []
 		}
 	],
 	"protocolProfileBehavior": {}
