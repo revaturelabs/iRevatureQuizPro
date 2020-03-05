@@ -25,5 +25,8 @@ class BaseViewController: UIViewController {
         gradientLayer.frame = view.bounds
         //insert the gradient layer to the view layer
         view.layer.insertSublayer(gradientLayer, at: 0)
+        //creates a raster of the static image, improves app performance
+        gradientLayer.shouldRasterize = true
+
     }
 }
