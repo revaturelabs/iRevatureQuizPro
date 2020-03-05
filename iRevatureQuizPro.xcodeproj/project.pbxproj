@@ -24,6 +24,7 @@
 		5F901D8224114E0C00986FF5 /* UITextFieldExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F901D8124114E0C00986FF5 /* UITextFieldExtension.swift */; };
 		84DB87CC241049EB00958E75 /* StartQuiz.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84DB87CB241049EB00958E75 /* StartQuiz.storyboard */; };
 		84DB87D024114A1000958E75 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DB87CF24114A1000958E75 /* BaseViewController.swift */; };
+		84DB87D4241159C300958E75 /* StartQuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DB87D3241159C300958E75 /* StartQuizViewController.swift */; };
 		84F34FA42410437100D250BB /* iRevatureButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F34FA32410437100D250BB /* iRevatureButton.swift */; };
 		D5F4B4AC241033770051F4B8 /* EmployeeLogin.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D5F4B4AB241033770051F4B8 /* EmployeeLogin.storyboard */; };
 /* End PBXBuildFile section */
@@ -48,6 +49,7 @@
 		5F901D8124114E0C00986FF5 /* UITextFieldExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextFieldExtension.swift; sourceTree = "<group>"; };
 		84DB87CB241049EB00958E75 /* StartQuiz.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = StartQuiz.storyboard; sourceTree = "<group>"; };
 		84DB87CF24114A1000958E75 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		84DB87D3241159C300958E75 /* StartQuizViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartQuizViewController.swift; sourceTree = "<group>"; };
 		84F34FA32410437100D250BB /* iRevatureButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iRevatureButton.swift; sourceTree = "<group>"; };
 		D5F4B4AB241033770051F4B8 /* EmployeeLogin.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = EmployeeLogin.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -333,6 +335,7 @@
 				09F2C048240EE1B5004A6F47 /* ViewController.swift */,
 				0944AEDD2410540400688C9B /* CreateEventViewController.swift */,
 				84DB87CF24114A1000958E75 /* BaseViewController.swift */,
+				84DB87D3241159C300958E75 /* StartQuizViewController.swift */,
 			);
 			path = "View-Controllers";
 			sourceTree = "<group>";
@@ -424,6 +427,7 @@
 				84DB87D024114A1000958E75 /* BaseViewController.swift in Sources */,
 				5F901D8224114E0C00986FF5 /* UITextFieldExtension.swift in Sources */,
 				09F2C049240EE1B5004A6F47 /* ViewController.swift in Sources */,
+				84DB87D4241159C300958E75 /* StartQuizViewController.swift in Sources */,
 				0944AEDC241041CE00688C9B /* CreateEventCell.swift in Sources */,
 				5F901D8024114A5200986FF5 /* DropdownPicker.swift in Sources */,
 				09F2C045240EE1B5004A6F47 /* AppDelegate.swift in Sources */,
