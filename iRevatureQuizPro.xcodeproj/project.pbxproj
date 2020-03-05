@@ -18,6 +18,10 @@
 		09F2C04C240EE1B5004A6F47 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09F2C04A240EE1B5004A6F47 /* Main.storyboard */; };
 		09F2C04E240EE1B9004A6F47 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 09F2C04D240EE1B9004A6F47 /* Assets.xcassets */; };
 		09F2C051240EE1B9004A6F47 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09F2C04F240EE1B9004A6F47 /* LaunchScreen.storyboard */; };
+		5F901D7C2411445600986FF5 /* DatePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F901D7B2411445600986FF5 /* DatePicker.swift */; };
+		5F901D7E2411485100986FF5 /* OrangeToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F901D7D2411485100986FF5 /* OrangeToolbar.swift */; };
+		5F901D8024114A5200986FF5 /* DropdownPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F901D7F24114A5200986FF5 /* DropdownPicker.swift */; };
+		5F901D8224114E0C00986FF5 /* UITextFieldExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F901D8124114E0C00986FF5 /* UITextFieldExtension.swift */; };
 		84DB87CC241049EB00958E75 /* StartQuiz.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84DB87CB241049EB00958E75 /* StartQuiz.storyboard */; };
 		84DB87D024114A1000958E75 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DB87CF24114A1000958E75 /* BaseViewController.swift */; };
 		84F34FA42410437100D250BB /* iRevatureButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F34FA32410437100D250BB /* iRevatureButton.swift */; };
@@ -38,6 +42,10 @@
 		09F2C04D240EE1B9004A6F47 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		09F2C050240EE1B9004A6F47 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		09F2C052240EE1B9004A6F47 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5F901D7B2411445600986FF5 /* DatePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePicker.swift; sourceTree = "<group>"; };
+		5F901D7D2411485100986FF5 /* OrangeToolbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrangeToolbar.swift; sourceTree = "<group>"; };
+		5F901D7F24114A5200986FF5 /* DropdownPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropdownPicker.swift; sourceTree = "<group>"; };
+		5F901D8124114E0C00986FF5 /* UITextFieldExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextFieldExtension.swift; sourceTree = "<group>"; };
 		84DB87CB241049EB00958E75 /* StartQuiz.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = StartQuiz.storyboard; sourceTree = "<group>"; };
 		84DB87CF24114A1000958E75 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		84F34FA32410437100D250BB /* iRevatureButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iRevatureButton.swift; sourceTree = "<group>"; };
@@ -256,6 +264,7 @@
 			isa = PBXGroup;
 			children = (
 				0944AED7241036BF00688C9B /* UIColorExtension.swift */,
+				5F901D8124114E0C00986FF5 /* UITextFieldExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -280,6 +289,7 @@
 				0944AED92410419100688C9B /* RevatureTableViewCell.swift */,
 				0944AEDB241041CE00688C9B /* CreateEventCell.swift */,
 				84F34FA32410437100D250BB /* iRevatureButton.swift */,
+				5F901D7D2411485100986FF5 /* OrangeToolbar.swift */,
 			);
 			path = "UI-Elements";
 			sourceTree = "<group>";
@@ -330,6 +340,8 @@
 		09F2C075240EE2CE004A6F47 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				5F901D7B2411445600986FF5 /* DatePicker.swift */,
+				5F901D7F24114A5200986FF5 /* DropdownPicker.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -410,10 +422,14 @@
 			files = (
 				0944AEDA2410419100688C9B /* RevatureTableViewCell.swift in Sources */,
 				84DB87D024114A1000958E75 /* BaseViewController.swift in Sources */,
+				5F901D8224114E0C00986FF5 /* UITextFieldExtension.swift in Sources */,
 				09F2C049240EE1B5004A6F47 /* ViewController.swift in Sources */,
 				0944AEDC241041CE00688C9B /* CreateEventCell.swift in Sources */,
+				5F901D8024114A5200986FF5 /* DropdownPicker.swift in Sources */,
 				09F2C045240EE1B5004A6F47 /* AppDelegate.swift in Sources */,
 				09F2C047240EE1B5004A6F47 /* SceneDelegate.swift in Sources */,
+				5F901D7E2411485100986FF5 /* OrangeToolbar.swift in Sources */,
+				5F901D7C2411445600986FF5 /* DatePicker.swift in Sources */,
 				0944AED8241036BF00688C9B /* UIColorExtension.swift in Sources */,
 				84F34FA42410437100D250BB /* iRevatureButton.swift in Sources */,
 				0944AEDE2410540400688C9B /* CreateEventViewController.swift in Sources */,
