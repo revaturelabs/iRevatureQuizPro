@@ -7,16 +7,28 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0944AED62410369000688C9B /* CreateEvent.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0944AED52410369000688C9B /* CreateEvent.storyboard */; };
+		0944AED8241036BF00688C9B /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0944AED7241036BF00688C9B /* UIColorExtension.swift */; };
+		0944AEDA2410419100688C9B /* RevatureTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0944AED92410419100688C9B /* RevatureTableViewCell.swift */; };
+		0944AEDC241041CE00688C9B /* CreateEventCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0944AEDB241041CE00688C9B /* CreateEventCell.swift */; };
+		0944AEDE2410540400688C9B /* CreateEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0944AEDD2410540400688C9B /* CreateEventViewController.swift */; };
 		09F2C045240EE1B5004A6F47 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F2C044240EE1B5004A6F47 /* AppDelegate.swift */; };
 		09F2C047240EE1B5004A6F47 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F2C046240EE1B5004A6F47 /* SceneDelegate.swift */; };
 		09F2C049240EE1B5004A6F47 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F2C048240EE1B5004A6F47 /* ViewController.swift */; };
 		09F2C04C240EE1B5004A6F47 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09F2C04A240EE1B5004A6F47 /* Main.storyboard */; };
 		09F2C04E240EE1B9004A6F47 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 09F2C04D240EE1B9004A6F47 /* Assets.xcassets */; };
 		09F2C051240EE1B9004A6F47 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09F2C04F240EE1B9004A6F47 /* LaunchScreen.storyboard */; };
+		84DB87CC241049EB00958E75 /* StartQuiz.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84DB87CB241049EB00958E75 /* StartQuiz.storyboard */; };
+		84F34FA42410437100D250BB /* iRevatureButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F34FA32410437100D250BB /* iRevatureButton.swift */; };
 		D5F4B4AC241033770051F4B8 /* EmployeeLogin.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D5F4B4AB241033770051F4B8 /* EmployeeLogin.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0944AED52410369000688C9B /* CreateEvent.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CreateEvent.storyboard; sourceTree = "<group>"; };
+		0944AED7241036BF00688C9B /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
+		0944AED92410419100688C9B /* RevatureTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RevatureTableViewCell.swift; sourceTree = "<group>"; };
+		0944AEDB241041CE00688C9B /* CreateEventCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateEventCell.swift; sourceTree = "<group>"; };
+		0944AEDD2410540400688C9B /* CreateEventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateEventViewController.swift; sourceTree = "<group>"; };
 		09F2C041240EE1B5004A6F47 /* iRevatureQuizPro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iRevatureQuizPro.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		09F2C044240EE1B5004A6F47 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		09F2C046240EE1B5004A6F47 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -25,6 +37,8 @@
 		09F2C04D240EE1B9004A6F47 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		09F2C050240EE1B9004A6F47 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		09F2C052240EE1B9004A6F47 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		84DB87CB241049EB00958E75 /* StartQuiz.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = StartQuiz.storyboard; sourceTree = "<group>"; };
+		84F34FA32410437100D250BB /* iRevatureButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iRevatureButton.swift; sourceTree = "<group>"; };
 		D5F4B4AB241033770051F4B8 /* EmployeeLogin.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = EmployeeLogin.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -39,6 +53,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0944AED4241031CF00688C9B /* CreateEvent */ = {
+			isa = PBXGroup;
+			children = (
+				0944AED52410369000688C9B /* CreateEvent.storyboard */,
+			);
+			path = CreateEvent;
+			sourceTree = "<group>";
+		};
 		09F2C038240EE1B5004A6F47 = {
 			isa = PBXGroup;
 			children = (
@@ -119,6 +141,7 @@
 		09F2C05F240EE287004A6F47 /* Storyboard */ = {
 			isa = PBXGroup;
 			children = (
+				0944AED4241031CF00688C9B /* CreateEvent */,
 				09F2C073240EE29F004A6F47 /* Launch */,
 				09F2C072240EE296004A6F47 /* Main */,
 				09F2C060240EE287004A6F47 /* Common */,
@@ -230,6 +253,7 @@
 		09F2C06C240EE287004A6F47 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				0944AED7241036BF00688C9B /* UIColorExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -251,6 +275,9 @@
 		09F2C06F240EE287004A6F47 /* UI-Elements */ = {
 			isa = PBXGroup;
 			children = (
+				0944AED92410419100688C9B /* RevatureTableViewCell.swift */,
+				0944AEDB241041CE00688C9B /* CreateEventCell.swift */,
+				84F34FA32410437100D250BB /* iRevatureButton.swift */,
 			);
 			path = "UI-Elements";
 			sourceTree = "<group>";
@@ -274,6 +301,7 @@
 			isa = PBXGroup;
 			children = (
 				09F2C04A240EE1B5004A6F47 /* Main.storyboard */,
+				84DB87CB241049EB00958E75 /* StartQuiz.storyboard */,
 				D5F4B4AB241033770051F4B8 /* EmployeeLogin.storyboard */,
 			);
 			path = Main;
@@ -291,6 +319,7 @@
 			isa = PBXGroup;
 			children = (
 				09F2C048240EE1B5004A6F47 /* ViewController.swift */,
+				0944AEDD2410540400688C9B /* CreateEventViewController.swift */,
 			);
 			path = "View-Controllers";
 			sourceTree = "<group>";
@@ -363,7 +392,9 @@
 				D5F4B4AC241033770051F4B8 /* EmployeeLogin.storyboard in Resources */,
 				09F2C051240EE1B9004A6F47 /* LaunchScreen.storyboard in Resources */,
 				09F2C04E240EE1B9004A6F47 /* Assets.xcassets in Resources */,
+				84DB87CC241049EB00958E75 /* StartQuiz.storyboard in Resources */,
 				09F2C04C240EE1B5004A6F47 /* Main.storyboard in Resources */,
+				0944AED62410369000688C9B /* CreateEvent.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -374,9 +405,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0944AEDA2410419100688C9B /* RevatureTableViewCell.swift in Sources */,
 				09F2C049240EE1B5004A6F47 /* ViewController.swift in Sources */,
+				0944AEDC241041CE00688C9B /* CreateEventCell.swift in Sources */,
 				09F2C045240EE1B5004A6F47 /* AppDelegate.swift in Sources */,
 				09F2C047240EE1B5004A6F47 /* SceneDelegate.swift in Sources */,
+				0944AED8241036BF00688C9B /* UIColorExtension.swift in Sources */,
+				84F34FA42410437100D250BB /* iRevatureButton.swift in Sources */,
+				0944AEDE2410540400688C9B /* CreateEventViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

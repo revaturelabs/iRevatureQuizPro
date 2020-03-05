@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="CWk-w8-Y4s">
+            <objects>
+                <viewController id="w1j-2z-koR" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="l3M-mh-BoA">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1uX-jB-jiK">
+                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                <color key="backgroundColor" red="1" green="0.37647058820000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="barTintColor" red="1" green="0.37647058820000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <items>
+                                    <navigationItem id="QQu-5h-p8g">
+                                        <barButtonItem key="leftBarButtonItem" title="&lt;" id="GIz-b4-z3f">
+                                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quiz" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cGP-7V-8Kd">
+                                <rect key="frame" x="189.5" y="56" width="35" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" text="By proceeding you also agree to the Terms of Service and Private Policy" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="6Pv-Xr-nWl">
+                                <rect key="frame" x="20" y="795" width="374" height="67"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="67" id="98i-E5-E86"/>
+                                </constraints>
+                                <color key="textColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Enter the provided event code in order to access the assesment" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Y8j-gy-x3j">
+                                <rect key="frame" x="62" y="336" width="290" height="64"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="eQq-M9-rJV"/>
+                                </constraints>
+                                <color key="textColor" red="1" green="0.37647058820000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Code:" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jIc-Za-hGT">
+                                <rect key="frame" x="62" y="417" width="290" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a4F-Pb-2OK">
+                                <rect key="frame" x="100" y="706" width="214" height="46"/>
+                                <color key="backgroundColor" red="0.94901960780000005" green="0.52156862749999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="46" id="STc-Hh-kr7"/>
+                                    <constraint firstAttribute="width" constant="214" id="e13-bY-ab7"/>
+                                </constraints>
+                                <state key="normal" title="Button">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="pzE-VR-dBa">
+                                <rect key="frame" x="20" y="129" width="374" height="170"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="170" id="vi4-bo-Irk"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="cGP-7V-8Kd" firstAttribute="top" secondItem="B9u-Ps-AoO" secondAttribute="top" constant="12" id="2Fi-ad-qw2"/>
+                            <constraint firstItem="Y8j-gy-x3j" firstAttribute="leading" secondItem="B9u-Ps-AoO" secondAttribute="leading" constant="62" id="2N6-mr-JLm"/>
+                            <constraint firstItem="B9u-Ps-AoO" firstAttribute="trailing" secondItem="6Pv-Xr-nWl" secondAttribute="trailing" constant="20" id="2ad-I2-CKC"/>
+                            <constraint firstItem="jIc-Za-hGT" firstAttribute="top" secondItem="Y8j-gy-x3j" secondAttribute="bottom" constant="17" id="62v-iY-VQC"/>
+                            <constraint firstItem="pzE-VR-dBa" firstAttribute="top" secondItem="cGP-7V-8Kd" secondAttribute="bottom" constant="52" id="76D-gN-4E4"/>
+                            <constraint firstItem="B9u-Ps-AoO" firstAttribute="trailing" secondItem="pzE-VR-dBa" secondAttribute="trailing" constant="20" id="8z8-20-7aD"/>
+                            <constraint firstItem="a4F-Pb-2OK" firstAttribute="centerX" secondItem="l3M-mh-BoA" secondAttribute="centerX" id="BsM-1L-pG6"/>
+                            <constraint firstItem="cGP-7V-8Kd" firstAttribute="centerX" secondItem="l3M-mh-BoA" secondAttribute="centerX" id="Hhz-Jf-F42"/>
+                            <constraint firstItem="pzE-VR-dBa" firstAttribute="leading" secondItem="B9u-Ps-AoO" secondAttribute="leading" constant="20" id="HwQ-2s-L6Z"/>
+                            <constraint firstItem="B9u-Ps-AoO" firstAttribute="trailing" secondItem="Y8j-gy-x3j" secondAttribute="trailing" constant="62" id="ICP-Qc-uNO"/>
+                            <constraint firstItem="a4F-Pb-2OK" firstAttribute="top" relation="lessThanOrEqual" secondItem="jIc-Za-hGT" secondAttribute="bottom" constant="255" id="QYR-6g-vCI"/>
+                            <constraint firstItem="6Pv-Xr-nWl" firstAttribute="top" secondItem="a4F-Pb-2OK" secondAttribute="bottom" constant="43" id="VM4-RM-jO6"/>
+                            <constraint firstItem="B9u-Ps-AoO" firstAttribute="trailing" secondItem="jIc-Za-hGT" secondAttribute="trailing" constant="62" id="bZZ-Yb-v4u"/>
+                            <constraint firstItem="jIc-Za-hGT" firstAttribute="leading" secondItem="B9u-Ps-AoO" secondAttribute="leading" constant="62" id="dT0-Iz-7fd"/>
+                            <constraint firstItem="pzE-VR-dBa" firstAttribute="top" secondItem="1uX-jB-jiK" secondAttribute="bottom" constant="41" id="gZi-WV-Xuo"/>
+                            <constraint firstItem="pzE-VR-dBa" firstAttribute="top" secondItem="1uX-jB-jiK" secondAttribute="bottom" constant="41" id="his-io-hpt"/>
+                            <constraint firstItem="6Pv-Xr-nWl" firstAttribute="leading" secondItem="B9u-Ps-AoO" secondAttribute="leading" constant="20" id="hva-Sx-kHb"/>
+                            <constraint firstItem="1uX-jB-jiK" firstAttribute="leading" secondItem="B9u-Ps-AoO" secondAttribute="leading" id="kh2-vj-UWo"/>
+                            <constraint firstItem="Y8j-gy-x3j" firstAttribute="top" secondItem="pzE-VR-dBa" secondAttribute="bottom" constant="37" id="o81-qF-VkI"/>
+                            <constraint firstItem="jIc-Za-hGT" firstAttribute="centerX" secondItem="l3M-mh-BoA" secondAttribute="centerX" id="pP4-G8-VtL"/>
+                            <constraint firstItem="1uX-jB-jiK" firstAttribute="trailing" secondItem="B9u-Ps-AoO" secondAttribute="trailing" id="rXs-hF-7mJ"/>
+                            <constraint firstItem="pzE-VR-dBa" firstAttribute="centerX" secondItem="l3M-mh-BoA" secondAttribute="centerX" id="vfl-VB-FeO"/>
+                            <constraint firstItem="1uX-jB-jiK" firstAttribute="top" secondItem="B9u-Ps-AoO" secondAttribute="top" id="yAY-W0-LTC"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="B9u-Ps-AoO"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Vkb-MM-i2v" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="21.739130434782609" y="-289.28571428571428"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="logo" width="180" height="56"/>
+    </resources>
+</document>
