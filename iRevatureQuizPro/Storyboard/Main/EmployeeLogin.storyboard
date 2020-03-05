@@ -10,7 +10,7 @@
         <!--Employee Login View Controller-->
         <scene sceneID="48W-T1-snW">
             <objects>
-                <viewController id="7TK-xN-2Qu" customClass="EmployeeLoginViewController" customModule="iRevatureQuizPro" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="EmployeeLoginViewController_ID" id="7TK-xN-2Qu" customClass="EmployeeLoginViewController" customModule="iRevatureQuizPro" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="jV6-XP-fW7">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

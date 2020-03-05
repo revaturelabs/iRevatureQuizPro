@@ -11,13 +11,19 @@ import UIKit
 class MainStoryBoardViewController: BaseViewController {
      
     @IBAction func memberLoginButton(_ sender: Any) {
+        present(EmployeeLoginViewController.instantiate(fromAppStoryboard: AppStoryboard.EmployeeLogin),animated: false,completion: nil)
+        
+
     }
     
     @IBAction func attendeeSignUp(_ sender: Any) {
+        let nextVC = AttendeeSignUpViewController.instantiate(fromAppStoryboard:AppStoryboard.AttendeeSignUp)
+        nextVC.modalPresentationStyle = .fullScreen
+        present(nextVC, animated: false, completion: nil)
     }
     
     @IBAction func associateLogin(_ sender: Any) {
-    
+        
     }
     
     override func viewDidLoad() {

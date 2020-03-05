@@ -7,10 +7,48 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Event View View Controller-->
+        <!--Tab Bar Controller-->
+        <scene sceneID="wio-xu-yag">
+            <objects>
+                <tabBarController storyboardIdentifier="TabBarController_ID" id="zv7-G0-kYO" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="EB0-i4-n2H">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="wa4-JJ-m9Y" kind="relationship" relationship="viewControllers" id="JAB-sm-K1R"/>
+                        <segue destination="8c4-mD-14f" kind="relationship" relationship="viewControllers" id="Lei-qh-Bys"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ReA-Ra-zIu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-849" y="53"/>
+        </scene>
+        <!--CreateQuizViewController_ID-->
+        <scene sceneID="FYE-hW-XqJ">
+            <objects>
+                <viewControllerPlaceholder storyboardName="QuizManagement" referencedIdentifier="CreateQuizViewController_ID" id="Eev-2Z-tK1" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="pmp-hA-iGo"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="U1W-pi-tx9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-920" y="452"/>
+        </scene>
+        <!--QuizViewViewController_ID-->
+        <scene sceneID="dSs-li-eya">
+            <objects>
+                <viewControllerPlaceholder storyboardName="QuizManagement" referencedIdentifier="QuizViewViewController_ID" id="8c4-mD-14f" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="JaQ-8D-CXJ"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4a4-dh-XC6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-631" y="435"/>
+        </scene>
+        <!--Events-->
         <scene sceneID="u1Z-sK-pdb">
             <objects>
-                <viewController id="wa4-JJ-m9Y" customClass="EventViewViewController" customModule="iRevatureQuizPro" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="EventViewViewController_ID" id="wa4-JJ-m9Y" customClass="EventViewViewController" customModule="iRevatureQuizPro" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="BsP-UO-HNm">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -35,6 +73,9 @@
                                                 <state key="normal" image="plus" catalog="system">
                                                     <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="addEventButton:" destination="wa4-JJ-m9Y" eventType="touchDown" id="VTC-zV-sxs"/>
+                                                </connections>
                                             </button>
                                             <connections>
                                                 <action selector="addEventButton:" destination="wa4-JJ-m9Y" id="rDx-4m-r4J"/>
@@ -61,16 +102,6 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             </tableView>
-                            <tabBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IAn-X5-jKq">
-                                <rect key="frame" x="0.0" y="813" width="414" height="49"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <items>
-                                    <tabBarItem title="Events" image="plus.rectangle.fill" catalog="system" id="qZs-B4-IwM"/>
-                                    <tabBarItem title="Quizzes" image="doc.text.fill" catalog="system" id="uDL-Wx-sUR"/>
-                                    <tabBarItem title="Questions" image="list.bullet" catalog="system" id="qNE-r3-dIZ"/>
-                                </items>
-                            </tabBar>
                             <searchBar contentMode="redraw" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YAD-d5-xhr">
                                 <rect key="frame" x="0.0" y="99" width="414" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
@@ -80,6 +111,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="hZB-8z-fif"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Events" id="qVk-VB-VHF"/>
                     <connections>
                         <outlet property="eventSearchBar" destination="YAD-d5-xhr" id="cug-01-p2V"/>
                     </connections>
@@ -88,10 +120,10 @@
             </objects>
             <point key="canvasLocation" x="-94.20289855072464" y="52.901785714285715"/>
         </scene>
-        <!--View Controller-->
+        <!--Create Event View Controller-->
         <scene sceneID="2MS-J4-FhK">
             <objects>
-                <viewController id="7da-JE-Mua" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CreateEventViewController_ID" id="7da-JE-Mua" customClass="CreateEventViewController" customModule="iRevatureQuizPro" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="AeP-Pw-ET4">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -116,7 +148,13 @@
                                                 <state key="normal" image="arrow.left" catalog="system">
                                                     <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="backButton:" destination="7da-JE-Mua" eventType="touchDown" id="3mY-3h-Ium"/>
+                                                </connections>
                                             </button>
+                                            <connections>
+                                                <action selector="backButton:" destination="7da-JE-Mua" id="SE0-zB-ojY"/>
+                                            </connections>
                                         </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" style="plain" id="We2-Yz-wHC">
                                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="o4c-dV-p8J">
@@ -131,16 +169,6 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <tabBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bOI-qD-BDG">
-                                <rect key="frame" x="0.0" y="813" width="414" height="49"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <items>
-                                    <tabBarItem title="Events" image="plus.rectangle.fill" catalog="system" id="VRj-tf-ykn"/>
-                                    <tabBarItem title="Quizzes" image="doc.text.fill" catalog="system" id="55o-be-Z5e"/>
-                                    <tabBarItem title="Questions" image="list.bullet" catalog="system" id="2M8-qH-Bv4"/>
-                                </items>
-                            </tabBar>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="*Event Code:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UWU-dE-VFc">
                                 <rect key="frame" x="20" y="116" width="106" height="20"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -223,6 +251,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="RkZ-Vm-YtT"/>
                     </view>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QJ2-ul-0P7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -231,9 +260,6 @@
     </scenes>
     <resources>
         <image name="arrow.left" catalog="system" width="64" height="48"/>
-        <image name="doc.text.fill" catalog="system" width="56" height="64"/>
-        <image name="list.bullet" catalog="system" width="64" height="44"/>
         <image name="plus" catalog="system" width="64" height="56"/>
-        <image name="plus.rectangle.fill" catalog="system" width="64" height="46"/>
     </resources>
 </document>

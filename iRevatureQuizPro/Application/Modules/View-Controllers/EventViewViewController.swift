@@ -19,6 +19,10 @@ class EventViewViewController: BaseViewController {
     }
 
     @IBAction func addEventButton(_ sender: Any) {
+
+        let nextVC = CreateEventViewController.instantiate(fromAppStoryboard: AppStoryboard.EventManagement)
+        nextVC.modalPresentationStyle = .fullScreen
+        present(nextVC, animated: false, completion: nil)
     }
     
     @IBAction func optionsButton(_ sender: Any) {

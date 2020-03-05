@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		091D7CCC24116C0E004928D1 /* VIewControllerInstantiator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 091D7CCB24116C0E004928D1 /* VIewControllerInstantiator.swift */; };
 		0940FE6E2411611D006F0E52 /* MetatagTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0940FE6D2411611D006F0E52 /* MetatagTable.swift */; };
 		0940FE8124116145006F0E52 /* arm64-apple-ios.swiftdoc in Resources */ = {isa = PBXBuildFile; fileRef = 0940FE7224116145006F0E52 /* arm64-apple-ios.swiftdoc */; };
 		0940FE8224116145006F0E52 /* x86_64-apple-ios-simulator.swiftdoc in Resources */ = {isa = PBXBuildFile; fileRef = 0940FE7324116145006F0E52 /* x86_64-apple-ios-simulator.swiftdoc */; };
@@ -43,6 +42,7 @@
 		84DB87D024114A1000958E75 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DB87CF24114A1000958E75 /* BaseViewController.swift */; };
 		84DB87D4241159C300958E75 /* StartQuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DB87D3241159C300958E75 /* StartQuizViewController.swift */; };
 		84F34FA42410437100D250BB /* iRevatureButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F34FA32410437100D250BB /* iRevatureButton.swift */; };
+		9544BEF224119B9500BFC412 /* VIewControllerInstantiator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9544BEF124119B9500BFC412 /* VIewControllerInstantiator.swift */; };
 		95D8CF1424116B5B00EB322E /* MainStoryBoardController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D8CF1324116B5B00EB322E /* MainStoryBoardController.swift */; };
 		95D8CF1624117F9300EB322E /* EventManagement.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 95D8CF1524117F9300EB322E /* EventManagement.storyboard */; };
 		95D8CF182411849400EB322E /* QuizManagement.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 95D8CF172411849400EB322E /* QuizManagement.storyboard */; };
@@ -51,13 +51,12 @@
 		95D8CF1E241190A100EB322E /* EventViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D8CF1D241190A100EB322E /* EventViewViewController.swift */; };
 		95D8CF20241190BB00EB322E /* AttendeeSignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D8CF1F241190BB00EB322E /* AttendeeSignUpViewController.swift */; };
 		95D8CF22241190E900EB322E /* QuizViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D8CF21241190E900EB322E /* QuizViewViewController.swift */; };
-		95D8CF242411911A00EB322E /* QuizCreateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D8CF232411911A00EB322E /* QuizCreateViewController.swift */; };
+		95D8CF242411911A00EB322E /* CreateQuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D8CF232411911A00EB322E /* CreateQuizViewController.swift */; };
 		D540960D2411538E00791C7E /* RevatureTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = D540960C2411538E00791C7E /* RevatureTextField.swift */; };
 		D5F4B4AC241033770051F4B8 /* EmployeeLogin.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D5F4B4AB241033770051F4B8 /* EmployeeLogin.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		091D7CCB24116C0E004928D1 /* VIewControllerInstantiator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VIewControllerInstantiator.swift; sourceTree = "<group>"; };
 		0940FE6D2411611D006F0E52 /* MetatagTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetatagTable.swift; sourceTree = "<group>"; };
 		0940FE7224116145006F0E52 /* arm64-apple-ios.swiftdoc */ = {isa = PBXFileReference; lastKnownFileType = file; path = "arm64-apple-ios.swiftdoc"; sourceTree = "<group>"; };
 		0940FE7324116145006F0E52 /* x86_64-apple-ios-simulator.swiftdoc */ = {isa = PBXFileReference; lastKnownFileType = file; path = "x86_64-apple-ios-simulator.swiftdoc"; sourceTree = "<group>"; };
@@ -95,6 +94,7 @@
 		84DB87CF24114A1000958E75 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		84DB87D3241159C300958E75 /* StartQuizViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartQuizViewController.swift; sourceTree = "<group>"; };
 		84F34FA32410437100D250BB /* iRevatureButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iRevatureButton.swift; sourceTree = "<group>"; };
+		9544BEF124119B9500BFC412 /* VIewControllerInstantiator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VIewControllerInstantiator.swift; sourceTree = "<group>"; };
 		95D8CF1324116B5B00EB322E /* MainStoryBoardController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainStoryBoardController.swift; sourceTree = "<group>"; };
 		95D8CF1524117F9300EB322E /* EventManagement.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = EventManagement.storyboard; sourceTree = "<group>"; };
 		95D8CF172411849400EB322E /* QuizManagement.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = QuizManagement.storyboard; sourceTree = "<group>"; };
@@ -103,7 +103,7 @@
 		95D8CF1D241190A100EB322E /* EventViewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventViewViewController.swift; sourceTree = "<group>"; };
 		95D8CF1F241190BB00EB322E /* AttendeeSignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttendeeSignUpViewController.swift; sourceTree = "<group>"; };
 		95D8CF21241190E900EB322E /* QuizViewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizViewViewController.swift; sourceTree = "<group>"; };
-		95D8CF232411911A00EB322E /* QuizCreateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizCreateViewController.swift; sourceTree = "<group>"; };
+		95D8CF232411911A00EB322E /* CreateQuizViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateQuizViewController.swift; sourceTree = "<group>"; };
 		D540960C2411538E00791C7E /* RevatureTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RevatureTextField.swift; sourceTree = "<group>"; };
 		D5F4B4AB241033770051F4B8 /* EmployeeLogin.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = EmployeeLogin.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -385,7 +385,7 @@
 		09F2C06D240EE287004A6F47 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
-				091D7CCB24116C0E004928D1 /* VIewControllerInstantiator.swift */,
+				9544BEF124119B9500BFC412 /* VIewControllerInstantiator.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -456,8 +456,8 @@
 				95D8CF1D241190A100EB322E /* EventViewViewController.swift */,
 				0944AEDD2410540400688C9B /* CreateEventViewController.swift */,
 				95D8CF21241190E900EB322E /* QuizViewViewController.swift */,
+				95D8CF232411911A00EB322E /* CreateQuizViewController.swift */,
 				84DB87D3241159C300958E75 /* StartQuizViewController.swift */,
-				95D8CF232411911A00EB322E /* QuizCreateViewController.swift */,
 			);
 			path = "View-Controllers";
 			sourceTree = "<group>";
@@ -583,7 +583,8 @@
 				0944AED8241036BF00688C9B /* UIColorExtension.swift in Sources */,
 				84F34FA42410437100D250BB /* iRevatureButton.swift in Sources */,
 				0944AEDE2410540400688C9B /* CreateEventViewController.swift in Sources */,
-				95D8CF242411911A00EB322E /* QuizCreateViewController.swift in Sources */,
+				9544BEF224119B9500BFC412 /* VIewControllerInstantiator.swift in Sources */,
+				95D8CF242411911A00EB322E /* CreateQuizViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

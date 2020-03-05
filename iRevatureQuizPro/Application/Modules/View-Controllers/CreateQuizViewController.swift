@@ -1,5 +1,5 @@
 //
-//  EmployeeLoginViewController.swift
+//  QuizCreateViewController.swift
 //  iRevatureQuizPro
 //
 //  Created by A Guest on 3/5/20.
@@ -8,19 +8,24 @@
 
 import UIKit
 
-class EmployeeLoginViewController: BaseViewController {
-
-    @IBOutlet weak var emailTextField: UITextField!
-    @IBOutlet weak var passwordTextField: UITextField!
-    @IBOutlet weak var keepMeLoggedInSwitch: UISwitch!
+class CreateQuizViewController: BaseViewController {
+    @IBOutlet weak var quizNameTextField: UITextField!
+    @IBOutlet weak var tagsTextField: UITextField!
+    @IBOutlet weak var activityPointsTextField: UITextField!
+    @IBOutlet weak var durationTextField: UITextField!
+    @IBOutlet weak var maxNumberOfAttemptsTextField: UITextField!
+    @IBOutlet weak var levenOverrideSwitch: UISwitch!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         addGradientToView(view: self.view)
     }
-
-    @IBAction func signInButton(_ sender: Any) {
+    
+    @IBAction func optionsButton(_ sender: Any) {
+    }
+    
+    @IBAction func backButton(_ sender: Any) {
         let storyboard = UIStoryboard(name: "EventManagement", bundle: nil)
         let nextVC = storyboard.instantiateViewController(withIdentifier: "TabBarController_ID")
         nextVC.modalPresentationStyle = .fullScreen

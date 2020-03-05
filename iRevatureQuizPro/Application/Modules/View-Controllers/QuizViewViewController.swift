@@ -9,12 +9,24 @@
 import UIKit
 
 class QuizViewViewController: BaseViewController {
-
+    
+    @IBOutlet weak var quizSearchBar: UISearchBar!
+    @IBOutlet weak var managementTabBar: UITabBar!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         addGradientToView(view: self.view)
     }
 
+    @IBAction func optionsButton(_ sender: Any) {
 
+    }
+    
+    @IBAction func createQuizButton(_ sender: Any) {
+        let nextVC = CreateQuizViewController.instantiate(fromAppStoryboard: AppStoryboard.QuizManagement)
+        nextVC.modalPresentationStyle = .fullScreen
+        present(nextVC, animated: false, completion: nil)
+    }
+    
 }

@@ -15,9 +15,17 @@ class AttendeeSignUpViewController: BaseViewController {
         // Do any additional setup after loading the view.
         addGradientToView(view: self.view)
     }
-
+    
+    @IBAction func backButton(_ sender: Any) {
+        let nextVC = MainStoryBoardViewController.instantiate(fromAppStoryboard: AppStoryboard.Main)
+        nextVC.modalPresentationStyle = .fullScreen
+        present(nextVC, animated: false, completion: nil)
+    }
+    
     @IBAction func submitButton(_ sender: Any) {
         
     }
     
+    @IBAction func signUpWithLinkedInButton(_ sender: Any) {
+    }
 }
