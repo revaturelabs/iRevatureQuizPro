@@ -13,7 +13,8 @@ class CreateEventViewController: BaseViewController {
     @IBOutlet weak var eventInputTable: UITableView!
     
     let tableCellIdentifier: String = "CreateEventCell"
-    let inputNames: [String] = ["Event Code", "Event Name", "Location", "Date", "Quiz", "Ambassador", "Useless", "Useless", "Useless"]
+    let inputNames: [String] = ["Event Code", "Event Name", "Location", "Date", "Quiz", "Ambassador"]
+    let quizArray: [String] = ["Quiz 1", "Quiz 2", "Quiz 3", "Quiz 4"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,6 +35,12 @@ extension CreateEventViewController: UITableViewDataSource, UITableViewDelegate 
         let cell = tableView.dequeueReusableCell(withIdentifier: tableCellIdentifier, for: indexPath) as! CreateEventTableCell
         
         cell.setFieldName(name: inputNames[indexPath.row])
+        if inputNames[indexPath.row] == "Quiz" {
+            cell.textInput.pickerSelector(data: quizArray)
+        }
+        if inputNames[indexPath.row] == "Date" {
+            cell.textInput.dateSelector(dateFormat: "MMM dd, yyyy")
+        }
         
         return cell
     }
