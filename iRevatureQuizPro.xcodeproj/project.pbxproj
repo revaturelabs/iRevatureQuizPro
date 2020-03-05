@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		091D7CCC24116C0E004928D1 /* VIewControllerInstantiator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 091D7CCB24116C0E004928D1 /* VIewControllerInstantiator.swift */; };
 		0940FE6E2411611D006F0E52 /* MetatagTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0940FE6D2411611D006F0E52 /* MetatagTable.swift */; };
 		0940FE8124116145006F0E52 /* arm64-apple-ios.swiftdoc in Resources */ = {isa = PBXBuildFile; fileRef = 0940FE7224116145006F0E52 /* arm64-apple-ios.swiftdoc */; };
 		0940FE8224116145006F0E52 /* x86_64-apple-ios-simulator.swiftdoc in Resources */ = {isa = PBXBuildFile; fileRef = 0940FE7324116145006F0E52 /* x86_64-apple-ios-simulator.swiftdoc */; };
@@ -47,6 +48,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		091D7CCB24116C0E004928D1 /* VIewControllerInstantiator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VIewControllerInstantiator.swift; sourceTree = "<group>"; };
 		0940FE6D2411611D006F0E52 /* MetatagTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetatagTable.swift; sourceTree = "<group>"; };
 		0940FE7224116145006F0E52 /* arm64-apple-ios.swiftdoc */ = {isa = PBXFileReference; lastKnownFileType = file; path = "arm64-apple-ios.swiftdoc"; sourceTree = "<group>"; };
 		0940FE7324116145006F0E52 /* x86_64-apple-ios-simulator.swiftdoc */ = {isa = PBXFileReference; lastKnownFileType = file; path = "x86_64-apple-ios-simulator.swiftdoc"; sourceTree = "<group>"; };
@@ -365,6 +367,7 @@
 		09F2C06D240EE287004A6F47 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				091D7CCB24116C0E004928D1 /* VIewControllerInstantiator.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -545,6 +548,7 @@
 				0944AED8241036BF00688C9B /* UIColorExtension.swift in Sources */,
 				84F34FA42410437100D250BB /* iRevatureButton.swift in Sources */,
 				0944AEDE2410540400688C9B /* CreateEventViewController.swift in Sources */,
+				091D7CCC24116C0E004928D1 /* VIewControllerInstantiator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
