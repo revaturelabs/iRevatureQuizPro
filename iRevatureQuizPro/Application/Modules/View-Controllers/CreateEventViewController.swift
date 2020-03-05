@@ -38,6 +38,9 @@ extension CreateEventViewController: UITableViewDataSource, UITableViewDelegate 
         if inputNames[indexPath.row] == "Quiz" {
             cell.textInput.pickerSelector(data: quizArray)
         }
+        if inputNames[indexPath.row] == "Date" {
+            cell.textInput.dateSelector(dateFormat: "MMM dd, yyyy")
+        }
         
         return cell
     }
