@@ -117,7 +117,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="SOd-5w-1zI"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Quizzes" id="f4A-W9-Waa"/>
+                    <tabBarItem key="tabBarItem" title="Quizzes" image="doc.text" catalog="system" id="f4A-W9-Waa"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="quizSearchBar" destination="OB3-yk-dc0" id="EJu-Qv-Jii"/>
@@ -276,6 +276,7 @@
     </scenes>
     <resources>
         <image name="arrow.left" catalog="system" width="64" height="48"/>
+        <image name="doc.text" catalog="system" width="56" height="64"/>
         <image name="plus" catalog="system" width="64" height="56"/>
     </resources>
 </document>
