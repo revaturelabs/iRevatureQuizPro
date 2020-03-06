@@ -23,7 +23,7 @@ struct PEventAttendee: PersistenceTable {
         case email = "email"
         case phone = "phone"
         case major = "major"
-        case highestEduc = "highest_enducation"
+        case highestEduc = "highest_education"
         case workAuth = "work_authorization"
     }
     

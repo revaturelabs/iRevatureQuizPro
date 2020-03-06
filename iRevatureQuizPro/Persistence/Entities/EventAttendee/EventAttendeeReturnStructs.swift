@@ -21,7 +21,7 @@ extension PEventAttendee {
         var email: String
         var phone: Int
         var major: String
-        var highest_enducation: String
+        var highest_education: String
         var work_authorization: String
     }
     

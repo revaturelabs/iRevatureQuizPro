@@ -38,6 +38,8 @@
 		099150242412E2F800E73B62 /* EventAttendeeAccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 099150232412E2F800E73B62 /* EventAttendeeAccess.swift */; };
 		0991502C2412E69500E73B62 /* iRevatureQuizProTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0991502B2412E69500E73B62 /* iRevatureQuizProTests.swift */; };
 		099150362412E6E600E73B62 /* EventAttendeeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 099150352412E6E600E73B62 /* EventAttendeeTests.swift */; };
+		0991503A2412F7B900E73B62 /* EventAttendee.swift in Sources */ = {isa = PBXBuildFile; fileRef = 099150392412F7B900E73B62 /* EventAttendee.swift */; };
+		0991503D2412F8C300E73B62 /* EventAttendeePersistenceService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0991503C2412F8C300E73B62 /* EventAttendeePersistenceService.swift */; };
 		09A4679824119C8700A4BB90 /* DatabaseError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09A4679724119C8700A4BB90 /* DatabaseError.swift */; };
 		09A4679A2411A81100A4BB90 /* MetatagAccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09A467992411A81100A4BB90 /* MetatagAccess.swift */; };
 		09F2C045240EE1B5004A6F47 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F2C044240EE1B5004A6F47 /* AppDelegate.swift */; };
@@ -120,6 +122,8 @@
 		0991502B2412E69500E73B62 /* iRevatureQuizProTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iRevatureQuizProTests.swift; sourceTree = "<group>"; };
 		0991502D2412E69500E73B62 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		099150352412E6E600E73B62 /* EventAttendeeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventAttendeeTests.swift; sourceTree = "<group>"; };
+		099150392412F7B900E73B62 /* EventAttendee.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventAttendee.swift; sourceTree = "<group>"; };
+		0991503C2412F8C300E73B62 /* EventAttendeePersistenceService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventAttendeePersistenceService.swift; sourceTree = "<group>"; };
 		09A4679724119C8700A4BB90 /* DatabaseError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseError.swift; sourceTree = "<group>"; };
 		09A467992411A81100A4BB90 /* MetatagAccess.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetatagAccess.swift; sourceTree = "<group>"; };
 		09F2C041240EE1B5004A6F47 /* iRevatureQuizPro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iRevatureQuizPro.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -273,6 +277,14 @@
 			path = EventAttendee;
 			sourceTree = "<group>";
 		};
+		0991503B2412F87D00E73B62 /* EventAttendee */ = {
+			isa = PBXGroup;
+			children = (
+				0991503C2412F8C300E73B62 /* EventAttendeePersistenceService.swift */,
+			);
+			path = EventAttendee;
+			sourceTree = "<group>";
+		};
 		09F2C038240EE1B5004A6F47 = {
 			isa = PBXGroup;
 			children = (
@@ -408,6 +420,7 @@
 		09F2C064240EE287004A6F47 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				0991503B2412F87D00E73B62 /* EventAttendee */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -415,6 +428,7 @@
 		09F2C065240EE287004A6F47 /* Entities */ = {
 			isa = PBXGroup;
 			children = (
+				099150392412F7B900E73B62 /* EventAttendee.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -735,6 +749,7 @@
 				09525E102412D9AC0051D177 /* EventAttendeeStatements.swift in Sources */,
 				5F901D952411A1AB00986FF5 /* Organization.swift in Sources */,
 				09525E0E2412D4750051D177 /* TableProtocol.swift in Sources */,
+				0991503A2412F7B900E73B62 /* EventAttendee.swift in Sources */,
 				5F901D8224114E0C00986FF5 /* UITextFieldExtension.swift in Sources */,
 				95D8CF1424116B5B00EB322E /* MainStoryBoardController.swift in Sources */,
 				09F2C049240EE1B5004A6F47 /* ViewController.swift in Sources */,
@@ -758,6 +773,7 @@
 				5F901D7C2411445600986FF5 /* DatePicker.swift in Sources */,
 				0944AED8241036BF00688C9B /* UIColorExtension.swift in Sources */,
 				5F901D8C2411971700986FF5 /* TrainerLoginAPIResponse.swift in Sources */,
+				0991503D2412F8C300E73B62 /* EventAttendeePersistenceService.swift in Sources */,
 				5F901D912411A13700986FF5 /* CurrentSystemRole.swift in Sources */,
 				84F34FA42410437100D250BB /* iRevatureButton.swift in Sources */,
 				090A81402411969C008D7A12 /* DatabaseInteractions.swift in Sources */,
