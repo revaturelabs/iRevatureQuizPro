@@ -11,7 +11,9 @@ import UIKit
 class MainStoryBoardViewController: BaseViewController {
      
     @IBAction func memberLoginButton(_ sender: Any) {
-        present(EmployeeLoginViewController.instantiate(fromAppStoryboard: AppStoryboard.EmployeeLogin),animated: false,completion: nil)
+        let nextVC = EmployeeLoginViewController.instantiate(fromAppStoryboard: AppStoryboard.EmployeeLogin)
+        nextVC.modalPresentationStyle = .fullScreen
+        present(nextVC, animated: false, completion: nil)
         
 
     }
