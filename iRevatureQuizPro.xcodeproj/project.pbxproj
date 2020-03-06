@@ -195,6 +195,7 @@
 			path = EasySQLite.swiftmodule;
 			sourceTree = "<group>";
 		};
+
 		0944AED4241031CF00688C9B /* CreateEvent */ = {
 			isa = PBXGroup;
 			children = (
@@ -202,6 +203,7 @@
 			path = CreateEvent;
 			sourceTree = "<group>";
 		};
+
 		09F2C038240EE1B5004A6F47 = {
 			isa = PBXGroup;
 			children = (
@@ -290,7 +292,6 @@
 		09F2C05F240EE287004A6F47 /* Storyboard */ = {
 			isa = PBXGroup;
 			children = (
-				0944AED4241031CF00688C9B /* CreateEvent */,
 				09F2C073240EE29F004A6F47 /* Launch */,
 				09F2C072240EE296004A6F47 /* Main */,
 				09F2C060240EE287004A6F47 /* Common */,
