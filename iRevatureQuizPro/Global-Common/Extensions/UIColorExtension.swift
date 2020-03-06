@@ -12,7 +12,6 @@ extension UIColor {
     //Shades
     static let revatureLightGray = UIColor(red: 153/255, green: 153/255, blue: 153/255, alpha: 1)
     static let revatureGray = UIColor(red: 71/255, green: 76/255, blue: 85/255, alpha: 1)
-    static let revatureBlack = UIColor(red: 71/255, green: 76/255, blue: 85/255, alpha: 1)
     
     //Reds
     static let revatureYellow = UIColor(red: 241/255, green: 172/255, blue: 73/255, alpha: 1)
