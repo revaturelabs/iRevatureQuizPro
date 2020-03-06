@@ -9,9 +9,9 @@
 import EasySQLite
 
 extension Events{
-    //=====================================
+//=====================================
     //Select All Events Rows Statement
-    //=====================================
+//=====================================
     static func getAllStatement() -> ESLSelectStatement {
         var select = ESLSelectStatement()
         select.getAllColumns(fromTable: Events.table)
@@ -19,9 +19,9 @@ extension Events{
         return select
     }
     
-    //=====================================
+//=====================================
     //Select Events Row By Event Code Statement
-    //=====================================
+//=====================================
     static func getByStatement(eventCode: String) -> ESLSelectStatement {
         //Select Statement
         var select = ESLSelectStatement()
@@ -36,9 +36,9 @@ extension Events{
         return select
     }
     
-    //=====================================
+//=====================================
     //Select Events Row by Ambassador Statement
-    //=====================================
+//=====================================
     static func getByStatement(ambassador: String) -> ESLSelectStatement {
         //Select Statement
         var select = ESLSelectStatement()
@@ -53,9 +53,9 @@ extension Events{
         return select
     }
     
-    //=====================================
+//=====================================
     //Select Events Row by Quiz ID Statement
-    //=====================================
+//=====================================
        static func getByStatement(quizID: Int) -> ESLSelectStatement {
            //Select Statement
            var select = ESLSelectStatement()
@@ -70,9 +70,9 @@ extension Events{
            return select
        }
     
-    //=====================================
+//=====================================
     //Insert Row Statement
-    //=====================================
+//=====================================
     static func insertStatement(eventName: String, location: String, eventCode: String, ambassadorEmail: String, date: String) -> ESLInsertStatement {
         var insert = ESLInsertStatement(table: Events.table)
         insert.specifyValue(columnName: Events.ColumnName.eventName.rawValue, columnValue: eventName)
@@ -84,9 +84,9 @@ extension Events{
         return insert
     }
     
-    //=====================================
+//=====================================
     //Delete Row By Event Code Statement
-    //=====================================
+//=====================================
     static func deleteByStatement(eventCode: String) -> ESLDeleteStatement {
         //Delete Statement
         var delete = ESLDeleteStatement(table: Events.table)
@@ -100,9 +100,9 @@ extension Events{
         return delete
     }
     
-    //=====================================
+//=====================================
     //Delete Row By Quiz ID Statement
-    //=====================================
+//=====================================
     static func deleteByStatement(quizID: Int) -> ESLDeleteStatement {
         //Delete Statement
         var delete = ESLDeleteStatement(table: Events.table)

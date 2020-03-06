@@ -26,7 +26,7 @@ struct Events: PersistenceTable {
         case date = "date"
     }
     
-    //Table
+    //Creating the Table
     static var table: ESLTable {
         var table = ESLTable(tableName: tableName)
         table.addColumn(columnName: ColumnName.eventName.rawValue, dataType: .CHAR  , constraints: .NOTNULL)
