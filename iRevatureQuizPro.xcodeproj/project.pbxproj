@@ -33,6 +33,11 @@
 		0944AEDE2410540400688C9B /* CreateEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0944AEDD2410540400688C9B /* CreateEventViewController.swift */; };
 		09525E0C2412D3430051D177 /* EventAttendeeTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09525E0B2412D3430051D177 /* EventAttendeeTable.swift */; };
 		09525E0E2412D4750051D177 /* TableProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09525E0D2412D4750051D177 /* TableProtocol.swift */; };
+		09525E102412D9AC0051D177 /* EventAttendeeStatements.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09525E0F2412D9AC0051D177 /* EventAttendeeStatements.swift */; };
+		099150222412E21D00E73B62 /* EventAttendeeReturnStructs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 099150212412E21D00E73B62 /* EventAttendeeReturnStructs.swift */; };
+		099150242412E2F800E73B62 /* EventAttendeeAccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 099150232412E2F800E73B62 /* EventAttendeeAccess.swift */; };
+		0991502C2412E69500E73B62 /* iRevatureQuizProTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0991502B2412E69500E73B62 /* iRevatureQuizProTests.swift */; };
+		099150362412E6E600E73B62 /* EventAttendeeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 099150352412E6E600E73B62 /* EventAttendeeTests.swift */; };
 		09A4679824119C8700A4BB90 /* DatabaseError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09A4679724119C8700A4BB90 /* DatabaseError.swift */; };
 		09A4679A2411A81100A4BB90 /* MetatagAccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09A467992411A81100A4BB90 /* MetatagAccess.swift */; };
 		09F2C045240EE1B5004A6F47 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F2C044240EE1B5004A6F47 /* AppDelegate.swift */; };
@@ -65,8 +70,21 @@
 		95D8CF22241190E900EB322E /* QuizViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D8CF21241190E900EB322E /* QuizViewViewController.swift */; };
 		95D8CF242411911A00EB322E /* CreateQuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D8CF232411911A00EB322E /* CreateQuizViewController.swift */; };
 		D540960D2411538E00791C7E /* RevatureTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = D540960C2411538E00791C7E /* RevatureTextField.swift */; };
+		D54096552412DFE500791C7E /* EventTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D54096542412DFE500791C7E /* EventTable.swift */; };
+		D54096572412E2AB00791C7E /* EventStatements.swift in Sources */ = {isa = PBXBuildFile; fileRef = D54096562412E2AB00791C7E /* EventStatements.swift */; };
+		D54096592412E42100791C7E /* EventReturnStructs.swift in Sources */ = {isa = PBXBuildFile; fileRef = D54096582412E42100791C7E /* EventReturnStructs.swift */; };
 		D5F4B4AC241033770051F4B8 /* EmployeeLogin.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D5F4B4AB241033770051F4B8 /* EmployeeLogin.storyboard */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		0991502E2412E69500E73B62 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 09F2C039240EE1B5004A6F47 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 09F2C040240EE1B5004A6F47;
+			remoteInfo = iRevatureQuizPro;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		090A813B24119492008D7A12 /* MetatagStatements.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetatagStatements.swift; sourceTree = "<group>"; };
@@ -95,6 +113,13 @@
 		0944AEDD2410540400688C9B /* CreateEventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateEventViewController.swift; sourceTree = "<group>"; };
 		09525E0B2412D3430051D177 /* EventAttendeeTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventAttendeeTable.swift; sourceTree = "<group>"; };
 		09525E0D2412D4750051D177 /* TableProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableProtocol.swift; sourceTree = "<group>"; };
+		09525E0F2412D9AC0051D177 /* EventAttendeeStatements.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventAttendeeStatements.swift; sourceTree = "<group>"; };
+		099150212412E21D00E73B62 /* EventAttendeeReturnStructs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventAttendeeReturnStructs.swift; sourceTree = "<group>"; };
+		099150232412E2F800E73B62 /* EventAttendeeAccess.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventAttendeeAccess.swift; sourceTree = "<group>"; };
+		099150292412E69500E73B62 /* iRevatureQuizProTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iRevatureQuizProTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0991502B2412E69500E73B62 /* iRevatureQuizProTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iRevatureQuizProTests.swift; sourceTree = "<group>"; };
+		0991502D2412E69500E73B62 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		099150352412E6E600E73B62 /* EventAttendeeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventAttendeeTests.swift; sourceTree = "<group>"; };
 		09A4679724119C8700A4BB90 /* DatabaseError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseError.swift; sourceTree = "<group>"; };
 		09A467992411A81100A4BB90 /* MetatagAccess.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetatagAccess.swift; sourceTree = "<group>"; };
 		09F2C041240EE1B5004A6F47 /* iRevatureQuizPro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iRevatureQuizPro.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -129,10 +154,20 @@
 		95D8CF21241190E900EB322E /* QuizViewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizViewViewController.swift; sourceTree = "<group>"; };
 		95D8CF232411911A00EB322E /* CreateQuizViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateQuizViewController.swift; sourceTree = "<group>"; };
 		D540960C2411538E00791C7E /* RevatureTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RevatureTextField.swift; sourceTree = "<group>"; };
+		D54096542412DFE500791C7E /* EventTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = EventTable.swift; path = iRevatureQuizPro/Persistence/Entities/Events/EventTable.swift; sourceTree = SOURCE_ROOT; };
+		D54096562412E2AB00791C7E /* EventStatements.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = EventStatements.swift; path = iRevatureQuizPro/Persistence/Entities/Events/EventStatements.swift; sourceTree = SOURCE_ROOT; };
+		D54096582412E42100791C7E /* EventReturnStructs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = EventReturnStructs.swift; path = iRevatureQuizPro/Persistence/Entities/Events/EventReturnStructs.swift; sourceTree = SOURCE_ROOT; };
 		D5F4B4AB241033770051F4B8 /* EmployeeLogin.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = EmployeeLogin.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		099150262412E69500E73B62 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		09F2C03E240EE1B5004A6F47 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -150,6 +185,9 @@
 				0940FE6D2411611D006F0E52 /* MetatagTable.swift */,
 				090A813B24119492008D7A12 /* MetatagStatements.swift */,
 				090A813D241195F5008D7A12 /* MetatagReturnStructs.swift */,
+				D54096542412DFE500791C7E /* EventTable.swift */,
+				D54096562412E2AB00791C7E /* EventStatements.swift */,
+				D54096582412E42100791C7E /* EventReturnStructs.swift */,
 			);
 			path = Metatag;
 			sourceTree = "<group>";
@@ -203,6 +241,34 @@
 			isa = PBXGroup;
 			children = (
 				09525E0B2412D3430051D177 /* EventAttendeeTable.swift */,
+				09525E0F2412D9AC0051D177 /* EventAttendeeStatements.swift */,
+				099150212412E21D00E73B62 /* EventAttendeeReturnStructs.swift */,
+			);
+			path = EventAttendee;
+			sourceTree = "<group>";
+		};
+		0991502A2412E69500E73B62 /* iRevatureQuizProTests */ = {
+			isa = PBXGroup;
+			children = (
+				099150332412E6A700E73B62 /* Persistence */,
+				0991502B2412E69500E73B62 /* iRevatureQuizProTests.swift */,
+				0991502D2412E69500E73B62 /* Info.plist */,
+			);
+			path = iRevatureQuizProTests;
+			sourceTree = "<group>";
+		};
+		099150332412E6A700E73B62 /* Persistence */ = {
+			isa = PBXGroup;
+			children = (
+				099150342412E6AF00E73B62 /* EventAttendee */,
+			);
+			path = Persistence;
+			sourceTree = "<group>";
+		};
+		099150342412E6AF00E73B62 /* EventAttendee */ = {
+			isa = PBXGroup;
+			children = (
+				099150352412E6E600E73B62 /* EventAttendeeTests.swift */,
 			);
 			path = EventAttendee;
 			sourceTree = "<group>";
@@ -212,6 +278,7 @@
 			children = (
 				0940FE6F24116145006F0E52 /* StaticLibraries */,
 				09F2C043240EE1B5004A6F47 /* iRevatureQuizPro */,
+				0991502A2412E69500E73B62 /* iRevatureQuizProTests */,
 				09F2C042240EE1B5004A6F47 /* Products */,
 				0940FE2924116019006F0E52 /* Frameworks */,
 			);
@@ -221,6 +288,7 @@
 			isa = PBXGroup;
 			children = (
 				09F2C041240EE1B5004A6F47 /* iRevatureQuizPro.app */,
+				099150292412E69500E73B62 /* iRevatureQuizProTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -282,6 +350,7 @@
 			isa = PBXGroup;
 			children = (
 				09A467992411A81100A4BB90 /* MetatagAccess.swift */,
+				099150232412E2F800E73B62 /* EventAttendeeAccess.swift */,
 			);
 			path = "Data-Access";
 			sourceTree = "<group>";
@@ -526,6 +595,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		099150282412E69500E73B62 /* iRevatureQuizProTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 099150302412E69500E73B62 /* Build configuration list for PBXNativeTarget "iRevatureQuizProTests" */;
+			buildPhases = (
+				099150252412E69500E73B62 /* Sources */,
+				099150262412E69500E73B62 /* Frameworks */,
+				099150272412E69500E73B62 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0991502F2412E69500E73B62 /* PBXTargetDependency */,
+			);
+			name = iRevatureQuizProTests;
+			productName = iRevatureQuizProTests;
+			productReference = 099150292412E69500E73B62 /* iRevatureQuizProTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		09F2C040240EE1B5004A6F47 /* iRevatureQuizPro */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 09F2C055240EE1B9004A6F47 /* Build configuration list for PBXNativeTarget "iRevatureQuizPro" */;
@@ -553,6 +640,10 @@
 				LastUpgradeCheck = 1130;
 				ORGANIZATIONNAME = revature;
 				TargetAttributes = {
+					099150282412E69500E73B62 = {
+						CreatedOnToolsVersion = 11.3.1;
+						TestTargetID = 09F2C040240EE1B5004A6F47;
+					};
 					09F2C040240EE1B5004A6F47 = {
 						CreatedOnToolsVersion = 11.3.1;
 					};
@@ -572,11 +663,19 @@
 			projectRoot = "";
 			targets = (
 				09F2C040240EE1B5004A6F47 /* iRevatureQuizPro */,
+				099150282412E69500E73B62 /* iRevatureQuizProTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		099150272412E69500E73B62 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		09F2C03F240EE1B5004A6F47 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -609,18 +708,31 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		099150252412E69500E73B62 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				099150362412E6E600E73B62 /* EventAttendeeTests.swift in Sources */,
+				0991502C2412E69500E73B62 /* iRevatureQuizProTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		09F2C03D240EE1B5004A6F47 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				0944AEDA2410419100688C9B /* RevatureTableViewCell.swift in Sources */,
 				84DB87D024114A1000958E75 /* BaseViewController.swift in Sources */,
+				099150242412E2F800E73B62 /* EventAttendeeAccess.swift in Sources */,
 				09A4679A2411A81100A4BB90 /* MetatagAccess.swift in Sources */,
+				099150222412E21D00E73B62 /* EventAttendeeReturnStructs.swift in Sources */,
 				09525E0C2412D3430051D177 /* EventAttendeeTable.swift in Sources */,
 				5F901D8224114E0C00986FF5 /* UITextFieldExtension.swift in Sources */,
+				D54096592412E42100791C7E /* EventReturnStructs.swift in Sources */,
 				09A4679824119C8700A4BB90 /* DatabaseError.swift in Sources */,
 				090A813E241195F5008D7A12 /* MetatagReturnStructs.swift in Sources */,
 				090A813C24119492008D7A12 /* MetatagStatements.swift in Sources */,
+				09525E102412D9AC0051D177 /* EventAttendeeStatements.swift in Sources */,
 				5F901D952411A1AB00986FF5 /* Organization.swift in Sources */,
 				09525E0E2412D4750051D177 /* TableProtocol.swift in Sources */,
 				5F901D8224114E0C00986FF5 /* UITextFieldExtension.swift in Sources */,
@@ -639,7 +751,9 @@
 				09F2C047240EE1B5004A6F47 /* SceneDelegate.swift in Sources */,
 				95D8CF22241190E900EB322E /* QuizViewViewController.swift in Sources */,
 				5F901D7E2411485100986FF5 /* OrangeToolbar.swift in Sources */,
+				D54096572412E2AB00791C7E /* EventStatements.swift in Sources */,
 				D540960D2411538E00791C7E /* RevatureTextField.swift in Sources */,
+				D54096552412DFE500791C7E /* EventTable.swift in Sources */,
 				5F901D932411A15200986FF5 /* OrgSystemUser.swift in Sources */,
 				5F901D7C2411445600986FF5 /* DatePicker.swift in Sources */,
 				0944AED8241036BF00688C9B /* UIColorExtension.swift in Sources */,
@@ -654,6 +768,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0991502F2412E69500E73B62 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 09F2C040240EE1B5004A6F47 /* iRevatureQuizPro */;
+			targetProxy = 0991502E2412E69500E73B62 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		09F2C04A240EE1B5004A6F47 /* Main.storyboard */ = {
@@ -675,6 +797,50 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		099150312412E69500E73B62 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = iRevatureQuizProTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/StaticLibraries/EasySQLite";
+				PRODUCT_BUNDLE_IDENTIFIER = com.revature.iRevatureQuizProTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_INCLUDE_PATHS = "$(PROJECT_DIR)/StaticLibraries/EasySQLite";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/iRevatureQuizPro.app/iRevatureQuizPro";
+			};
+			name = Debug;
+		};
+		099150322412E69500E73B62 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = iRevatureQuizProTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/StaticLibraries/EasySQLite";
+				PRODUCT_BUNDLE_IDENTIFIER = com.revature.iRevatureQuizProTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_INCLUDE_PATHS = "$(PROJECT_DIR)/StaticLibraries/EasySQLite";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/iRevatureQuizPro.app/iRevatureQuizPro";
+			};
+			name = Release;
+		};
 		09F2C053240EE1B9004A6F47 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -834,6 +1000,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		099150302412E69500E73B62 /* Build configuration list for PBXNativeTarget "iRevatureQuizProTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				099150312412E69500E73B62 /* Debug */,
+				099150322412E69500E73B62 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		09F2C03C240EE1B5004A6F47 /* Build configuration list for PBXProject "iRevatureQuizPro" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

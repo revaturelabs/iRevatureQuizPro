@@ -9,7 +9,7 @@
 import EasySQLite
 
 //=====================================
-    //Metatag Table information
+    //Event Attendee Table information
 //=====================================
 struct PEventAttendee: PersistenceTable {
     //Table's name
@@ -31,7 +31,13 @@ struct PEventAttendee: PersistenceTable {
     static var table: ESLTable {
         var table = ESLTable(tableName: tableName)
         table.addColumn(columnName: ColumnName.id.rawValue, dataType: .INTEGER, constraints: .PRIMARYKEY, .AUTOINCREMENT)
-        //table.addColumn(columnName: ColumnName.name.rawValue, dataType: .CHAR, constraints: .UNIQUE, .NOTNULL)
+        table.addColumn(columnName: ColumnName.firstName.rawValue, dataType: .CHAR, constraints: .NOTNULL)
+        table.addColumn(columnName: ColumnName.lastName.rawValue, dataType: .CHAR, constraints: .NOTNULL)
+        table.addColumn(columnName: ColumnName.email.rawValue, dataType: .CHAR, constraints: .NOTNULL, .UNIQUE)
+        table.addColumn(columnName: ColumnName.phone.rawValue, dataType: .INT, constraints: .NOTNULL)
+        table.addColumn(columnName: ColumnName.major.rawValue, dataType: .CHAR, constraints: .NOTNULL)
+        table.addColumn(columnName: ColumnName.highestEduc.rawValue, dataType: .CHAR, constraints: .NOTNULL)
+        table.addColumn(columnName: ColumnName.workAuth.rawValue, dataType: .CHAR, constraints: .NOTNULL)
         
         return table
     }
