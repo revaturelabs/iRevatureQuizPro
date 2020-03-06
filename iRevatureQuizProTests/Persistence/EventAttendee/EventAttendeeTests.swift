@@ -47,7 +47,7 @@ class EventAttendeeStatementTests: XCTestCase {
         PEventAttendee.insert(firstName: "first", lastName: "last", email: "email2@email.com", phoneNumber: 1234567890, major: "Programming", highestEducation: "College", worthAuthority: "US Citizen")
         PEventAttendee.insert(firstName: "first", lastName: "last", email: "email3@email.com", phoneNumber: 1234567890, major: "Programming", highestEducation: "College", worthAuthority: "US Citizen")
         
-        XCTAssertNotNil(PEventAttendee.getBy(id: 2))
+        XCTAssertEqual(PEventAttendee.getBy(id: 2)?.email, "email2@email.com")
     }
     
 
