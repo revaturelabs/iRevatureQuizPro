@@ -14,7 +14,7 @@ class CreateQuizViewController: BaseViewController {
     @IBOutlet weak var activityPointsTextField: UITextField!
     @IBOutlet weak var durationTextField: UITextField!
     @IBOutlet weak var maxNumberOfAttemptsTextField: UITextField!
-    @IBOutlet weak var levenOverrideSwitch: UISwitch!
+    @IBOutlet weak var levelOverrideSwitch: UISwitch!
     
     override func viewDidLoad() {
         super.viewDidLoad()
