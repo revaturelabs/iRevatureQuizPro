@@ -10,7 +10,6 @@
 		090A813C24119492008D7A12 /* MetatagStatements.swift in Sources */ = {isa = PBXBuildFile; fileRef = 090A813B24119492008D7A12 /* MetatagStatements.swift */; };
 		090A813E241195F5008D7A12 /* MetatagReturnStructs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 090A813D241195F5008D7A12 /* MetatagReturnStructs.swift */; };
 		090A81402411969C008D7A12 /* DatabaseInteractions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 090A813F2411969C008D7A12 /* DatabaseInteractions.swift */; };
-		091D7CCC24116C0E004928D1 /* VIewControllerInstantiator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 091D7CCB24116C0E004928D1 /* VIewControllerInstantiator.swift */; };
 		091DC3972411972300C5D577 /* DatabaseInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 091DC3962411972300C5D577 /* DatabaseInformation.swift */; };
 		0940FE6E2411611D006F0E52 /* MetatagTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0940FE6D2411611D006F0E52 /* MetatagTable.swift */; };
 		0940FE8124116145006F0E52 /* arm64-apple-ios.swiftdoc in Resources */ = {isa = PBXBuildFile; fileRef = 0940FE7224116145006F0E52 /* arm64-apple-ios.swiftdoc */; };
@@ -28,7 +27,6 @@
 		0940FE8D24116145006F0E52 /* armv7-apple-ios.swiftdoc in Resources */ = {isa = PBXBuildFile; fileRef = 0940FE7E24116145006F0E52 /* armv7-apple-ios.swiftdoc */; };
 		0940FE8E24116145006F0E52 /* armv7.swiftmodule in Resources */ = {isa = PBXBuildFile; fileRef = 0940FE7F24116145006F0E52 /* armv7.swiftmodule */; };
 		0940FE8F24116145006F0E52 /* libEasySQLite.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0940FE8024116145006F0E52 /* libEasySQLite.a */; };
-		0944AED62410369000688C9B /* CreateEvent.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0944AED52410369000688C9B /* CreateEvent.storyboard */; };
 		0944AED8241036BF00688C9B /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0944AED7241036BF00688C9B /* UIColorExtension.swift */; };
 		0944AEDA2410419100688C9B /* RevatureTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0944AED92410419100688C9B /* RevatureTableViewCell.swift */; };
 		0944AEDC241041CE00688C9B /* CreateEventCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0944AEDB241041CE00688C9B /* CreateEventCell.swift */; };
@@ -72,7 +70,6 @@
 		090A813B24119492008D7A12 /* MetatagStatements.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetatagStatements.swift; sourceTree = "<group>"; };
 		090A813D241195F5008D7A12 /* MetatagReturnStructs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetatagReturnStructs.swift; sourceTree = "<group>"; };
 		090A813F2411969C008D7A12 /* DatabaseInteractions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseInteractions.swift; sourceTree = "<group>"; };
-		091D7CCB24116C0E004928D1 /* VIewControllerInstantiator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VIewControllerInstantiator.swift; sourceTree = "<group>"; };
 		091DC3962411972300C5D577 /* DatabaseInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseInformation.swift; sourceTree = "<group>"; };
 		0940FE6D2411611D006F0E52 /* MetatagTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetatagTable.swift; sourceTree = "<group>"; };
 		0940FE7224116145006F0E52 /* arm64-apple-ios.swiftdoc */ = {isa = PBXFileReference; lastKnownFileType = file; path = "arm64-apple-ios.swiftdoc"; sourceTree = "<group>"; };
@@ -90,7 +87,6 @@
 		0940FE7E24116145006F0E52 /* armv7-apple-ios.swiftdoc */ = {isa = PBXFileReference; lastKnownFileType = file; path = "armv7-apple-ios.swiftdoc"; sourceTree = "<group>"; };
 		0940FE7F24116145006F0E52 /* armv7.swiftmodule */ = {isa = PBXFileReference; lastKnownFileType = file; path = armv7.swiftmodule; sourceTree = "<group>"; };
 		0940FE8024116145006F0E52 /* libEasySQLite.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libEasySQLite.a; sourceTree = "<group>"; };
-		0944AED52410369000688C9B /* CreateEvent.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CreateEvent.storyboard; sourceTree = "<group>"; };
 		0944AED7241036BF00688C9B /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		0944AED92410419100688C9B /* RevatureTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RevatureTableViewCell.swift; sourceTree = "<group>"; };
 		0944AEDB241041CE00688C9B /* CreateEventCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateEventCell.swift; sourceTree = "<group>"; };
@@ -202,7 +198,6 @@
 		0944AED4241031CF00688C9B /* CreateEvent */ = {
 			isa = PBXGroup;
 			children = (
-				0944AED52410369000688C9B /* CreateEvent.storyboard */,
 			);
 			path = CreateEvent;
 			sourceTree = "<group>";
@@ -592,7 +587,6 @@
 				0940FE8924116145006F0E52 /* arm64-apple-ios.swiftmodule in Resources */,
 				09F2C04C240EE1B5004A6F47 /* Main.storyboard in Resources */,
 				0940FE8E24116145006F0E52 /* armv7.swiftmodule in Resources */,
-				0944AED62410369000688C9B /* CreateEvent.storyboard in Resources */,
 				0940FE8124116145006F0E52 /* arm64-apple-ios.swiftdoc in Resources */,
 				95D8CF1A24118B2D00EB322E /* AttendeeSignUp.storyboard in Resources */,
 				0940FE8424116145006F0E52 /* x86_64.swiftdoc in Resources */,
