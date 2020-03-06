@@ -31,4 +31,11 @@ class CreateQuizViewController: BaseViewController {
         present(nextVC,animated: false, completion: nil)
     }
     
+    @IBAction func submitQuizButtton(_ sender: Any) {
+        let alert = UIAlertController(title: "Create Quiz", message: "Feature coming soon", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Acknowledge", style: .default, handler: nil))
+        self.present(alert, animated: true)
+        
+    }
+    
 }
