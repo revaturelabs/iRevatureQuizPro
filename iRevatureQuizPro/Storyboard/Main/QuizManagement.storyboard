@@ -51,6 +51,9 @@
                                                 <state key="normal" title="...">
                                                     <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="optionsButton:" destination="pZa-u9-IKp" eventType="touchDown" id="s4D-NS-EYV"/>
+                                                </connections>
                                             </button>
                                             <connections>
                                                 <action selector="optionsButton:" destination="pZa-u9-IKp" id="OZq-oK-X9d"/>
