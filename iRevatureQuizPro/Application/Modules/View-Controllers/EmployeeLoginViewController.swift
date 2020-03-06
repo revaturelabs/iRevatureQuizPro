@@ -27,6 +27,11 @@ class EmployeeLoginViewController: BaseViewController {
     }
     
     @IBAction func signInButton(_ sender: Any) {
+        
+        TrainerLoginAccess.getUserLogin(email:"testuday@yopmail.com", password: "SaiP0wer@Uda", completionHandler: { (user) in
+            print("login")
+        })
+        
         let storyboard = UIStoryboard(name: "EventManagement", bundle: nil)
         let nextVC = storyboard.instantiateViewController(withIdentifier: "TabBarController_ID")
         nextVC.modalPresentationStyle = .fullScreen

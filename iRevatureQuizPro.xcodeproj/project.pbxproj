@@ -10,7 +10,6 @@
 		090A813C24119492008D7A12 /* MetatagStatements.swift in Sources */ = {isa = PBXBuildFile; fileRef = 090A813B24119492008D7A12 /* MetatagStatements.swift */; };
 		090A813E241195F5008D7A12 /* MetatagReturnStructs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 090A813D241195F5008D7A12 /* MetatagReturnStructs.swift */; };
 		090A81402411969C008D7A12 /* DatabaseInteractions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 090A813F2411969C008D7A12 /* DatabaseInteractions.swift */; };
-		091D7CCC24116C0E004928D1 /* VIewControllerInstantiator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 091D7CCB24116C0E004928D1 /* VIewControllerInstantiator.swift */; };
 		091DC3972411972300C5D577 /* DatabaseInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 091DC3962411972300C5D577 /* DatabaseInformation.swift */; };
 		0940FE6E2411611D006F0E52 /* MetatagTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0940FE6D2411611D006F0E52 /* MetatagTable.swift */; };
 		0940FE8124116145006F0E52 /* arm64-apple-ios.swiftdoc in Resources */ = {isa = PBXBuildFile; fileRef = 0940FE7224116145006F0E52 /* arm64-apple-ios.swiftdoc */; };
@@ -28,7 +27,6 @@
 		0940FE8D24116145006F0E52 /* armv7-apple-ios.swiftdoc in Resources */ = {isa = PBXBuildFile; fileRef = 0940FE7E24116145006F0E52 /* armv7-apple-ios.swiftdoc */; };
 		0940FE8E24116145006F0E52 /* armv7.swiftmodule in Resources */ = {isa = PBXBuildFile; fileRef = 0940FE7F24116145006F0E52 /* armv7.swiftmodule */; };
 		0940FE8F24116145006F0E52 /* libEasySQLite.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0940FE8024116145006F0E52 /* libEasySQLite.a */; };
-		0944AED62410369000688C9B /* CreateEvent.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0944AED52410369000688C9B /* CreateEvent.storyboard */; };
 		0944AED8241036BF00688C9B /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0944AED7241036BF00688C9B /* UIColorExtension.swift */; };
 		0944AEDA2410419100688C9B /* RevatureTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0944AED92410419100688C9B /* RevatureTableViewCell.swift */; };
 		0944AEDC241041CE00688C9B /* CreateEventCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0944AEDB241041CE00688C9B /* CreateEventCell.swift */; };
@@ -42,6 +40,9 @@
 		09F2C04E240EE1B9004A6F47 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 09F2C04D240EE1B9004A6F47 /* Assets.xcassets */; };
 		09F2C051240EE1B9004A6F47 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09F2C04F240EE1B9004A6F47 /* LaunchScreen.storyboard */; };
 		5F897EBF24129481001B5C2B /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 5F897EBE24129481001B5C2B /* Alamofire */; };
+		5F897EE22412B749001B5C2B /* TrainerLoginAccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F897EE12412B749001B5C2B /* TrainerLoginAccess.swift */; };
+		5F897EE42412BE36001B5C2B /* TrainerLoginInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F897EE32412BE36001B5C2B /* TrainerLoginInfo.swift */; };
+		5F897EE92412EA92001B5C2B /* StatusCodeMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F897EE82412EA92001B5C2B /* StatusCodeMessage.swift */; };
 		5F901D7C2411445600986FF5 /* DatePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F901D7B2411445600986FF5 /* DatePicker.swift */; };
 		5F901D7E2411485100986FF5 /* OrangeToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F901D7D2411485100986FF5 /* OrangeToolbar.swift */; };
 		5F901D8024114A5200986FF5 /* DropdownPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F901D7F24114A5200986FF5 /* DropdownPicker.swift */; };
@@ -49,8 +50,6 @@
 		5F901D8C2411971700986FF5 /* TrainerLoginAPIResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F901D8B2411971700986FF5 /* TrainerLoginAPIResponse.swift */; };
 		5F901D8F2411A11700986FF5 /* TrainerLoginData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F901D8E2411A11700986FF5 /* TrainerLoginData.swift */; };
 		5F901D912411A13700986FF5 /* CurrentSystemRole.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F901D902411A13700986FF5 /* CurrentSystemRole.swift */; };
-		5F901D932411A15200986FF5 /* OrgSystemUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F901D922411A15200986FF5 /* OrgSystemUser.swift */; };
-		5F901D952411A1AB00986FF5 /* Organization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F901D942411A1AB00986FF5 /* Organization.swift */; };
 		84DB87CC241049EB00958E75 /* StartQuiz.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84DB87CB241049EB00958E75 /* StartQuiz.storyboard */; };
 		84DB87D024114A1000958E75 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DB87CF24114A1000958E75 /* BaseViewController.swift */; };
 		84DB87D4241159C300958E75 /* StartQuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DB87D3241159C300958E75 /* StartQuizViewController.swift */; };
@@ -73,7 +72,6 @@
 		090A813B24119492008D7A12 /* MetatagStatements.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetatagStatements.swift; sourceTree = "<group>"; };
 		090A813D241195F5008D7A12 /* MetatagReturnStructs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetatagReturnStructs.swift; sourceTree = "<group>"; };
 		090A813F2411969C008D7A12 /* DatabaseInteractions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseInteractions.swift; sourceTree = "<group>"; };
-		091D7CCB24116C0E004928D1 /* VIewControllerInstantiator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VIewControllerInstantiator.swift; sourceTree = "<group>"; };
 		091DC3962411972300C5D577 /* DatabaseInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseInformation.swift; sourceTree = "<group>"; };
 		0940FE6D2411611D006F0E52 /* MetatagTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetatagTable.swift; sourceTree = "<group>"; };
 		0940FE7224116145006F0E52 /* arm64-apple-ios.swiftdoc */ = {isa = PBXFileReference; lastKnownFileType = file; path = "arm64-apple-ios.swiftdoc"; sourceTree = "<group>"; };
@@ -91,7 +89,6 @@
 		0940FE7E24116145006F0E52 /* armv7-apple-ios.swiftdoc */ = {isa = PBXFileReference; lastKnownFileType = file; path = "armv7-apple-ios.swiftdoc"; sourceTree = "<group>"; };
 		0940FE7F24116145006F0E52 /* armv7.swiftmodule */ = {isa = PBXFileReference; lastKnownFileType = file; path = armv7.swiftmodule; sourceTree = "<group>"; };
 		0940FE8024116145006F0E52 /* libEasySQLite.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libEasySQLite.a; sourceTree = "<group>"; };
-		0944AED52410369000688C9B /* CreateEvent.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CreateEvent.storyboard; sourceTree = "<group>"; };
 		0944AED7241036BF00688C9B /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		0944AED92410419100688C9B /* RevatureTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RevatureTableViewCell.swift; sourceTree = "<group>"; };
 		0944AEDB241041CE00688C9B /* CreateEventCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateEventCell.swift; sourceTree = "<group>"; };
@@ -106,6 +103,9 @@
 		09F2C04D240EE1B9004A6F47 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		09F2C050240EE1B9004A6F47 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		09F2C052240EE1B9004A6F47 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5F897EE12412B749001B5C2B /* TrainerLoginAccess.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainerLoginAccess.swift; sourceTree = "<group>"; };
+		5F897EE32412BE36001B5C2B /* TrainerLoginInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainerLoginInfo.swift; sourceTree = "<group>"; };
+		5F897EE82412EA92001B5C2B /* StatusCodeMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusCodeMessage.swift; sourceTree = "<group>"; };
 		5F901D7B2411445600986FF5 /* DatePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePicker.swift; sourceTree = "<group>"; };
 		5F901D7D2411485100986FF5 /* OrangeToolbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrangeToolbar.swift; sourceTree = "<group>"; };
 		5F901D7F24114A5200986FF5 /* DropdownPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropdownPicker.swift; sourceTree = "<group>"; };
@@ -113,8 +113,6 @@
 		5F901D8B2411971700986FF5 /* TrainerLoginAPIResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainerLoginAPIResponse.swift; sourceTree = "<group>"; };
 		5F901D8E2411A11700986FF5 /* TrainerLoginData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainerLoginData.swift; sourceTree = "<group>"; };
 		5F901D902411A13700986FF5 /* CurrentSystemRole.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentSystemRole.swift; sourceTree = "<group>"; };
-		5F901D922411A15200986FF5 /* OrgSystemUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrgSystemUser.swift; sourceTree = "<group>"; };
-		5F901D942411A1AB00986FF5 /* Organization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Organization.swift; sourceTree = "<group>"; };
 		84DB87CB241049EB00958E75 /* StartQuiz.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = StartQuiz.storyboard; sourceTree = "<group>"; };
 		84DB87CF24114A1000958E75 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		84DB87D3241159C300958E75 /* StartQuizViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartQuizViewController.swift; sourceTree = "<group>"; };
@@ -199,14 +197,6 @@
 				0940FE7F24116145006F0E52 /* armv7.swiftmodule */,
 			);
 			path = EasySQLite.swiftmodule;
-			sourceTree = "<group>";
-		};
-		0944AED4241031CF00688C9B /* CreateEvent */ = {
-			isa = PBXGroup;
-			children = (
-				0944AED52410369000688C9B /* CreateEvent.storyboard */,
-			);
-			path = CreateEvent;
 			sourceTree = "<group>";
 		};
 		09F2C038240EE1B5004A6F47 = {
@@ -297,7 +287,6 @@
 		09F2C05F240EE287004A6F47 /* Storyboard */ = {
 			isa = PBXGroup;
 			children = (
-				0944AED4241031CF00688C9B /* CreateEvent */,
 				09F2C073240EE29F004A6F47 /* Launch */,
 				09F2C072240EE296004A6F47 /* Main */,
 				09F2C060240EE287004A6F47 /* Common */,
@@ -504,9 +493,18 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		5F897EE02412B6DF001B5C2B /* Access */ = {
+			isa = PBXGroup;
+			children = (
+				5F897EE12412B749001B5C2B /* TrainerLoginAccess.swift */,
+			);
+			path = Access;
+			sourceTree = "<group>";
+		};
 		5F901D8A241196EC00986FF5 /* API */ = {
 			isa = PBXGroup;
 			children = (
+				5F897EE02412B6DF001B5C2B /* Access */,
 				5F901D8D2411A0E900986FF5 /* Entities */,
 			);
 			path = API;
@@ -517,9 +515,9 @@
 			children = (
 				5F901D8B2411971700986FF5 /* TrainerLoginAPIResponse.swift */,
 				5F901D8E2411A11700986FF5 /* TrainerLoginData.swift */,
-				5F901D942411A1AB00986FF5 /* Organization.swift */,
 				5F901D902411A13700986FF5 /* CurrentSystemRole.swift */,
-				5F901D922411A15200986FF5 /* OrgSystemUser.swift */,
+				5F897EE32412BE36001B5C2B /* TrainerLoginInfo.swift */,
+				5F897EE82412EA92001B5C2B /* StatusCodeMessage.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -600,7 +598,6 @@
 				0940FE8924116145006F0E52 /* arm64-apple-ios.swiftmodule in Resources */,
 				09F2C04C240EE1B5004A6F47 /* Main.storyboard in Resources */,
 				0940FE8E24116145006F0E52 /* armv7.swiftmodule in Resources */,
-				0944AED62410369000688C9B /* CreateEvent.storyboard in Resources */,
 				0940FE8124116145006F0E52 /* arm64-apple-ios.swiftdoc in Resources */,
 				95D8CF1A24118B2D00EB322E /* AttendeeSignUp.storyboard in Resources */,
 				0940FE8424116145006F0E52 /* x86_64.swiftdoc in Resources */,
@@ -628,14 +625,16 @@
 				09A4679824119C8700A4BB90 /* DatabaseError.swift in Sources */,
 				090A813E241195F5008D7A12 /* MetatagReturnStructs.swift in Sources */,
 				090A813C24119492008D7A12 /* MetatagStatements.swift in Sources */,
-				5F901D952411A1AB00986FF5 /* Organization.swift in Sources */,
 				5F901D8224114E0C00986FF5 /* UITextFieldExtension.swift in Sources */,
 				95D8CF1424116B5B00EB322E /* MainStoryBoardController.swift in Sources */,
 				09F2C049240EE1B5004A6F47 /* ViewController.swift in Sources */,
+				5F897EE42412BE36001B5C2B /* TrainerLoginInfo.swift in Sources */,
 				84DB87D4241159C300958E75 /* StartQuizViewController.swift in Sources */,
 				5F901D8F2411A11700986FF5 /* TrainerLoginData.swift in Sources */,
 				0944AEDC241041CE00688C9B /* CreateEventCell.swift in Sources */,
+				5F897EE92412EA92001B5C2B /* StatusCodeMessage.swift in Sources */,
 				95D8CF1E241190A100EB322E /* EventViewViewController.swift in Sources */,
+				5F897EE22412B749001B5C2B /* TrainerLoginAccess.swift in Sources */,
 				5F901D8024114A5200986FF5 /* DropdownPicker.swift in Sources */,
 				091DC3972411972300C5D577 /* DatabaseInformation.swift in Sources */,
 				09F2C045240EE1B5004A6F47 /* AppDelegate.swift in Sources */,
@@ -646,7 +645,6 @@
 				95D8CF22241190E900EB322E /* QuizViewViewController.swift in Sources */,
 				5F901D7E2411485100986FF5 /* OrangeToolbar.swift in Sources */,
 				D540960D2411538E00791C7E /* RevatureTextField.swift in Sources */,
-				5F901D932411A15200986FF5 /* OrgSystemUser.swift in Sources */,
 				5F901D7C2411445600986FF5 /* DatePicker.swift in Sources */,
 				0944AED8241036BF00688C9B /* UIColorExtension.swift in Sources */,
 				5F901D8C2411971700986FF5 /* TrainerLoginAPIResponse.swift in Sources */,
