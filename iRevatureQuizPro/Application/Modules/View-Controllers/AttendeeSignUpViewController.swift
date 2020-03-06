@@ -13,7 +13,6 @@ class AttendeeSignUpViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        addGradientToView(view: self.view)
     }
     
     @IBAction func backButton(_ sender: Any) {
@@ -23,7 +22,9 @@ class AttendeeSignUpViewController: BaseViewController {
     }
     
     @IBAction func submitButton(_ sender: Any) {
-        
+        let nextVC = StartQuizViewController.instantiate(fromAppStoryboard: AppStoryboard.StartQuiz)
+        nextVC.modalPresentationStyle = .fullScreen
+        present(nextVC, animated: false, completion: nil)
     }
     
     @IBAction func signUpWithLinkedInButton(_ sender: Any) {

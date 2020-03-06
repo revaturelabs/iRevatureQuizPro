@@ -15,15 +15,18 @@ class StartQuizViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        addGradientToView(view: self.view)
     }
 
     @IBAction func backbutton(_ sender: Any) {
-    
+        let nextVC = AttendeeSignUpViewController.instantiate(fromAppStoryboard: AppStoryboard.AttendeeSignUp)
+        nextVC.modalPresentationStyle = .fullScreen
+        present(nextVC, animated: false, completion: nil)
     }
     
     @IBAction func submitButton(_ sender: Any) {
-    
+        let alert = UIAlertController(title: "Start Quiz", message: "Feature coming soon", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Acknowledge", style: .default, handler: nil))
+        self.present(alert, animated: true)
     }
     
 }
