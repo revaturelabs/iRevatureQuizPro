@@ -15,7 +15,7 @@ class BaseViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        addGradientToView(view: self.view)
+        //addGradientToView(view: self.view)
     }
     
     func addGradientToView(view: UIView)

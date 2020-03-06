@@ -19,7 +19,6 @@ class CreateEventViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        addGradientToView(view: self.view)
 
     }
     
