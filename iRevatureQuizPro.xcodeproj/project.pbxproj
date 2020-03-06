@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -34,6 +34,7 @@
 		09F2C04C240EE1B5004A6F47 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09F2C04A240EE1B5004A6F47 /* Main.storyboard */; };
 		09F2C04E240EE1B9004A6F47 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 09F2C04D240EE1B9004A6F47 /* Assets.xcassets */; };
 		09F2C051240EE1B9004A6F47 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09F2C04F240EE1B9004A6F47 /* LaunchScreen.storyboard */; };
+		5F897EBF24129481001B5C2B /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 5F897EBE24129481001B5C2B /* Alamofire */; };
 		5F901D7C2411445600986FF5 /* DatePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F901D7B2411445600986FF5 /* DatePicker.swift */; };
 		5F901D7E2411485100986FF5 /* OrangeToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F901D7D2411485100986FF5 /* OrangeToolbar.swift */; };
 		5F901D8024114A5200986FF5 /* DropdownPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F901D7F24114A5200986FF5 /* DropdownPicker.swift */; };
@@ -124,6 +125,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0940FE8F24116145006F0E52 /* libEasySQLite.a in Frameworks */,
+				5F897EBF24129481001B5C2B /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -518,6 +520,9 @@
 			dependencies = (
 			);
 			name = iRevatureQuizPro;
+			packageProductDependencies = (
+				5F897EBE24129481001B5C2B /* Alamofire */,
+			);
 			productName = iRevatureQuizPro;
 			productReference = 09F2C041240EE1B5004A6F47 /* iRevatureQuizPro.app */;
 			productType = "com.apple.product-type.application";
@@ -546,6 +551,9 @@
 				Base,
 			);
 			mainGroup = 09F2C038240EE1B5004A6F47;
+			packageReferences = (
+				5F897EBD24129481001B5C2B /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			productRefGroup = 09F2C042240EE1B5004A6F47 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -824,6 +832,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		5F897EBD24129481001B5C2B /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		5F897EBE24129481001B5C2B /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5F897EBD24129481001B5C2B /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 09F2C039240EE1B5004A6F47 /* Project object */;
 }
