@@ -10,6 +10,8 @@ import UIKit
 
 class AttendeeSignUpViewController: BaseViewController {
 
+    @IBOutlet weak var textTest: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.

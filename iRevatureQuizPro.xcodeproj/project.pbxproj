@@ -42,6 +42,7 @@
 		0991503D2412F8C300E73B62 /* EventAttendeePersistenceService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0991503C2412F8C300E73B62 /* EventAttendeePersistenceService.swift */; };
 		09A4679824119C8700A4BB90 /* DatabaseError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09A4679724119C8700A4BB90 /* DatabaseError.swift */; };
 		09A4679A2411A81100A4BB90 /* MetatagAccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09A467992411A81100A4BB90 /* MetatagAccess.swift */; };
+		09C0837E24136D4B00D021F0 /* EndInputExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C0837D24136D4B00D021F0 /* EndInputExtension.swift */; };
 		09F2C045240EE1B5004A6F47 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F2C044240EE1B5004A6F47 /* AppDelegate.swift */; };
 		09F2C047240EE1B5004A6F47 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F2C046240EE1B5004A6F47 /* SceneDelegate.swift */; };
 		09F2C049240EE1B5004A6F47 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F2C048240EE1B5004A6F47 /* ViewController.swift */; };
@@ -126,6 +127,7 @@
 		0991503C2412F8C300E73B62 /* EventAttendeePersistenceService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventAttendeePersistenceService.swift; sourceTree = "<group>"; };
 		09A4679724119C8700A4BB90 /* DatabaseError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseError.swift; sourceTree = "<group>"; };
 		09A467992411A81100A4BB90 /* MetatagAccess.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetatagAccess.swift; sourceTree = "<group>"; };
+		09C0837D24136D4B00D021F0 /* EndInputExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndInputExtension.swift; sourceTree = "<group>"; };
 		09F2C041240EE1B5004A6F47 /* iRevatureQuizPro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iRevatureQuizPro.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		09F2C044240EE1B5004A6F47 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		09F2C046240EE1B5004A6F47 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -493,6 +495,7 @@
 			children = (
 				0944AED7241036BF00688C9B /* UIColorExtension.swift */,
 				5F901D8124114E0C00986FF5 /* UITextFieldExtension.swift */,
+				09C0837D24136D4B00D021F0 /* EndInputExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -759,6 +762,7 @@
 				95D8CF1E241190A100EB322E /* EventViewViewController.swift in Sources */,
 				5F901D8024114A5200986FF5 /* DropdownPicker.swift in Sources */,
 				091DC3972411972300C5D577 /* DatabaseInformation.swift in Sources */,
+				09C0837E24136D4B00D021F0 /* EndInputExtension.swift in Sources */,
 				09F2C045240EE1B5004A6F47 /* AppDelegate.swift in Sources */,
 				0940FE6E2411611D006F0E52 /* MetatagTable.swift in Sources */,
 				95D8CF1C2411907100EB322E /* EmployeeLoginViewController.swift in Sources */,
