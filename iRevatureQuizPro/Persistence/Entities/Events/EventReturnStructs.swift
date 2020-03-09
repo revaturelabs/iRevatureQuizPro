@@ -18,8 +18,16 @@ extension Events {
         var event_name: String
         var location: String
         var event_code: String
-        var quiz_id: Int
-        var ambassafor_email: String
+        var quiz_id: String
+        var ambassador_email: String
         var date: String
+    }
+//=====================================
+    //Hold Identifier Columns From Events Table
+//=====================================
+    struct EventCode: Codable {
+        var event_name: String
+        var event_code: String
+        var ambassador_email: String
     }
 }
