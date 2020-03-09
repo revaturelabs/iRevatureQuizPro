@@ -19,7 +19,13 @@ extension Events {
         var location: String
         var event_code: String
         var quiz_id: Int
-        var ambassafor_email: String
+        var ambassador_email: String
         var date: String
+    }
+    
+    struct EventCode: Codable {
+        var event_name: String
+        var event_code: String
+        var ambassador_email: String
     }
 }
