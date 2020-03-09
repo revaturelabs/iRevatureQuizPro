@@ -42,6 +42,9 @@
 		0991503D2412F8C300E73B62 /* EventAttendeePersistenceService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0991503C2412F8C300E73B62 /* EventAttendeePersistenceService.swift */; };
 		09A4679824119C8700A4BB90 /* DatabaseError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09A4679724119C8700A4BB90 /* DatabaseError.swift */; };
 		09A4679A2411A81100A4BB90 /* MetatagAccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09A467992411A81100A4BB90 /* MetatagAccess.swift */; };
+		09C0837E24136D4B00D021F0 /* EndInputExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C0837D24136D4B00D021F0 /* EndInputExtension.swift */; };
+		09C4D08424168ABB00DCDEC4 /* AttendeeSignupTableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C4D08324168ABB00DCDEC4 /* AttendeeSignupTableController.swift */; };
+		09C4D08724168C6400DCDEC4 /* AttendeeSignupTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C4D08624168C6400DCDEC4 /* AttendeeSignupTableCell.swift */; };
 		09F2C045240EE1B5004A6F47 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F2C044240EE1B5004A6F47 /* AppDelegate.swift */; };
 		09F2C047240EE1B5004A6F47 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F2C046240EE1B5004A6F47 /* SceneDelegate.swift */; };
 		09F2C049240EE1B5004A6F47 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F2C048240EE1B5004A6F47 /* ViewController.swift */; };
@@ -131,6 +134,9 @@
 		0991503C2412F8C300E73B62 /* EventAttendeePersistenceService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventAttendeePersistenceService.swift; sourceTree = "<group>"; };
 		09A4679724119C8700A4BB90 /* DatabaseError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseError.swift; sourceTree = "<group>"; };
 		09A467992411A81100A4BB90 /* MetatagAccess.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetatagAccess.swift; sourceTree = "<group>"; };
+		09C0837D24136D4B00D021F0 /* EndInputExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndInputExtension.swift; sourceTree = "<group>"; };
+		09C4D08324168ABB00DCDEC4 /* AttendeeSignupTableController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttendeeSignupTableController.swift; sourceTree = "<group>"; };
+		09C4D08624168C6400DCDEC4 /* AttendeeSignupTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttendeeSignupTableCell.swift; sourceTree = "<group>"; };
 		09F2C041240EE1B5004A6F47 /* iRevatureQuizPro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iRevatureQuizPro.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		09F2C044240EE1B5004A6F47 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		09F2C046240EE1B5004A6F47 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -293,6 +299,23 @@
 				0991503C2412F8C300E73B62 /* EventAttendeePersistenceService.swift */,
 			);
 			path = EventAttendee;
+			sourceTree = "<group>";
+		};
+		09C4D08524168C4600DCDEC4 /* AttendeeSignup */ = {
+			isa = PBXGroup;
+			children = (
+				09C4D08624168C6400DCDEC4 /* AttendeeSignupTableCell.swift */,
+			);
+			path = AttendeeSignup;
+			sourceTree = "<group>";
+		};
+		09DD60A124168A17004E9583 /* AttendeeSignup */ = {
+			isa = PBXGroup;
+			children = (
+				95D8CF1F241190BB00EB322E /* AttendeeSignUpViewController.swift */,
+				09C4D08324168ABB00DCDEC4 /* AttendeeSignupTableController.swift */,
+			);
+			path = AttendeeSignup;
 			sourceTree = "<group>";
 		};
 		09F2C038240EE1B5004A6F47 = {
@@ -512,6 +535,7 @@
 			children = (
 				0944AED7241036BF00688C9B /* UIColorExtension.swift */,
 				5F901D8124114E0C00986FF5 /* UITextFieldExtension.swift */,
+				09C0837D24136D4B00D021F0 /* EndInputExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -582,10 +606,10 @@
 		09F2C074240EE2C7004A6F47 /* View-Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				09DD60A124168A17004E9583 /* AttendeeSignup */,
 				09F2C048240EE1B5004A6F47 /* ViewController.swift */,
 				84DB87CF24114A1000958E75 /* BaseViewController.swift */,
 				95D8CF1324116B5B00EB322E /* MainStoryBoardController.swift */,
-				95D8CF1F241190BB00EB322E /* AttendeeSignUpViewController.swift */,
 				95D8CF1B2411907100EB322E /* EmployeeLoginViewController.swift */,
 				95D8CF1D241190A100EB322E /* EventViewViewController.swift */,
 				0944AEDD2410540400688C9B /* CreateEventViewController.swift */,
@@ -599,6 +623,7 @@
 		09F2C075240EE2CE004A6F47 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				09C4D08524168C4600DCDEC4 /* AttendeeSignup */,
 				5F901D7B2411445600986FF5 /* DatePicker.swift */,
 				5F901D7F24114A5200986FF5 /* DropdownPicker.swift */,
 			);
@@ -769,7 +794,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				09C4D08724168C6400DCDEC4 /* AttendeeSignupTableCell.swift in Sources */,
 				0944AEDA2410419100688C9B /* RevatureTableViewCell.swift in Sources */,
+				09C4D08424168ABB00DCDEC4 /* AttendeeSignupTableController.swift in Sources */,
 				84DB87D024114A1000958E75 /* BaseViewController.swift in Sources */,
 				099150242412E2F800E73B62 /* EventAttendeeAccess.swift in Sources */,
 				09A4679A2411A81100A4BB90 /* MetatagAccess.swift in Sources */,
@@ -800,6 +827,7 @@
 				5F901D8024114A5200986FF5 /* DropdownPicker.swift in Sources */,
 				5F897EEE2412F39D001B5C2B /* UserInfoBusinessService.swift in Sources */,
 				091DC3972411972300C5D577 /* DatabaseInformation.swift in Sources */,
+				09C0837E24136D4B00D021F0 /* EndInputExtension.swift in Sources */,
 				09F2C045240EE1B5004A6F47 /* AppDelegate.swift in Sources */,
 				0940FE6E2411611D006F0E52 /* MetatagTable.swift in Sources */,
 				95D8CF1C2411907100EB322E /* EmployeeLoginViewController.swift in Sources */,
