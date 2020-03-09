@@ -15,18 +15,19 @@ class CreateEventViewController: BaseViewController {
     
     private var quizDropdown: DropdownPicker?
     
-    let tableCellIdentifier: String = "CreateEventCell"
-    let inputNames: [String] = ["Event Code", "Event Name", "Location", "Date", "Quiz", "Ambassador"]
     var quizArray: [String] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        quizArray = ["Quiz 1", "Quiz 2", "Quiz 3", "Quiz 4"]
+
+//        quizArray = ["Quiz 1", "Quiz 2", "Quiz 3", "Quiz 4"]
+        quizArray  = ["Quiz 1", "Quiz 2", "Quiz 3", "Quiz 4"]
         
         // Assigns the quiz a list of values to select from
+//        quizTextField.pickerSelector(data: quizArray)
         quizTextField.pickerSelector(data: quizArray)
-        
+
     }
     
     @IBAction func backButton(_ sender: Any) {
@@ -45,29 +46,29 @@ class CreateEventViewController: BaseViewController {
     
 }
 
-extension CreateEventViewController: UITableViewDataSource, UITableViewDelegate {
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return inputNames.count
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: tableCellIdentifier, for: indexPath) as! CreateEventTableCell
-        
-        cell.setFieldName(name: inputNames[indexPath.row])
-        if inputNames[indexPath.row] == "Quiz" {
-            cell.textInput.pickerSelector(data: quizArray)
-        }
-        if inputNames[indexPath.row] == "Date" {
-            cell.textInput.dateSelector(dateFormat: "MMM dd, yyyy")
-        }
-        
-        return cell
-    }
-    
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 86
-    }
-    
-    
-}
+//extension CreateEventViewController: UITableViewDataSource, UITableViewDelegate {
+//
+//    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+//        return inputNames.count
+//    }
+//
+//    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+//        let cell = tableView.dequeueReusableCell(withIdentifier: tableCellIdentifier, for: indexPath) as! CreateEventTableCell
+//
+//        cell.setFieldName(name: inputNames[indexPath.row])
+//        if inputNames[indexPath.row] == "Quiz" {
+//            cell.textInput.pickerSelector(data: quizArray)
+//        }
+//        if inputNames[indexPath.row] == "Date" {
+//            cell.textInput.dateSelector(dateFormat: "MMM dd, yyyy")
+//        }
+//
+//        return cell
+//    }
+//
+//    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+//        return 86
+//    }
+//
+//
+//}
