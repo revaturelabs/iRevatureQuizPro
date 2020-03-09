@@ -11,14 +11,21 @@ import UIKit
 class CreateEventViewController: BaseViewController {
     
     @IBOutlet weak var eventInputTable: UITableView!
+    @IBOutlet weak var quizTextField: UITextField!
+    
+    private var quizDropdown: DropdownPicker?
     
     let tableCellIdentifier: String = "CreateEventCell"
     let inputNames: [String] = ["Event Code", "Event Name", "Location", "Date", "Quiz", "Ambassador"]
-    let quizArray: [String] = ["Quiz 1", "Quiz 2", "Quiz 3", "Quiz 4"]
+    var quizArray: [String] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        quizArray = ["Quiz 1", "Quiz 2", "Quiz 3", "Quiz 4"]
+        
+        // Assigns the quiz a list of values to select from
+        quizTextField.pickerSelector(data: quizArray)
         
     }
     
@@ -35,9 +42,11 @@ class CreateEventViewController: BaseViewController {
         self.present(alert, animated: true)
         
     }
+    
 }
 
 extension CreateEventViewController: UITableViewDataSource, UITableViewDelegate {
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return inputNames.count
     }

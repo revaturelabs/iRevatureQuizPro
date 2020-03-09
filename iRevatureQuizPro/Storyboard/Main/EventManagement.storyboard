@@ -322,6 +322,9 @@
                         <viewLayoutGuide key="safeArea" id="RkZ-Vm-YtT"/>
                     </view>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="quizTextField" destination="KNd-si-kTf" id="kHx-nw-MFV"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QJ2-ul-0P7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
