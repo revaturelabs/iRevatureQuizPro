@@ -22,7 +22,9 @@ extension Events {
         var ambassador_email: String
         var date: String
     }
-    
+//=====================================
+    //Hold Identifier Columns From Events Table
+//=====================================
     struct EventCode: Codable {
         var event_name: String
         var event_code: String
