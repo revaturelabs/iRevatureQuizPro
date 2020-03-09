@@ -28,24 +28,30 @@ class EmployeeLoginViewController: BaseViewController {
     }
     
     @IBAction func signInButton(_ sender: Any) {
+        //set email and password
         let email = self.emailTextField.text!
         let password = self.passwordTextField.text!
         
-        TrainerLoginAccess.getUserLogin(email: email, password: password, completionHandler: { trainerInfo, errorMessage in
+        //function to login with API
+        TrainerLoginAccess.getUserLogin(email: email, password: password, completionHandler: { trainerInfo, hasError in
             guard let trainer = trainerInfo else {
+                //Display error if login fails
                 self.errorMessage.text = "Invalid username or password"
                 return
             }
             
+            //set UserDefaults if log in is successful
             let user = UserInfo(id: trainer.id, empId: trainer.employeeId, username: trainer.displayEmail, name: trainer.displayFullName, role: trainer.currentSystemRole.name, token: trainer.encryptedLoginToken, keepLoggedIn: self.keepMeLoggedInSwitch.isOn)
             
             UserInfoBusinessService.setUserInfo(userObject: user)
             
+            //move user to next screen
             self.navigateToEventManagement()
         })
 
     }
     
+    //function to display Event Management storyboard
     func navigateToEventManagement() {
         let storyboard = UIStoryboard(name: "EventManagement", bundle: nil)
         let nextVC = storyboard.instantiateViewController(withIdentifier: "TabBarController_ID")
