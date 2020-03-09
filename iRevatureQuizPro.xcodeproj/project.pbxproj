@@ -69,6 +69,8 @@
 		84DB87D024114A1000958E75 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DB87CF24114A1000958E75 /* BaseViewController.swift */; };
 		84DB87D4241159C300958E75 /* StartQuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DB87D3241159C300958E75 /* StartQuizViewController.swift */; };
 		84DB87F624168A8200958E75 /* EventAccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DB87F524168A8200958E75 /* EventAccess.swift */; };
+		84DB88182416CD9000958E75 /* Events.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DB88172416CD9000958E75 /* Events.swift */; };
+		84DB881A2416CE0000958E75 /* EventsBusinessService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DB88192416CE0000958E75 /* EventsBusinessService.swift */; };
 		84F34FA42410437100D250BB /* iRevatureButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F34FA32410437100D250BB /* iRevatureButton.swift */; };
 		9544BEF224119B9500BFC412 /* VIewControllerInstantiator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9544BEF124119B9500BFC412 /* VIewControllerInstantiator.swift */; };
 		95D8CF1424116B5B00EB322E /* MainStoryBoardController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D8CF1324116B5B00EB322E /* MainStoryBoardController.swift */; };
@@ -162,6 +164,8 @@
 		84DB87CF24114A1000958E75 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		84DB87D3241159C300958E75 /* StartQuizViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartQuizViewController.swift; sourceTree = "<group>"; };
 		84DB87F524168A8200958E75 /* EventAccess.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventAccess.swift; sourceTree = "<group>"; };
+		84DB88172416CD9000958E75 /* Events.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Events.swift; sourceTree = "<group>"; };
+		84DB88192416CE0000958E75 /* EventsBusinessService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsBusinessService.swift; sourceTree = "<group>"; };
 		84F34FA32410437100D250BB /* iRevatureButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iRevatureButton.swift; sourceTree = "<group>"; };
 		9544BEF124119B9500BFC412 /* VIewControllerInstantiator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VIewControllerInstantiator.swift; sourceTree = "<group>"; };
 		95D8CF1324116B5B00EB322E /* MainStoryBoardController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainStoryBoardController.swift; sourceTree = "<group>"; };
@@ -299,6 +303,7 @@
 			isa = PBXGroup;
 			children = (
 				0991503C2412F8C300E73B62 /* EventAttendeePersistenceService.swift */,
+				84DB88192416CE0000958E75 /* EventsBusinessService.swift */,
 			);
 			path = EventAttendee;
 			sourceTree = "<group>";
@@ -467,6 +472,7 @@
 			children = (
 				5F897EEA2412F246001B5C2B /* UserInfo.swift */,
 				099150392412F7B900E73B62 /* EventAttendee.swift */,
+				84DB88172416CD9000958E75 /* Events.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -794,6 +800,7 @@
 				0944AEDA2410419100688C9B /* RevatureTableViewCell.swift in Sources */,
 				09C4D08424168ABB00DCDEC4 /* AttendeeSignupTableController.swift in Sources */,
 				84DB87D024114A1000958E75 /* BaseViewController.swift in Sources */,
+				84DB88182416CD9000958E75 /* Events.swift in Sources */,
 				099150242412E2F800E73B62 /* EventAttendeeAccess.swift in Sources */,
 				09A4679A2411A81100A4BB90 /* MetatagAccess.swift in Sources */,
 				099150222412E21D00E73B62 /* EventAttendeeReturnStructs.swift in Sources */,
@@ -835,6 +842,7 @@
 				5F901D7C2411445600986FF5 /* DatePicker.swift in Sources */,
 				0944AED8241036BF00688C9B /* UIColorExtension.swift in Sources */,
 				5F901D8C2411971700986FF5 /* TrainerLoginAPIResponse.swift in Sources */,
+				84DB881A2416CE0000958E75 /* EventsBusinessService.swift in Sources */,
 				0991503D2412F8C300E73B62 /* EventAttendeePersistenceService.swift in Sources */,
 				5F901D912411A13700986FF5 /* CurrentSystemRole.swift in Sources */,
 				84F34FA42410437100D250BB /* iRevatureButton.swift in Sources */,
