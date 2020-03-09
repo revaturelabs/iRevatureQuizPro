@@ -34,7 +34,7 @@ class CreateEventViewController: BaseViewController {
     }
     
     @IBAction func submitEventButton(_ sender: Any) {
-        let table = Database.create(table: Events.table)
+        Database.create(table: Events.table)
         Events.insert(eventName: eventNametextField.text!, location: locationTextField.text!, eventCode: eventCodeTextField.text!, quizID: Int(quizIDTextField.text!)!, ambassadorEmail: ambassadorEmailTextField.text!, date: dateTextField.text!)
         
         
