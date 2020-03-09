@@ -9,7 +9,6 @@
 import UIKit
 
 class RevatureTableViewCell: UITableViewCell {
-
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -20,5 +19,4 @@ class RevatureTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-
 }

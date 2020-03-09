@@ -8,13 +8,23 @@
 
 import UIKit
 
-class EventViewViewController: BaseViewController, UITableViewDelegate {
+class EventViewViewController: BaseViewController, UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        <#code#>
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        <#code#>
+    }
+    
 
     @IBOutlet weak var eventSearchBar: UISearchBar!
     @IBOutlet weak var eventsTable: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.eventsTable.dataSource = self
+        self.eventsTable.delegate = self
         // Do any additional setup after loading the view.
     }
 

@@ -80,6 +80,7 @@
 		D54096552412DFE500791C7E /* EventTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D54096542412DFE500791C7E /* EventTable.swift */; };
 		D54096572412E2AB00791C7E /* EventStatements.swift in Sources */ = {isa = PBXBuildFile; fileRef = D54096562412E2AB00791C7E /* EventStatements.swift */; };
 		D54096592412E42100791C7E /* EventReturnStructs.swift in Sources */ = {isa = PBXBuildFile; fileRef = D54096582412E42100791C7E /* EventReturnStructs.swift */; };
+		D5D8BCC42416C3A500BC01B0 /* EventCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D8BCC32416C3A500BC01B0 /* EventCell.swift */; };
 		D5F4B4AC241033770051F4B8 /* EmployeeLogin.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D5F4B4AB241033770051F4B8 /* EmployeeLogin.storyboard */; };
 /* End PBXBuildFile section */
 
@@ -170,6 +171,7 @@
 		D54096542412DFE500791C7E /* EventTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = EventTable.swift; path = iRevatureQuizPro/Persistence/Entities/Events/EventTable.swift; sourceTree = SOURCE_ROOT; };
 		D54096562412E2AB00791C7E /* EventStatements.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = EventStatements.swift; path = iRevatureQuizPro/Persistence/Entities/Events/EventStatements.swift; sourceTree = SOURCE_ROOT; };
 		D54096582412E42100791C7E /* EventReturnStructs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = EventReturnStructs.swift; path = iRevatureQuizPro/Persistence/Entities/Events/EventReturnStructs.swift; sourceTree = SOURCE_ROOT; };
+		D5D8BCC32416C3A500BC01B0 /* EventCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventCell.swift; sourceTree = "<group>"; };
 		D5F4B4AB241033770051F4B8 /* EmployeeLogin.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = EmployeeLogin.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -431,11 +433,8 @@
 		09F2C064240EE287004A6F47 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-
 				5F897EED2412F39D001B5C2B /* UserInfoBusinessService.swift */,
-
 				0991503B2412F87D00E73B62 /* EventAttendee */,
-
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -443,11 +442,8 @@
 		09F2C065240EE287004A6F47 /* Entities */ = {
 			isa = PBXGroup;
 			children = (
-
 				5F897EEA2412F246001B5C2B /* UserInfo.swift */,
-
 				099150392412F7B900E73B62 /* EventAttendee.swift */,
-
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -599,6 +595,7 @@
 		09F2C075240EE2CE004A6F47 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				D5D8BCC22416C37A00BC01B0 /* ViewEvents */,
 				5F901D7B2411445600986FF5 /* DatePicker.swift */,
 				5F901D7F24114A5200986FF5 /* DropdownPicker.swift */,
 			);
@@ -632,6 +629,14 @@
 				5F897EE82412EA92001B5C2B /* StatusCodeMessage.swift */,
 			);
 			path = Entities;
+			sourceTree = "<group>";
+		};
+		D5D8BCC22416C37A00BC01B0 /* ViewEvents */ = {
+			isa = PBXGroup;
+			children = (
+				D5D8BCC32416C3A500BC01B0 /* EventCell.swift */,
+			);
+			path = ViewEvents;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -771,6 +776,7 @@
 			files = (
 				0944AEDA2410419100688C9B /* RevatureTableViewCell.swift in Sources */,
 				84DB87D024114A1000958E75 /* BaseViewController.swift in Sources */,
+				D5D8BCC42416C3A500BC01B0 /* EventCell.swift in Sources */,
 				099150242412E2F800E73B62 /* EventAttendeeAccess.swift in Sources */,
 				09A4679A2411A81100A4BB90 /* MetatagAccess.swift in Sources */,
 				099150222412E21D00E73B62 /* EventAttendeeReturnStructs.swift in Sources */,
@@ -780,13 +786,10 @@
 				09A4679824119C8700A4BB90 /* DatabaseError.swift in Sources */,
 				090A813E241195F5008D7A12 /* MetatagReturnStructs.swift in Sources */,
 				090A813C24119492008D7A12 /* MetatagStatements.swift in Sources */,
-
 				09525E102412D9AC0051D177 /* EventAttendeeStatements.swift in Sources */,
-				5F901D952411A1AB00986FF5 /* Organization.swift in Sources */,
 				09525E0E2412D4750051D177 /* TableProtocol.swift in Sources */,
 				84DB87F624168A8200958E75 /* EventAccess.swift in Sources */,
 				0991503A2412F7B900E73B62 /* EventAttendee.swift in Sources */,
-
 				5F901D8224114E0C00986FF5 /* UITextFieldExtension.swift in Sources */,
 				95D8CF1424116B5B00EB322E /* MainStoryBoardController.swift in Sources */,
 				09F2C049240EE1B5004A6F47 /* ViewController.swift in Sources */,
@@ -811,7 +814,6 @@
 				D54096572412E2AB00791C7E /* EventStatements.swift in Sources */,
 				D540960D2411538E00791C7E /* RevatureTextField.swift in Sources */,
 				D54096552412DFE500791C7E /* EventTable.swift in Sources */,
-				5F901D932411A15200986FF5 /* OrgSystemUser.swift in Sources */,
 				5F901D7C2411445600986FF5 /* DatePicker.swift in Sources */,
 				0944AED8241036BF00688C9B /* UIColorExtension.swift in Sources */,
 				5F901D8C2411971700986FF5 /* TrainerLoginAPIResponse.swift in Sources */,

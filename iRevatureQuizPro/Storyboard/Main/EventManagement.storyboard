@@ -107,7 +107,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="169" id="ODX-GR-Tsd">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="169" id="ODX-GR-Tsd" customClass="EventCell" customModule="iRevatureQuizPro" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="374" height="169"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ODX-GR-Tsd" id="abW-PV-0ss">
@@ -148,6 +148,13 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="date" destination="S5V-Da-s4e" id="VMa-7D-ra3"/>
+                                            <outlet property="eventName" destination="Ijc-eu-Mf4" id="89r-sy-xkf"/>
+                                            <outlet property="imagesView" destination="Oav-iW-qFW" id="KoC-kA-HjB"/>
+                                            <outlet property="location" destination="48w-xj-vez" id="4Oe-XC-pmo"/>
+                                            <outlet property="quiz" destination="ezZ-bs-Ryo" id="tv6-DJ-cwg"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
