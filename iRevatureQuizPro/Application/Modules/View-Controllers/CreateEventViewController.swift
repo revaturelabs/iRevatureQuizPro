@@ -50,7 +50,7 @@ extension CreateEventViewController: UITableViewDataSource, UITableViewDelegate 
             cell.textInput.pickerSelector(data: quizArray)
         }
         if inputNames[indexPath.row] == "Date" {
-            cell.textInput.dateSelector(dateFormat: "MMM dd, yyyy")
+            cell.textInput.dateSelector()
         }
         
         return cell

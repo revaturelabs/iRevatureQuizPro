@@ -13,7 +13,7 @@ class UserInfoBusinessService {
     
     static let defaults = UserDefaults.standard
     
-    
+    //set userdefaults
     static func setUserInfo(userObject: UserInfo) {
         
         do{
@@ -27,7 +27,7 @@ class UserInfoBusinessService {
         }
     }
     
-    
+    //get user from userdefaults
     static func getUserInfo() -> UserInfo? {
         
         if let decodedUserInfo = (defaults.value(forKey: "UserInfo")) {

@@ -14,10 +14,18 @@ class EmployeeLoginViewController: BaseViewController {
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var keepMeLoggedInSwitch: UISwitch!
     @IBOutlet weak var errorMessage: UILabel!
+    @IBOutlet weak var returnMessage: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
+        //check if user has logged in, set user welcome back message
+        if let user = UserInfoBusinessService.getUserInfo() {
+            emailTextField.text = user.username
+            returnMessage.text = "Welcome back \(user.name)"
+        }
+        
     }
     
     @IBAction func backButton(_ sender: Any) {
