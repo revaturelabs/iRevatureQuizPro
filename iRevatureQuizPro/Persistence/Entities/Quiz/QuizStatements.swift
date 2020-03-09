@@ -1,5 +1,5 @@
 //
-//  MetatagStatements.swift
+//  QuizStatements.swift
 //  iRevatureQuizPro
 //
 //  Created by Jeremy Malisse on 3/6/20.
@@ -10,17 +10,17 @@ import EasySQLite
 
 extension PQuiz {
 //=====================================
-    //Select All Metatag Rows Statement
+    //Select All Quiz Rows Statement
 //=====================================
     static func getAllStatement() -> ESLSelectStatement {
         var select = ESLSelectStatement()
         select.getAllColumns(fromTable: PQuiz.table)
         
-        return select
+        return select // currently doesnt work? mark says dont use atm
     }
     
 //=====================================
-    //Select Metatag Row By ID Statement
+    //Select Quiz Row By ID Statement
 //=====================================
     static func getByStatement(id: Int) -> ESLSelectStatement {
         //Select Statement
@@ -29,7 +29,7 @@ extension PQuiz {
         
         //Where Statement
         var `where` =  ESLWhereStatement()
-        `where`.addStatement(table: PQuiz.table, columnName: PQuiz.ColumnName.id.rawValue, expression: .EQUALS, columnValue: id)
+        `where`.addStatement(table: PQuiz.table, columnName: PQuiz.ColumnName.quiz_id.rawValue, expression: .EQUALS, columnValue: id)
         
         select.setWhereStatement(statement: `where`)
         
@@ -37,7 +37,7 @@ extension PQuiz {
     }
     
 //=====================================
-    //Select Metatag Row by Name Statement
+    //Select Quiz Row by Name Statement
 //=====================================
     static func getByStatement(name: String) -> ESLSelectStatement {
         //Select Statement
@@ -46,7 +46,7 @@ extension PQuiz {
         
         //Where Statement
         var `where` =  ESLWhereStatement()
-        `where`.addStatement(table: PQuiz.table, columnName: PQuiz.ColumnName.name.rawValue, expression: .EQUALS, columnValue: name)
+        `where`.addStatement(table: PQuiz.table, columnName: PQuiz.ColumnName.quiz_name.rawValue, expression: .EQUALS, columnValue: name)
         
         select.setWhereStatement(statement: `where`)
         
@@ -56,9 +56,42 @@ extension PQuiz {
 //=====================================
     //Insert Row Statement
 //=====================================
-    static func insertStatement(name: String) -> ESLInsertStatement {
+    static func insertStatement(quiz: QuizAllData) -> ESLInsertStatement {
+        
         var insert = ESLInsertStatement(table: PQuiz.table)
-        insert.specifyValue(columnName: PQuiz.ColumnName.name.rawValue, columnValue: name)
+        
+        insert.specifyValue(columnName: PQuiz.ColumnName.quiz_name.rawValue, columnValue: quiz.quiz_name)
+        insert.specifyValue(columnName: PQuiz.ColumnName.quiz_id.rawValue, columnValue: <#T##Any#>)
+        insert.specifyValue(columnName: <#T##String#>, columnValue: <#T##Any#>)
+        insert.specifyValue(columnName: <#T##String#>, columnValue: <#T##Any#>)
+        insert.specifyValue(columnName: <#T##String#>, columnValue: <#T##Any#>)
+        insert.specifyValue(columnName: <#T##String#>, columnValue: <#T##Any#>)
+        insert.specifyValue(columnName: <#T##String#>, columnValue: <#T##Any#>)
+        insert.specifyValue(columnName: <#T##String#>, columnValue: <#T##Any#>)
+        
+        insert.specifyValue(columnName: <#T##String#>, columnValue: <#T##Any#>)
+        insert.specifyValue(columnName: <#T##String#>, columnValue: <#T##Any#>)
+        insert.specifyValue(columnName: <#T##String#>, columnValue: <#T##Any#>)
+        insert.specifyValue(columnName: <#T##String#>, columnValue: <#T##Any#>)
+        insert.specifyValue(columnName: <#T##String#>, columnValue: <#T##Any#>)
+        
+        insert.specifyValue(columnName: <#T##String#>, columnValue: <#T##Any#>)
+        insert.specifyValue(columnName: <#T##String#>, columnValue: <#T##Any#>)
+        insert.specifyValue(columnName: <#T##String#>, columnValue: <#T##Any#>)
+        insert.specifyValue(columnName: <#T##String#>, columnValue: <#T##Any#>)
+        insert.specifyValue(columnName: <#T##String#>, columnValue: <#T##Any#>)
+        
+        insert.specifyValue(columnName: <#T##String#>, columnValue: <#T##Any#>)
+        insert.specifyValue(columnName: <#T##String#>, columnValue: <#T##Any#>)
+        insert.specifyValue(columnName: <#T##String#>, columnValue: <#T##Any#>)
+        insert.specifyValue(columnName: <#T##String#>, columnValue: <#T##Any#>)
+        insert.specifyValue(columnName: <#T##String#>, columnValue: <#T##Any#>)
+        
+        insert.specifyValue(columnName: <#T##String#>, columnValue: <#T##Any#>)
+        insert.specifyValue(columnName: <#T##String#>, columnValue: <#T##Any#>)
+        insert.specifyValue(columnName: <#T##String#>, columnValue: <#T##Any#>)
+        insert.specifyValue(columnName: <#T##String#>, columnValue: <#T##Any#>)
+        insert.specifyValue(columnName: <#T##String#>, columnValue: <#T##Any#>)
         
         return insert
     }
@@ -72,7 +105,7 @@ extension PQuiz {
         
         //Where Statement
         var `where` = ESLWhereStatement()
-        `where`.addStatement(table: PQuiz.table, columnName: PQuiz.ColumnName.id.rawValue, expression: .EQUALS, columnValue: id)
+        `where`.addStatement(table: PQuiz.table, columnName: PQuiz.ColumnName.quiz_id.rawValue, expression: .EQUALS, columnValue: id)
         
         delete.setWhereStatement(statement: `where`)
         
@@ -88,7 +121,7 @@ extension PQuiz {
         
         //Where Statement
         var `where` = ESLWhereStatement()
-        `where`.addStatement(table: PQuiz.table, columnName: PQuiz.ColumnName.name.rawValue, expression: .EQUALS, columnValue: name)
+        `where`.addStatement(table: PQuiz.table, columnName: PQuiz.ColumnName.quiz_name.rawValue, expression: .EQUALS, columnValue: name)
         
         delete.setWhereStatement(statement: `where`)
         
