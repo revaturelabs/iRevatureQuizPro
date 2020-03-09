@@ -14,7 +14,7 @@ class TrainerLoginAccess {
     
     static private let endpoint = "https://dev3-ms.revature.com/apigateway/security/admin/login"
     
-    static func getUserLogin(email: String, password: String, completionHandler: @escaping (TrainerLoginData) -> Void) {
+    static func getUserLogin(email: String, password: String, completionHandler: @escaping (TrainerLoginData?, StaticString?) -> Void) {
         
         let login = TrainerLoginInfo(userName: email, password: password)
         
@@ -31,12 +31,16 @@ class TrainerLoginAccess {
         ).validate().responseDecodable(of: TrainerLoginAPIResponse.self){
             (response) in
             guard let user = response.value else {
-                os_log(StatusCodeMessage.getMessage(code: response.response!.statusCode))
+                let errorMessage = StatusCodeMessage.getMessage(code: response.response!.statusCode)
+                
+                os_log(errorMessage)
+                
+                completionHandler(nil, errorMessage)
                 
                 return
             }
             
-            completionHandler(user.data)
+            completionHandler(user.data, "Login successful")
         }
     }
     

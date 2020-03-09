@@ -126,12 +126,20 @@
                                     <action selector="signInButton:" destination="7TK-xN-2Qu" eventType="touchDown" id="uGv-Hx-DPe"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mrd-DL-Uzf">
+                                <rect key="frame" x="23" y="632" width="368" height="0.0"/>
+                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="16"/>
+                                <color key="textColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="mtC-bs-e7R" firstAttribute="top" secondItem="KGX-9l-KJ7" secondAttribute="bottom" constant="80" id="0Ja-sI-RJP"/>
                             <constraint firstItem="CnB-m9-IGY" firstAttribute="trailing" secondItem="sbj-oO-9Vm" secondAttribute="trailing" constant="23" id="0xg-P7-QfD"/>
                             <constraint firstItem="KGX-9l-KJ7" firstAttribute="leading" secondItem="CnB-m9-IGY" secondAttribute="leading" constant="20" id="5eF-o8-fWq"/>
+                            <constraint firstItem="Mrd-DL-Uzf" firstAttribute="trailing" secondItem="ntv-DJ-Moz" secondAttribute="trailing" id="8hn-ZH-Xll"/>
+                            <constraint firstItem="Mrd-DL-Uzf" firstAttribute="leading" secondItem="ntv-DJ-Moz" secondAttribute="leading" id="AQ6-u2-4Pi"/>
                             <constraint firstItem="OdK-NO-KZD" firstAttribute="top" relation="lessThanOrEqual" secondItem="k3s-wz-9pi" secondAttribute="bottom" constant="115" id="Bol-HK-6rQ"/>
                             <constraint firstItem="ntv-DJ-Moz" firstAttribute="top" secondItem="sbj-oO-9Vm" secondAttribute="bottom" constant="26" id="DNB-3m-skY"/>
                             <constraint firstItem="deC-Lu-KGI" firstAttribute="top" secondItem="OdK-NO-KZD" secondAttribute="bottom" constant="24" id="F9l-eF-oMX"/>
@@ -152,6 +160,7 @@
                             <constraint firstItem="mtC-bs-e7R" firstAttribute="leading" secondItem="CnB-m9-IGY" secondAttribute="leading" constant="20" id="gc3-0N-sFM"/>
                             <constraint firstItem="OdK-NO-KZD" firstAttribute="leading" secondItem="CnB-m9-IGY" secondAttribute="leading" constant="103" id="iDN-lC-Ldp"/>
                             <constraint firstItem="OqZ-cC-Sa0" firstAttribute="trailing" secondItem="CnB-m9-IGY" secondAttribute="trailing" id="lxW-Ts-Okd"/>
+                            <constraint firstItem="Mrd-DL-Uzf" firstAttribute="top" secondItem="nRR-m0-HKP" secondAttribute="bottom" constant="10" id="m3N-Hx-iXi"/>
                             <constraint firstItem="KGX-9l-KJ7" firstAttribute="top" secondItem="OqZ-cC-Sa0" secondAttribute="bottom" constant="38" id="meQ-xK-KcG"/>
                             <constraint firstItem="k3s-wz-9pi" firstAttribute="leading" secondItem="nRR-m0-HKP" secondAttribute="trailing" constant="35" id="mgp-JE-dHR"/>
                             <constraint firstItem="CnB-m9-IGY" firstAttribute="trailing" secondItem="mtC-bs-e7R" secondAttribute="trailing" constant="322" id="nXZ-1X-txh"/>
@@ -163,6 +172,7 @@
                     </view>
                     <connections>
                         <outlet property="emailTextField" destination="sbj-oO-9Vm" id="QRd-2D-MaF"/>
+                        <outlet property="errorMessage" destination="Mrd-DL-Uzf" id="2Ku-kZ-OR7"/>
                         <outlet property="keepMeLoggedInSwitch" destination="nRR-m0-HKP" id="4zL-95-Neo"/>
                         <outlet property="passwordTextField" destination="ntv-DJ-Moz" id="HBs-Da-8kY"/>
                     </connections>

@@ -13,6 +13,7 @@ class EmployeeLoginViewController: BaseViewController {
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var keepMeLoggedInSwitch: UISwitch!
+    @IBOutlet weak var errorMessage: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,15 +28,29 @@ class EmployeeLoginViewController: BaseViewController {
     }
     
     @IBAction func signInButton(_ sender: Any) {
+        let email = self.emailTextField.text!
+        let password = self.passwordTextField.text!
         
-        TrainerLoginAccess.getUserLogin(email:"testuday@yopmail.com", password: "SaiP0wer@Uda", completionHandler: { (user) in
-            print("login")
+        TrainerLoginAccess.getUserLogin(email: email, password: password, completionHandler: { trainerInfo, errorMessage in
+            guard let trainer = trainerInfo else {
+                self.errorMessage.text = "Invalid username or password"
+                return
+            }
+            
+            let user = UserInfo(id: trainer.id, empId: trainer.employeeId, username: trainer.displayEmail, name: trainer.displayFullName, role: trainer.currentSystemRole.name, token: trainer.encryptedLoginToken, keepLoggedIn: self.keepMeLoggedInSwitch.isOn)
+            
+            UserInfoBusinessService.setUserInfo(userObject: user)
+            
+            self.navigateToEventManagement()
         })
-        
+
+    }
+    
+    func navigateToEventManagement() {
         let storyboard = UIStoryboard(name: "EventManagement", bundle: nil)
         let nextVC = storyboard.instantiateViewController(withIdentifier: "TabBarController_ID")
         nextVC.modalPresentationStyle = .fullScreen
-        present(nextVC,animated: false, completion: nil)
+        self.present(nextVC,animated: false, completion: nil)
     }
     
 }

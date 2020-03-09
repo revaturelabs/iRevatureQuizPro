@@ -7,22 +7,23 @@
 //
 
 import Foundation
+import os.log
 
 class UserInfoBusinessService {
     
     static let defaults = UserDefaults.standard
     
     
-    static func setUserInfo(userObject: UserInfo) -> Bool {
+    static func setUserInfo(userObject: UserInfo) {
         
         do{
             
             try defaults.set(PropertyListEncoder().encode(userObject), forKey: "UserInfo")
-            
-            return true
+
+            os_log("UserDefaults successfully stored")
             
         } catch {
-            return false
+            os_log("UserDefaults not stored")
         }
     }
     

@@ -14,7 +14,7 @@ class StatusCodeMessage {
         if code == 400 {
             return "400: Bad request"
         } else if code == 401 {
-            return "401: Invalid user credentials"
+            return "401: Invalid email or password"
         } else if code == 404 {
             return "404: Not found"
         }else if code == 422 {
