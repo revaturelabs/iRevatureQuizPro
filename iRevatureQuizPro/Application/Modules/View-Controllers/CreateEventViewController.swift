@@ -37,7 +37,6 @@ class CreateEventViewController: BaseViewController {
         Database.create(table: Events.table)
         Events.insert(eventName: eventNametextField.text!, location: locationTextField.text!, eventCode: eventCodeTextField.text!, quizID: Int(quizIDTextField.text!)!, ambassadorEmail: ambassadorEmailTextField.text!, date: dateTextField.text!)
         
-        
     }
 }
 
