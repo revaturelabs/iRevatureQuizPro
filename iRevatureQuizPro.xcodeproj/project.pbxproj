@@ -45,6 +45,7 @@
 		09C0837E24136D4B00D021F0 /* EndInputExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C0837D24136D4B00D021F0 /* EndInputExtension.swift */; };
 		09C4D08424168ABB00DCDEC4 /* AttendeeSignupTableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C4D08324168ABB00DCDEC4 /* AttendeeSignupTableController.swift */; };
 		09C4D08724168C6400DCDEC4 /* AttendeeSignupTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C4D08624168C6400DCDEC4 /* AttendeeSignupTableCell.swift */; };
+		09C4D0A82416D92200DCDEC4 /* libEasySQLite.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0940FE8024116145006F0E52 /* libEasySQLite.a */; };
 		09F2C045240EE1B5004A6F47 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F2C044240EE1B5004A6F47 /* AppDelegate.swift */; };
 		09F2C047240EE1B5004A6F47 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F2C046240EE1B5004A6F47 /* SceneDelegate.swift */; };
 		09F2C049240EE1B5004A6F47 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F2C048240EE1B5004A6F47 /* ViewController.swift */; };
@@ -184,6 +185,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				09C4D0A82416D92200DCDEC4 /* libEasySQLite.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -454,11 +456,8 @@
 		09F2C064240EE287004A6F47 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-
 				5F897EED2412F39D001B5C2B /* UserInfoBusinessService.swift */,
-
 				0991503B2412F87D00E73B62 /* EventAttendee */,
-
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -466,11 +465,8 @@
 		09F2C065240EE287004A6F47 /* Entities */ = {
 			isa = PBXGroup;
 			children = (
-
 				5F897EEA2412F246001B5C2B /* UserInfo.swift */,
-
 				099150392412F7B900E73B62 /* EventAttendee.swift */,
-
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -807,13 +803,10 @@
 				09A4679824119C8700A4BB90 /* DatabaseError.swift in Sources */,
 				090A813E241195F5008D7A12 /* MetatagReturnStructs.swift in Sources */,
 				090A813C24119492008D7A12 /* MetatagStatements.swift in Sources */,
-
 				09525E102412D9AC0051D177 /* EventAttendeeStatements.swift in Sources */,
-				5F901D952411A1AB00986FF5 /* Organization.swift in Sources */,
 				09525E0E2412D4750051D177 /* TableProtocol.swift in Sources */,
 				84DB87F624168A8200958E75 /* EventAccess.swift in Sources */,
 				0991503A2412F7B900E73B62 /* EventAttendee.swift in Sources */,
-
 				5F901D8224114E0C00986FF5 /* UITextFieldExtension.swift in Sources */,
 				95D8CF1424116B5B00EB322E /* MainStoryBoardController.swift in Sources */,
 				09F2C049240EE1B5004A6F47 /* ViewController.swift in Sources */,
@@ -839,7 +832,6 @@
 				D54096572412E2AB00791C7E /* EventStatements.swift in Sources */,
 				D540960D2411538E00791C7E /* RevatureTextField.swift in Sources */,
 				D54096552412DFE500791C7E /* EventTable.swift in Sources */,
-				5F901D932411A15200986FF5 /* OrgSystemUser.swift in Sources */,
 				5F901D7C2411445600986FF5 /* DatePicker.swift in Sources */,
 				0944AED8241036BF00688C9B /* UIColorExtension.swift in Sources */,
 				5F901D8C2411971700986FF5 /* TrainerLoginAPIResponse.swift in Sources */,
@@ -887,6 +879,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = iRevatureQuizProTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
@@ -909,6 +902,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = iRevatureQuizProTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
