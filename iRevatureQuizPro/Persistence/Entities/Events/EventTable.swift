@@ -31,10 +31,10 @@ struct Events: PersistenceTable {
         var table = ESLTable(tableName: tableName)
         table.addColumn(columnName: ColumnName.eventName.rawValue, dataType: .CHAR  , constraints: .NOTNULL)
         table.addColumn(columnName: ColumnName.location.rawValue, dataType: .CHAR, constraints: .NOTNULL)
-        table.addColumn(columnName: ColumnName.eventCode.rawValue, dataType: .CHAR, constraints: .PRIMARYKEY, .UNIQUE, .NOTNULL)
-        table.addColumn(columnName: ColumnName.quizID.rawValue, dataType: .INT, constraints: nil)
+        table.addColumn(columnName: ColumnName.eventCode.rawValue, dataType: .CHAR, constraints: .PRIMARYKEY, .NOTNULL)
+        table.addColumn(columnName: ColumnName.quizID.rawValue, dataType: .CHAR, constraints: nil)
         table.addColumn(columnName: ColumnName.ambassadorEmail.rawValue, dataType: .CHAR, constraints: .NOTNULL)
-        table.addColumn(columnName: ColumnName.date.rawValue, dataType: .DATE, constraints: .NOTNULL)
+        table.addColumn(columnName: ColumnName.date.rawValue, dataType: .CHAR, constraints: .NOTNULL)
         
         return table
     }

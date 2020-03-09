@@ -32,7 +32,7 @@ extension Events {
 //=====================================
     //Insert Row Into Database
 //=====================================
-    static func insert(eventName: String, location: String, eventCode: String, quizID: Int, ambassadorEmail: String, date: String) {
+    static func insert(eventName: String, location: String, eventCode: String, quizID: String, ambassadorEmail: String, date: String) {
         let insert = insertStatement(eventName: eventName, location: location, eventCode: eventCode, quizID: quizID, ambassadorEmail: ambassadorEmail, date: date)
         
         if !Database.insertRow(withInsertStatement: insert) {
