@@ -21,9 +21,9 @@ extension Events {
 //=====================================
     //Get A Single Row By Event Code
 //=====================================
-    static func getBy(eventCode: String) -> Events.EventCode? {
+    static func getBy(eventCode: String) -> Events.EventsAllData? {
         let select = getByStatement(eventCode: eventCode)
-        guard let result = Database.selectRow(withSelectStatement: select, returnStruct: Events.EventCode.self) else {
+        guard let result = Database.selectRow(withSelectStatement: select, returnStruct: Events.EventsAllData.self) else {
             return nil }
         
         return result.first
