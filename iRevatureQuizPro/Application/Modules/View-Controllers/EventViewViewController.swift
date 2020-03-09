@@ -8,9 +8,10 @@
 
 import UIKit
 
-class EventViewViewController: BaseViewController {
+class EventViewViewController: BaseViewController, UITableViewDelegate {
 
     @IBOutlet weak var eventSearchBar: UISearchBar!
+    @IBOutlet weak var eventsTable: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,7 +19,6 @@ class EventViewViewController: BaseViewController {
     }
 
     @IBAction func addEventButton(_ sender: Any) {
-
         let nextVC = CreateEventViewController.instantiate(fromAppStoryboard: AppStoryboard.EventManagement)
         nextVC.modalPresentationStyle = .fullScreen
         present(nextVC, animated: false, completion: nil)

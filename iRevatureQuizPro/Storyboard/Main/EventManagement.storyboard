@@ -163,6 +163,7 @@
                     <tabBarItem key="tabBarItem" title="Events" image="calendar" catalog="system" id="qVk-VB-VHF"/>
                     <connections>
                         <outlet property="eventSearchBar" destination="YAD-d5-xhr" id="cug-01-p2V"/>
+                        <outlet property="eventsTable" destination="FqQ-xq-tB3" id="ZZq-bN-MfM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ATp-Mr-eb4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
