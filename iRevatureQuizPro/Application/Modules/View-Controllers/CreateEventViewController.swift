@@ -18,9 +18,11 @@ class CreateEventViewController: BaseViewController {
     @IBOutlet weak var quizIDTextField: UITextField!
     @IBOutlet weak var ambassadorEmailTextField: UITextField!
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        //creates the database table for Events
+        Database.create(table: Events.table)
     }
     
     //returns user back to the events view screen
@@ -31,11 +33,8 @@ class CreateEventViewController: BaseViewController {
         present(nextVC,animated: false, completion: nil)
     }
     
-    //creates the event and updates the database
+    //Inserts a new row into the database based on the form on the view
     @IBAction func submitEventButton(_ sender: Any) {
-        //creates the database table for Events
-        Database.create(table: Events.table)
-        //inserts a row into the database
         Events.insert(eventName: eventNametextField.text!, location: locationTextField.text!, eventCode: eventCodeTextField.text!, quizID: quizIDTextField.text!, ambassadorEmail: ambassadorEmailTextField.text!, date: dateTextField.text!)
         
         
