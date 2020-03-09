@@ -19,7 +19,7 @@ class CreateEventViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-
+        
     }
     
     @IBAction func backButton(_ sender: Any) {
@@ -29,6 +29,12 @@ class CreateEventViewController: BaseViewController {
         present(nextVC,animated: false, completion: nil)
     }
     
+    @IBAction func submitEventButton(_ sender: Any) {
+        let alert = UIAlertController(title: "Create Event", message: "Feature coming soon", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Acknowledge", style: .default, handler: nil))
+        self.present(alert, animated: true)
+        
+    }
 }
 
 extension CreateEventViewController: UITableViewDataSource, UITableViewDelegate {

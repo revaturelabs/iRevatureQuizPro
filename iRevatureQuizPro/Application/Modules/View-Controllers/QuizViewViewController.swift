@@ -17,15 +17,17 @@ class QuizViewViewController: BaseViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
-
-    @IBAction func optionsButton(_ sender: Any) {
-
-    }
     
     @IBAction func createQuizButton(_ sender: Any) {
         let nextVC = CreateQuizViewController.instantiate(fromAppStoryboard: AppStoryboard.QuizManagement)
         nextVC.modalPresentationStyle = .fullScreen
         present(nextVC, animated: false, completion: nil)
+    }
+    
+    @IBAction func optionsButton(_ sender: Any) {
+        let nextVC = EmployeeLoginViewController.instantiate(fromAppStoryboard: AppStoryboard.EmployeeLogin)
+               nextVC.modalPresentationStyle = .fullScreen
+               present(nextVC, animated: false, completion: nil)
     }
     
 }

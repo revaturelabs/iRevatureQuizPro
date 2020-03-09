@@ -15,6 +15,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" red="1" green="0.37647058820000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="selectedImageTintColor" red="1" green="0.37647058820000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </tabBar>
                     <connections>
                         <segue destination="wa4-JJ-m9Y" kind="relationship" relationship="viewControllers" id="JAB-sm-K1R"/>
@@ -89,6 +91,9 @@
                                                 <state key="normal" title="...">
                                                     <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="optionsButton:" destination="wa4-JJ-m9Y" eventType="touchDown" id="nLF-aZ-wlk"/>
+                                                </connections>
                                             </button>
                                             <connections>
                                                 <action selector="optionsButton:" destination="wa4-JJ-m9Y" id="Rr1-5j-z0F"/>
@@ -155,7 +160,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="hZB-8z-fif"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Events" id="qVk-VB-VHF"/>
+                    <tabBarItem key="tabBarItem" title="Events" image="calendar" catalog="system" id="qVk-VB-VHF"/>
                     <connections>
                         <outlet property="eventSearchBar" destination="YAD-d5-xhr" id="cug-01-p2V"/>
                     </connections>
@@ -291,6 +296,27 @@
                                 <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="17"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NRG-fO-MlX" customClass="RevatureButton" customModule="iRevatureQuizPro" customModuleProvider="target">
+                                <rect key="frame" x="117" y="763" width="180" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Submit">
+                                    <color key="titleColor" red="1" green="0.37647058820000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="1" green="0.37647058820000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="submitEventButton:" destination="7da-JE-Mua" eventType="touchDown" id="HCX-wq-TKP"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="RkZ-Vm-YtT"/>
@@ -304,6 +330,7 @@
     </scenes>
     <resources>
         <image name="arrow.left" catalog="system" width="64" height="48"/>
+        <image name="calendar" catalog="system" width="64" height="52"/>
         <image name="plus" catalog="system" width="64" height="56"/>
     </resources>
 </document>
