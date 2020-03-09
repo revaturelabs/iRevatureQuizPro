@@ -49,6 +49,11 @@
 		09F2C04E240EE1B9004A6F47 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 09F2C04D240EE1B9004A6F47 /* Assets.xcassets */; };
 		09F2C051240EE1B9004A6F47 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09F2C04F240EE1B9004A6F47 /* LaunchScreen.storyboard */; };
 		5F897EBF24129481001B5C2B /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 5F897EBE24129481001B5C2B /* Alamofire */; };
+		5F897EE22412B749001B5C2B /* TrainerLoginAccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F897EE12412B749001B5C2B /* TrainerLoginAccess.swift */; };
+		5F897EE42412BE36001B5C2B /* TrainerLoginInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F897EE32412BE36001B5C2B /* TrainerLoginInfo.swift */; };
+		5F897EE92412EA92001B5C2B /* StatusCodeMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F897EE82412EA92001B5C2B /* StatusCodeMessage.swift */; };
+		5F897EEB2412F246001B5C2B /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F897EEA2412F246001B5C2B /* UserInfo.swift */; };
+		5F897EEE2412F39D001B5C2B /* UserInfoBusinessService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F897EED2412F39D001B5C2B /* UserInfoBusinessService.swift */; };
 		5F901D7C2411445600986FF5 /* DatePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F901D7B2411445600986FF5 /* DatePicker.swift */; };
 		5F901D7E2411485100986FF5 /* OrangeToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F901D7D2411485100986FF5 /* OrangeToolbar.swift */; };
 		5F901D8024114A5200986FF5 /* DropdownPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F901D7F24114A5200986FF5 /* DropdownPicker.swift */; };
@@ -56,8 +61,6 @@
 		5F901D8C2411971700986FF5 /* TrainerLoginAPIResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F901D8B2411971700986FF5 /* TrainerLoginAPIResponse.swift */; };
 		5F901D8F2411A11700986FF5 /* TrainerLoginData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F901D8E2411A11700986FF5 /* TrainerLoginData.swift */; };
 		5F901D912411A13700986FF5 /* CurrentSystemRole.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F901D902411A13700986FF5 /* CurrentSystemRole.swift */; };
-		5F901D932411A15200986FF5 /* OrgSystemUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F901D922411A15200986FF5 /* OrgSystemUser.swift */; };
-		5F901D952411A1AB00986FF5 /* Organization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F901D942411A1AB00986FF5 /* Organization.swift */; };
 		84DB87CC241049EB00958E75 /* StartQuiz.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84DB87CB241049EB00958E75 /* StartQuiz.storyboard */; };
 		84DB87D024114A1000958E75 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DB87CF24114A1000958E75 /* BaseViewController.swift */; };
 		84DB87D4241159C300958E75 /* StartQuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DB87D3241159C300958E75 /* StartQuizViewController.swift */; };
@@ -136,6 +139,11 @@
 		09F2C04D240EE1B9004A6F47 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		09F2C050240EE1B9004A6F47 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		09F2C052240EE1B9004A6F47 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5F897EE12412B749001B5C2B /* TrainerLoginAccess.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainerLoginAccess.swift; sourceTree = "<group>"; };
+		5F897EE32412BE36001B5C2B /* TrainerLoginInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainerLoginInfo.swift; sourceTree = "<group>"; };
+		5F897EE82412EA92001B5C2B /* StatusCodeMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusCodeMessage.swift; sourceTree = "<group>"; };
+		5F897EEA2412F246001B5C2B /* UserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
+		5F897EED2412F39D001B5C2B /* UserInfoBusinessService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoBusinessService.swift; sourceTree = "<group>"; };
 		5F901D7B2411445600986FF5 /* DatePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePicker.swift; sourceTree = "<group>"; };
 		5F901D7D2411485100986FF5 /* OrangeToolbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrangeToolbar.swift; sourceTree = "<group>"; };
 		5F901D7F24114A5200986FF5 /* DropdownPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropdownPicker.swift; sourceTree = "<group>"; };
@@ -143,8 +151,6 @@
 		5F901D8B2411971700986FF5 /* TrainerLoginAPIResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainerLoginAPIResponse.swift; sourceTree = "<group>"; };
 		5F901D8E2411A11700986FF5 /* TrainerLoginData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainerLoginData.swift; sourceTree = "<group>"; };
 		5F901D902411A13700986FF5 /* CurrentSystemRole.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentSystemRole.swift; sourceTree = "<group>"; };
-		5F901D922411A15200986FF5 /* OrgSystemUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrgSystemUser.swift; sourceTree = "<group>"; };
-		5F901D942411A1AB00986FF5 /* Organization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Organization.swift; sourceTree = "<group>"; };
 		84DB87CB241049EB00958E75 /* StartQuiz.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = StartQuiz.storyboard; sourceTree = "<group>"; };
 		84DB87CF24114A1000958E75 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		84DB87D3241159C300958E75 /* StartQuizViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartQuizViewController.swift; sourceTree = "<group>"; };
@@ -425,7 +431,11 @@
 		09F2C064240EE287004A6F47 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+
+				5F897EED2412F39D001B5C2B /* UserInfoBusinessService.swift */,
+
 				0991503B2412F87D00E73B62 /* EventAttendee */,
+
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -433,7 +443,11 @@
 		09F2C065240EE287004A6F47 /* Entities */ = {
 			isa = PBXGroup;
 			children = (
+
+				5F897EEA2412F246001B5C2B /* UserInfo.swift */,
+
 				099150392412F7B900E73B62 /* EventAttendee.swift */,
+
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -591,9 +605,18 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		5F897EE02412B6DF001B5C2B /* Access */ = {
+			isa = PBXGroup;
+			children = (
+				5F897EE12412B749001B5C2B /* TrainerLoginAccess.swift */,
+			);
+			path = Access;
+			sourceTree = "<group>";
+		};
 		5F901D8A241196EC00986FF5 /* API */ = {
 			isa = PBXGroup;
 			children = (
+				5F897EE02412B6DF001B5C2B /* Access */,
 				5F901D8D2411A0E900986FF5 /* Entities */,
 			);
 			path = API;
@@ -604,9 +627,9 @@
 			children = (
 				5F901D8B2411971700986FF5 /* TrainerLoginAPIResponse.swift */,
 				5F901D8E2411A11700986FF5 /* TrainerLoginData.swift */,
-				5F901D942411A1AB00986FF5 /* Organization.swift */,
 				5F901D902411A13700986FF5 /* CurrentSystemRole.swift */,
-				5F901D922411A15200986FF5 /* OrgSystemUser.swift */,
+				5F897EE32412BE36001B5C2B /* TrainerLoginInfo.swift */,
+				5F897EE82412EA92001B5C2B /* StatusCodeMessage.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -757,24 +780,31 @@
 				09A4679824119C8700A4BB90 /* DatabaseError.swift in Sources */,
 				090A813E241195F5008D7A12 /* MetatagReturnStructs.swift in Sources */,
 				090A813C24119492008D7A12 /* MetatagStatements.swift in Sources */,
+
 				09525E102412D9AC0051D177 /* EventAttendeeStatements.swift in Sources */,
 				5F901D952411A1AB00986FF5 /* Organization.swift in Sources */,
 				09525E0E2412D4750051D177 /* TableProtocol.swift in Sources */,
 				84DB87F624168A8200958E75 /* EventAccess.swift in Sources */,
 				0991503A2412F7B900E73B62 /* EventAttendee.swift in Sources */,
+
 				5F901D8224114E0C00986FF5 /* UITextFieldExtension.swift in Sources */,
 				95D8CF1424116B5B00EB322E /* MainStoryBoardController.swift in Sources */,
 				09F2C049240EE1B5004A6F47 /* ViewController.swift in Sources */,
+				5F897EE42412BE36001B5C2B /* TrainerLoginInfo.swift in Sources */,
 				84DB87D4241159C300958E75 /* StartQuizViewController.swift in Sources */,
 				5F901D8F2411A11700986FF5 /* TrainerLoginData.swift in Sources */,
 				0944AEDC241041CE00688C9B /* CreateEventCell.swift in Sources */,
+				5F897EE92412EA92001B5C2B /* StatusCodeMessage.swift in Sources */,
 				95D8CF1E241190A100EB322E /* EventViewViewController.swift in Sources */,
+				5F897EE22412B749001B5C2B /* TrainerLoginAccess.swift in Sources */,
 				5F901D8024114A5200986FF5 /* DropdownPicker.swift in Sources */,
+				5F897EEE2412F39D001B5C2B /* UserInfoBusinessService.swift in Sources */,
 				091DC3972411972300C5D577 /* DatabaseInformation.swift in Sources */,
 				09F2C045240EE1B5004A6F47 /* AppDelegate.swift in Sources */,
 				0940FE6E2411611D006F0E52 /* MetatagTable.swift in Sources */,
 				95D8CF1C2411907100EB322E /* EmployeeLoginViewController.swift in Sources */,
 				95D8CF20241190BB00EB322E /* AttendeeSignUpViewController.swift in Sources */,
+				5F897EEB2412F246001B5C2B /* UserInfo.swift in Sources */,
 				09F2C047240EE1B5004A6F47 /* SceneDelegate.swift in Sources */,
 				95D8CF22241190E900EB322E /* QuizViewViewController.swift in Sources */,
 				5F901D7E2411485100986FF5 /* OrangeToolbar.swift in Sources */,
