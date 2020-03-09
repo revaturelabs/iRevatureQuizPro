@@ -12,9 +12,15 @@ class AttendeeSignUpViewController: BaseViewController {
 
     @IBOutlet weak var textTest: UITextField!
     
+    @IBOutlet weak var table: UITableView!
+    private let tableSource = AttendeeSignupTableController()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
+        table.dataSource = tableSource
+        table.delegate = tableSource
     }
     
     @IBAction func backButton(_ sender: Any) {
@@ -24,6 +30,9 @@ class AttendeeSignUpViewController: BaseViewController {
     }
     
     @IBAction func submitButton(_ sender: Any) {
+        guard let signUpData = tableSource.getInputData() else { return }
+        EventAttendeePersistenceService.insert(attendeeData: signUpData)
+        
         let nextVC = StartQuizViewController.instantiate(fromAppStoryboard: AppStoryboard.StartQuiz)
         nextVC.modalPresentationStyle = .fullScreen
         present(nextVC, animated: false, completion: nil)
