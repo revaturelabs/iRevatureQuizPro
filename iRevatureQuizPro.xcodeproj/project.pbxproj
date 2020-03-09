@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -42,12 +42,21 @@
 		0991503D2412F8C300E73B62 /* EventAttendeePersistenceService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0991503C2412F8C300E73B62 /* EventAttendeePersistenceService.swift */; };
 		09A4679824119C8700A4BB90 /* DatabaseError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09A4679724119C8700A4BB90 /* DatabaseError.swift */; };
 		09A4679A2411A81100A4BB90 /* MetatagAccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09A467992411A81100A4BB90 /* MetatagAccess.swift */; };
+		09C0837E24136D4B00D021F0 /* EndInputExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C0837D24136D4B00D021F0 /* EndInputExtension.swift */; };
+		09C4D08424168ABB00DCDEC4 /* AttendeeSignupTableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C4D08324168ABB00DCDEC4 /* AttendeeSignupTableController.swift */; };
+		09C4D08724168C6400DCDEC4 /* AttendeeSignupTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C4D08624168C6400DCDEC4 /* AttendeeSignupTableCell.swift */; };
 		09F2C045240EE1B5004A6F47 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F2C044240EE1B5004A6F47 /* AppDelegate.swift */; };
 		09F2C047240EE1B5004A6F47 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F2C046240EE1B5004A6F47 /* SceneDelegate.swift */; };
 		09F2C049240EE1B5004A6F47 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F2C048240EE1B5004A6F47 /* ViewController.swift */; };
 		09F2C04C240EE1B5004A6F47 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09F2C04A240EE1B5004A6F47 /* Main.storyboard */; };
 		09F2C04E240EE1B9004A6F47 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 09F2C04D240EE1B9004A6F47 /* Assets.xcassets */; };
 		09F2C051240EE1B9004A6F47 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09F2C04F240EE1B9004A6F47 /* LaunchScreen.storyboard */; };
+		5F897EBF24129481001B5C2B /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 5F897EBE24129481001B5C2B /* Alamofire */; };
+		5F897EE22412B749001B5C2B /* TrainerLoginAccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F897EE12412B749001B5C2B /* TrainerLoginAccess.swift */; };
+		5F897EE42412BE36001B5C2B /* TrainerLoginInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F897EE32412BE36001B5C2B /* TrainerLoginInfo.swift */; };
+		5F897EE92412EA92001B5C2B /* StatusCodeMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F897EE82412EA92001B5C2B /* StatusCodeMessage.swift */; };
+		5F897EEB2412F246001B5C2B /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F897EEA2412F246001B5C2B /* UserInfo.swift */; };
+		5F897EEE2412F39D001B5C2B /* UserInfoBusinessService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F897EED2412F39D001B5C2B /* UserInfoBusinessService.swift */; };
 		5F901D7C2411445600986FF5 /* DatePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F901D7B2411445600986FF5 /* DatePicker.swift */; };
 		5F901D7E2411485100986FF5 /* OrangeToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F901D7D2411485100986FF5 /* OrangeToolbar.swift */; };
 		5F901D8024114A5200986FF5 /* DropdownPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F901D7F24114A5200986FF5 /* DropdownPicker.swift */; };
@@ -55,11 +64,10 @@
 		5F901D8C2411971700986FF5 /* TrainerLoginAPIResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F901D8B2411971700986FF5 /* TrainerLoginAPIResponse.swift */; };
 		5F901D8F2411A11700986FF5 /* TrainerLoginData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F901D8E2411A11700986FF5 /* TrainerLoginData.swift */; };
 		5F901D912411A13700986FF5 /* CurrentSystemRole.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F901D902411A13700986FF5 /* CurrentSystemRole.swift */; };
-		5F901D932411A15200986FF5 /* OrgSystemUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F901D922411A15200986FF5 /* OrgSystemUser.swift */; };
-		5F901D952411A1AB00986FF5 /* Organization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F901D942411A1AB00986FF5 /* Organization.swift */; };
 		84DB87CC241049EB00958E75 /* StartQuiz.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84DB87CB241049EB00958E75 /* StartQuiz.storyboard */; };
 		84DB87D024114A1000958E75 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DB87CF24114A1000958E75 /* BaseViewController.swift */; };
 		84DB87D4241159C300958E75 /* StartQuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DB87D3241159C300958E75 /* StartQuizViewController.swift */; };
+		84DB87F624168A8200958E75 /* EventAccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DB87F524168A8200958E75 /* EventAccess.swift */; };
 		84F34FA42410437100D250BB /* iRevatureButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F34FA32410437100D250BB /* iRevatureButton.swift */; };
 		9544BEF224119B9500BFC412 /* VIewControllerInstantiator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9544BEF124119B9500BFC412 /* VIewControllerInstantiator.swift */; };
 		95D8CF1424116B5B00EB322E /* MainStoryBoardController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D8CF1324116B5B00EB322E /* MainStoryBoardController.swift */; };
@@ -126,6 +134,9 @@
 		0991503C2412F8C300E73B62 /* EventAttendeePersistenceService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventAttendeePersistenceService.swift; sourceTree = "<group>"; };
 		09A4679724119C8700A4BB90 /* DatabaseError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseError.swift; sourceTree = "<group>"; };
 		09A467992411A81100A4BB90 /* MetatagAccess.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetatagAccess.swift; sourceTree = "<group>"; };
+		09C0837D24136D4B00D021F0 /* EndInputExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndInputExtension.swift; sourceTree = "<group>"; };
+		09C4D08324168ABB00DCDEC4 /* AttendeeSignupTableController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttendeeSignupTableController.swift; sourceTree = "<group>"; };
+		09C4D08624168C6400DCDEC4 /* AttendeeSignupTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttendeeSignupTableCell.swift; sourceTree = "<group>"; };
 		09F2C041240EE1B5004A6F47 /* iRevatureQuizPro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iRevatureQuizPro.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		09F2C044240EE1B5004A6F47 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		09F2C046240EE1B5004A6F47 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -134,6 +145,11 @@
 		09F2C04D240EE1B9004A6F47 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		09F2C050240EE1B9004A6F47 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		09F2C052240EE1B9004A6F47 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5F897EE12412B749001B5C2B /* TrainerLoginAccess.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainerLoginAccess.swift; sourceTree = "<group>"; };
+		5F897EE32412BE36001B5C2B /* TrainerLoginInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainerLoginInfo.swift; sourceTree = "<group>"; };
+		5F897EE82412EA92001B5C2B /* StatusCodeMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusCodeMessage.swift; sourceTree = "<group>"; };
+		5F897EEA2412F246001B5C2B /* UserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
+		5F897EED2412F39D001B5C2B /* UserInfoBusinessService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoBusinessService.swift; sourceTree = "<group>"; };
 		5F901D7B2411445600986FF5 /* DatePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePicker.swift; sourceTree = "<group>"; };
 		5F901D7D2411485100986FF5 /* OrangeToolbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrangeToolbar.swift; sourceTree = "<group>"; };
 		5F901D7F24114A5200986FF5 /* DropdownPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropdownPicker.swift; sourceTree = "<group>"; };
@@ -141,11 +157,10 @@
 		5F901D8B2411971700986FF5 /* TrainerLoginAPIResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainerLoginAPIResponse.swift; sourceTree = "<group>"; };
 		5F901D8E2411A11700986FF5 /* TrainerLoginData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainerLoginData.swift; sourceTree = "<group>"; };
 		5F901D902411A13700986FF5 /* CurrentSystemRole.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentSystemRole.swift; sourceTree = "<group>"; };
-		5F901D922411A15200986FF5 /* OrgSystemUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrgSystemUser.swift; sourceTree = "<group>"; };
-		5F901D942411A1AB00986FF5 /* Organization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Organization.swift; sourceTree = "<group>"; };
 		84DB87CB241049EB00958E75 /* StartQuiz.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = StartQuiz.storyboard; sourceTree = "<group>"; };
 		84DB87CF24114A1000958E75 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		84DB87D3241159C300958E75 /* StartQuizViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartQuizViewController.swift; sourceTree = "<group>"; };
+		84DB87F524168A8200958E75 /* EventAccess.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventAccess.swift; sourceTree = "<group>"; };
 		84F34FA32410437100D250BB /* iRevatureButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iRevatureButton.swift; sourceTree = "<group>"; };
 		9544BEF124119B9500BFC412 /* VIewControllerInstantiator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VIewControllerInstantiator.swift; sourceTree = "<group>"; };
 		95D8CF1324116B5B00EB322E /* MainStoryBoardController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainStoryBoardController.swift; sourceTree = "<group>"; };
@@ -177,6 +192,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0940FE8F24116145006F0E52 /* libEasySQLite.a in Frameworks */,
+				5F897EBF24129481001B5C2B /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -285,6 +301,23 @@
 			path = EventAttendee;
 			sourceTree = "<group>";
 		};
+		09C4D08524168C4600DCDEC4 /* AttendeeSignup */ = {
+			isa = PBXGroup;
+			children = (
+				09C4D08624168C6400DCDEC4 /* AttendeeSignupTableCell.swift */,
+			);
+			path = AttendeeSignup;
+			sourceTree = "<group>";
+		};
+		09DD60A124168A17004E9583 /* AttendeeSignup */ = {
+			isa = PBXGroup;
+			children = (
+				95D8CF1F241190BB00EB322E /* AttendeeSignUpViewController.swift */,
+				09C4D08324168ABB00DCDEC4 /* AttendeeSignupTableController.swift */,
+			);
+			path = AttendeeSignup;
+			sourceTree = "<group>";
+		};
 		09F2C038240EE1B5004A6F47 = {
 			isa = PBXGroup;
 			children = (
@@ -363,6 +396,7 @@
 			children = (
 				09A467992411A81100A4BB90 /* MetatagAccess.swift */,
 				099150232412E2F800E73B62 /* EventAttendeeAccess.swift */,
+				84DB87F524168A8200958E75 /* EventAccess.swift */,
 			);
 			path = "Data-Access";
 			sourceTree = "<group>";
@@ -420,7 +454,11 @@
 		09F2C064240EE287004A6F47 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+
+				5F897EED2412F39D001B5C2B /* UserInfoBusinessService.swift */,
+
 				0991503B2412F87D00E73B62 /* EventAttendee */,
+
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -428,7 +466,11 @@
 		09F2C065240EE287004A6F47 /* Entities */ = {
 			isa = PBXGroup;
 			children = (
+
+				5F897EEA2412F246001B5C2B /* UserInfo.swift */,
+
 				099150392412F7B900E73B62 /* EventAttendee.swift */,
+
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -493,6 +535,7 @@
 			children = (
 				0944AED7241036BF00688C9B /* UIColorExtension.swift */,
 				5F901D8124114E0C00986FF5 /* UITextFieldExtension.swift */,
+				09C0837D24136D4B00D021F0 /* EndInputExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -563,10 +606,10 @@
 		09F2C074240EE2C7004A6F47 /* View-Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				09DD60A124168A17004E9583 /* AttendeeSignup */,
 				09F2C048240EE1B5004A6F47 /* ViewController.swift */,
 				84DB87CF24114A1000958E75 /* BaseViewController.swift */,
 				95D8CF1324116B5B00EB322E /* MainStoryBoardController.swift */,
-				95D8CF1F241190BB00EB322E /* AttendeeSignUpViewController.swift */,
 				95D8CF1B2411907100EB322E /* EmployeeLoginViewController.swift */,
 				95D8CF1D241190A100EB322E /* EventViewViewController.swift */,
 				0944AEDD2410540400688C9B /* CreateEventViewController.swift */,
@@ -580,15 +623,25 @@
 		09F2C075240EE2CE004A6F47 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				09C4D08524168C4600DCDEC4 /* AttendeeSignup */,
 				5F901D7B2411445600986FF5 /* DatePicker.swift */,
 				5F901D7F24114A5200986FF5 /* DropdownPicker.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
 		};
+		5F897EE02412B6DF001B5C2B /* Access */ = {
+			isa = PBXGroup;
+			children = (
+				5F897EE12412B749001B5C2B /* TrainerLoginAccess.swift */,
+			);
+			path = Access;
+			sourceTree = "<group>";
+		};
 		5F901D8A241196EC00986FF5 /* API */ = {
 			isa = PBXGroup;
 			children = (
+				5F897EE02412B6DF001B5C2B /* Access */,
 				5F901D8D2411A0E900986FF5 /* Entities */,
 			);
 			path = API;
@@ -599,9 +652,9 @@
 			children = (
 				5F901D8B2411971700986FF5 /* TrainerLoginAPIResponse.swift */,
 				5F901D8E2411A11700986FF5 /* TrainerLoginData.swift */,
-				5F901D942411A1AB00986FF5 /* Organization.swift */,
 				5F901D902411A13700986FF5 /* CurrentSystemRole.swift */,
-				5F901D922411A15200986FF5 /* OrgSystemUser.swift */,
+				5F897EE32412BE36001B5C2B /* TrainerLoginInfo.swift */,
+				5F897EE82412EA92001B5C2B /* StatusCodeMessage.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -640,6 +693,9 @@
 			dependencies = (
 			);
 			name = iRevatureQuizPro;
+			packageProductDependencies = (
+				5F897EBE24129481001B5C2B /* Alamofire */,
+			);
 			productName = iRevatureQuizPro;
 			productReference = 09F2C041240EE1B5004A6F47 /* iRevatureQuizPro.app */;
 			productType = "com.apple.product-type.application";
@@ -672,6 +728,9 @@
 				Base,
 			);
 			mainGroup = 09F2C038240EE1B5004A6F47;
+			packageReferences = (
+				5F897EBD24129481001B5C2B /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			productRefGroup = 09F2C042240EE1B5004A6F47 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -735,7 +794,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				09C4D08724168C6400DCDEC4 /* AttendeeSignupTableCell.swift in Sources */,
 				0944AEDA2410419100688C9B /* RevatureTableViewCell.swift in Sources */,
+				09C4D08424168ABB00DCDEC4 /* AttendeeSignupTableController.swift in Sources */,
 				84DB87D024114A1000958E75 /* BaseViewController.swift in Sources */,
 				099150242412E2F800E73B62 /* EventAttendeeAccess.swift in Sources */,
 				09A4679A2411A81100A4BB90 /* MetatagAccess.swift in Sources */,
@@ -746,23 +807,32 @@
 				09A4679824119C8700A4BB90 /* DatabaseError.swift in Sources */,
 				090A813E241195F5008D7A12 /* MetatagReturnStructs.swift in Sources */,
 				090A813C24119492008D7A12 /* MetatagStatements.swift in Sources */,
+
 				09525E102412D9AC0051D177 /* EventAttendeeStatements.swift in Sources */,
 				5F901D952411A1AB00986FF5 /* Organization.swift in Sources */,
 				09525E0E2412D4750051D177 /* TableProtocol.swift in Sources */,
+				84DB87F624168A8200958E75 /* EventAccess.swift in Sources */,
 				0991503A2412F7B900E73B62 /* EventAttendee.swift in Sources */,
+
 				5F901D8224114E0C00986FF5 /* UITextFieldExtension.swift in Sources */,
 				95D8CF1424116B5B00EB322E /* MainStoryBoardController.swift in Sources */,
 				09F2C049240EE1B5004A6F47 /* ViewController.swift in Sources */,
+				5F897EE42412BE36001B5C2B /* TrainerLoginInfo.swift in Sources */,
 				84DB87D4241159C300958E75 /* StartQuizViewController.swift in Sources */,
 				5F901D8F2411A11700986FF5 /* TrainerLoginData.swift in Sources */,
 				0944AEDC241041CE00688C9B /* CreateEventCell.swift in Sources */,
+				5F897EE92412EA92001B5C2B /* StatusCodeMessage.swift in Sources */,
 				95D8CF1E241190A100EB322E /* EventViewViewController.swift in Sources */,
+				5F897EE22412B749001B5C2B /* TrainerLoginAccess.swift in Sources */,
 				5F901D8024114A5200986FF5 /* DropdownPicker.swift in Sources */,
+				5F897EEE2412F39D001B5C2B /* UserInfoBusinessService.swift in Sources */,
 				091DC3972411972300C5D577 /* DatabaseInformation.swift in Sources */,
+				09C0837E24136D4B00D021F0 /* EndInputExtension.swift in Sources */,
 				09F2C045240EE1B5004A6F47 /* AppDelegate.swift in Sources */,
 				0940FE6E2411611D006F0E52 /* MetatagTable.swift in Sources */,
 				95D8CF1C2411907100EB322E /* EmployeeLoginViewController.swift in Sources */,
 				95D8CF20241190BB00EB322E /* AttendeeSignUpViewController.swift in Sources */,
+				5F897EEB2412F246001B5C2B /* UserInfo.swift in Sources */,
 				09F2C047240EE1B5004A6F47 /* SceneDelegate.swift in Sources */,
 				95D8CF22241190E900EB322E /* QuizViewViewController.swift in Sources */,
 				5F901D7E2411485100986FF5 /* OrangeToolbar.swift in Sources */,
@@ -1044,6 +1114,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		5F897EBD24129481001B5C2B /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		5F897EBE24129481001B5C2B /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5F897EBD24129481001B5C2B /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 09F2C039240EE1B5004A6F47 /* Project object */;
 }

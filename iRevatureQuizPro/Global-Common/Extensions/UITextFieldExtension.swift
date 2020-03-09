@@ -15,8 +15,8 @@ extension UITextField {
         self.inputView = DropdownPicker(pickerData: data, textField: self)
     }
     
-    func dateSelector(dateFormat: String) {
-        self.inputView = DatePicker(dateFormat: dateFormat, textField: self)
+    func dateSelector() {
+        self.inputView = DatePicker(dateFormat: "MMM dd, yyyy", textField: self)
     }
     
 }

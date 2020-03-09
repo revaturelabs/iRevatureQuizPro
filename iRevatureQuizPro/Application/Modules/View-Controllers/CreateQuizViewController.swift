@@ -14,7 +14,7 @@ class CreateQuizViewController: BaseViewController {
     @IBOutlet weak var activityPointsTextField: UITextField!
     @IBOutlet weak var durationTextField: UITextField!
     @IBOutlet weak var maxNumberOfAttemptsTextField: UITextField!
-    @IBOutlet weak var levenOverrideSwitch: UISwitch!
+    @IBOutlet weak var levelOverrideSwitch: UISwitch!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,6 +29,13 @@ class CreateQuizViewController: BaseViewController {
         let nextVC = storyboard.instantiateViewController(withIdentifier: "TabBarController_ID")
         nextVC.modalPresentationStyle = .fullScreen
         present(nextVC,animated: false, completion: nil)
+    }
+    
+    @IBAction func submitQuizButtton(_ sender: Any) {
+        let alert = UIAlertController(title: "Create Quiz", message: "Feature coming soon", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Acknowledge", style: .default, handler: nil))
+        self.present(alert, animated: true)
+        
     }
     
 }
