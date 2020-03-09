@@ -73,11 +73,12 @@ extension Events{
 //=====================================
     //Insert Row Statement
 //=====================================
-    static func insertStatement(eventName: String, location: String, eventCode: String, ambassadorEmail: String, date: String) -> ESLInsertStatement {
+    static func insertStatement(eventName: String, location: String, eventCode: String, quizID: Int, ambassadorEmail: String, date: String) -> ESLInsertStatement {
         var insert = ESLInsertStatement(table: Events.table)
         insert.specifyValue(columnName: Events.ColumnName.eventName.rawValue, columnValue: eventName)
         insert.specifyValue(columnName: Events.ColumnName.location.rawValue, columnValue: location)
         insert.specifyValue(columnName: Events.ColumnName.eventCode.rawValue, columnValue: eventCode)
+        insert.specifyValue(columnName: Events.ColumnName.quizID.rawValue, columnValue: quizID)
         insert.specifyValue(columnName: Events.ColumnName.ambassadorEmail.rawValue, columnValue: ambassadorEmail)
         insert.specifyValue(columnName: Events.ColumnName.date.rawValue, columnValue: date)
         
