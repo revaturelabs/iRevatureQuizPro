@@ -11,9 +11,9 @@ import EasySQLite
 //=====================================
     //Metatag Table information
 //=====================================
-struct PMetatag {
+struct PMetatag: PersistenceTable {
     //Table's name
-    private static let tableName = "metatag"
+    static let tableName = "metatag"
     
     //Table's Column Names
     enum ColumnName: String {

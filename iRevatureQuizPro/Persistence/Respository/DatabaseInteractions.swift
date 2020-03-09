@@ -16,7 +16,7 @@ class Database {
 //=====================================
     //Open Database
 //=====================================
-    private static func openDatabase() throws -> ESLDatabaseAccess {
+    static func openDatabase() throws -> ESLDatabaseAccess {
         guard let db = ESLDatabaseAccess.openDatabase(path: DatabaseInfo.filePath, createIfDoesNotExist: true) else {
             os_log(DatabaseErrorMessage.open, log: OSLog.default, type: .error)
             throw EasySQLiteError.OpenDatabase(message: "")
@@ -27,52 +27,70 @@ class Database {
 //=====================================
     //Create Table In Database
 //=====================================
-    static func create(table: ESLTable) {
+    static func create(table: ESLTable) -> Bool {
         do {
             let db = try openDatabase()
             try db.createTable(table: table)
+            return true
         } catch {
             os_log(DatabaseErrorMessage.create, log: OSLog.default, type: .error, table.getTableName())
-            return
+            return false
+        }
+    }
+    
+//=====================================
+    //Create Table In Database
+//=====================================
+    static func drop(table: ESLTable) -> Bool {
+        do {
+            let db = try openDatabase()
+            try db.dropTable(table: table)
+            return true
+        } catch {
+            os_log(DatabaseErrorMessage.drop, log: OSLog.default, type: .error, table.getTableName())
+            return false
         }
     }
     
 //=====================================
     //Insert Row Into Database
 //=====================================
-    static func insertRow(withInsertStatement insert: ESLInsertStatement) {
+    static func insertRow(withInsertStatement insert: ESLInsertStatement) -> Bool {
         do {
             let db = try openDatabase()
             try db.insertRow(statement: insert)
+            return true
         } catch {
             os_log(DatabaseErrorMessage.insert, log: OSLog.default, type: .error, insert.getTableName())
-            return
+            return false
         }
     }
     
 //=====================================
     //Delete Row From Database
 //=====================================
-    static func deleteRow(withDeleteStatement delete: ESLDeleteStatement) {
+    static func deleteRow(withDeleteStatement delete: ESLDeleteStatement) -> Bool {
         do {
             let db = try openDatabase()
             try db.deleteRow(statement: delete)
+            return true
         } catch {
             os_log(DatabaseErrorMessage.delete, log: OSLog.default, type: .error, delete.getTableName())
-            return
+            return false
         }
     }
     
 //=====================================
     //Delete Row From Database
 //=====================================
-    static func updateRow(withUpdateStatement update: ESLUpdateStatement) {
+    static func updateRow(withUpdateStatement update: ESLUpdateStatement) -> Bool {
         do {
             let db = try openDatabase()
             try db.updateRow(statement: update)
+            return true
         } catch {
             os_log(DatabaseErrorMessage.update, log: OSLog.default, type: .error, update.getTableName())
-            return
+            return false
         }
     }
     

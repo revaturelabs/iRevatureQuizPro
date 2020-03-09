@@ -25,5 +25,8 @@ class EventViewViewController: BaseViewController {
     }
     
     @IBAction func optionsButton(_ sender: Any) {
+        let nextVC = EmployeeLoginViewController.instantiate(fromAppStoryboard: AppStoryboard.EmployeeLogin)
+        nextVC.modalPresentationStyle = .fullScreen
+        present(nextVC, animated: false, completion: nil)
     }
 }

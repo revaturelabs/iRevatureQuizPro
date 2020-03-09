@@ -51,6 +51,9 @@
                                                 <state key="normal" title="...">
                                                     <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="optionsButton:" destination="pZa-u9-IKp" eventType="touchDown" id="s4D-NS-EYV"/>
+                                                </connections>
                                             </button>
                                             <connections>
                                                 <action selector="optionsButton:" destination="pZa-u9-IKp" id="OZq-oK-X9d"/>
@@ -117,7 +120,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="SOd-5w-1zI"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Quizzes" id="f4A-W9-Waa"/>
+                    <tabBarItem key="tabBarItem" title="Quizzes" image="doc.text" catalog="system" id="f4A-W9-Waa"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="quizSearchBar" destination="OB3-yk-dc0" id="EJu-Qv-Jii"/>
@@ -248,13 +251,34 @@
                                 <rect key="frame" x="345" y="452" width="49" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </switch>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="*Leven Override" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k5o-05-5hy">
-                                <rect key="frame" x="20" y="457" width="131" height="20"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="*Level Override" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k5o-05-5hy">
+                                <rect key="frame" x="20" y="457" width="125" height="20"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ybc-d9-GaP" customClass="RevatureButton" customModule="iRevatureQuizPro" customModuleProvider="target">
+                                <rect key="frame" x="117" y="763" width="180" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Submit">
+                                    <color key="titleColor" red="1" green="0.37647058820000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="1" green="0.37647058820000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="submitQuizButtton:" destination="VWc-QF-ZYf" eventType="touchDown" id="lGu-19-2gu"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="I1p-Ng-Ufg"/>
@@ -263,7 +287,7 @@
                     <connections>
                         <outlet property="activityPointsTextField" destination="bbM-rf-Urq" id="8Kd-6R-aOo"/>
                         <outlet property="durationTextField" destination="aZC-d5-pcf" id="eFR-Yq-NbE"/>
-                        <outlet property="levenOverrideSwitch" destination="MY4-xM-LIK" id="ucc-jN-gGd"/>
+                        <outlet property="levelOverrideSwitch" destination="MY4-xM-LIK" id="dKL-YS-iJw"/>
                         <outlet property="maxNumberOfAttemptsTextField" destination="PJW-Tt-ZSJ" id="8uk-Yi-GM1"/>
                         <outlet property="quizNameTextField" destination="uzN-JF-UID" id="EsV-DD-MNA"/>
                         <outlet property="tagsTextField" destination="mLa-hN-zXO" id="j14-cM-FIy"/>
@@ -276,6 +300,7 @@
     </scenes>
     <resources>
         <image name="arrow.left" catalog="system" width="64" height="48"/>
+        <image name="doc.text" catalog="system" width="56" height="64"/>
         <image name="plus" catalog="system" width="64" height="56"/>
     </resources>
 </document>
