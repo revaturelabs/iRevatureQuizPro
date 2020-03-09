@@ -32,22 +32,28 @@ extension PEventAttendee {
 //=====================================
     //Insert Row Into Database
 //=====================================
-    static func insert(firstName: String, lastName: String, email: String, phoneNumber: Int, major: String, highestEducation: String, worthAuthority: String) {
+    static func insert(firstName: String, lastName: String, email: String, phoneNumber: Int, major: String, highestEducation: String, worthAuthority: String) -> Bool {
         let insert = insertStatement(firstName: firstName, lastName: lastName, email: email, phoneNumber: phoneNumber, major: major, highestEducation: highestEducation, worthAuthority: worthAuthority)
         
         if !Database.insertRow(withInsertStatement: insert) {
             os_log(DatabaseErrorMessage.insert, log: OSLog.default, type: .error, PEventAttendee.tableName)
+            return false
         }
+        
+        return true
     }
     
 //=====================================
     //Delete Row From Database By ID
 //=====================================
-    static func delete(id: Int) {
+    static func delete(id: Int) -> Bool {
         let delete = deleteByStatement(id: id)
         
         if !Database.deleteRow(withDeleteStatement: delete) {
             os_log(DatabaseErrorMessage.delete, log: OSLog.default, type: .error, PEventAttendee.tableName)
+            return false
         }
+        
+        return true
     }
 }
