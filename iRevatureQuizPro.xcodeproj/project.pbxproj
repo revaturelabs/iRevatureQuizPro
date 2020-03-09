@@ -44,6 +44,7 @@
 		2916E6782412D44900775797 /* QuizStatements.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2916E6752412D44900775797 /* QuizStatements.swift */; };
 		2916E6792412D44900775797 /* QuizTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2916E6762412D44900775797 /* QuizTable.swift */; };
 		2916E67A2412D44900775797 /* QuizReturnStructs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2916E6772412D44900775797 /* QuizReturnStructs.swift */; };
+		29B2F19F2416C4D500FDDE57 /* QuizObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29B2F19E2416C4D500FDDE57 /* QuizObject.swift */; };
 		5F901D7C2411445600986FF5 /* DatePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F901D7B2411445600986FF5 /* DatePicker.swift */; };
 		5F901D7E2411485100986FF5 /* OrangeToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F901D7D2411485100986FF5 /* OrangeToolbar.swift */; };
 		5F901D8024114A5200986FF5 /* DropdownPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F901D7F24114A5200986FF5 /* DropdownPicker.swift */; };
@@ -111,6 +112,7 @@
 		2916E6752412D44900775797 /* QuizStatements.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuizStatements.swift; sourceTree = "<group>"; };
 		2916E6762412D44900775797 /* QuizTable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuizTable.swift; sourceTree = "<group>"; };
 		2916E6772412D44900775797 /* QuizReturnStructs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuizReturnStructs.swift; sourceTree = "<group>"; };
+		29B2F19E2416C4D500FDDE57 /* QuizObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizObject.swift; sourceTree = "<group>"; };
 		5F901D7B2411445600986FF5 /* DatePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePicker.swift; sourceTree = "<group>"; };
 		5F901D7D2411485100986FF5 /* OrangeToolbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrangeToolbar.swift; sourceTree = "<group>"; };
 		5F901D7F24114A5200986FF5 /* DropdownPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropdownPicker.swift; sourceTree = "<group>"; };
@@ -353,6 +355,7 @@
 		09F2C065240EE287004A6F47 /* Entities */ = {
 			isa = PBXGroup;
 			children = (
+				29B2F19E2416C4D500FDDE57 /* QuizObject.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -630,6 +633,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				29B2F19F2416C4D500FDDE57 /* QuizObject.swift in Sources */,
 				2916E6782412D44900775797 /* QuizStatements.swift in Sources */,
 				0944AEDA2410419100688C9B /* RevatureTableViewCell.swift in Sources */,
 				84DB87D024114A1000958E75 /* BaseViewController.swift in Sources */,

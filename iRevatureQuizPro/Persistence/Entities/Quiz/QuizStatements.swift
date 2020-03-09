@@ -12,12 +12,12 @@ extension PQuiz {
 //=====================================
     //Select All Quiz Rows Statement
 //=====================================
-    static func getAllStatement() -> ESLSelectStatement {
-        var select = ESLSelectStatement()
-        select.getAllColumns(fromTable: PQuiz.table)
-        
-        return select // currently doesnt work? mark says dont use atm
-    }
+//    static func getAllStatement() -> ESLSelectStatement {
+//        var select = ESLSelectStatement()
+//        select.getAllColumns(fromTable: PQuiz.table)
+//
+//        return select // currently doesnt work? mark says dont use atm
+//    }
     
 //=====================================
     //Select Quiz Row By ID Statement
@@ -61,8 +61,8 @@ extension PQuiz {
         var insert = ESLInsertStatement(table: PQuiz.table)
         
         insert.specifyValue(columnName: PQuiz.ColumnName.quiz_name.rawValue, columnValue: quiz.quiz_name)
-        insert.specifyValue(columnName: PQuiz.ColumnName.quiz_id.rawValue, columnValue: <#T##Any#>)
-        insert.specifyValue(columnName: <#T##String#>, columnValue: <#T##Any#>)
+        insert.specifyValue(columnName: PQuiz.ColumnName.quiz_id.rawValue, columnValue: quiz.quiz_id)
+        insert.specifyValue(columnName: PQuiz.ColumnName.activity_points.rawValue, columnValue: quiz.activity_points)
         insert.specifyValue(columnName: <#T##String#>, columnValue: <#T##Any#>)
         insert.specifyValue(columnName: <#T##String#>, columnValue: <#T##Any#>)
         insert.specifyValue(columnName: <#T##String#>, columnValue: <#T##Any#>)
