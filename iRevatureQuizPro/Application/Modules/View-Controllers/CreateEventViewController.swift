@@ -24,6 +24,7 @@ class CreateEventViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
     }
     
     @IBAction func backButton(_ sender: Any) {
@@ -35,7 +36,7 @@ class CreateEventViewController: BaseViewController {
     
     @IBAction func submitEventButton(_ sender: Any) {
         Database.create(table: Events.table)
-        Events.insert(eventName: eventNametextField.text!, location: locationTextField.text!, eventCode: eventCodeTextField.text!, quizID: Int(quizIDTextField.text!)!, ambassadorEmail: ambassadorEmailTextField.text!, date: dateTextField.text!)
+        Events.insert(eventName: eventNametextField.text!, location: locationTextField.text!, eventCode: eventCodeTextField.text!, quizID: quizIDTextField.text!, ambassadorEmail: ambassadorEmailTextField.text!, date: dateTextField.text!)
         
     }
 }
