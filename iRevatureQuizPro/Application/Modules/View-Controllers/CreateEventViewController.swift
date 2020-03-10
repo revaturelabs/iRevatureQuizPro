@@ -12,7 +12,7 @@ class CreateEventViewController: BaseViewController {
     
 
     @IBOutlet weak var eventInputTable: UITableView!
-    @IBOutlet weak var quizTextField: UITextField!
+
     
 
     private var quizDropdown: DropdownPicker?
@@ -46,7 +46,7 @@ class CreateEventViewController: BaseViewController {
         
         // Assigns the quiz a list of values to select from
 //        quizTextField.pickerSelector(data: quizArray)
-        quizTextField.pickerSelector(data: quizArray)
+        quizIDTextField.pickerSelector(data: quizArray)
 
     }
     
