@@ -10,20 +10,44 @@ import UIKit
 
 class CreateEventViewController: BaseViewController {
     
-    let quizArray: [String] = ["Quiz 1", "Quiz 2", "Quiz 3", "Quiz 4"]
+
+    @IBOutlet weak var eventInputTable: UITableView!
+    @IBOutlet weak var quizTextField: UITextField!
+    
+
+    private var quizDropdown: DropdownPicker?
+    
+    var quizArray: [String] = []
+    //    let tableCellIdentifier: String = "CreateEventCell"
+    //    let inputNames: [String] = ["Event Code", "Event Name", "Location", "Date", "Quiz", "Ambassador"]
+    //    let quizArray: [String] = ["Quiz 1", "Quiz 2", "Quiz 3", "Quiz 4"]
+
     @IBOutlet weak var eventCodeTextField: UITextField!
     @IBOutlet weak var eventNametextField: UITextField!
     @IBOutlet weak var locationTextField: UITextField!
     @IBOutlet weak var dateTextField: UITextField!
     @IBOutlet weak var quizIDTextField: UITextField!
     @IBOutlet weak var ambassadorEmailTextField: UITextField!
+
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+
         //creates the database table for Events
         Database.create(table: Events.table)
         dateTextField.dateSelector()
+
+        
+
+
+//        quizArray = ["Quiz 1", "Quiz 2", "Quiz 3", "Quiz 4"]
+        quizArray  = ["Quiz 1", "Quiz 2", "Quiz 3", "Quiz 4"]
+        
+        // Assigns the quiz a list of values to select from
+//        quizTextField.pickerSelector(data: quizArray)
+        quizTextField.pickerSelector(data: quizArray)
+
     }
     
     //returns user back to the events view screen
@@ -39,4 +63,5 @@ class CreateEventViewController: BaseViewController {
         Events.insert(eventName: eventNametextField.text!, location: locationTextField.text!, eventCode: eventCodeTextField.text!, quizID: quizIDTextField.text!, ambassadorEmail: ambassadorEmailTextField.text!, date: dateTextField.text!)
         
     }
+    
 }
