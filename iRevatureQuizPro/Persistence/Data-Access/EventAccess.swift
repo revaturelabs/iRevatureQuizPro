@@ -7,6 +7,7 @@
 //
 
 import os.log
+import Foundation
 
 extension Events {
     
@@ -21,9 +22,9 @@ extension Events {
 //=====================================
     //Get A Single Row By Event Code
 //=====================================
-    static func getBy(eventCode: String) -> Events.EventCode? {
+    static func getBy(eventCode: String) -> Events.EventsAllData? {
         let select = getByStatement(eventCode: eventCode)
-        guard let result = Database.selectRow(withSelectStatement: select, returnStruct: Events.EventCode.self) else {
+        guard let result = Database.selectRow(withSelectStatement: select, returnStruct: Events.EventsAllData.self) else {
             return nil }
         
         return result.first
@@ -32,7 +33,7 @@ extension Events {
 //=====================================
     //Insert Row Into Database
 //=====================================
-    static func insert(eventName: String, location: String, eventCode: String, quizID: Int, ambassadorEmail: String, date: String) {
+    static func insert(eventName: String, location: String, eventCode: String, quizID: String, ambassadorEmail: String, date: Date) {
         let insert = insertStatement(eventName: eventName, location: location, eventCode: eventCode, quizID: quizID, ambassadorEmail: ambassadorEmail, date: date)
         
         if !Database.insertRow(withInsertStatement: insert) {

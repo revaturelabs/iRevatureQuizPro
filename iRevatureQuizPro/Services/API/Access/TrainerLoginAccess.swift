@@ -10,6 +10,8 @@ import Foundation
 import Alamofire
 import os.log
 
+import UIKit
+
 class TrainerLoginAccess {
     
     //endpoint for user login
@@ -47,5 +49,4 @@ class TrainerLoginAccess {
             completionHandler(user.data, false)
         }
     }
-    
 }

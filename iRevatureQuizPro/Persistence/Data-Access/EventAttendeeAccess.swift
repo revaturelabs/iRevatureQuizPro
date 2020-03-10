@@ -21,9 +21,9 @@ extension PEventAttendee {
 //=====================================
     //Get A Single Row By Database ID
 //=====================================
-    static func getBy(id: Int) -> PEventAttendee.EventAttendeeFullNameEmail? {
+    static func getBy(id: Int) -> PEventAttendee.EventAttendeeAllData? {
         let select = getByStatement(id: id)
-        guard let result = Database.selectRow(withSelectStatement: select, returnStruct: PEventAttendee.EventAttendeeFullNameEmail.self) else {
+        guard let result = Database.selectRow(withSelectStatement: select, returnStruct: PEventAttendee.EventAttendeeAllData .self) else {
             return nil }
         
         return result.first

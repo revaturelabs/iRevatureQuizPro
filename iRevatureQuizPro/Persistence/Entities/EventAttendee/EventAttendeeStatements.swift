@@ -32,9 +32,14 @@ extension PEventAttendee {
     static func getByStatement(id: Int) -> ESLSelectStatement {
         //Select Statement
         var select = ESLSelectStatement()
-        select.specifyColumn(table: PEventAttendee.table, columnName: PEventAttendee.ColumnName.firstName.rawValue, asName: PEventAttendee.ColumnName.firstName.rawValue)
-        select.specifyColumn(table: PEventAttendee.table, columnName: PEventAttendee.ColumnName.lastName.rawValue, asName: PEventAttendee.ColumnName.lastName.rawValue)
-        select.specifyColumn(table: PEventAttendee.table, columnName: PEventAttendee.ColumnName.email.rawValue, asName: PEventAttendee.ColumnName.email.rawValue)
+        select.specifyColumn(table: table, columnName: ColumnName.id.rawValue, asName: ColumnName.id.rawValue)
+        select.specifyColumn(table: table, columnName: ColumnName.firstName.rawValue, asName: ColumnName.firstName.rawValue)
+        select.specifyColumn(table: table, columnName: ColumnName.lastName.rawValue, asName: ColumnName.lastName.rawValue)
+        select.specifyColumn(table: table, columnName: ColumnName.email.rawValue, asName: ColumnName.email.rawValue)
+        select.specifyColumn(table: table, columnName: ColumnName.phone.rawValue, asName: ColumnName.phone.rawValue)
+        select.specifyColumn(table: table, columnName: ColumnName.major.rawValue, asName: ColumnName.major.rawValue)
+        select.specifyColumn(table: table, columnName: ColumnName.highestEduc.rawValue, asName: ColumnName.highestEduc.rawValue)
+        select.specifyColumn(table: table, columnName: ColumnName.workAuth.rawValue, asName: ColumnName.workAuth.rawValue)
         
         //Where Statement
         var `where` =  ESLWhereStatement()

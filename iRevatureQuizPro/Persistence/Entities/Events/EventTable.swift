@@ -18,6 +18,7 @@ struct Events: PersistenceTable {
     //Table column names
     enum  ColumnName: String {
         
+        case eventID = "event_id"
         case eventName = "event_name"
         case location = "location"
         case eventCode = "event_code"
@@ -26,13 +27,14 @@ struct Events: PersistenceTable {
         case date = "date"
     }
     
-    //Creating the Table
+    //Sets up the Table to be created
     static var table: ESLTable {
         var table = ESLTable(tableName: tableName)
+        table.addColumn(columnName: ColumnName.eventID.rawValue, dataType: .INTEGER, constraints: .PRIMARYKEY, .AUTOINCREMENT)
         table.addColumn(columnName: ColumnName.eventName.rawValue, dataType: .CHAR  , constraints: .NOTNULL)
         table.addColumn(columnName: ColumnName.location.rawValue, dataType: .CHAR, constraints: .NOTNULL)
-        table.addColumn(columnName: ColumnName.eventCode.rawValue, dataType: .CHAR, constraints: .PRIMARYKEY, .UNIQUE, .NOTNULL)
-        table.addColumn(columnName: ColumnName.quizID.rawValue, dataType: .INT, constraints: nil)
+        table.addColumn(columnName: ColumnName.eventCode.rawValue, dataType: .CHAR, constraints: .NOTNULL)
+        table.addColumn(columnName: ColumnName.quizID.rawValue, dataType: .CHAR, constraints: nil)
         table.addColumn(columnName: ColumnName.ambassadorEmail.rawValue, dataType: .CHAR, constraints: .NOTNULL)
         table.addColumn(columnName: ColumnName.date.rawValue, dataType: .DATE, constraints: .NOTNULL)
         
