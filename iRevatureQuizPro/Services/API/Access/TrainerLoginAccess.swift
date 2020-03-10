@@ -49,15 +49,4 @@ class TrainerLoginAccess {
             completionHandler(user.data, false)
         }
     }
-    
-    
-    func alert() {
-        let alert = UIAlertController()
-        alert.title = "Title"
-        alert.message = "Doop"
-        alert.addTextField(configurationHandler: {(textfield) in
-            let text = textfield.text
-        })
-        alert.addAction(UIAlertAction(title: "Boop", style: .default))
-    }
 }
