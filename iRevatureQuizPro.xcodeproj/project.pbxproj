@@ -35,7 +35,7 @@
 		09525E0E2412D4750051D177 /* TableProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09525E0D2412D4750051D177 /* TableProtocol.swift */; };
 		09525E102412D9AC0051D177 /* EventAttendeeStatements.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09525E0F2412D9AC0051D177 /* EventAttendeeStatements.swift */; };
 		095E53C12418041C0009322C /* StatusCodeMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 095E53C02418041C0009322C /* StatusCodeMessage.swift */; };
-		095E53C32418042B0009322C /* VIewControllerInstantiator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 095E53C22418042B0009322C /* VIewControllerInstantiator.swift */; };
+		095E53C32418042B0009322C /* VIewControllerUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 095E53C22418042B0009322C /* VIewControllerUtilities.swift */; };
 		099150222412E21D00E73B62 /* EventAttendeeReturnStructs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 099150212412E21D00E73B62 /* EventAttendeeReturnStructs.swift */; };
 		099150242412E2F800E73B62 /* EventAttendeeAccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 099150232412E2F800E73B62 /* EventAttendeeAccess.swift */; };
 		0991502C2412E69500E73B62 /* iRevatureQuizProTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0991502B2412E69500E73B62 /* iRevatureQuizProTests.swift */; };
@@ -137,7 +137,7 @@
 		09525E0D2412D4750051D177 /* TableProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableProtocol.swift; sourceTree = "<group>"; };
 		09525E0F2412D9AC0051D177 /* EventAttendeeStatements.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventAttendeeStatements.swift; sourceTree = "<group>"; };
 		095E53C02418041C0009322C /* StatusCodeMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatusCodeMessage.swift; sourceTree = "<group>"; };
-		095E53C22418042B0009322C /* VIewControllerInstantiator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VIewControllerInstantiator.swift; sourceTree = "<group>"; };
+		095E53C22418042B0009322C /* VIewControllerUtilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VIewControllerUtilities.swift; sourceTree = "<group>"; };
 		099150212412E21D00E73B62 /* EventAttendeeReturnStructs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventAttendeeReturnStructs.swift; sourceTree = "<group>"; };
 		099150232412E2F800E73B62 /* EventAttendeeAccess.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventAttendeeAccess.swift; sourceTree = "<group>"; };
 		099150292412E69500E73B62 /* iRevatureQuizProTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iRevatureQuizProTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -581,7 +581,7 @@
 		09F2C06E240EE287004A6F47 /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				095E53C22418042B0009322C /* VIewControllerInstantiator.swift */,
+				095E53C22418042B0009322C /* VIewControllerUtilities.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -876,7 +876,7 @@
 				09525E0E2412D4750051D177 /* TableProtocol.swift in Sources */,
 				84DB87F624168A8200958E75 /* EventAccess.swift in Sources */,
 				0991503A2412F7B900E73B62 /* EventAttendee.swift in Sources */,
-				095E53C32418042B0009322C /* VIewControllerInstantiator.swift in Sources */,
+				095E53C32418042B0009322C /* VIewControllerUtilities.swift in Sources */,
 				29105E352416DE4F005453CD /* QuizAccess.swift in Sources */,
 				5F901D8224114E0C00986FF5 /* UITextFieldExtension.swift in Sources */,
 				29B2F1A82416D6CA00FDDE57 /* QuizObject.swift in Sources */,
