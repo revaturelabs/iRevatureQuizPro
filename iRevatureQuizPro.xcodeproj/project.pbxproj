@@ -86,6 +86,7 @@
 		D54096552412DFE500791C7E /* EventTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D54096542412DFE500791C7E /* EventTable.swift */; };
 		D54096572412E2AB00791C7E /* EventStatements.swift in Sources */ = {isa = PBXBuildFile; fileRef = D54096562412E2AB00791C7E /* EventStatements.swift */; };
 		D54096592412E42100791C7E /* EventReturnStructs.swift in Sources */ = {isa = PBXBuildFile; fileRef = D54096582412E42100791C7E /* EventReturnStructs.swift */; };
+		D5D8BCC42416C3A500BC01B0 /* EventCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D8BCC32416C3A500BC01B0 /* EventCell.swift */; };
 		D5F4B4AC241033770051F4B8 /* EmployeeLogin.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D5F4B4AB241033770051F4B8 /* EmployeeLogin.storyboard */; };
 /* End PBXBuildFile section */
 
@@ -181,6 +182,7 @@
 		D54096542412DFE500791C7E /* EventTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = EventTable.swift; path = iRevatureQuizPro/Persistence/Entities/Events/EventTable.swift; sourceTree = SOURCE_ROOT; };
 		D54096562412E2AB00791C7E /* EventStatements.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = EventStatements.swift; path = iRevatureQuizPro/Persistence/Entities/Events/EventStatements.swift; sourceTree = SOURCE_ROOT; };
 		D54096582412E42100791C7E /* EventReturnStructs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = EventReturnStructs.swift; path = iRevatureQuizPro/Persistence/Entities/Events/EventReturnStructs.swift; sourceTree = SOURCE_ROOT; };
+		D5D8BCC32416C3A500BC01B0 /* EventCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventCell.swift; sourceTree = "<group>"; };
 		D5F4B4AB241033770051F4B8 /* EmployeeLogin.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = EmployeeLogin.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -626,6 +628,7 @@
 			isa = PBXGroup;
 			children = (
 				09C4D08524168C4600DCDEC4 /* AttendeeSignup */,
+				D5D8BCC22416C37A00BC01B0 /* ViewEvents */,
 				5F901D7B2411445600986FF5 /* DatePicker.swift */,
 				5F901D7F24114A5200986FF5 /* DropdownPicker.swift */,
 			);
@@ -659,6 +662,14 @@
 				5F897EE82412EA92001B5C2B /* StatusCodeMessage.swift */,
 			);
 			path = Entities;
+			sourceTree = "<group>";
+		};
+		D5D8BCC22416C37A00BC01B0 /* ViewEvents */ = {
+			isa = PBXGroup;
+			children = (
+				D5D8BCC32416C3A500BC01B0 /* EventCell.swift */,
+			);
+			path = ViewEvents;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -801,6 +812,7 @@
 				09C4D08424168ABB00DCDEC4 /* AttendeeSignupTableController.swift in Sources */,
 				84DB87D024114A1000958E75 /* BaseViewController.swift in Sources */,
 				84DB88182416CD9000958E75 /* Events.swift in Sources */,
+				D5D8BCC42416C3A500BC01B0 /* EventCell.swift in Sources */,
 				099150242412E2F800E73B62 /* EventAttendeeAccess.swift in Sources */,
 				09A4679A2411A81100A4BB90 /* MetatagAccess.swift in Sources */,
 				099150222412E21D00E73B62 /* EventAttendeeReturnStructs.swift in Sources */,
