@@ -54,7 +54,7 @@ class EventViewViewController: BaseViewController, UITableViewDelegate, UITableV
         statement.specifyColumn(table: Events.table, columnName: Events.ColumnName.eventCode.rawValue, asName: Events.ColumnName.eventCode.rawValue)
         statement.specifyColumn(table: Events.table, columnName: Events.ColumnName.eventName.rawValue, asName: Events.ColumnName.eventName.rawValue)
         statement.specifyColumn(table: Events.table, columnName: Events.ColumnName.location.rawValue, asName: Events.ColumnName.location.rawValue)
-        return []
-        //return Database.selectRow(withSelectStatement: statement, returnStruct: Events.EventsAllData.self)!
+//        return []
+        return Database.selectRow(withSelectStatement: statement, returnStruct: Events.EventsAllData.self)!
     }
 }
