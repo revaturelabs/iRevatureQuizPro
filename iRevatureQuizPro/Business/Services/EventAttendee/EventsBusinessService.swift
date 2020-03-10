@@ -12,6 +12,7 @@ class EventBusinessService {
         Events.insert(eventName: data.eventName, location: data.location, eventCode: data.eventCode, quizID: data.quizID, ambassadorEmail: data.ambassadorEmail, date: data.date)
     }
     
+    //checks for a single event Code
     static func checkCode(eventCode data: String) -> Bool{
         if Events.getBy(eventCode: data) != nil{
             return true
