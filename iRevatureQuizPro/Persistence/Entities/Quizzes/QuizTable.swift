@@ -13,12 +13,12 @@ import EasySQLite
 //=====================================
 struct PQuiz : PersistenceTable {
     //Table's name
-    internal static let tableName = "quiz"
+    static let tableName = "quiz"
     
     //Table's Column Names
     enum ColumnName: String {
-        case quiz_id = "id"
-        case quiz_name = "name"
+        case quiz_id = "quiz_id"
+        case quiz_name = "quiz_name"
         case activity_points = "activity_points"
         case duration = "duration"
         case max_attempts = "max_attempts"
@@ -53,7 +53,7 @@ struct PQuiz : PersistenceTable {
         table.addColumn(columnName: ColumnName.quiz_id.rawValue, dataType: .INTEGER, constraints: .PRIMARYKEY, .AUTOINCREMENT)
         table.addColumn(columnName: ColumnName.quiz_name.rawValue, dataType: .CHAR, constraints: .UNIQUE, .NOTNULL)
         table.addColumn(columnName: ColumnName.activity_points.rawValue, dataType: .INT, constraints: .NOTNULL)
-        table.addColumn(columnName: ColumnName.duration.rawValue, dataType: .CHAR, constraints: nil)
+        table.addColumn(columnName: ColumnName.duration.rawValue, dataType: .INT, constraints: nil)
         table.addColumn(columnName: ColumnName.max_attempts.rawValue, dataType: .INT, constraints: nil)
         table.addColumn(columnName: ColumnName.level_override.rawValue, dataType: .BOOL, constraints: nil)
         table.addColumn(columnName: ColumnName.slug.rawValue, dataType: .CHAR, constraints: nil)
@@ -61,7 +61,7 @@ struct PQuiz : PersistenceTable {
         table.addColumn(columnName: ColumnName.meta_description.rawValue, dataType: .CHAR, constraints: nil)
         table.addColumn(columnName: ColumnName.image_url.rawValue, dataType: .CHAR, constraints: nil)
         table.addColumn(columnName: ColumnName.pass_percentage.rawValue, dataType: .INT, constraints: .NOTNULL)
-        table.addColumn(columnName: ColumnName.via_slug.rawValue, dataType: .BOOL, constraints: nil)
+        table.addColumn(columnName: ColumnName.via_slug.rawValue, dataType: .CHAR, constraints: nil)
         table.addColumn(columnName: ColumnName.timer.rawValue, dataType: .BOOL, constraints: nil)
         table.addColumn(columnName: ColumnName.shuffle_questions.rawValue, dataType: .BOOL, constraints: nil)
         table.addColumn(columnName: ColumnName.shuffle_answers.rawValue, dataType: .BOOL, constraints: nil)
@@ -74,8 +74,7 @@ struct PQuiz : PersistenceTable {
         table.addColumn(columnName: ColumnName.save_and_resume.rawValue, dataType: .BOOL, constraints: nil)
         table.addColumn(columnName: ColumnName.instructions.rawValue, dataType: .CHAR, constraints: nil)
         table.addColumn(columnName: ColumnName.mode.rawValue, dataType: .CHAR, constraints: .NOTNULL)
-        table.addColumn(columnName: ColumnName.created_by.rawValue, dataType: .CHAR
-            , constraints: .NOTNULL)
+        table.addColumn(columnName: ColumnName.created_by.rawValue, dataType: .CHAR, constraints: .NOTNULL)
         table.addColumn(columnName: ColumnName.created_on.rawValue, dataType: .DATE, constraints: .NOTNULL)
         table.addColumn(columnName: ColumnName.updated_by.rawValue, dataType: .CHAR, constraints: nil)
         table.addColumn(columnName: ColumnName.updated_on.rawValue, dataType: .DATE, constraints: nil)

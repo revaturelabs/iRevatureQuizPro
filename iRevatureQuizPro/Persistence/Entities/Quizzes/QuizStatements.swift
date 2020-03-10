@@ -12,12 +12,45 @@ extension PQuiz {
 //=====================================
     //Select All Quiz Rows Statement
 //=====================================
-//    static func getAllStatement() -> ESLSelectStatement {
-//        var select = ESLSelectStatement()
-//        select.getAllColumns(fromTable: PQuiz.table)
-//
-//        return select // currently doesnt work? mark says dont use atm
-//    }
+    static func getAllStatement() -> ESLSelectStatement {
+        var select = ESLSelectStatement()
+		
+		select.specifyColumn(table: PQuiz.table, columnName: PQuiz.ColumnName.quiz_id.rawValue,                         	asName: PQuiz.ColumnName.quiz_id.rawValue)
+		select.specifyColumn(table: PQuiz.table, columnName: PQuiz.ColumnName.quiz_name.rawValue,                           asName: PQuiz.ColumnName.quiz_name.rawValue)
+		select.specifyColumn(table: PQuiz.table, columnName: PQuiz.ColumnName.activity_points.rawValue,                   	asName: PQuiz.ColumnName.activity_points.rawValue)
+		select.specifyColumn(table: PQuiz.table, columnName: PQuiz.ColumnName.duration.rawValue,                          	asName: PQuiz.ColumnName.duration.rawValue)
+		select.specifyColumn(table: PQuiz.table, columnName: PQuiz.ColumnName.max_attempts.rawValue,                      	asName: PQuiz.ColumnName.max_attempts.rawValue)
+		
+		select.specifyColumn(table: PQuiz.table, columnName: PQuiz.ColumnName.level_override.rawValue,						asName: PQuiz.ColumnName.level_override.rawValue)
+		select.specifyColumn(table: PQuiz.table, columnName: PQuiz.ColumnName.slug.rawValue,                            	asName: PQuiz.ColumnName.slug.rawValue)
+		select.specifyColumn(table: PQuiz.table, columnName: PQuiz.ColumnName.description.rawValue,                      	asName: PQuiz.ColumnName.description.rawValue)
+		select.specifyColumn(table: PQuiz.table, columnName: PQuiz.ColumnName.meta_description.rawValue, 					asName: PQuiz.ColumnName.meta_description.rawValue)
+		select.specifyColumn(table: PQuiz.table, columnName: PQuiz.ColumnName.image_url.rawValue, 							asName: PQuiz.ColumnName.image_url.rawValue)
+		
+		select.specifyColumn(table: PQuiz.table, columnName: PQuiz.ColumnName.pass_percentage.rawValue,					 	asName: PQuiz.ColumnName.pass_percentage.rawValue)
+		select.specifyColumn(table: PQuiz.table, columnName: PQuiz.ColumnName.via_slug.rawValue,					 		asName: PQuiz.ColumnName.via_slug.rawValue)
+		select.specifyColumn(table: PQuiz.table, columnName: PQuiz.ColumnName.timer.rawValue,					 			asName: PQuiz.ColumnName.timer.rawValue)
+		select.specifyColumn(table: PQuiz.table, columnName: PQuiz.ColumnName.shuffle_questions.rawValue,					asName: PQuiz.ColumnName.shuffle_questions.rawValue)
+		select.specifyColumn(table: PQuiz.table, columnName: PQuiz.ColumnName.shuffle_answers.rawValue,					 	asName: PQuiz.ColumnName.shuffle_answers.rawValue)
+		
+		select.specifyColumn(table: PQuiz.table, columnName: PQuiz.ColumnName.display_score_and_result.rawValue,			asName: PQuiz.ColumnName.display_score_and_result.rawValue)
+		select.specifyColumn(table: PQuiz.table, columnName: PQuiz.ColumnName.allow_attempt_review.rawValue,			 	asName: PQuiz.ColumnName.allow_attempt_review.rawValue)
+		select.specifyColumn(table: PQuiz.table, columnName: PQuiz.ColumnName.show_whether_correct.rawValue,			 	asName: PQuiz.ColumnName.show_whether_correct.rawValue)
+		select.specifyColumn(table: PQuiz.table, columnName: PQuiz.ColumnName.show_correct_answers_passed.rawValue,			asName: PQuiz.ColumnName.show_correct_answers_passed.rawValue)
+		select.specifyColumn(table: PQuiz.table, columnName: PQuiz.ColumnName.show_correct_answers_failed.rawValue,			asName: PQuiz.ColumnName.show_correct_answers_failed.rawValue)
+		
+		select.specifyColumn(table: PQuiz.table, columnName: PQuiz.ColumnName.show_answer_explanations.rawValue,			asName: PQuiz.ColumnName.show_answer_explanations.rawValue)
+		select.specifyColumn(table: PQuiz.table, columnName: PQuiz.ColumnName.save_and_resume.rawValue,			 			asName: PQuiz.ColumnName.save_and_resume.rawValue)
+		select.specifyColumn(table: PQuiz.table, columnName: PQuiz.ColumnName.instructions.rawValue,			 			asName: PQuiz.ColumnName.instructions.rawValue)
+		select.specifyColumn(table: PQuiz.table, columnName: PQuiz.ColumnName.mode.rawValue,			 					asName: PQuiz.ColumnName.mode.rawValue)
+		select.specifyColumn(table: PQuiz.table, columnName: PQuiz.ColumnName.created_by.rawValue,			 				asName: PQuiz.ColumnName.created_by.rawValue)
+		
+		select.specifyColumn(table: PQuiz.table, columnName: PQuiz.ColumnName.created_on.rawValue, 							asName: PQuiz.ColumnName.created_on.rawValue)
+		select.specifyColumn(table: PQuiz.table, columnName: PQuiz.ColumnName.updated_by.rawValue, 							asName: PQuiz.ColumnName.updated_by.rawValue)
+		select.specifyColumn(table: PQuiz.table, columnName: PQuiz.ColumnName.updated_on.rawValue, 							asName: PQuiz.ColumnName.updated_on.rawValue)
+
+        return select
+    }
     
 //=====================================
     //Select Quiz Row By ID Statement
@@ -25,7 +58,39 @@ extension PQuiz {
     static func getByStatement(id: Int) -> ESLSelectStatement {
         //Select Statement
         var select = ESLSelectStatement()
-        select.getAllColumns(fromTable: PQuiz.table)
+        select.specifyColumn(table: PQuiz.table, columnName: PQuiz.ColumnName.quiz_id.rawValue,                         	asName: PQuiz.ColumnName.quiz_id.rawValue)
+		select.specifyColumn(table: PQuiz.table, columnName: PQuiz.ColumnName.quiz_name.rawValue,                           asName: PQuiz.ColumnName.quiz_name.rawValue)
+        select.specifyColumn(table: PQuiz.table, columnName: PQuiz.ColumnName.activity_points.rawValue,                   	asName: PQuiz.ColumnName.activity_points.rawValue)
+        select.specifyColumn(table: PQuiz.table, columnName: PQuiz.ColumnName.duration.rawValue,                          	asName: PQuiz.ColumnName.duration.rawValue)
+        select.specifyColumn(table: PQuiz.table, columnName: PQuiz.ColumnName.max_attempts.rawValue,                      	asName: PQuiz.ColumnName.max_attempts.rawValue)
+        
+		select.specifyColumn(table: PQuiz.table, columnName: PQuiz.ColumnName.level_override.rawValue,						asName: PQuiz.ColumnName.level_override.rawValue)
+        select.specifyColumn(table: PQuiz.table, columnName: PQuiz.ColumnName.slug.rawValue,                            	asName: PQuiz.ColumnName.slug.rawValue)
+        select.specifyColumn(table: PQuiz.table, columnName: PQuiz.ColumnName.description.rawValue,                      	asName: PQuiz.ColumnName.description.rawValue)
+        select.specifyColumn(table: PQuiz.table, columnName: PQuiz.ColumnName.meta_description.rawValue, 					asName: PQuiz.ColumnName.meta_description.rawValue)
+        select.specifyColumn(table: PQuiz.table, columnName: PQuiz.ColumnName.image_url.rawValue, 							asName: PQuiz.ColumnName.image_url.rawValue)
+        
+        select.specifyColumn(table: PQuiz.table, columnName: PQuiz.ColumnName.pass_percentage.rawValue,					 	asName: PQuiz.ColumnName.pass_percentage.rawValue)
+        select.specifyColumn(table: PQuiz.table, columnName: PQuiz.ColumnName.via_slug.rawValue,					 		asName: PQuiz.ColumnName.via_slug.rawValue)
+        select.specifyColumn(table: PQuiz.table, columnName: PQuiz.ColumnName.timer.rawValue,					 			asName: PQuiz.ColumnName.timer.rawValue)
+        select.specifyColumn(table: PQuiz.table, columnName: PQuiz.ColumnName.shuffle_questions.rawValue,					asName: PQuiz.ColumnName.shuffle_questions.rawValue)
+        select.specifyColumn(table: PQuiz.table, columnName: PQuiz.ColumnName.shuffle_answers.rawValue,					 	asName: PQuiz.ColumnName.shuffle_answers.rawValue)
+        
+        select.specifyColumn(table: PQuiz.table, columnName: PQuiz.ColumnName.display_score_and_result.rawValue,			asName: PQuiz.ColumnName.display_score_and_result.rawValue)
+        select.specifyColumn(table: PQuiz.table, columnName: PQuiz.ColumnName.allow_attempt_review.rawValue,			 	asName: PQuiz.ColumnName.allow_attempt_review.rawValue)
+        select.specifyColumn(table: PQuiz.table, columnName: PQuiz.ColumnName.show_whether_correct.rawValue,			 	asName: PQuiz.ColumnName.show_whether_correct.rawValue)
+        select.specifyColumn(table: PQuiz.table, columnName: PQuiz.ColumnName.show_correct_answers_passed.rawValue,			asName: PQuiz.ColumnName.show_correct_answers_passed.rawValue)
+        select.specifyColumn(table: PQuiz.table, columnName: PQuiz.ColumnName.show_correct_answers_failed.rawValue,			asName: PQuiz.ColumnName.show_correct_answers_failed.rawValue)
+        
+        select.specifyColumn(table: PQuiz.table, columnName: PQuiz.ColumnName.show_answer_explanations.rawValue,			asName: PQuiz.ColumnName.show_answer_explanations.rawValue)
+        select.specifyColumn(table: PQuiz.table, columnName: PQuiz.ColumnName.save_and_resume.rawValue,			 			asName: PQuiz.ColumnName.save_and_resume.rawValue)
+        select.specifyColumn(table: PQuiz.table, columnName: PQuiz.ColumnName.instructions.rawValue,			 			asName: PQuiz.ColumnName.instructions.rawValue)
+        select.specifyColumn(table: PQuiz.table, columnName: PQuiz.ColumnName.mode.rawValue,			 					asName: PQuiz.ColumnName.mode.rawValue)
+        select.specifyColumn(table: PQuiz.table, columnName: PQuiz.ColumnName.created_by.rawValue,			 				asName: PQuiz.ColumnName.created_by.rawValue)
+        
+        select.specifyColumn(table: PQuiz.table, columnName: PQuiz.ColumnName.created_on.rawValue, 							asName: PQuiz.ColumnName.created_on.rawValue)
+        select.specifyColumn(table: PQuiz.table, columnName: PQuiz.ColumnName.updated_by.rawValue, 							asName: PQuiz.ColumnName.updated_by.rawValue)
+        select.specifyColumn(table: PQuiz.table, columnName: PQuiz.ColumnName.updated_on.rawValue, 							asName: PQuiz.ColumnName.updated_on.rawValue)
         
         //Where Statement
         var `where` =  ESLWhereStatement()
@@ -61,8 +126,8 @@ extension PQuiz {
         
         var insert = ESLInsertStatement(table: PQuiz.table)
         
+		insert.specifyValue(columnName: PQuiz.ColumnName.quiz_id.rawValue,                          columnValue: quizobject.quiz_id)
         insert.specifyValue(columnName: PQuiz.ColumnName.quiz_name.rawValue,                        columnValue: quizobject.quiz_name)
-        insert.specifyValue(columnName: PQuiz.ColumnName.quiz_id.rawValue,                          columnValue: quizobject.quiz_id)
         insert.specifyValue(columnName: PQuiz.ColumnName.activity_points.rawValue,                  columnValue: quizobject.activity_points)
         insert.specifyValue(columnName: PQuiz.ColumnName.duration.rawValue,                         columnValue: quizobject.duration)
         insert.specifyValue(columnName: PQuiz.ColumnName.max_attempts.rawValue,                     columnValue: quizobject.max_attempts)

@@ -65,7 +65,7 @@ struct BQuiz {
     var image_url : String              // Will require Ternary Operator to 0 or "" if the returned object is empty
     var pass_percentage : Int
     var via_slug : String               // Will require Ternary Operator to 0 or "" if the returned object is empty
-    var timer : Int
+    var timer : Bool
     var shuffle_questions : Bool
     var shuffle_answers : Bool
     var display_score_and_result : Bool
