@@ -22,7 +22,7 @@ class EmployeeLoginViewController: BaseViewController {
         
         //check if user has logged in, set user welcome back message
         if let user = UserInfoBusinessService.getUserInfo() {
-            emailTextField.text = user.username
+            emailTextField.text = user.email
             returnMessage.text = "Welcome back \(user.name)"
         }
         
@@ -44,12 +44,12 @@ class EmployeeLoginViewController: BaseViewController {
         TrainerLoginAccess.getUserLogin(email: email, password: password, completionHandler: { trainerInfo, hasError in
             guard let trainer = trainerInfo else {
                 //Display error if login fails
-                self.errorMessage.text = "Invalid username or password"
+                self.errorMessage.text = "Invalid email or password"
                 return
             }
             
             //set UserDefaults if log in is successful
-            let user = UserInfo(id: trainer.id, empId: trainer.employeeId, username: trainer.displayEmail, name: trainer.displayFullName, role: trainer.currentSystemRole.name, token: trainer.encryptedLoginToken, keepLoggedIn: self.keepMeLoggedInSwitch.isOn)
+            let user = UserInfo(id: trainer.id, empId: trainer.employeeId, email: trainer.displayEmail, name: trainer.displayFullName, role: trainer.currentSystemRole.name, token: trainer.encryptedLoginToken, keepLoggedIn: self.keepMeLoggedInSwitch.isOn)
             
             UserInfoBusinessService.setUserInfo(userObject: user)
             

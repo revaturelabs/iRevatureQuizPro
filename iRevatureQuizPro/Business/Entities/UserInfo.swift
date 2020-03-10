@@ -11,7 +11,7 @@ import Foundation
 struct UserInfo: Codable {
     var id: Int
     var empId: Int
-    var username: String
+    var email: String
     var name: String
     var role: String
     var token: String

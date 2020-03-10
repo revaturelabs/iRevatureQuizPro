@@ -67,7 +67,7 @@
 		84DB87D4241159C300958E75 /* StartQuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DB87D3241159C300958E75 /* StartQuizViewController.swift */; };
 		84DB87F624168A8200958E75 /* EventAccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DB87F524168A8200958E75 /* EventAccess.swift */; };
 		84F34FA42410437100D250BB /* iRevatureButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F34FA32410437100D250BB /* iRevatureButton.swift */; };
-		9544BEF224119B9500BFC412 /* VIewControllerInstantiator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9544BEF124119B9500BFC412 /* VIewControllerInstantiator.swift */; };
+		9544BEF224119B9500BFC412 /* VIewControllerUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9544BEF124119B9500BFC412 /* VIewControllerUtilities.swift */; };
 		95D8CF1424116B5B00EB322E /* MainStoryBoardController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D8CF1324116B5B00EB322E /* MainStoryBoardController.swift */; };
 		95D8CF1624117F9300EB322E /* EventManagement.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 95D8CF1524117F9300EB322E /* EventManagement.storyboard */; };
 		95D8CF182411849400EB322E /* QuizManagement.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 95D8CF172411849400EB322E /* QuizManagement.storyboard */; };
@@ -157,7 +157,7 @@
 		84DB87D3241159C300958E75 /* StartQuizViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartQuizViewController.swift; sourceTree = "<group>"; };
 		84DB87F524168A8200958E75 /* EventAccess.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventAccess.swift; sourceTree = "<group>"; };
 		84F34FA32410437100D250BB /* iRevatureButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iRevatureButton.swift; sourceTree = "<group>"; };
-		9544BEF124119B9500BFC412 /* VIewControllerInstantiator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VIewControllerInstantiator.swift; sourceTree = "<group>"; };
+		9544BEF124119B9500BFC412 /* VIewControllerUtilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VIewControllerUtilities.swift; sourceTree = "<group>"; };
 		95D8CF1324116B5B00EB322E /* MainStoryBoardController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainStoryBoardController.swift; sourceTree = "<group>"; };
 		95D8CF1524117F9300EB322E /* EventManagement.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = EventManagement.storyboard; sourceTree = "<group>"; };
 		95D8CF172411849400EB322E /* QuizManagement.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = QuizManagement.storyboard; sourceTree = "<group>"; };
@@ -261,6 +261,14 @@
 				099150212412E21D00E73B62 /* EventAttendeeReturnStructs.swift */,
 			);
 			path = EventAttendee;
+			sourceTree = "<group>";
+		};
+		095E53BD2417F0ED0009322C /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				5F897EE82412EA92001B5C2B /* StatusCodeMessage.swift */,
+			);
+			path = Common;
 			sourceTree = "<group>";
 		};
 		0991502A2412E69500E73B62 /* iRevatureQuizProTests */ = {
@@ -515,7 +523,7 @@
 		09F2C06D240EE287004A6F47 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
-				9544BEF124119B9500BFC412 /* VIewControllerInstantiator.swift */,
+				9544BEF124119B9500BFC412 /* VIewControllerUtilities.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -612,6 +620,7 @@
 		5F901D8A241196EC00986FF5 /* API */ = {
 			isa = PBXGroup;
 			children = (
+				095E53BD2417F0ED0009322C /* Common */,
 				5F897EE02412B6DF001B5C2B /* Access */,
 				5F901D8D2411A0E900986FF5 /* Entities */,
 			);
@@ -625,7 +634,6 @@
 				5F901D8E2411A11700986FF5 /* TrainerLoginData.swift */,
 				5F901D902411A13700986FF5 /* CurrentSystemRole.swift */,
 				5F897EE32412BE36001B5C2B /* TrainerLoginInfo.swift */,
-				5F897EE82412EA92001B5C2B /* StatusCodeMessage.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -812,7 +820,7 @@
 				84F34FA42410437100D250BB /* iRevatureButton.swift in Sources */,
 				090A81402411969C008D7A12 /* DatabaseInteractions.swift in Sources */,
 				0944AEDE2410540400688C9B /* CreateEventViewController.swift in Sources */,
-				9544BEF224119B9500BFC412 /* VIewControllerInstantiator.swift in Sources */,
+				9544BEF224119B9500BFC412 /* VIewControllerUtilities.swift in Sources */,
 				95D8CF242411911A00EB322E /* CreateQuizViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

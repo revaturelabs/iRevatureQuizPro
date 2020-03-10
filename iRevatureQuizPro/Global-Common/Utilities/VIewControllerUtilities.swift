@@ -55,3 +55,10 @@ extension UIViewController {
         return appStoryboard.viewController(viewControllerClass: self)
     }
 }
+
+extension UIViewController {
+    func easyPresent(_ viewController: UIViewController, animated: Bool, style: UIModalPresentationStyle) {
+        viewController.modalPresentationStyle = style
+        present(viewController, animated: false)
+    }
+}
