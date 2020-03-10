@@ -60,7 +60,10 @@ class CreateEventViewController: BaseViewController {
     
     //Inserts a new row into the database based on the form on the view
     @IBAction func submitEventButton(_ sender: Any) {
-        Events.insert(eventName: eventNametextField.text!, location: locationTextField.text!, eventCode: eventCodeTextField.text!, quizID: quizIDTextField.text!, ambassadorEmail: ambassadorEmailTextField.text!, date: dateTextField.text!)
+        let DF = DateFormatter()
+        DF.dateFormat = "MMM dd, yyyy"
+        let date = DF.date(from: dateTextField.text!)
+        Events.insert(eventName: eventNametextField.text!, location: locationTextField.text!, eventCode: eventCodeTextField.text!, quizID: quizIDTextField.text!, ambassadorEmail: ambassadorEmailTextField.text!, date: date!)
         
     }
     
