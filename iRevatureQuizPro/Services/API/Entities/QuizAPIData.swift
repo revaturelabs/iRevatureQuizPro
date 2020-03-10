@@ -15,3 +15,14 @@ struct QuizAPIData: Codable {
     var metaTags: [String]
     var quizDuration: Int
 }
+
+struct QuizBody: Codable{
+    var size: Int
+    var page: Int
+    var sortOrder: String
+    var orderBy: String
+    var subscribedContent: Bool
+    var publicContent: Bool
+    var ownContent: Bool
+    var isOrdered: Bool
+}

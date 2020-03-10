@@ -21,21 +21,35 @@ class QuizDataAccess {
     
     static private let endpoint = "https://dev3-ms.revature.com/apigateway/quiz/secure/quizzes"
     
-    static func getQuizzes(finish: @escaping (_ quizCall: QuizAPIData) -> Void) {
+    static func getQuizzes(finish: @escaping (QuizAPIData) -> Void) {
+        
+        let user = UserInfoBusinessService.getUserInfo()
+        guard let token = user?.token else {
+            return
+        }
+        
+        let quizBody = QuizBody(size: 10, page: 1, sortOrder: "desc", orderBy: "creaeName", subscribedContent: false, publicContent: false, ownContent: false, isOrdered: false)
         
         let header: HTTPHeaders = [
             "Content-Type": "application/json",
-            
+            "encryptedToken": token
         ]
         
-        AF.request(endpoint, method: .post, parameters: nil).validate().responseDecodable(of: QuizAPIData.self){
-            response in
-            guard let tempQuiz = response.value else {
-                print("Error")
+        AF.request(
+            endpoint,
+            method: .post,
+            parameters: quizBody,
+            encoder: JSONParameterEncoder.default,
+            headers: header
+        ).validate().responseDecodable(of: QuizAPIData.self) {
+            (response) in
+            
+            guard let data = response.value else {
+                print(response.error?.errorDescription)
                 return
             }
 
-            finish(tempQuiz)
+            finish(data)
         }
         
         

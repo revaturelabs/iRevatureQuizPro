@@ -15,6 +15,15 @@ class EventViewViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+       
+        var sampleQuiz: QuizAPIData
+        
+        print(QuizDataAccess.getQuizzes { sampleQuiz in
+            
+            let quiz = sampleQuiz
+            
+        })
+        
     }
 
     @IBAction func addEventButton(_ sender: Any) {
