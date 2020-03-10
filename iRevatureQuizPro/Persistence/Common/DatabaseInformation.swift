@@ -15,7 +15,7 @@ struct DatabaseInfo {
     static let domainMask = FileManager.SearchPathDomainMask.userDomainMask
     
     static var filePath: String? {
-        let filePath =  ESLDatabaseAccess.getDatabaseFilePath(name: name, pathDirectory: directory, domainMask: domainMask)
-        return filePath
+        let filepath = ESLDatabaseAccess.getDatabaseFilePath(name: name, pathDirectory: directory, domainMask: domainMask)
+        return filepath
     }
 }
