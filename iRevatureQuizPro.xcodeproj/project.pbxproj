@@ -136,7 +136,7 @@
 		09525E0B2412D3430051D177 /* EventAttendeeTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventAttendeeTable.swift; sourceTree = "<group>"; };
 		09525E0D2412D4750051D177 /* TableProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableProtocol.swift; sourceTree = "<group>"; };
 		09525E0F2412D9AC0051D177 /* EventAttendeeStatements.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventAttendeeStatements.swift; sourceTree = "<group>"; };
-		095E53C02418041C0009322C /* StatusCodeMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatusCodeMessage.swift; sourceTree = "<group>"; };
+		095E53C02418041C0009322C /* StatusCodeMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StatusCodeMessage.swift; path = ../Entities/StatusCodeMessage.swift; sourceTree = "<group>"; };
 		095E53C22418042B0009322C /* VIewControllerUtilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VIewControllerUtilities.swift; sourceTree = "<group>"; };
 		099150212412E21D00E73B62 /* EventAttendeeReturnStructs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventAttendeeReturnStructs.swift; sourceTree = "<group>"; };
 		099150232412E2F800E73B62 /* EventAttendeeAccess.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventAttendeeAccess.swift; sourceTree = "<group>"; };
@@ -294,6 +294,7 @@
 		095E53BD2417F0ED0009322C /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				095E53C02418041C0009322C /* StatusCodeMessage.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -703,7 +704,6 @@
 			isa = PBXGroup;
 			children = (
 				5F901D8B2411971700986FF5 /* TrainerLoginAPIResponse.swift */,
-				095E53C02418041C0009322C /* StatusCodeMessage.swift */,
 				5F901D8E2411A11700986FF5 /* TrainerLoginData.swift */,
 				5F901D902411A13700986FF5 /* CurrentSystemRole.swift */,
 				5F897EE32412BE36001B5C2B /* TrainerLoginInfo.swift */,
