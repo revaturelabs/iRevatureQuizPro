@@ -10,6 +10,8 @@ import Foundation
 import Alamofire
 import os.log
 
+import UIKit
+
 class TrainerLoginAccess {
     
     //endpoint for user login
@@ -48,4 +50,14 @@ class TrainerLoginAccess {
         }
     }
     
+    
+    func alert() {
+        let alert = UIAlertController()
+        alert.title = "Title"
+        alert.message = "Doop"
+        alert.addTextField(configurationHandler: {(textfield) in
+            let text = textfield.text
+        })
+        alert.addAction(UIAlertAction(title: "Boop", style: .default))
+    }
 }
