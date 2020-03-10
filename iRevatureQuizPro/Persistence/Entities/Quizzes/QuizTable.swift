@@ -75,9 +75,9 @@ struct PQuiz : PersistenceTable {
         table.addColumn(columnName: ColumnName.instructions.rawValue, dataType: .CHAR, constraints: nil)
         table.addColumn(columnName: ColumnName.mode.rawValue, dataType: .CHAR, constraints: .NOTNULL)
         table.addColumn(columnName: ColumnName.created_by.rawValue, dataType: .CHAR, constraints: .NOTNULL)
-        table.addColumn(columnName: ColumnName.created_on.rawValue, dataType: .DATE, constraints: .NOTNULL)
+        table.addColumn(columnName: ColumnName.created_on.rawValue, dataType: .CHAR, constraints: .NOTNULL)
         table.addColumn(columnName: ColumnName.updated_by.rawValue, dataType: .CHAR, constraints: nil)
-        table.addColumn(columnName: ColumnName.updated_on.rawValue, dataType: .DATE, constraints: nil)
+        table.addColumn(columnName: ColumnName.updated_on.rawValue, dataType: .CHAR, constraints: nil)
         
         // anything in the API but NOT in the erd can be tossed, and blue diamonds in the ERD are not nullable
         return table

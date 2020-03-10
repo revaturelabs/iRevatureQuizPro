@@ -13,8 +13,8 @@ import EasySQLite
 
 class QuizStatementTests : XCTestCase {
     
-    let iso_date_1 = "2019-01-18T16:40:35+0000"
-    let iso_date_2 = "2019-01-19T18:54:50+0000"
+    let iso_date_1 = "2019-01-18T16:40:35"
+    let iso_date_2 = "2019-01-19T18:54:50"
 
     let dateFormatter = ISO8601DateFormatter()
     var date1 : Date?
