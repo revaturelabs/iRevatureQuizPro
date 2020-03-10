@@ -121,7 +121,7 @@ extension PQuiz {
 //=====================================
     //Insert Row Statement
 //=====================================
-    // Function takes a BQuiz object from the Business Layer. There are 6 fields that are .NOTNULL contraint which need to be checked during the API call conversion between the two calls -> business entity struct. By this point they shouldn't require any authentication/verification.
+    // Function takes a BQuiz object from the Business Layer. There are 6 fields that are .NOTNULL constraint which need to be checked during the API call conversion between the two calls -> business entity struct. By this point they shouldn't require any authentication/verification.
     static func insertStatement(quizobject: BQuiz) -> ESLInsertStatement {
         
         var insert = ESLInsertStatement(table: PQuiz.table)
