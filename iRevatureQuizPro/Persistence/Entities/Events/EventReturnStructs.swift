@@ -9,6 +9,8 @@
 //=====================================
     //Return Structs for data from Events Table
 //=====================================
+import Foundation
+
 extension Events {
     
 //=====================================
@@ -20,7 +22,7 @@ extension Events {
         var event_code: String
         var quiz_id: String
         var ambassador_email: String
-        var date: String
+        var date: Date
     }
 //=====================================
     //Hold Identifier Columns From Events Table

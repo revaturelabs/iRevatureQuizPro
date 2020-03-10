@@ -12,13 +12,14 @@ import os.log
 class UserInfoBusinessService {
     
     static let defaults = UserDefaults.standard
+    private static let userInfoKey: String = "UserInfo"
     
     //set userdefaults
     static func setUserInfo(userObject: UserInfo) {
         
         do{
             
-            try defaults.set(PropertyListEncoder().encode(userObject), forKey: "UserInfo")
+            try defaults.set(PropertyListEncoder().encode(userObject), forKey: userInfoKey)
 
             os_log("UserDefaults successfully stored")
             
@@ -30,7 +31,7 @@ class UserInfoBusinessService {
     //get user from userdefaults
     static func getUserInfo() -> UserInfo? {
         
-        if let decodedUserInfo = (defaults.value(forKey: "UserInfo")) {
+        if let decodedUserInfo = (defaults.value(forKey: userInfoKey)) {
             let user = try? PropertyListDecoder().decode(UserInfo.self, from: decodedUserInfo as! Data)
             
             return user
