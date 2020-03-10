@@ -23,6 +23,7 @@ class CreateEventViewController: BaseViewController {
         super.viewDidLoad()
         //creates the database table for Events
         Database.create(table: Events.table)
+        dateTextField.dateSelector()
     }
     
     //returns user back to the events view screen
