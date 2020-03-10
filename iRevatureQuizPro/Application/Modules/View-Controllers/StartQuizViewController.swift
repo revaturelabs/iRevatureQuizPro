@@ -18,9 +18,10 @@ class StartQuizViewController: BaseViewController {
     }
 
     @IBAction func backbutton(_ sender: Any) {
+        guard let quizCode = eventCodeTextField.text, EventBusinessService.checkCode(eventCode: quizCode) else { return }
+        
         let nextVC = AttendeeSignUpViewController.instantiate(fromAppStoryboard: AppStoryboard.AttendeeSignUp)
-        nextVC.modalPresentationStyle = .fullScreen
-        present(nextVC, animated: false, completion: nil)
+        easyPresent(nextVC, animated: false, style: .fullScreen)
     }
     
     @IBAction func submitButton(_ sender: Any) {
