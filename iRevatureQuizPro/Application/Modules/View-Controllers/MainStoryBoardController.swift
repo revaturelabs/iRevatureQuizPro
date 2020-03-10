@@ -46,7 +46,7 @@ class MainStoryBoardViewController: BaseViewController {
         super.viewDidLoad()
       //  var sampleQuiz:QuizAPIData
         
-        QuizDataAccess.getQuizzes(finish: <#T##(QuizAPIData) -> Void#>)
+        //QuizDataAccess.getQuizzes(finish: <#T##(QuizAPIData) -> Void#>)
     
         // Do any additional setup after loading the view.
         

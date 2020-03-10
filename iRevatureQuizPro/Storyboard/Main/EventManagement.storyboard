@@ -414,15 +414,12 @@
                     </view>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-
-                        <outlet property="quizTextField" destination="KNd-si-kTf" id="kHx-nw-MFV"/>
-
                         <outlet property="ambassadorEmailTextField" destination="yx1-DO-BZa" id="OeQ-p0-M0u"/>
                         <outlet property="dateTextField" destination="H0O-8x-uw3" id="CC2-ca-iq0"/>
                         <outlet property="eventCodeTextField" destination="pfe-h6-66t" id="fhw-dT-mNJ"/>
                         <outlet property="eventNametextField" destination="M0g-Nk-76T" id="8Re-ii-b2v"/>
                         <outlet property="locationTextField" destination="23Z-Vh-pur" id="Hef-gg-N5r"/>
-
+                        <outlet property="quizIDTextField" destination="KNd-si-kTf" id="xvL-Vq-agf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QJ2-ul-0P7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
