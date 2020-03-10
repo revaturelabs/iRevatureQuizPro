@@ -15,7 +15,11 @@ class EventViewViewController: BaseViewController, UITableViewDelegate, UITableV
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        <#code#>
+        let cell = eventsTable.dequeueReusableCell(withIdentifier: "EventsTableCell", for: indexPath) as! EventCell
+        cell.date?.text = eventsArray[indexPath.row].date
+        cell.eventName?.text = eventsArray[indexPath.row].event_name
+        cell.location?.text = eventsArray[indexPath.row].location
+        return cell
     }
     
     var eventsArray:[Events.EventsAllData] = []
@@ -52,6 +56,5 @@ class EventViewViewController: BaseViewController, UITableViewDelegate, UITableV
         statement.specifyColumn(table: Events.table, columnName: Events.ColumnName.location.rawValue, asName: Events.ColumnName.location.rawValue)
         
         return Database.selectRow(withSelectStatement: statement, returnStruct: Events.EventsAllData.self)!
-        
     }
 }
