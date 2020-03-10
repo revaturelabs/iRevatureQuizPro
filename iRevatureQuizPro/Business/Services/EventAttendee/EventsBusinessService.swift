@@ -13,11 +13,10 @@ class EventBusinessService {
     }
     
     static func checkCode(eventCode data: String) -> Bool{
-//        if Events.getBy(eventCode: data)! = data{
-//            return true
-//        }else{
-//            return false
-//        }
-        return false
+        if Events.getBy(eventCode: data) != nil{
+            return true
+        }else{
+            return false
+        }
     }
 }
