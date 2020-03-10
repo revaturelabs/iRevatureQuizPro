@@ -7,6 +7,7 @@
 //
 
 import EasySQLite
+import Foundation
 
 extension Events{
 //=====================================
@@ -73,7 +74,7 @@ extension Events{
 //=====================================
     //Insert Row Statement
 //=====================================
-    static func insertStatement(eventName: String, location: String, eventCode: String, quizID: String, ambassadorEmail: String, date: String) -> ESLInsertStatement {
+    static func insertStatement(eventName: String, location: String, eventCode: String, quizID: String, ambassadorEmail: String, date: Date) -> ESLInsertStatement {
         var insert = ESLInsertStatement(table: Events.table)
         insert.specifyValue(columnName: Events.ColumnName.eventName.rawValue, columnValue: eventName)
         insert.specifyValue(columnName: Events.ColumnName.location.rawValue, columnValue: location)

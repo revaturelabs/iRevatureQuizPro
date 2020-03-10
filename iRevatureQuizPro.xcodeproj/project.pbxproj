@@ -73,6 +73,8 @@
 		84DB881A2416CE0000958E75 /* EventsBusinessService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DB88192416CE0000958E75 /* EventsBusinessService.swift */; };
 		84F34FA42410437100D250BB /* iRevatureButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F34FA32410437100D250BB /* iRevatureButton.swift */; };
 		9544BEF224119B9500BFC412 /* VIewControllerInstantiator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9544BEF124119B9500BFC412 /* VIewControllerInstantiator.swift */; };
+		9544BF522416CD7A00BFC412 /* QuizAPIData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9544BF512416CD7A00BFC412 /* QuizAPIData.swift */; };
+		9544BF542416D0BC00BFC412 /* QuizDataAccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9544BF532416D0BC00BFC412 /* QuizDataAccess.swift */; };
 		95D8CF1424116B5B00EB322E /* MainStoryBoardController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D8CF1324116B5B00EB322E /* MainStoryBoardController.swift */; };
 		95D8CF1624117F9300EB322E /* EventManagement.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 95D8CF1524117F9300EB322E /* EventManagement.storyboard */; };
 		95D8CF182411849400EB322E /* QuizManagement.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 95D8CF172411849400EB322E /* QuizManagement.storyboard */; };
@@ -169,6 +171,8 @@
 		84DB88192416CE0000958E75 /* EventsBusinessService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsBusinessService.swift; sourceTree = "<group>"; };
 		84F34FA32410437100D250BB /* iRevatureButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iRevatureButton.swift; sourceTree = "<group>"; };
 		9544BEF124119B9500BFC412 /* VIewControllerInstantiator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VIewControllerInstantiator.swift; sourceTree = "<group>"; };
+		9544BF512416CD7A00BFC412 /* QuizAPIData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizAPIData.swift; sourceTree = "<group>"; };
+		9544BF532416D0BC00BFC412 /* QuizDataAccess.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizDataAccess.swift; sourceTree = "<group>"; };
 		95D8CF1324116B5B00EB322E /* MainStoryBoardController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainStoryBoardController.swift; sourceTree = "<group>"; };
 		95D8CF1524117F9300EB322E /* EventManagement.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = EventManagement.storyboard; sourceTree = "<group>"; };
 		95D8CF172411849400EB322E /* QuizManagement.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = QuizManagement.storyboard; sourceTree = "<group>"; };
@@ -639,6 +643,7 @@
 			isa = PBXGroup;
 			children = (
 				5F897EE12412B749001B5C2B /* TrainerLoginAccess.swift */,
+				9544BF532416D0BC00BFC412 /* QuizDataAccess.swift */,
 			);
 			path = Access;
 			sourceTree = "<group>";
@@ -660,6 +665,7 @@
 				5F901D902411A13700986FF5 /* CurrentSystemRole.swift */,
 				5F897EE32412BE36001B5C2B /* TrainerLoginInfo.swift */,
 				5F897EE82412EA92001B5C2B /* StatusCodeMessage.swift */,
+				9544BF512416CD7A00BFC412 /* QuizAPIData.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -836,12 +842,14 @@
 				5F897EE92412EA92001B5C2B /* StatusCodeMessage.swift in Sources */,
 				95D8CF1E241190A100EB322E /* EventViewViewController.swift in Sources */,
 				5F897EE22412B749001B5C2B /* TrainerLoginAccess.swift in Sources */,
+				9544BF522416CD7A00BFC412 /* QuizAPIData.swift in Sources */,
 				5F901D8024114A5200986FF5 /* DropdownPicker.swift in Sources */,
 				5F897EEE2412F39D001B5C2B /* UserInfoBusinessService.swift in Sources */,
 				091DC3972411972300C5D577 /* DatabaseInformation.swift in Sources */,
 				09C0837E24136D4B00D021F0 /* EndInputExtension.swift in Sources */,
 				09F2C045240EE1B5004A6F47 /* AppDelegate.swift in Sources */,
 				0940FE6E2411611D006F0E52 /* MetatagTable.swift in Sources */,
+				9544BF542416D0BC00BFC412 /* QuizDataAccess.swift in Sources */,
 				95D8CF1C2411907100EB322E /* EmployeeLoginViewController.swift in Sources */,
 				95D8CF20241190BB00EB322E /* AttendeeSignUpViewController.swift in Sources */,
 				5F897EEB2412F246001B5C2B /* UserInfo.swift in Sources */,

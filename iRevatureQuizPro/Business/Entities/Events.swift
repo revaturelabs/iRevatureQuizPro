@@ -7,11 +7,13 @@
 //
 
 //Struct to hold the info needed for the database
+import Foundation
+
 struct Event{
     var eventName: String
     var location: String
     var eventCode: String
     var quizID: String
     var ambassadorEmail: String
-    var date: String
+    var date: Date
 }
