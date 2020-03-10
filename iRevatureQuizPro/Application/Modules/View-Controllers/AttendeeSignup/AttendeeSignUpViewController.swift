@@ -25,8 +25,7 @@ class AttendeeSignUpViewController: BaseViewController {
     
     @IBAction func backButton(_ sender: Any) {
         let nextVC = MainStoryBoardViewController.instantiate(fromAppStoryboard: AppStoryboard.Main)
-        nextVC.modalPresentationStyle = .fullScreen
-        present(nextVC, animated: false, completion: nil)
+        easyPresent(nextVC, animated: false, style: .fullScreen)
     }
     
     @IBAction func submitButton(_ sender: Any) {
@@ -34,8 +33,7 @@ class AttendeeSignUpViewController: BaseViewController {
         EventAttendeePersistenceService.insert(attendeeData: signUpData)
         
         let nextVC = StartQuizViewController.instantiate(fromAppStoryboard: AppStoryboard.StartQuiz)
-        nextVC.modalPresentationStyle = .fullScreen
-        present(nextVC, animated: false, completion: nil)
+        easyPresent(nextVC, animated: false, style: .fullScreen)
     }
     
     @IBAction func signUpWithLinkedInButton(_ sender: Any) {
