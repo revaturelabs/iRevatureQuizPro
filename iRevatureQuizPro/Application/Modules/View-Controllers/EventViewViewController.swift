@@ -15,8 +15,11 @@ class EventViewViewController: BaseViewController, UITableViewDelegate, UITableV
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let df = DateFormatter()
+        df.dateFormat = "MMM dd, yyyy"
+        
         let cell = eventsTable.dequeueReusableCell(withIdentifier: "EventsTableCell", for: indexPath) as! EventCell
-        cell.date?.text = eventsArray[indexPath.row].date
+        cell.date?.text = df.string(from: eventsArray[indexPath.row].date)
         cell.eventName?.text = eventsArray[indexPath.row].event_name
         cell.location?.text = eventsArray[indexPath.row].location
         return cell
