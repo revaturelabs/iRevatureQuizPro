@@ -24,18 +24,9 @@ class QuizDataAccess {
     static private let endpointByID = "https://dev3-ms.revature.com/apigateway/quiz/secure/"
     
     // Sends a request to the API for data
-<<<<<<< HEAD
+
     static func getAllQuizzes(numberOfRecords: Int, finish: @escaping (APIQuizResults) -> Void) {
 
-=======
-    static func getQuizzes(finish: @escaping (APIQuizResults) -> Void) {
-        
-        let user = UserInfoBusinessService.getUserInfo()
-        guard let token = user?.token else {
-            return
-        }
-        
->>>>>>> parent of 8893a53... Included SwiftLint Plugin
         //I'm assuming this is test hard coded data, if not this needs a configurable way of doing it
         let quizBody = QuizBody(size: numberOfRecords, page: 1, sortOrder: "desc", orderBy: "createdName", subscribedContent: false, publicContent: false, ownContent: false, isOrdered: false)
         
@@ -66,7 +57,7 @@ class QuizDataAccess {
         
     }
     
-<<<<<<< HEAD
+
     static func getQuizById(quizId: String, finish: @escaping (APIQuizResults) -> Void) {
         
         //I'm assuming this is test hard coded data, if not this needs a configurable way of doing it
@@ -100,6 +91,4 @@ class QuizDataAccess {
         
     }
     
-=======
->>>>>>> parent of 8893a53... Included SwiftLint Plugin
 }
