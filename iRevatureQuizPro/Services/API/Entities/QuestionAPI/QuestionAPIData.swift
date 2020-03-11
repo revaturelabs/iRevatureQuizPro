@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct QuestionAPIData {
+struct AllQuestionAPIData {
     var id: Int
     var title:String
     var levelId: Int

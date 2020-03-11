@@ -1,5 +1,5 @@
 //
-//  QuestionByIDAPIResponse.swift
+//  QuestionType.swift
 //  iRevatureQuizPro
 //
 //  Created by Kyle Keck on 3/11/20.
@@ -7,3 +7,9 @@
 //
 
 import Foundation
+
+struct QuestionType {
+    var id: Int
+    var code: String
+    var qsnType: String
+}

@@ -8,8 +8,8 @@
 
 import Foundation
 
-struct QuestionAPIResponse {
+struct AllQuestionAPIResponse {
     var statusCode: Int
     var description: String
-    var data: [QuestionAPIData]
+    var data: [AllQuestionAPIData]
 }
