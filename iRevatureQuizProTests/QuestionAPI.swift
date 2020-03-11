@@ -66,4 +66,15 @@ class QuestionAPITest: XCTestCase {
         
     }
     
+    func testQuestionParse() {
+        let expectation = self.expectation(description: "wait for API")
+        let qpbs = QuestionsParsingBusinessService()
+        let questions = qpbs.parseAPI()
+
+        
+        waitForExpectations(timeout: 10, handler: nil)
+        debugPrint(questions)
+        XCTAssertEqual(1, questions.count)
+    }
+    
 }
