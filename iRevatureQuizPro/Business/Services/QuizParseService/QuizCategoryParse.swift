@@ -11,11 +11,14 @@ import Foundation
 struct QuizCategoryParse {
 	
 	func loadData() {
-		QuizDataAccess.getAllQuizzes(numberOfRecords: 200, finish: {
+		QuizDataAccess.getAllQuizzes(numberOfRecords: 800, finish: {
 			results in
 			
 			print("should be results next")
 			print(results)
+			
+//			for object in results {
+//			}
 			
 		})
 		
