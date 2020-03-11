@@ -8,8 +8,9 @@
 
 import UIKit
 
-class AttendeeSignupTableController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class AttendeeSignupTableController: UITableViewController {
     
+    //Input field names
     private let inputFieldNames: [String] = ["First Name",
                                              "Last Name",
                                              "Email",
@@ -18,14 +19,16 @@ class AttendeeSignupTableController: UIViewController, UITableViewDataSource, UI
                                              "Highest Level of Education",
                                              "Work Authorization"]
     
+    //Hold reference to all the cells in the table to get data from later
     private var cells: [String : AttendeeSignupTableCell] = [String : AttendeeSignupTableCell]()
 
-    //Table funcs
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    //Set how many cells are going to be in the table
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return inputFieldNames.count
     }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    //Setup cells in table
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: AttendeeSignupTableCell.cellIdentifier, for: indexPath) as! AttendeeSignupTableCell
         
         cell.setTextInput(name: "\(inputFieldNames[indexPath.row])*")
@@ -41,11 +44,12 @@ class AttendeeSignupTableController: UIViewController, UITableViewDataSource, UI
         return cell
     }
     
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+    //Set height for each cell
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return AttendeeSignupTableCell.cellHeight
     }
     
-    //Data func
+    //Get data from cells
     func getInputData() -> BEventAttendeeSignUpInputData? {
         var signUpInput = BEventAttendeeSignUpInputData()
         

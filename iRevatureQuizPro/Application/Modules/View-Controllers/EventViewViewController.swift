@@ -33,21 +33,6 @@ class EventViewViewController: BaseViewController, UITableViewDelegate, UITableV
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.eventsTable.dataSource = self
-        self.eventsTable.delegate = self
-        self.eventsArray = initArray()
-
-        // Do any additional setup after loading the view.
-       
-        var sampleQuiz: QuizAPIData
-        
-        print(QuizDataAccess.getQuizzes { sampleQuiz in
-            
-            let quiz = sampleQuiz
-            
-        })
-        
-
     }
     
     @IBAction func addEventButton(_ sender: Any) {
