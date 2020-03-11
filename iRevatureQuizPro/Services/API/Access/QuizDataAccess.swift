@@ -8,24 +8,25 @@
 
 /*
  
-    Allows us to pull all quiz data into an API quiz struct that receives it.
+ Allows us to pull all quiz data into an API quiz struct that receives it.
  
-    These values are meant to be persisted in the databse to then be used in the business layer.
+ These values are meant to be persisted in the databse to then be used in the business layer.
  
  */
 
 import Alamofire
 import os.log
 
-// Makes a request to API to gather all Quiz Data needed to persist
+// Makes a request to API to gather all Quizzes Data needed
 class QuizDataAccess {
     
     static private let endpoint = "https://dev3-ms.revature.com/apigateway/quiz/secure/quizzes"
     
     // Sends a request to the API for data
-    static func getQuizzes(finish: @escaping (APIQuizResults) -> Void) {
+    static func getAllQuizzes(finish: @escaping (APIQuizResults) -> Void) {
         
         let user = UserInfoBusinessService.getUserInfo()
+        
         guard let token = user?.token else {
             return
         }
@@ -56,9 +57,27 @@ class QuizDataAccess {
                 print(response.error?.errorDescription)
                 return
             }
-
+            
             finish(data)
         }
+        
+        
+    }
+    
+    static func getQuizById(quizId: String, finish: @escaping (APIQuizResults) -> Void) {
+        
+        // Grabs an instance of the user defaults
+        let user = UserInfoBusinessService.getUserInfo()
+        
+        // Grabs the token from an instance of the current user
+        guard let token =  user?.token else {
+            return
+        }
+        
+        let header = ["Content-Type": "application/json",
+                      "encryptedToken": token
+        ]
+        
         
         
     }
