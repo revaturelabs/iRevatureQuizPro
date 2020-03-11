@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct questionObject{
+struct QuestionObject{
     var id: Int
     var title: String
     var tags: String

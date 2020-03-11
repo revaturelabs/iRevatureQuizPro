@@ -12,7 +12,7 @@ class QuizDataService {
         // Do any additional setup after loading the view.
         var sampleQuiz: QuizAPIData
         
-        var data = QuizDataAccess.getQuizzes { sampleQuiz in
+        var data = QuizDataAccess.getAllQuizzes(numberOfRecords: 1) { sampleQuiz in
             
             let quiz = sampleQuiz
             

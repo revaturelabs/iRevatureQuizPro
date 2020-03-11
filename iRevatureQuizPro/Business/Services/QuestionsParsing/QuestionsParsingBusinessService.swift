@@ -9,5 +9,18 @@
 import Foundation
 
 class QuestionsParsingBusinessService{
-    
+
+    func parseAPI() -> [QuestionObject]{
+        var questions:[QuestionObject] = []
+        QuestionAPIAccess.getAllQuestions(size: 10, page: 1) { (allQuestions, hasError) in
+            guard let q = allQuestions else {
+                return
+            }
+            
+             let questions = q.map{QuestionObject(id: $0.id, title: $0.title, tags: $0.tags, questionType: $0.questionType)}
+            
+        }
+        
+        return questions
+    }
 }

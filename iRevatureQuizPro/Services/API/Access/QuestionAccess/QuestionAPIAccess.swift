@@ -11,7 +11,7 @@ import Alamofire
 import os.log
 
 
-public class QuestionAPIAccess {
+class QuestionAPIAccess {
     
     static private let allEndpoint = "https://dev3-ms.revature.com/apigateway/quiz/secure/questions"
     static private let endpointByID = "https://dev3-ms.revature.com/apigateway/quiz/secure/question/"
