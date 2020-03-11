@@ -69,6 +69,7 @@
 		9544BEF224119B9500BFC412 /* VIewControllerInstantiator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9544BEF124119B9500BFC412 /* VIewControllerInstantiator.swift */; };
 		9544BF522416CD7A00BFC412 /* QuizAPIData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9544BF512416CD7A00BFC412 /* QuizAPIData.swift */; };
 		9544BF542416D0BC00BFC412 /* QuizDataAccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9544BF532416D0BC00BFC412 /* QuizDataAccess.swift */; };
+		95C6172024191D05001E270E /* QuizDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95C6171F24191D05001E270E /* QuizDataService.swift */; };
 		95D8CF1424116B5B00EB322E /* MainStoryBoardController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D8CF1324116B5B00EB322E /* MainStoryBoardController.swift */; };
 		95D8CF1624117F9300EB322E /* EventManagement.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 95D8CF1524117F9300EB322E /* EventManagement.storyboard */; };
 		95D8CF182411849400EB322E /* QuizManagement.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 95D8CF172411849400EB322E /* QuizManagement.storyboard */; };
@@ -161,6 +162,7 @@
 		9544BEF124119B9500BFC412 /* VIewControllerInstantiator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VIewControllerInstantiator.swift; sourceTree = "<group>"; };
 		9544BF512416CD7A00BFC412 /* QuizAPIData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizAPIData.swift; sourceTree = "<group>"; };
 		9544BF532416D0BC00BFC412 /* QuizDataAccess.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizDataAccess.swift; sourceTree = "<group>"; };
+		95C6171F24191D05001E270E /* QuizDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizDataService.swift; sourceTree = "<group>"; };
 		95D8CF1324116B5B00EB322E /* MainStoryBoardController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainStoryBoardController.swift; sourceTree = "<group>"; };
 		95D8CF1524117F9300EB322E /* EventManagement.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = EventManagement.storyboard; sourceTree = "<group>"; };
 		95D8CF172411849400EB322E /* QuizManagement.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = QuizManagement.storyboard; sourceTree = "<group>"; };
@@ -437,6 +439,7 @@
 			children = (
 				5F897EED2412F39D001B5C2B /* UserInfoBusinessService.swift */,
 				0991503B2412F87D00E73B62 /* EventAttendee */,
+				95C6171F24191D05001E270E /* QuizDataService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -769,6 +772,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				95C6172024191D05001E270E /* QuizDataService.swift in Sources */,
 				0944AEDA2410419100688C9B /* RevatureTableViewCell.swift in Sources */,
 				84DB87D024114A1000958E75 /* BaseViewController.swift in Sources */,
 				099150242412E2F800E73B62 /* EventAttendeeAccess.swift in Sources */,
