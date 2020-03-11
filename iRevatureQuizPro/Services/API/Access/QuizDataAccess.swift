@@ -17,18 +17,21 @@
 import Alamofire
 import os.log
 
+// Makes a request to API to gather all Quiz Data needed to persist
 class QuizDataAccess {
     
     static private let endpoint = "https://dev3-ms.revature.com/apigateway/quiz/secure/quizzes"
     
-    static func getQuizzes(finish: @escaping (QuizAPIData) -> Void) {
+    // Sends a request to the API for data
+    static func getQuizzes(finish: @escaping (APIQuizResults) -> Void) {
         
         let user = UserInfoBusinessService.getUserInfo()
         guard let token = user?.token else {
             return
         }
         
-        let quizBody = QuizBody(size: 10, page: 1, sortOrder: "desc", orderBy: "creaeName", subscribedContent: false, publicContent: false, ownContent: false, isOrdered: false)
+        //I'm assuming this is test hard coded data, if not this needs a configurable way of doing it
+        let quizBody = QuizBody(size: 800, page: 1, sortOrder: "desc", orderBy: "createdName", subscribedContent: false, publicContent: false, ownContent: false, isOrdered: false)
         
         let header: HTTPHeaders = [
             "Content-Type": "application/json",
@@ -41,10 +44,15 @@ class QuizDataAccess {
             parameters: quizBody,
             encoder: JSONParameterEncoder.default,
             headers: header
-        ).validate().responseDecodable(of: QuizAPIData.self) {
+        ).validate().responseDecodable(of: APIQuizResults.self) {
             (response) in
             
+            
             guard let data = response.value else {
+                print(response.debugDescription)
+                
+                print(response.error.debugDescription)
+                
                 print(response.error?.errorDescription)
                 return
             }
