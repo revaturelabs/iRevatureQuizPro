@@ -60,8 +60,16 @@
 		29B2F1A52416D6BB00FDDE57 /* QuizTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29B2F1A22416D6BB00FDDE57 /* QuizTable.swift */; };
 		29B2F1A62416D6BB00FDDE57 /* QuizReturnStructs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29B2F1A32416D6BB00FDDE57 /* QuizReturnStructs.swift */; };
 		29B2F1A82416D6CA00FDDE57 /* QuizObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29B2F1A72416D6CA00FDDE57 /* QuizObject.swift */; };
-		5F1E2DAF24191CEF00F2FAE3 /* QuestionAPIResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F1E2DAE24191CEF00F2FAE3 /* QuestionAPIResponse.swift */; };
-		5F1E2DB124191E1800F2FAE3 /* QuestionAPIData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F1E2DB024191E1800F2FAE3 /* QuestionAPIData.swift */; };
+		5F1E2DAF24191CEF00F2FAE3 /* AllQuestionAPIResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F1E2DAE24191CEF00F2FAE3 /* AllQuestionAPIResponse.swift */; };
+		5F1E2DB124191E1800F2FAE3 /* AllQuestionAPIData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F1E2DB024191E1800F2FAE3 /* AllQuestionAPIData.swift */; };
+		5F1E2DB324191EEA00F2FAE3 /* QuestionByIDAPIResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F1E2DB224191EEA00F2FAE3 /* QuestionByIDAPIResponse.swift */; };
+		5F1E2DB52419217C00F2FAE3 /* QuestionByIDAPIData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F1E2DB42419217C00F2FAE3 /* QuestionByIDAPIData.swift */; };
+		5F1E2DB72419219B00F2FAE3 /* QuestionAnswer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F1E2DB62419219B00F2FAE3 /* QuestionAnswer.swift */; };
+		5F1E2DB9241921BB00F2FAE3 /* QuestionType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F1E2DB8241921BB00F2FAE3 /* QuestionType.swift */; };
+		5F1E2DBD2419230D00F2FAE3 /* QuestionAPIAccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F1E2DBC2419230D00F2FAE3 /* QuestionAPIAccess.swift */; };
+		5F1E2DBF241926E500F2FAE3 /* QuestionBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F1E2DBE241926E500F2FAE3 /* QuestionBody.swift */; };
+		5F1E2DC12419290600F2FAE3 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F1E2DC02419290600F2FAE3 /* API.swift */; };
+		5F1E2DD224192CDB00F2FAE3 /* QuestionAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F1E2DD124192CDB00F2FAE3 /* QuestionAPI.swift */; };
 		5F897EBF24129481001B5C2B /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 5F897EBE24129481001B5C2B /* Alamofire */; };
 		5F897EE22412B749001B5C2B /* TrainerLoginAccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F897EE12412B749001B5C2B /* TrainerLoginAccess.swift */; };
 		5F897EE42412BE36001B5C2B /* TrainerLoginInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F897EE32412BE36001B5C2B /* TrainerLoginInfo.swift */; };
@@ -102,6 +110,13 @@
 
 /* Begin PBXContainerItemProxy section */
 		0991502E2412E69500E73B62 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 09F2C039240EE1B5004A6F47 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 09F2C040240EE1B5004A6F47;
+			remoteInfo = iRevatureQuizPro;
+		};
+		5F1E2DCB24192B9C00F2FAE3 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 09F2C039240EE1B5004A6F47 /* Project object */;
 			proxyType = 1;
@@ -167,8 +182,17 @@
 		29B2F1A22416D6BB00FDDE57 /* QuizTable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuizTable.swift; sourceTree = "<group>"; };
 		29B2F1A32416D6BB00FDDE57 /* QuizReturnStructs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuizReturnStructs.swift; sourceTree = "<group>"; };
 		29B2F1A72416D6CA00FDDE57 /* QuizObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuizObject.swift; sourceTree = "<group>"; };
-		5F1E2DAE24191CEF00F2FAE3 /* QuestionAPIResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionAPIResponse.swift; sourceTree = "<group>"; };
-		5F1E2DB024191E1800F2FAE3 /* QuestionAPIData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionAPIData.swift; sourceTree = "<group>"; };
+		5F1E2DAE24191CEF00F2FAE3 /* AllQuestionAPIResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllQuestionAPIResponse.swift; sourceTree = "<group>"; };
+		5F1E2DB024191E1800F2FAE3 /* AllQuestionAPIData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllQuestionAPIData.swift; sourceTree = "<group>"; };
+		5F1E2DB224191EEA00F2FAE3 /* QuestionByIDAPIResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionByIDAPIResponse.swift; sourceTree = "<group>"; };
+		5F1E2DB42419217C00F2FAE3 /* QuestionByIDAPIData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionByIDAPIData.swift; sourceTree = "<group>"; };
+		5F1E2DB62419219B00F2FAE3 /* QuestionAnswer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionAnswer.swift; sourceTree = "<group>"; };
+		5F1E2DB8241921BB00F2FAE3 /* QuestionType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionType.swift; sourceTree = "<group>"; };
+		5F1E2DBC2419230D00F2FAE3 /* QuestionAPIAccess.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionAPIAccess.swift; sourceTree = "<group>"; };
+		5F1E2DBE241926E500F2FAE3 /* QuestionBody.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionBody.swift; sourceTree = "<group>"; };
+		5F1E2DC02419290600F2FAE3 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		5F1E2DC624192B9C00F2FAE3 /* QuestionAPITest.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QuestionAPITest.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5F1E2DD124192CDB00F2FAE3 /* QuestionAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionAPI.swift; sourceTree = "<group>"; };
 		5F897EE12412B749001B5C2B /* TrainerLoginAccess.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainerLoginAccess.swift; sourceTree = "<group>"; };
 		5F897EE32412BE36001B5C2B /* TrainerLoginInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainerLoginInfo.swift; sourceTree = "<group>"; };
 		5F897EEA2412F246001B5C2B /* UserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
@@ -221,6 +245,13 @@
 			files = (
 				0940FE8F24116145006F0E52 /* libEasySQLite.a in Frameworks */,
 				5F897EBF24129481001B5C2B /* Alamofire in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5F1E2DC324192B9C00F2FAE3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -309,6 +340,7 @@
 				099150332412E6A700E73B62 /* Persistence */,
 				0991502B2412E69500E73B62 /* iRevatureQuizProTests.swift */,
 				0991502D2412E69500E73B62 /* Info.plist */,
+				5F1E2DD124192CDB00F2FAE3 /* QuestionAPI.swift */,
 			);
 			path = iRevatureQuizProTests;
 			sourceTree = "<group>";
@@ -372,6 +404,7 @@
 			children = (
 				09F2C041240EE1B5004A6F47 /* iRevatureQuizPro.app */,
 				099150292412E69500E73B62 /* iRevatureQuizProTests.xctest */,
+				5F1E2DC624192B9C00F2FAE3 /* QuestionAPITest.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -685,11 +718,35 @@
 			path = Quizzes;
 			sourceTree = "<group>";
 		};
+		5F1E2DBA241921DD00F2FAE3 /* QuestionAPI */ = {
+			isa = PBXGroup;
+			children = (
+				5F1E2DAE24191CEF00F2FAE3 /* AllQuestionAPIResponse.swift */,
+				5F1E2DB224191EEA00F2FAE3 /* QuestionByIDAPIResponse.swift */,
+				5F1E2DB42419217C00F2FAE3 /* QuestionByIDAPIData.swift */,
+				5F1E2DB62419219B00F2FAE3 /* QuestionAnswer.swift */,
+				5F1E2DB8241921BB00F2FAE3 /* QuestionType.swift */,
+				5F1E2DB024191E1800F2FAE3 /* AllQuestionAPIData.swift */,
+				5F1E2DBE241926E500F2FAE3 /* QuestionBody.swift */,
+			);
+			path = QuestionAPI;
+			sourceTree = "<group>";
+		};
+		5F1E2DBB241922EB00F2FAE3 /* QuestionAccess */ = {
+			isa = PBXGroup;
+			children = (
+				5F1E2DBC2419230D00F2FAE3 /* QuestionAPIAccess.swift */,
+			);
+			path = QuestionAccess;
+			sourceTree = "<group>";
+		};
 		5F897EE02412B6DF001B5C2B /* Access */ = {
 			isa = PBXGroup;
 			children = (
+				5F1E2DBB241922EB00F2FAE3 /* QuestionAccess */,
 				5F897EE12412B749001B5C2B /* TrainerLoginAccess.swift */,
 				9544BF532416D0BC00BFC412 /* QuizDataAccess.swift */,
+				5F1E2DC02419290600F2FAE3 /* API.swift */,
 			);
 			path = Access;
 			sourceTree = "<group>";
@@ -712,8 +769,7 @@
 				5F901D902411A13700986FF5 /* CurrentSystemRole.swift */,
 				5F897EE32412BE36001B5C2B /* TrainerLoginInfo.swift */,
 				9544BF512416CD7A00BFC412 /* QuizAPIData.swift */,
-				5F1E2DAE24191CEF00F2FAE3 /* QuestionAPIResponse.swift */,
-				5F1E2DB024191E1800F2FAE3 /* QuestionAPIData.swift */,
+				5F1E2DBA241921DD00F2FAE3 /* QuestionAPI */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -767,6 +823,24 @@
 			productReference = 09F2C041240EE1B5004A6F47 /* iRevatureQuizPro.app */;
 			productType = "com.apple.product-type.application";
 		};
+		5F1E2DC524192B9C00F2FAE3 /* QuestionAPITest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5F1E2DCD24192B9C00F2FAE3 /* Build configuration list for PBXNativeTarget "QuestionAPITest" */;
+			buildPhases = (
+				5F1E2DC224192B9C00F2FAE3 /* Sources */,
+				5F1E2DC324192B9C00F2FAE3 /* Frameworks */,
+				5F1E2DC424192B9C00F2FAE3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5F1E2DCC24192B9C00F2FAE3 /* PBXTargetDependency */,
+			);
+			name = QuestionAPITest;
+			productName = QuestionAPITest;
+			productReference = 5F1E2DC624192B9C00F2FAE3 /* QuestionAPITest.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -783,6 +857,10 @@
 					};
 					09F2C040240EE1B5004A6F47 = {
 						CreatedOnToolsVersion = 11.3.1;
+					};
+					5F1E2DC524192B9C00F2FAE3 = {
+						CreatedOnToolsVersion = 11.3.1;
+						TestTargetID = 09F2C040240EE1B5004A6F47;
 					};
 				};
 			};
@@ -804,6 +882,7 @@
 			targets = (
 				09F2C040240EE1B5004A6F47 /* iRevatureQuizPro */,
 				099150282412E69500E73B62 /* iRevatureQuizProTests */,
+				5F1E2DC524192B9C00F2FAE3 /* QuestionAPITest */,
 			);
 		};
 /* End PBXProject section */
@@ -845,6 +924,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		5F1E2DC424192B9C00F2FAE3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -854,6 +940,7 @@
 			files = (
 				29105E332416DCF6005453CD /* QuizTests.swift in Sources */,
 				099150362412E6E600E73B62 /* EventAttendeeTests.swift in Sources */,
+				5F1E2DD224192CDB00F2FAE3 /* QuestionAPI.swift in Sources */,
 				0991502C2412E69500E73B62 /* iRevatureQuizProTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -868,6 +955,8 @@
 				09C4D08424168ABB00DCDEC4 /* AttendeeSignupTableController.swift in Sources */,
 				84DB87D024114A1000958E75 /* BaseViewController.swift in Sources */,
 				84DB88182416CD9000958E75 /* Events.swift in Sources */,
+				5F1E2DB52419217C00F2FAE3 /* QuestionByIDAPIData.swift in Sources */,
+				5F1E2DBF241926E500F2FAE3 /* QuestionBody.swift in Sources */,
 				D5D8BCC42416C3A500BC01B0 /* EventCell.swift in Sources */,
 				099150242412E2F800E73B62 /* EventAttendeeAccess.swift in Sources */,
 				09A4679A2411A81100A4BB90 /* MetatagAccess.swift in Sources */,
@@ -885,12 +974,13 @@
 				095E53C32418042B0009322C /* VIewControllerUtilities.swift in Sources */,
 				29105E352416DE4F005453CD /* QuizAccess.swift in Sources */,
 				5F901D8224114E0C00986FF5 /* UITextFieldExtension.swift in Sources */,
+				5F1E2DBD2419230D00F2FAE3 /* QuestionAPIAccess.swift in Sources */,
 				29B2F1A82416D6CA00FDDE57 /* QuizObject.swift in Sources */,
 				95D8CF1424116B5B00EB322E /* MainStoryBoardController.swift in Sources */,
 				09F2C049240EE1B5004A6F47 /* ViewController.swift in Sources */,
 				5F897EE42412BE36001B5C2B /* TrainerLoginInfo.swift in Sources */,
 				84DB87D4241159C300958E75 /* StartQuizViewController.swift in Sources */,
-				5F1E2DB124191E1800F2FAE3 /* QuestionAPIData.swift in Sources */,
+				5F1E2DB124191E1800F2FAE3 /* AllQuestionAPIData.swift in Sources */,
 				5F901D8F2411A11700986FF5 /* TrainerLoginData.swift in Sources */,
 				0944AEDC241041CE00688C9B /* CreateEventCell.swift in Sources */,
 				95D8CF1E241190A100EB322E /* EventViewViewController.swift in Sources */,
@@ -902,7 +992,7 @@
 				09C0837E24136D4B00D021F0 /* EndInputExtension.swift in Sources */,
 				29B2F1A52416D6BB00FDDE57 /* QuizTable.swift in Sources */,
 				09F2C045240EE1B5004A6F47 /* AppDelegate.swift in Sources */,
-				5F1E2DAF24191CEF00F2FAE3 /* QuestionAPIResponse.swift in Sources */,
+				5F1E2DAF24191CEF00F2FAE3 /* AllQuestionAPIResponse.swift in Sources */,
 				0940FE6E2411611D006F0E52 /* MetatagTable.swift in Sources */,
 				9544BF542416D0BC00BFC412 /* QuizDataAccess.swift in Sources */,
 				95D8CF1C2411907100EB322E /* EmployeeLoginViewController.swift in Sources */,
@@ -919,13 +1009,24 @@
 				0944AED8241036BF00688C9B /* UIColorExtension.swift in Sources */,
 				5F901D8C2411971700986FF5 /* TrainerLoginAPIResponse.swift in Sources */,
 				84DB881A2416CE0000958E75 /* EventsBusinessService.swift in Sources */,
+				5F1E2DB324191EEA00F2FAE3 /* QuestionByIDAPIResponse.swift in Sources */,
+				5F1E2DC12419290600F2FAE3 /* API.swift in Sources */,
 				0991503D2412F8C300E73B62 /* EventAttendeePersistenceService.swift in Sources */,
 				5F901D912411A13700986FF5 /* CurrentSystemRole.swift in Sources */,
 				84F34FA42410437100D250BB /* iRevatureButton.swift in Sources */,
 				090A81402411969C008D7A12 /* DatabaseInteractions.swift in Sources */,
+				5F1E2DB9241921BB00F2FAE3 /* QuestionType.swift in Sources */,
+				5F1E2DB72419219B00F2FAE3 /* QuestionAnswer.swift in Sources */,
 				0944AEDE2410540400688C9B /* CreateEventViewController.swift in Sources */,
 				95D8CF242411911A00EB322E /* CreateQuizViewController.swift in Sources */,
 				29B2F1A42416D6BB00FDDE57 /* QuizStatements.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5F1E2DC224192B9C00F2FAE3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -936,6 +1037,11 @@
 			isa = PBXTargetDependency;
 			target = 09F2C040240EE1B5004A6F47 /* iRevatureQuizPro */;
 			targetProxy = 0991502E2412E69500E73B62 /* PBXContainerItemProxy */;
+		};
+		5F1E2DCC24192B9C00F2FAE3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 09F2C040240EE1B5004A6F47 /* iRevatureQuizPro */;
+			targetProxy = 5F1E2DCB24192B9C00F2FAE3 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -965,7 +1071,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = iRevatureQuizProTests/Info.plist;
+				INFOPLIST_FILE = "$(PROJECT_DIR)/iRevatureQuizPro/Application/Configuration/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -988,7 +1094,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = iRevatureQuizProTests/Info.plist;
+				INFOPLIST_FILE = "$(PROJECT_DIR)/iRevatureQuizPro/Application/Configuration/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1161,6 +1267,50 @@
 			};
 			name = Release;
 		};
+		5F1E2DCE24192B9C00F2FAE3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4R6WHCFACK;
+				INFOPLIST_FILE = "$(PROJECT_DIR)/iRevatureQuizPro/Application/Configuration/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/StaticLibraries/EasySQLite";
+				PRODUCT_BUNDLE_IDENTIFIER = com.revature.QuestionAPITest;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/iRevatureQuizPro.app/iRevatureQuizPro";
+			};
+			name = Debug;
+		};
+		5F1E2DCF24192B9C00F2FAE3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4R6WHCFACK;
+				INFOPLIST_FILE = "$(PROJECT_DIR)/iRevatureQuizPro/Application/Configuration/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/StaticLibraries/EasySQLite";
+				PRODUCT_BUNDLE_IDENTIFIER = com.revature.QuestionAPITest;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/iRevatureQuizPro.app/iRevatureQuizPro";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1187,6 +1337,15 @@
 			buildConfigurations = (
 				09F2C056240EE1B9004A6F47 /* Debug */,
 				09F2C057240EE1B9004A6F47 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5F1E2DCD24192B9C00F2FAE3 /* Build configuration list for PBXNativeTarget "QuestionAPITest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5F1E2DCE24192B9C00F2FAE3 /* Debug */,
+				5F1E2DCF24192B9C00F2FAE3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

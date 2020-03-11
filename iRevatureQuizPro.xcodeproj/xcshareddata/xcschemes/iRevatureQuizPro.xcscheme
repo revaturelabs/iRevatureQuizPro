@@ -20,6 +20,20 @@
                ReferencedContainer = "container:iRevatureQuizPro.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "NO"
+            buildForArchiving = "NO"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "099150282412E69500E73B62"
+               BuildableName = "iRevatureQuizProTests.xctest"
+               BlueprintName = "iRevatureQuizProTests"
+               ReferencedContainer = "container:iRevatureQuizPro.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
       </BuildActionEntries>
    </BuildAction>
    <TestAction
@@ -35,6 +49,16 @@
                BlueprintIdentifier = "099150282412E69500E73B62"
                BuildableName = "iRevatureQuizProTests.xctest"
                BlueprintName = "iRevatureQuizProTests"
+               ReferencedContainer = "container:iRevatureQuizPro.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "5F1E2DC524192B9C00F2FAE3"
+               BuildableName = "QuestionAPITest.xctest"
+               BlueprintName = "QuestionAPITest"
                ReferencedContainer = "container:iRevatureQuizPro.xcodeproj">
             </BuildableReference>
          </TestableReference>

@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct AllQuestionAPIData {
+struct AllQuestionAPIData: Codable  {
     var id: Int
     var title:String
     var levelId: Int

@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct AllQuestionAPIResponse {
+struct AllQuestionAPIResponse: Codable {
     var statusCode: Int
     var description: String
     var data: [AllQuestionAPIData]

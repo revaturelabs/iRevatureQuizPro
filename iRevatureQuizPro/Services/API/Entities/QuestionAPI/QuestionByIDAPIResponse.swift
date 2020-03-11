@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct QuestionByIDAPIResponse {
+struct QuestionByIDAPIResponse: Codable  {
     var statusCode: Int
     var description: String
     var data: QuestionByIDAPIData
