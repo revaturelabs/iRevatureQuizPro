@@ -21,23 +21,15 @@ import os.log
 class QuizDataAccess {
     
     static private let endpoint = "https://dev3-ms.revature.com/apigateway/quiz/secure/quizzes"
+    static private let endpointByID = "https://dev3-ms.revature.com/apigateway/quiz/secure/"
     
     // Sends a request to the API for data
-    static func getAllQuizzes(finish: @escaping (APIQuizResults) -> Void) {
-        
-        let user = UserInfoBusinessService.getUserInfo()
-        
-        guard let token = user?.token else {
-            return
-        }
-        
+    static func getAllQuizzes(numberOfRecords: Int, finish: @escaping (APIQuizResults) -> Void) {
+
         //I'm assuming this is test hard coded data, if not this needs a configurable way of doing it
-        let quizBody = QuizBody(size: 800, page: 1, sortOrder: "desc", orderBy: "createdName", subscribedContent: false, publicContent: false, ownContent: false, isOrdered: false)
+        let quizBody = QuizBody(size: numberOfRecords, page: 1, sortOrder: "desc", orderBy: "createdName", subscribedContent: false, publicContent: false, ownContent: false, isOrdered: false)
         
-        let header: HTTPHeaders = [
-            "Content-Type": "application/json",
-            "encryptedToken": token
-        ]
+        let header = API.getHTTPHeader()
         
         AF.request(
             endpoint,
@@ -66,19 +58,34 @@ class QuizDataAccess {
     
     static func getQuizById(quizId: String, finish: @escaping (APIQuizResults) -> Void) {
         
-        // Grabs an instance of the user defaults
-        let user = UserInfoBusinessService.getUserInfo()
+        //I'm assuming this is test hard coded data, if not this needs a configurable way of doing it
+        let quizData = QuizBody(size: 1, page: 1, sortOrder: "desc", orderBy: "createdName", subscribedContent: false, publicContent: false, ownContent: false, isOrdered: false)
         
-        // Grabs the token from an instance of the current user
-        guard let token =  user?.token else {
-            return
+        let header = API.getHTTPHeader()
+        
+        let endPoint = endpointByID + quizId
+        
+        AF.request(
+            endpoint,
+            method: .post,
+            parameters: quizData,
+            encoder: JSONParameterEncoder.default,
+            headers: header
+        ).validate().responseDecodable(of: APIQuizResults.self) {
+            (response) in
+            
+            
+            guard let data = response.value else {
+                print(response.debugDescription)
+                
+                print(response.error.debugDescription)
+                
+                print(response.error?.errorDescription)
+                return
+            }
+            
+            finish(data)
         }
-        
-        let header = ["Content-Type": "application/json",
-                      "encryptedToken": token
-        ]
-        
-        
         
     }
     

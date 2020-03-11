@@ -37,3 +37,13 @@ struct QuizBody: Codable{
     var ownContent: Bool
     var isOrdered: Bool
 }
+
+struct APIQuizByIDResults {
+    var statusCode:Int
+    var description:String
+    var data:[QuizByIDAPIData]
+}
+
+struct QuizByIDAPIData{
+    
+}
