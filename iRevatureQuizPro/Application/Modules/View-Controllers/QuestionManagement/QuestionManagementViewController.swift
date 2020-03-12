@@ -37,8 +37,8 @@ class QuestionManagementViewController: BaseViewController, UITableViewDelegate,
         cell.TitleLabel.text = "Title: \(question.title)"
         cell.tagLabel.text = "Tags: \(question.tags)"
         cell.questionTypeLabel.text = "Question Type: \(question.questionType)"
-        
-        cell.TitleLabel.lineBreakMode = NSLineBreakMode.byWordWrapping
+                
+        cell.TitleLabel.sizeToFit()
         cell.tagLabel.lineBreakMode = NSLineBreakMode.byWordWrapping
         cell.questionTypeLabel.lineBreakMode = NSLineBreakMode.byWordWrapping
         return cell
