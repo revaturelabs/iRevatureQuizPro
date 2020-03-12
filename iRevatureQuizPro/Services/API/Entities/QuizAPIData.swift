@@ -20,7 +20,7 @@ struct APIQuizResults: Codable {
 struct QuizAPIAllData: Codable {
 	
 	var id: Int
-	var title: String
+	var title: String 
 	var categoryId: Int
 	var passPercentage: Int
 	var metaTags: String?
