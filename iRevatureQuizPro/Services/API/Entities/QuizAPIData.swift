@@ -3,31 +3,172 @@
 //  iRevatureQuizPro
 //
 //  Created by A Guest on 3/9/20.
+//	Modified by Jeremy Malisse 3/11/2020.
 //  Copyright © 2020 revature. All rights reserved.
 //
 
 import Foundation
 
-// First set of data we receive from API
+// API response struct for the AllQuizzes API call
 struct APIQuizResults: Codable {
-    var statusCode:Int
-    var description:String
-    var data:[QuizAPIData]
-    
+    var statusCode: Int
+    var description: String
+    var data: [QuizAPIAllData]
 }
 
-// Models a single individual quiz record, that is received from the API
-struct QuizAPIData: Codable {
-    var id: Int
-    var title: String
-    var categoryId: String
-    var metaTags: String
-    var quizDuration: Int
+// API response struct for the data contained in AllQuizzes API call
+struct QuizAPIAllData: Codable {
+	
+	var id: Int
+	var title: String 
+	var categoryId: Int
+	var passPercentage: Int
+	var metaTags: String?
+	var version: Int
+	var mode: String
+	var orgId: Int
+	var superParentId: Int
+	var preSignupFlag: Bool
+	var dashboardFlag: Bool
+	var overrideFlag: Bool
+	var createdBy: Int
+	var isActive: Bool
+	var isStickyEnabled: Bool
+	var isImageUploaded: Bool
+	var quizDuration: Int
+	var isDurationOverridden: Bool
+	var isPublic: Bool
+	var enableSaveResume: Bool
+	var displayCorrectAnswerWhenPassed: Bool
+	var displayCorrectAnswerWhenFailed: Bool
+	var isReviewEnabled: Bool
+	var showWhetherCorrect: Bool
+	var displayScore: Bool
+	var timerEnable: Bool
+	var showExplanation: Bool
+	var shuffleQsn: Bool
+	var shuffleAns: Bool
+	var qsnCount: Int
+	var isChildAvailable: Bool
+	var contentType: String
+	var totalRecords: Int
+	var iconDeleted: Bool
+	var updatedTotalRecords: Bool
+	var categoryName: String
+	var createdName: String
 }
+
+struct APIQuizByIDResults {
+	var statusCode: Int
+	var description: String
+	var data: [QuizAPIByIDData]
+}
+
+struct QuizAPIByIDData {
+		var id: Int
+		var title: String
+		var levelId: Int
+		var categoryId: Int
+		var noOfAttempts: Int
+		var passPercentage: Int
+		var metaTags: String?
+		var metaDescription: String
+		var version: Int
+		var mode: String
+		var orgId: Int
+		var superParentId: Int
+		var preSignupFlag: Bool
+		var dashboardFlag: Bool
+		var overrideFlag: Bool
+		var createdBy: Int
+		var createdOn: String
+		var modifiedBy: Int
+		var modifiedOn: String
+		var quizPools: [QuizPoolItem]
+		var activityPoints: Int
+		var isActive: Bool
+		var isStickyEnabled: Bool
+		var isImageUploaded: Bool
+		var isReqForPublish: Bool
+		var quizDuration: Int
+		var isDurationOverridden: Bool
+		var isPublic: Bool
+		var tags: String
+		var slug: String
+		var description: String
+		var instructions: String
+		var enableSaveResume: Bool
+		var displayCorrectAnswerWhenPassed: Bool
+		var displayCorrectAnswerWhenFailed: Bool
+		var isReviewEnabled: Bool
+		var showWhetherCorrect: Bool
+		var displayScore: Bool
+		var timerEnable: Bool
+		var showExplanation: Bool
+		var shuffleQsn: Bool
+		var shuffleAns: Bool
+		var contentType: String
+		var iconDeleted: Bool
+		var updatedTotalRecords: Bool
+		var categoryName: String
+		var createdName: String
+		var modifiedName: String
+
+	struct QuizPoolItem {
+		var id: Int
+		var name: String
+		var maxQstnToDisplay: Int
+		var displayOrder: Int
+		var quizPoolQuestions: QuizQuestionPool
+		var isEdittedMaxQsnToDisp: Bool
+	}
+
+	struct QuizQuestionPool {
+		var id: Int
+		var question: QuestionPoolItem
+		var order: Int
+		var isSticky: Bool
+		var dontEvaluate: Bool
+	}
+
+	struct QuestionPoolItem {
+		var id: Int
+		var title: String
+		var levelId: Int
+		var points: Int
+		var score: Double
+		var tags: String
+		var durationInSec: Int
+		var categoryId: Int
+		var qsnAnswers: [AnswerItem]
+		var qsnType: QuestionType
+		var categoryName: String
+		var isDeactivated: Bool
+		var updatedTotalRecords: Bool
+		var lineNumber: Int
+		var validAnswers: Bool
+	}
+	
+	struct AnswerItem {
+		var id: Int
+		var answer: String
+		var order: Int
+		var correct: Bool
+		var sticky: Bool
+	}
+	
+	struct QuestionType {
+		var id: Int
+		var code: String
+		var qsnType: String
+	}
+}
+
 
 // Body of the API request
-struct QuizBody: Codable{
-    // Size is how many reccords are being requested
+struct QuizBody: Codable {
+    // Size is how many records are being requested
+	// Needs to be changed somehow to verify all records are received
     var size: Int
     var page: Int
     var sortOrder: String
@@ -38,12 +179,3 @@ struct QuizBody: Codable{
     var isOrdered: Bool
 }
 
-struct APIQuizByIDResults {
-    var statusCode:Int
-    var description:String
-    var data:[QuizByIDAPIData]
-}
-
-struct QuizByIDAPIData{
-    
-}

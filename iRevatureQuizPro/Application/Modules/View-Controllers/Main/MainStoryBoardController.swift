@@ -36,9 +36,10 @@ class MainStoryBoardViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-      //  var sampleQuiz:QuizAPIData
+		
+      	// var sampleQuiz:QuizAPIData
         
-        //QuizDataAccess.getQuizzes(finish: <#T##(QuizAPIData) -> Void#>)
+		QuizDataService.getQuizData()
     
         // Do any additional setup after loading the view.
         

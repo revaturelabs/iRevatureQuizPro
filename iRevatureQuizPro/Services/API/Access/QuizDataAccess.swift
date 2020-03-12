@@ -25,7 +25,8 @@ class QuizDataAccess {
     
     // Sends a request to the API for data
 
-    static func getAllQuizzes(numberOfRecords: Int, finish: @escaping (APIQuizResults) -> Void) {
+
+    static func getAllQuizzes(numberOfRecords: Int, finish: @escaping ([QuizAPIAllData]) -> Void) {
 
         //I'm assuming this is test hard coded data, if not this needs a configurable way of doing it
         let quizBody = QuizBody(size: numberOfRecords, page: 1, sortOrder: "desc", orderBy: "createdName", subscribedContent: false, publicContent: false, ownContent: false, isOrdered: false)
@@ -38,25 +39,26 @@ class QuizDataAccess {
             parameters: quizBody,
             encoder: JSONParameterEncoder.default,
             headers: header
-        ).validate().responseDecodable(of: APIQuizResults.self) {
+        ).validate().responseDecodable(of: APIQuizResults.self)
+		{
             (response) in
             
-            
-            guard let data = response.value else {
-                print(response.debugDescription)
+			guard let data = response.value else {
+				
+				print(response.debugDescription)
                 
                 print(response.error.debugDescription)
                 
                 print(response.error?.errorDescription)
                 return
             }
-
-            finish(data)
+			finish(data.data)
         }
         
         
     }
     
+
     static func getQuizById(quizId: String, finish: @escaping (APIQuizResults) -> Void) {
         
         //I'm assuming this is test hard coded data, if not this needs a configurable way of doing it
