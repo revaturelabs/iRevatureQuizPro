@@ -82,6 +82,9 @@
 		5F901D8C2411971700986FF5 /* TrainerLoginAPIResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F901D8B2411971700986FF5 /* TrainerLoginAPIResponse.swift */; };
 		5F901D8F2411A11700986FF5 /* TrainerLoginData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F901D8E2411A11700986FF5 /* TrainerLoginData.swift */; };
 		5F901D912411A13700986FF5 /* CurrentSystemRole.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F901D902411A13700986FF5 /* CurrentSystemRole.swift */; };
+		5FD4802D241A731600D1A0D1 /* QuestionManagement.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5FD4802C241A731600D1A0D1 /* QuestionManagement.storyboard */; };
+		5FD48030241A74BE00D1A0D1 /* QuestionManagementViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FD4802F241A74BE00D1A0D1 /* QuestionManagementViewController.swift */; };
+		5FD48033241A767900D1A0D1 /* QuestionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FD48032241A767900D1A0D1 /* QuestionTableViewCell.swift */; };
 		84DB87CC241049EB00958E75 /* StartQuiz.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84DB87CB241049EB00958E75 /* StartQuiz.storyboard */; };
 		84DB87D024114A1000958E75 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DB87CF24114A1000958E75 /* BaseViewController.swift */; };
 		84DB87D4241159C300958E75 /* StartQuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DB87D3241159C300958E75 /* StartQuizViewController.swift */; };
@@ -101,9 +104,6 @@
 		95D8CF20241190BB00EB322E /* AttendeeSignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D8CF1F241190BB00EB322E /* AttendeeSignUpViewController.swift */; };
 		95D8CF22241190E900EB322E /* QuizViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D8CF21241190E900EB322E /* QuizViewViewController.swift */; };
 		95D8CF242411911A00EB322E /* CreateQuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D8CF232411911A00EB322E /* CreateQuizViewController.swift */; };
-		D50FC892241A724D00BACABF /* QuestionStatements.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50FC88F241A724D00BACABF /* QuestionStatements.swift */; };
-		D50FC893241A724D00BACABF /* QuestionTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50FC890241A724D00BACABF /* QuestionTable.swift */; };
-		D50FC894241A724D00BACABF /* QuestionReturnStructs.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50FC891241A724D00BACABF /* QuestionReturnStructs.swift */; };
 		D540960D2411538E00791C7E /* RevatureTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = D540960C2411538E00791C7E /* RevatureTextField.swift */; };
 		D54096552412DFE500791C7E /* EventTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D54096542412DFE500791C7E /* EventTable.swift */; };
 		D54096572412E2AB00791C7E /* EventStatements.swift in Sources */ = {isa = PBXBuildFile; fileRef = D54096562412E2AB00791C7E /* EventStatements.swift */; };
@@ -210,6 +210,9 @@
 		5F901D8B2411971700986FF5 /* TrainerLoginAPIResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainerLoginAPIResponse.swift; sourceTree = "<group>"; };
 		5F901D8E2411A11700986FF5 /* TrainerLoginData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainerLoginData.swift; sourceTree = "<group>"; };
 		5F901D902411A13700986FF5 /* CurrentSystemRole.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentSystemRole.swift; sourceTree = "<group>"; };
+		5FD4802C241A731600D1A0D1 /* QuestionManagement.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = QuestionManagement.storyboard; sourceTree = "<group>"; };
+		5FD4802F241A74BE00D1A0D1 /* QuestionManagementViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionManagementViewController.swift; sourceTree = "<group>"; };
+		5FD48032241A767900D1A0D1 /* QuestionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = QuestionTableViewCell.swift; path = iRevatureQuizPro/Application/Modules/Views/QuestionTableViewCell.swift; sourceTree = SOURCE_ROOT; };
 		84DB87CB241049EB00958E75 /* StartQuiz.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = StartQuiz.storyboard; sourceTree = "<group>"; };
 		84DB87CF24114A1000958E75 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		84DB87D3241159C300958E75 /* StartQuizViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartQuizViewController.swift; sourceTree = "<group>"; };
@@ -229,13 +232,10 @@
 		95D8CF1F241190BB00EB322E /* AttendeeSignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttendeeSignUpViewController.swift; sourceTree = "<group>"; };
 		95D8CF21241190E900EB322E /* QuizViewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizViewViewController.swift; sourceTree = "<group>"; };
 		95D8CF232411911A00EB322E /* CreateQuizViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateQuizViewController.swift; sourceTree = "<group>"; };
-		D50FC88F241A724D00BACABF /* QuestionStatements.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionStatements.swift; sourceTree = "<group>"; };
-		D50FC890241A724D00BACABF /* QuestionTable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionTable.swift; sourceTree = "<group>"; };
-		D50FC891241A724D00BACABF /* QuestionReturnStructs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionReturnStructs.swift; sourceTree = "<group>"; };
 		D540960C2411538E00791C7E /* RevatureTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RevatureTextField.swift; sourceTree = "<group>"; };
-		D54096542412DFE500791C7E /* EventTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = EventTable.swift; path = iRevatureQuizPro/Persistence/Entities/Events/EventTable.swift; sourceTree = SOURCE_ROOT; };
-		D54096562412E2AB00791C7E /* EventStatements.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = EventStatements.swift; path = iRevatureQuizPro/Persistence/Entities/Events/EventStatements.swift; sourceTree = SOURCE_ROOT; };
-		D54096582412E42100791C7E /* EventReturnStructs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = EventReturnStructs.swift; path = iRevatureQuizPro/Persistence/Entities/Events/EventReturnStructs.swift; sourceTree = SOURCE_ROOT; };
+		D54096542412DFE500791C7E /* EventTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = EventTable.swift; path = iRevatureQuizPro/Persistence/Entities/Event/EventTable.swift; sourceTree = SOURCE_ROOT; };
+		D54096562412E2AB00791C7E /* EventStatements.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = EventStatements.swift; path = iRevatureQuizPro/Persistence/Entities/Event/EventStatements.swift; sourceTree = SOURCE_ROOT; };
+		D54096582412E42100791C7E /* EventReturnStructs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = EventReturnStructs.swift; path = iRevatureQuizPro/Persistence/Entities/Event/EventReturnStructs.swift; sourceTree = SOURCE_ROOT; };
 		D5935E6E241943EC00512267 /* QuestionsParsingBusinessService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionsParsingBusinessService.swift; sourceTree = "<group>"; };
 		D5935E702419449400512267 /* QuestionObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionObject.swift; sourceTree = "<group>"; };
 		D5D8BCC32416C3A500BC01B0 /* EventCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventCell.swift; sourceTree = "<group>"; };
@@ -276,9 +276,6 @@
 				0940FE6D2411611D006F0E52 /* MetatagTable.swift */,
 				090A813B24119492008D7A12 /* MetatagStatements.swift */,
 				090A813D241195F5008D7A12 /* MetatagReturnStructs.swift */,
-				D54096542412DFE500791C7E /* EventTable.swift */,
-				D54096562412E2AB00791C7E /* EventStatements.swift */,
-				D54096582412E42100791C7E /* EventReturnStructs.swift */,
 			);
 			path = Metatag;
 			sourceTree = "<group>";
@@ -468,7 +465,7 @@
 		09F2C05C240EE287004A6F47 /* Entities */ = {
 			isa = PBXGroup;
 			children = (
-				D50FC88E241A71E100BACABF /* Questions */,
+				84492B52241A7D4900CC8E9A /* Event */,
 				29B2F1A02416D66400FDDE57 /* Quizzes */,
 				09525E0A2412D31B0051D177 /* EventAttendee */,
 				0940FE2624115EEB006F0E52 /* Metatag */,
@@ -498,7 +495,13 @@
 		09F2C05F240EE287004A6F47 /* Storyboard */ = {
 			isa = PBXGroup;
 			children = (
+				84492B51241A7D2200CC8E9A /* StartQuiz */,
+				84492B50241A7D1200CC8E9A /* EmployeeLogin */,
+				84492B4F241A7D0300CC8E9A /* AttendeeSignUp */,
+				84492B4E241A7CF700CC8E9A /* QuizManagement */,
+				84492B4D241A7CDF00CC8E9A /* EventManagement */,
 				09F2C073240EE29F004A6F47 /* Launch */,
+				5FD4802B241A72F200D1A0D1 /* QuestionManagement */,
 				09F2C072240EE296004A6F47 /* Main */,
 				09F2C060240EE287004A6F47 /* Common */,
 			);
@@ -671,11 +674,6 @@
 			isa = PBXGroup;
 			children = (
 				09F2C04A240EE1B5004A6F47 /* Main.storyboard */,
-				95D8CF1924118B2D00EB322E /* AttendeeSignUp.storyboard */,
-				D5F4B4AB241033770051F4B8 /* EmployeeLogin.storyboard */,
-				95D8CF1524117F9300EB322E /* EventManagement.storyboard */,
-				95D8CF172411849400EB322E /* QuizManagement.storyboard */,
-				84DB87CB241049EB00958E75 /* StartQuiz.storyboard */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -691,16 +689,14 @@
 		09F2C074240EE2C7004A6F47 /* View-Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				84492B57241A7DDA00CC8E9A /* EmployeeLogin */,
+				84492B56241A7DD000CC8E9A /* Main */,
+				84492B55241A7DBC00CC8E9A /* QuizManagement */,
+				84492B54241A7DB000CC8E9A /* BaseController */,
+				84492B53241A7D9A00CC8E9A /* EventManagement */,
+				5FD4802E241A748800D1A0D1 /* QuestionManagement */,
 				09DD60A124168A17004E9583 /* AttendeeSignup */,
 				09F2C048240EE1B5004A6F47 /* ViewController.swift */,
-				84DB87CF24114A1000958E75 /* BaseViewController.swift */,
-				95D8CF1324116B5B00EB322E /* MainStoryBoardController.swift */,
-				95D8CF1B2411907100EB322E /* EmployeeLoginViewController.swift */,
-				95D8CF1D241190A100EB322E /* EventViewViewController.swift */,
-				0944AEDD2410540400688C9B /* CreateEventViewController.swift */,
-				95D8CF21241190E900EB322E /* QuizViewViewController.swift */,
-				95D8CF232411911A00EB322E /* CreateQuizViewController.swift */,
-				84DB87D3241159C300958E75 /* StartQuizViewController.swift */,
 			);
 			path = "View-Controllers";
 			sourceTree = "<group>";
@@ -708,6 +704,7 @@
 		09F2C075240EE2CE004A6F47 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				5FD48031241A764E00D1A0D1 /* QuestionCellView */,
 				09C4D08524168C4600DCDEC4 /* AttendeeSignup */,
 				D5D8BCC22416C37A00BC01B0 /* ViewEvents */,
 				5F901D7B2411445600986FF5 /* DatePicker.swift */,
@@ -790,14 +787,121 @@
 			path = Entities;
 			sourceTree = "<group>";
 		};
-		D50FC88E241A71E100BACABF /* Questions */ = {
+		5FD4802B241A72F200D1A0D1 /* QuestionManagement */ = {
 			isa = PBXGroup;
 			children = (
-				D50FC891241A724D00BACABF /* QuestionReturnStructs.swift */,
-				D50FC88F241A724D00BACABF /* QuestionStatements.swift */,
-				D50FC890241A724D00BACABF /* QuestionTable.swift */,
+				5FD4802C241A731600D1A0D1 /* QuestionManagement.storyboard */,
 			);
-			path = Questions;
+			path = QuestionManagement;
+			sourceTree = "<group>";
+		};
+		5FD4802E241A748800D1A0D1 /* QuestionManagement */ = {
+			isa = PBXGroup;
+			children = (
+				5FD4802F241A74BE00D1A0D1 /* QuestionManagementViewController.swift */,
+			);
+			path = QuestionManagement;
+			sourceTree = "<group>";
+		};
+		5FD48031241A764E00D1A0D1 /* QuestionCellView */ = {
+			isa = PBXGroup;
+			children = (
+				5FD48032241A767900D1A0D1 /* QuestionTableViewCell.swift */,
+			);
+			path = QuestionCellView;
+			sourceTree = "<group>";
+		};
+		84492B4D241A7CDF00CC8E9A /* EventManagement */ = {
+			isa = PBXGroup;
+			children = (
+				95D8CF1524117F9300EB322E /* EventManagement.storyboard */,
+			);
+			path = EventManagement;
+			sourceTree = "<group>";
+		};
+		84492B4E241A7CF700CC8E9A /* QuizManagement */ = {
+			isa = PBXGroup;
+			children = (
+				95D8CF172411849400EB322E /* QuizManagement.storyboard */,
+			);
+			path = QuizManagement;
+			sourceTree = "<group>";
+		};
+		84492B4F241A7D0300CC8E9A /* AttendeeSignUp */ = {
+			isa = PBXGroup;
+			children = (
+				95D8CF1924118B2D00EB322E /* AttendeeSignUp.storyboard */,
+			);
+			path = AttendeeSignUp;
+			sourceTree = "<group>";
+		};
+		84492B50241A7D1200CC8E9A /* EmployeeLogin */ = {
+			isa = PBXGroup;
+			children = (
+				D5F4B4AB241033770051F4B8 /* EmployeeLogin.storyboard */,
+			);
+			path = EmployeeLogin;
+			sourceTree = "<group>";
+		};
+		84492B51241A7D2200CC8E9A /* StartQuiz */ = {
+			isa = PBXGroup;
+			children = (
+				84DB87CB241049EB00958E75 /* StartQuiz.storyboard */,
+			);
+			path = StartQuiz;
+			sourceTree = "<group>";
+		};
+		84492B52241A7D4900CC8E9A /* Event */ = {
+			isa = PBXGroup;
+			children = (
+				D54096542412DFE500791C7E /* EventTable.swift */,
+				D54096562412E2AB00791C7E /* EventStatements.swift */,
+				D54096582412E42100791C7E /* EventReturnStructs.swift */,
+			);
+			path = Event;
+			sourceTree = "<group>";
+		};
+		84492B53241A7D9A00CC8E9A /* EventManagement */ = {
+			isa = PBXGroup;
+			children = (
+				95D8CF1D241190A100EB322E /* EventViewViewController.swift */,
+				0944AEDD2410540400688C9B /* CreateEventViewController.swift */,
+			);
+			path = EventManagement;
+			sourceTree = "<group>";
+		};
+		84492B54241A7DB000CC8E9A /* BaseController */ = {
+			isa = PBXGroup;
+			children = (
+				84DB87CF24114A1000958E75 /* BaseViewController.swift */,
+			);
+			path = BaseController;
+			sourceTree = "<group>";
+		};
+		84492B55241A7DBC00CC8E9A /* QuizManagement */ = {
+			isa = PBXGroup;
+			children = (
+				95D8CF21241190E900EB322E /* QuizViewViewController.swift */,
+				95D8CF232411911A00EB322E /* CreateQuizViewController.swift */,
+				84DB87D3241159C300958E75 /* StartQuizViewController.swift */,
+			);
+			path = QuizManagement;
+			sourceTree = "<group>";
+		};
+		84492B56241A7DD000CC8E9A /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				95D8CF1324116B5B00EB322E /* MainStoryBoardController.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		84492B57241A7DDA00CC8E9A /* EmployeeLogin */ = {
+			isa = PBXGroup;
+			children = (
+				95D8CF1B2411907100EB322E /* EmployeeLoginViewController.swift */,
+			);
+			path = EmployeeLogin;
 			sourceTree = "<group>";
 		};
 		D5935E6D241943C700512267 /* QuestionsParsing */ = {
@@ -955,6 +1059,7 @@
 				0940FE8224116145006F0E52 /* x86_64-apple-ios-simulator.swiftdoc in Resources */,
 				95D8CF1624117F9300EB322E /* EventManagement.storyboard in Resources */,
 				0940FE8324116145006F0E52 /* x86_64-apple-ios-simulator.swiftmodule in Resources */,
+				5FD4802D241A731600D1A0D1 /* QuestionManagement.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1001,7 +1106,6 @@
 				D54096592412E42100791C7E /* EventReturnStructs.swift in Sources */,
 				09A4679824119C8700A4BB90 /* DatabaseError.swift in Sources */,
 				090A813E241195F5008D7A12 /* MetatagReturnStructs.swift in Sources */,
-				D50FC893241A724D00BACABF /* QuestionTable.swift in Sources */,
 				D5935E712419449400512267 /* QuestionObject.swift in Sources */,
 				090A813C24119492008D7A12 /* MetatagStatements.swift in Sources */,
 				09525E102412D9AC0051D177 /* EventAttendeeStatements.swift in Sources */,
@@ -1011,8 +1115,8 @@
 				095E53C32418042B0009322C /* VIewControllerUtilities.swift in Sources */,
 				29105E352416DE4F005453CD /* QuizAccess.swift in Sources */,
 				5F901D8224114E0C00986FF5 /* UITextFieldExtension.swift in Sources */,
-				D50FC892241A724D00BACABF /* QuestionStatements.swift in Sources */,
 				5F1E2DBD2419230D00F2FAE3 /* QuestionAPIAccess.swift in Sources */,
+				5FD48030241A74BE00D1A0D1 /* QuestionManagementViewController.swift in Sources */,
 				29B2F1A82416D6CA00FDDE57 /* QuizObject.swift in Sources */,
 				95D8CF1424116B5B00EB322E /* MainStoryBoardController.swift in Sources */,
 				09F2C049240EE1B5004A6F47 /* ViewController.swift in Sources */,
@@ -1048,10 +1152,10 @@
 				0944AED8241036BF00688C9B /* UIColorExtension.swift in Sources */,
 				5F901D8C2411971700986FF5 /* TrainerLoginAPIResponse.swift in Sources */,
 				84DB881A2416CE0000958E75 /* EventsBusinessService.swift in Sources */,
+				5FD48033241A767900D1A0D1 /* QuestionTableViewCell.swift in Sources */,
 				5F1E2DB324191EEA00F2FAE3 /* QuestionByIDAPIResponse.swift in Sources */,
 				5F1E2DC12419290600F2FAE3 /* API.swift in Sources */,
 				0991503D2412F8C300E73B62 /* EventAttendeePersistenceService.swift in Sources */,
-				D50FC894241A724D00BACABF /* QuestionReturnStructs.swift in Sources */,
 				5F901D912411A13700986FF5 /* CurrentSystemRole.swift in Sources */,
 				84F34FA42410437100D250BB /* iRevatureButton.swift in Sources */,
 				090A81402411969C008D7A12 /* DatabaseInteractions.swift in Sources */,
