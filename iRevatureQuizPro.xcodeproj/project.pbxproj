@@ -104,6 +104,9 @@
 		95D8CF20241190BB00EB322E /* AttendeeSignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D8CF1F241190BB00EB322E /* AttendeeSignUpViewController.swift */; };
 		95D8CF22241190E900EB322E /* QuizViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D8CF21241190E900EB322E /* QuizViewViewController.swift */; };
 		95D8CF242411911A00EB322E /* CreateQuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D8CF232411911A00EB322E /* CreateQuizViewController.swift */; };
+		D50FC897241A8BE700BACABF /* QuestionReturnStructs.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50FC896241A8BE700BACABF /* QuestionReturnStructs.swift */; };
+		D50FC899241A8C5600BACABF /* QuestionStatements.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50FC898241A8C5600BACABF /* QuestionStatements.swift */; };
+		D50FC89B241A8C8400BACABF /* QuestionTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50FC89A241A8C8400BACABF /* QuestionTable.swift */; };
 		D540960D2411538E00791C7E /* RevatureTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = D540960C2411538E00791C7E /* RevatureTextField.swift */; };
 		D54096552412DFE500791C7E /* EventTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D54096542412DFE500791C7E /* EventTable.swift */; };
 		D54096572412E2AB00791C7E /* EventStatements.swift in Sources */ = {isa = PBXBuildFile; fileRef = D54096562412E2AB00791C7E /* EventStatements.swift */; };
@@ -232,6 +235,9 @@
 		95D8CF1F241190BB00EB322E /* AttendeeSignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttendeeSignUpViewController.swift; sourceTree = "<group>"; };
 		95D8CF21241190E900EB322E /* QuizViewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizViewViewController.swift; sourceTree = "<group>"; };
 		95D8CF232411911A00EB322E /* CreateQuizViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateQuizViewController.swift; sourceTree = "<group>"; };
+		D50FC896241A8BE700BACABF /* QuestionReturnStructs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionReturnStructs.swift; sourceTree = "<group>"; };
+		D50FC898241A8C5600BACABF /* QuestionStatements.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionStatements.swift; sourceTree = "<group>"; };
+		D50FC89A241A8C8400BACABF /* QuestionTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionTable.swift; sourceTree = "<group>"; };
 		D540960C2411538E00791C7E /* RevatureTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RevatureTextField.swift; sourceTree = "<group>"; };
 		D54096542412DFE500791C7E /* EventTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = EventTable.swift; path = iRevatureQuizPro/Persistence/Entities/Event/EventTable.swift; sourceTree = SOURCE_ROOT; };
 		D54096562412E2AB00791C7E /* EventStatements.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = EventStatements.swift; path = iRevatureQuizPro/Persistence/Entities/Event/EventStatements.swift; sourceTree = SOURCE_ROOT; };
@@ -465,6 +471,7 @@
 		09F2C05C240EE287004A6F47 /* Entities */ = {
 			isa = PBXGroup;
 			children = (
+				D50FC895241A8BC200BACABF /* Question */,
 				84492B52241A7D4900CC8E9A /* Event */,
 				29B2F1A02416D66400FDDE57 /* Quizzes */,
 				09525E0A2412D31B0051D177 /* EventAttendee */,
@@ -904,6 +911,16 @@
 			path = EmployeeLogin;
 			sourceTree = "<group>";
 		};
+		D50FC895241A8BC200BACABF /* Question */ = {
+			isa = PBXGroup;
+			children = (
+				D50FC896241A8BE700BACABF /* QuestionReturnStructs.swift */,
+				D50FC898241A8C5600BACABF /* QuestionStatements.swift */,
+				D50FC89A241A8C8400BACABF /* QuestionTable.swift */,
+			);
+			path = Question;
+			sourceTree = "<group>";
+		};
 		D5935E6D241943C700512267 /* QuestionsParsing */ = {
 			isa = PBXGroup;
 			children = (
@@ -1099,6 +1116,7 @@
 				5F1E2DBF241926E500F2FAE3 /* QuestionBody.swift in Sources */,
 				D5D8BCC42416C3A500BC01B0 /* EventCell.swift in Sources */,
 				099150242412E2F800E73B62 /* EventAttendeeAccess.swift in Sources */,
+				D50FC89B241A8C8400BACABF /* QuestionTable.swift in Sources */,
 				09A4679A2411A81100A4BB90 /* MetatagAccess.swift in Sources */,
 				099150222412E21D00E73B62 /* EventAttendeeReturnStructs.swift in Sources */,
 				09525E0C2412D3430051D177 /* EventAttendeeTable.swift in Sources */,
@@ -1133,6 +1151,7 @@
 				091DC3972411972300C5D577 /* DatabaseInformation.swift in Sources */,
 				09C0837E24136D4B00D021F0 /* EndInputExtension.swift in Sources */,
 				29B2F1A52416D6BB00FDDE57 /* QuizTable.swift in Sources */,
+				D50FC899241A8C5600BACABF /* QuestionStatements.swift in Sources */,
 				D5935E6F241943EC00512267 /* QuestionsParsingBusinessService.swift in Sources */,
 				09F2C045240EE1B5004A6F47 /* AppDelegate.swift in Sources */,
 				5F1E2DAF24191CEF00F2FAE3 /* AllQuestionAPIResponse.swift in Sources */,
@@ -1156,6 +1175,7 @@
 				5F1E2DB324191EEA00F2FAE3 /* QuestionByIDAPIResponse.swift in Sources */,
 				5F1E2DC12419290600F2FAE3 /* API.swift in Sources */,
 				0991503D2412F8C300E73B62 /* EventAttendeePersistenceService.swift in Sources */,
+				D50FC897241A8BE700BACABF /* QuestionReturnStructs.swift in Sources */,
 				5F901D912411A13700986FF5 /* CurrentSystemRole.swift in Sources */,
 				84F34FA42410437100D250BB /* iRevatureButton.swift in Sources */,
 				090A81402411969C008D7A12 /* DatabaseInteractions.swift in Sources */,
