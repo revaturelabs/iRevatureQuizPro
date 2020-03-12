@@ -689,17 +689,14 @@
 		09F2C074240EE2C7004A6F47 /* View-Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				84492B57241A7DDA00CC8E9A /* EmployeeLogin */,
+				84492B56241A7DD000CC8E9A /* Main */,
+				84492B55241A7DBC00CC8E9A /* QuizManagement */,
+				84492B54241A7DB000CC8E9A /* BaseController */,
+				84492B53241A7D9A00CC8E9A /* EventManagement */,
 				5FD4802E241A748800D1A0D1 /* QuestionManagement */,
 				09DD60A124168A17004E9583 /* AttendeeSignup */,
 				09F2C048240EE1B5004A6F47 /* ViewController.swift */,
-				84DB87CF24114A1000958E75 /* BaseViewController.swift */,
-				95D8CF1324116B5B00EB322E /* MainStoryBoardController.swift */,
-				95D8CF1B2411907100EB322E /* EmployeeLoginViewController.swift */,
-				95D8CF1D241190A100EB322E /* EventViewViewController.swift */,
-				0944AEDD2410540400688C9B /* CreateEventViewController.swift */,
-				95D8CF21241190E900EB322E /* QuizViewViewController.swift */,
-				95D8CF232411911A00EB322E /* CreateQuizViewController.swift */,
-				84DB87D3241159C300958E75 /* StartQuizViewController.swift */,
 			);
 			path = "View-Controllers";
 			sourceTree = "<group>";
@@ -862,6 +859,49 @@
 				D54096582412E42100791C7E /* EventReturnStructs.swift */,
 			);
 			path = Event;
+			sourceTree = "<group>";
+		};
+		84492B53241A7D9A00CC8E9A /* EventManagement */ = {
+			isa = PBXGroup;
+			children = (
+				95D8CF1D241190A100EB322E /* EventViewViewController.swift */,
+				0944AEDD2410540400688C9B /* CreateEventViewController.swift */,
+			);
+			path = EventManagement;
+			sourceTree = "<group>";
+		};
+		84492B54241A7DB000CC8E9A /* BaseController */ = {
+			isa = PBXGroup;
+			children = (
+				84DB87CF24114A1000958E75 /* BaseViewController.swift */,
+			);
+			path = BaseController;
+			sourceTree = "<group>";
+		};
+		84492B55241A7DBC00CC8E9A /* QuizManagement */ = {
+			isa = PBXGroup;
+			children = (
+				95D8CF21241190E900EB322E /* QuizViewViewController.swift */,
+				95D8CF232411911A00EB322E /* CreateQuizViewController.swift */,
+				84DB87D3241159C300958E75 /* StartQuizViewController.swift */,
+			);
+			path = QuizManagement;
+			sourceTree = "<group>";
+		};
+		84492B56241A7DD000CC8E9A /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				95D8CF1324116B5B00EB322E /* MainStoryBoardController.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		84492B57241A7DDA00CC8E9A /* EmployeeLogin */ = {
+			isa = PBXGroup;
+			children = (
+				95D8CF1B2411907100EB322E /* EmployeeLoginViewController.swift */,
+			);
+			path = EmployeeLogin;
 			sourceTree = "<group>";
 		};
 		D5935E6D241943C700512267 /* QuestionsParsing */ = {
