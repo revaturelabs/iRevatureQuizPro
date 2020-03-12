@@ -34,10 +34,13 @@ class QuestionManagementViewController: BaseViewController, UITableViewDelegate,
         let cell = tableView.dequeueReusableCell(withIdentifier: "QuestionCell", for: indexPath) as! QuestionTableViewCell
         let question = questions[indexPath.row]
         
-        cell.TitleLabel.text = question.title
-        cell.tagLabel.text = question.tags
-        cell.questionTypeLabel.text = question.questionType
+        cell.TitleLabel.text = "Title: \(question.title)"
+        cell.tagLabel.text = "Tags: \(question.tags)"
+        cell.questionTypeLabel.text = "Question Type: \(question.questionType)"
         
+        cell.TitleLabel.lineBreakMode = NSLineBreakMode.byWordWrapping
+        cell.tagLabel.lineBreakMode = NSLineBreakMode.byWordWrapping
+        cell.questionTypeLabel.lineBreakMode = NSLineBreakMode.byWordWrapping
         return cell
     }
     
