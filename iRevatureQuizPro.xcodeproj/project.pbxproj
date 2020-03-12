@@ -101,6 +101,9 @@
 		95D8CF20241190BB00EB322E /* AttendeeSignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D8CF1F241190BB00EB322E /* AttendeeSignUpViewController.swift */; };
 		95D8CF22241190E900EB322E /* QuizViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D8CF21241190E900EB322E /* QuizViewViewController.swift */; };
 		95D8CF242411911A00EB322E /* CreateQuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D8CF232411911A00EB322E /* CreateQuizViewController.swift */; };
+		D50FC892241A724D00BACABF /* QuestionStatements.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50FC88F241A724D00BACABF /* QuestionStatements.swift */; };
+		D50FC893241A724D00BACABF /* QuestionTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50FC890241A724D00BACABF /* QuestionTable.swift */; };
+		D50FC894241A724D00BACABF /* QuestionReturnStructs.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50FC891241A724D00BACABF /* QuestionReturnStructs.swift */; };
 		D540960D2411538E00791C7E /* RevatureTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = D540960C2411538E00791C7E /* RevatureTextField.swift */; };
 		D54096552412DFE500791C7E /* EventTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D54096542412DFE500791C7E /* EventTable.swift */; };
 		D54096572412E2AB00791C7E /* EventStatements.swift in Sources */ = {isa = PBXBuildFile; fileRef = D54096562412E2AB00791C7E /* EventStatements.swift */; };
@@ -226,6 +229,9 @@
 		95D8CF1F241190BB00EB322E /* AttendeeSignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttendeeSignUpViewController.swift; sourceTree = "<group>"; };
 		95D8CF21241190E900EB322E /* QuizViewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizViewViewController.swift; sourceTree = "<group>"; };
 		95D8CF232411911A00EB322E /* CreateQuizViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateQuizViewController.swift; sourceTree = "<group>"; };
+		D50FC88F241A724D00BACABF /* QuestionStatements.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionStatements.swift; sourceTree = "<group>"; };
+		D50FC890241A724D00BACABF /* QuestionTable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionTable.swift; sourceTree = "<group>"; };
+		D50FC891241A724D00BACABF /* QuestionReturnStructs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionReturnStructs.swift; sourceTree = "<group>"; };
 		D540960C2411538E00791C7E /* RevatureTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RevatureTextField.swift; sourceTree = "<group>"; };
 		D54096542412DFE500791C7E /* EventTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = EventTable.swift; path = iRevatureQuizPro/Persistence/Entities/Events/EventTable.swift; sourceTree = SOURCE_ROOT; };
 		D54096562412E2AB00791C7E /* EventStatements.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = EventStatements.swift; path = iRevatureQuizPro/Persistence/Entities/Events/EventStatements.swift; sourceTree = SOURCE_ROOT; };
@@ -462,6 +468,7 @@
 		09F2C05C240EE287004A6F47 /* Entities */ = {
 			isa = PBXGroup;
 			children = (
+				D50FC88E241A71E100BACABF /* Questions */,
 				29B2F1A02416D66400FDDE57 /* Quizzes */,
 				09525E0A2412D31B0051D177 /* EventAttendee */,
 				0940FE2624115EEB006F0E52 /* Metatag */,
@@ -783,6 +790,16 @@
 			path = Entities;
 			sourceTree = "<group>";
 		};
+		D50FC88E241A71E100BACABF /* Questions */ = {
+			isa = PBXGroup;
+			children = (
+				D50FC891241A724D00BACABF /* QuestionReturnStructs.swift */,
+				D50FC88F241A724D00BACABF /* QuestionStatements.swift */,
+				D50FC890241A724D00BACABF /* QuestionTable.swift */,
+			);
+			path = Questions;
+			sourceTree = "<group>";
+		};
 		D5935E6D241943C700512267 /* QuestionsParsing */ = {
 			isa = PBXGroup;
 			children = (
@@ -968,9 +985,7 @@
 			files = (
 				09C4D08724168C6400DCDEC4 /* AttendeeSignupTableCell.swift in Sources */,
 				29B2F1A62416D6BB00FDDE57 /* QuizReturnStructs.swift in Sources */,
-
 				95C6172024191D05001E270E /* QuizDataService.swift in Sources */,
-
 				0944AEDA2410419100688C9B /* RevatureTableViewCell.swift in Sources */,
 				09C4D08424168ABB00DCDEC4 /* AttendeeSignupTableController.swift in Sources */,
 				84DB87D024114A1000958E75 /* BaseViewController.swift in Sources */,
@@ -986,6 +1001,7 @@
 				D54096592412E42100791C7E /* EventReturnStructs.swift in Sources */,
 				09A4679824119C8700A4BB90 /* DatabaseError.swift in Sources */,
 				090A813E241195F5008D7A12 /* MetatagReturnStructs.swift in Sources */,
+				D50FC893241A724D00BACABF /* QuestionTable.swift in Sources */,
 				D5935E712419449400512267 /* QuestionObject.swift in Sources */,
 				090A813C24119492008D7A12 /* MetatagStatements.swift in Sources */,
 				09525E102412D9AC0051D177 /* EventAttendeeStatements.swift in Sources */,
@@ -995,6 +1011,7 @@
 				095E53C32418042B0009322C /* VIewControllerUtilities.swift in Sources */,
 				29105E352416DE4F005453CD /* QuizAccess.swift in Sources */,
 				5F901D8224114E0C00986FF5 /* UITextFieldExtension.swift in Sources */,
+				D50FC892241A724D00BACABF /* QuestionStatements.swift in Sources */,
 				5F1E2DBD2419230D00F2FAE3 /* QuestionAPIAccess.swift in Sources */,
 				29B2F1A82416D6CA00FDDE57 /* QuizObject.swift in Sources */,
 				95D8CF1424116B5B00EB322E /* MainStoryBoardController.swift in Sources */,
@@ -1034,6 +1051,7 @@
 				5F1E2DB324191EEA00F2FAE3 /* QuestionByIDAPIResponse.swift in Sources */,
 				5F1E2DC12419290600F2FAE3 /* API.swift in Sources */,
 				0991503D2412F8C300E73B62 /* EventAttendeePersistenceService.swift in Sources */,
+				D50FC894241A724D00BACABF /* QuestionReturnStructs.swift in Sources */,
 				5F901D912411A13700986FF5 /* CurrentSystemRole.swift in Sources */,
 				84F34FA42410437100D250BB /* iRevatureButton.swift in Sources */,
 				090A81402411969C008D7A12 /* DatabaseInteractions.swift in Sources */,
