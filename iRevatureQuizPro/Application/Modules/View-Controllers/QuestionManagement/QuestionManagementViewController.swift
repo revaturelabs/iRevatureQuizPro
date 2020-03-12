@@ -23,9 +23,7 @@ class QuestionManagementViewController: BaseViewController, UITableViewDelegate,
         
         self.QuestionTableView.delegate = self
         self.QuestionTableView.dataSource = self
-//        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now()+5) {
-//            self.QuestionTableView.reloadData()
-//        }
+
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
