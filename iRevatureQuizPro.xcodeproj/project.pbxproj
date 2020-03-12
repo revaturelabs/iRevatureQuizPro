@@ -107,6 +107,7 @@
 		D50FC897241A8BE700BACABF /* QuestionReturnStructs.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50FC896241A8BE700BACABF /* QuestionReturnStructs.swift */; };
 		D50FC899241A8C5600BACABF /* QuestionStatements.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50FC898241A8C5600BACABF /* QuestionStatements.swift */; };
 		D50FC89B241A8C8400BACABF /* QuestionTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50FC89A241A8C8400BACABF /* QuestionTable.swift */; };
+		D50FC89D241A8F0E00BACABF /* QuestionAccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50FC89C241A8F0E00BACABF /* QuestionAccess.swift */; };
 		D540960D2411538E00791C7E /* RevatureTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = D540960C2411538E00791C7E /* RevatureTextField.swift */; };
 		D54096552412DFE500791C7E /* EventTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D54096542412DFE500791C7E /* EventTable.swift */; };
 		D54096572412E2AB00791C7E /* EventStatements.swift in Sources */ = {isa = PBXBuildFile; fileRef = D54096562412E2AB00791C7E /* EventStatements.swift */; };
@@ -238,6 +239,7 @@
 		D50FC896241A8BE700BACABF /* QuestionReturnStructs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionReturnStructs.swift; sourceTree = "<group>"; };
 		D50FC898241A8C5600BACABF /* QuestionStatements.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionStatements.swift; sourceTree = "<group>"; };
 		D50FC89A241A8C8400BACABF /* QuestionTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionTable.swift; sourceTree = "<group>"; };
+		D50FC89C241A8F0E00BACABF /* QuestionAccess.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionAccess.swift; sourceTree = "<group>"; };
 		D540960C2411538E00791C7E /* RevatureTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RevatureTextField.swift; sourceTree = "<group>"; };
 		D54096542412DFE500791C7E /* EventTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = EventTable.swift; path = iRevatureQuizPro/Persistence/Entities/Event/EventTable.swift; sourceTree = SOURCE_ROOT; };
 		D54096562412E2AB00791C7E /* EventStatements.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = EventStatements.swift; path = iRevatureQuizPro/Persistence/Entities/Event/EventStatements.swift; sourceTree = SOURCE_ROOT; };
@@ -487,6 +489,7 @@
 				099150232412E2F800E73B62 /* EventAttendeeAccess.swift */,
 				84DB87F524168A8200958E75 /* EventAccess.swift */,
 				29105E342416DE4F005453CD /* QuizAccess.swift */,
+				D50FC89C241A8F0E00BACABF /* QuestionAccess.swift */,
 			);
 			path = "Data-Access";
 			sourceTree = "<group>";
@@ -1114,6 +1117,7 @@
 				84DB88182416CD9000958E75 /* Events.swift in Sources */,
 				5F1E2DB52419217C00F2FAE3 /* QuestionByIDAPIData.swift in Sources */,
 				5F1E2DBF241926E500F2FAE3 /* QuestionBody.swift in Sources */,
+				D50FC89D241A8F0E00BACABF /* QuestionAccess.swift in Sources */,
 				D5D8BCC42416C3A500BC01B0 /* EventCell.swift in Sources */,
 				099150242412E2F800E73B62 /* EventAttendeeAccess.swift in Sources */,
 				D50FC89B241A8C8400BACABF /* QuestionTable.swift in Sources */,
