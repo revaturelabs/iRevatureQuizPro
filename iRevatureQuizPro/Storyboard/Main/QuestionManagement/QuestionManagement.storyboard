@@ -7,7 +7,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Quizzes-->
+        <!--Questions-->
         <scene sceneID="7Ki-fh-cNR">
             <objects>
                 <viewController storyboardIdentifier="QuestionManagement_ID" id="B76-t9-Nr2" customClass="QuestionManagementViewController" customModule="iRevatureQuizPro" customModuleProvider="target" sceneMemberID="viewController">
@@ -102,7 +102,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="4a2-4c-zMI"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Quizzes" image="doc.text" catalog="system" id="SBj-77-GNk"/>
+                    <tabBarItem key="tabBarItem" title="Questions" image="doc.text" catalog="system" id="SBj-77-GNk"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="QuestionTableView" destination="ptB-vd-H5M" id="qlP-K9-k7D"/>

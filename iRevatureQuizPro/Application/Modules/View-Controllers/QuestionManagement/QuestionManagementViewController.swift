@@ -19,12 +19,13 @@ class QuestionManagementViewController: BaseViewController, UITableViewDelegate,
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        self.getQuestions()
         
         self.QuestionTableView.delegate = self
         self.QuestionTableView.dataSource = self
-        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now()+5) {
-            self.QuestionTableView.reloadData()
-        }
+//        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now()+5) {
+//            self.QuestionTableView.reloadData()
+//        }
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -49,6 +50,8 @@ class QuestionManagementViewController: BaseViewController, UITableViewDelegate,
             }
             
             self.questions = q.map{QuestionObject(id: $0.id, title: $0.title, tags: $0.tags, questionType: $0.questionType)}
+            print(self.questions)
+            self.QuestionTableView.reloadData()
 
         }
     }
