@@ -16,6 +16,7 @@ class QuestionManagementViewController: BaseViewController, UITableViewDelegate,
     @IBOutlet weak var questionSearchBar: UISearchBar!
     //
     
+    var currentPage: Int = 1
     var questions = [QuestionObject]()
     var filteredQuestions: [QuestionObject] = []
     
@@ -24,18 +25,35 @@ class QuestionManagementViewController: BaseViewController, UITableViewDelegate,
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
-        self.getQuestions()
+        self.getQuestions(page: 1)
         
         self.QuestionTableView.delegate = self
         self.QuestionTableView.dataSource = self
         self.questionSearchBar.delegate = self
         
         //needs to delay grabbing data or it will display empty table
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.75){
-            self.filteredQuestions = self.questions
-            self.QuestionTableView.reloadData()
-        }
+        repopulateTable()
         //
+    }
+    
+    //grabs the last page of data from API and updates the table view
+    @IBAction func previousPageButton(_ sender: Any) {
+        if currentPage != 1{
+            currentPage -= 1
+            getQuestions(page: currentPage)
+            repopulateTable()
+        }else{
+            let alert = UIAlertController(title: "At Starting Page", message: "Cannot go further back a page", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "Acknowledge", style: .default, handler: nil))
+            self.present(alert, animated: true)
+        }
+    }
+    
+    //grabs next page of data from API and updates the table view
+    @IBAction func nextPageButton(_ sender: Any) {
+        currentPage += 1
+        getQuestions(page: currentPage)
+        repopulateTable()
     }
     
     //new function that will live update filtered data
@@ -76,8 +94,8 @@ class QuestionManagementViewController: BaseViewController, UITableViewDelegate,
     //
     
     //calls the API and creates an array of the questions
-    func getQuestions() {
-        QuestionAPIAccess.getAllQuestions(size: 10, page: 1) { (allQuestions, hasError) in
+    func getQuestions(page: Int) {
+        QuestionAPIAccess.getAllQuestions(size: 10, page: page) { (allQuestions, hasError) in
             guard let q = allQuestions else {
                 return
             }
@@ -86,6 +104,14 @@ class QuestionManagementViewController: BaseViewController, UITableViewDelegate,
             print(self.questions)
             self.QuestionTableView.reloadData()
             
+        }
+    }
+    
+    //grabs the data from the stored return of API and repopulates the table
+    func repopulateTable(){
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.75){
+            self.filteredQuestions = self.questions
+            self.QuestionTableView.reloadData()
         }
     }
 }

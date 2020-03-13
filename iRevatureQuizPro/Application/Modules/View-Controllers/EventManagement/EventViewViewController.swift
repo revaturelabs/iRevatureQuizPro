@@ -10,6 +10,7 @@ import UIKit
 import EasySQLite
 
 class EventViewViewController: BaseViewController, UITableViewDelegate, UITableViewDataSource {
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return eventsArray.count
     }
