@@ -15,5 +15,14 @@ class EntityManager {
 	init() {
 		quizzes = [BQuiz]()
 		questions = [QuestionObject]()
+		
+		QuizDataService.getQuizData(finish: {
+			allquizzes in
+			
+			for quiz in allquizzes
+			{
+				
+			}
+		})
 	}
 }
