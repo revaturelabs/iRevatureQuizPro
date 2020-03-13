@@ -8,19 +8,13 @@
 
 import UIKit
 
-class QuestionManagementViewController: BaseViewController, UITableViewDelegate, UITableViewDataSource, UISearchResultsUpdating {
+class QuestionManagementViewController: BaseViewController, UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate {
     
     @IBOutlet weak var QuestionTableView: UITableView!
+    @IBOutlet weak var questionSearchBar: UISearchBar!
     
     var questions = [QuestionObject]()
-    let searchController = UISearchController(searchResultsController: nil)
-    var isSearchBarEmpty: Bool{
-        return searchController.searchBar.text?.isEmpty ?? true
-    }
     var filteredQuestions: [QuestionObject] = []
-    var isFiltering: Bool {
-        return searchController.isActive && !isSearchBarEmpty
-    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,47 +24,32 @@ class QuestionManagementViewController: BaseViewController, UITableViewDelegate,
         
         self.QuestionTableView.delegate = self
         self.QuestionTableView.dataSource = self
+        self.questionSearchBar.delegate = self
         
-        self.searchController.searchResultsUpdater = self
-        self.searchController.obscuresBackgroundDuringPresentation = false
-        self.searchController.searchBar.placeholder = "Search Tags"
-        QuestionTableView.tableHeaderView = self.searchController.searchBar
-        self.navigationItem.searchController = searchController
-        self.definesPresentationContext = false
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.75){
+            self.filteredQuestions = self.questions
+            self.QuestionTableView.reloadData()
+        }
     }
     
-    func filterContentForSearchText(_ searchText: String) {
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         
-        filteredQuestions = questions.filter { (Questions: QuestionObject) -> Bool in
-            return Questions.tags.lowercased().contains(searchText.lowercased())
-            
+        filteredQuestions = searchText.isEmpty ? questions : questions.filter { (Questions: QuestionObject) -> Bool in
+            return Questions.tags.range(of: searchText, options: .caseInsensitive, range: nil, locale: nil) != nil
         }
         
         QuestionTableView.reloadData()
     }
     
     
-    func updateSearchResults(for searchController: UISearchController) {
-        let searchBar = searchController.searchBar
-        filterContentForSearchText(searchBar.text!)
-        
-    }
-    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if isFiltering {
-            return filteredQuestions.count
-        }
-        return self.questions.count
+        return filteredQuestions.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "QuestionCell", for: indexPath) as! QuestionTableViewCell
         var question: QuestionObject
-        if isFiltering{
-            question = filteredQuestions[indexPath.row]
-        }else{
-            question = questions[indexPath.row]
-        }
+        question = filteredQuestions[indexPath.row]
         
         cell.TitleLabel.text = "Title: \(question.title)"
         cell.tagLabel.text = "Tags: \(question.tags)"
