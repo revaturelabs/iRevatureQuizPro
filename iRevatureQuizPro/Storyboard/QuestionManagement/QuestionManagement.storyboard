@@ -26,15 +26,17 @@
                                 </textAttributes>
                                 <items>
                                     <navigationItem title="Questions" id="9wl-gi-Vkg">
-                                        <barButtonItem key="rightBarButtonItem" style="plain" id="moH-cw-wgU">
-                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="KeI-dX-aYN">
-                                                <rect key="frame" x="302" y="0.0" width="92" height="44"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
-                                                <state key="normal" title="...">
-                                                    <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                                                </state>
-                                            </button>
+                                        <barButtonItem key="leftBarButtonItem" title="Previous Page" id="phF-3f-OAX">
+                                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <connections>
+                                                <action selector="previousPageButton:" destination="B76-t9-Nr2" id="PF3-VW-Gat"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" title="Next Page" id="gl3-Ve-188">
+                                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <connections>
+                                                <action selector="nextPageButton:" destination="B76-t9-Nr2" id="pLc-vO-qAM"/>
+                                            </connections>
                                         </barButtonItem>
                                     </navigationItem>
                                 </items>

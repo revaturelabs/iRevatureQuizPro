@@ -8,6 +8,7 @@
 
 import Foundation
 
+//struct for JSON data from all question api
 struct AllQuestionAPIData: Codable  {
     var id: Int
     var title:String

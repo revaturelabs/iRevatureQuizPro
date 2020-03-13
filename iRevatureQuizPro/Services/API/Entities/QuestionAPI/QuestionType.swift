@@ -8,6 +8,7 @@
 
 import Foundation
 
+//struct for JSON qsnType object
 struct QuestionType: Codable  {
     var id: Int
     var code: String

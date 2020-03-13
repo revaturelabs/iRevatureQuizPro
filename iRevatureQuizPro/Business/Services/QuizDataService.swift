@@ -12,9 +12,10 @@ class QuizDataService {
 	static private var quizlist : [QuizAPIAllData]?
 	static private var categories = [String]()
     
-    static func getQuizData(){
+	static func getQuizData(finish: @escaping ([String]) -> Void) {
         // Do any additional setup after loading the view.
         
+		print("pulling quiz data")
 
         QuizDataAccess.getAllQuizzes(numberOfRecords: 1000) {
 			quizzes in
@@ -25,7 +26,16 @@ class QuizDataService {
 				}
 			}
         }
-		print(self.categories)
-		print("finished printing")
+		finish(self.categories)
     }
+	
+	
+	static func getQuizDataForID(id: Int, finish: @escaping (QuizAPIByIDData) -> Void) {
+		
+		print("updating all current quiz IDs into memory")
+		
+		
+		
+		//QuizDataAccess.getQuizById(quizId: <#T##String#>, finish: <#T##(QuizAPIByIDData) -> Void#>)
+	}
 }

@@ -3,6 +3,7 @@
 //  iRevatureQuizPro
 //
 //  Created by A Guest on 3/9/20.
+//	Modified by Jeremy Malisse on 3/11/2020.
 //  Copyright © 2020 revature. All rights reserved.
 //
 
@@ -49,7 +50,7 @@ class QuizDataAccess {
                 
                 print(response.error.debugDescription)
                 
-                print(response.error?.errorDescription)
+				print(response.error?.errorDescription as Any)
                 return
             }
 			finish(data.data)
@@ -59,22 +60,22 @@ class QuizDataAccess {
     }
     
 
-    static func getQuizById(quizId: String, finish: @escaping (APIQuizResults) -> Void) {
+    static func getQuizById(quizId: String, finish: @escaping (QuizAPIByIDData) -> Void) {
         
         //I'm assuming this is test hard coded data, if not this needs a configurable way of doing it
         let quizData = QuizBody(size: 1, page: 1, sortOrder: "desc", orderBy: "createdName", subscribedContent: false, publicContent: false, ownContent: false, isOrdered: false)
         
         let header = API.getHTTPHeader()
         
-        let endPoint = endpointByID + quizId
+        let endpointForSingleID = endpointByID + quizId
         
         AF.request(
-            endpoint,
+            endpointForSingleID,
             method: .post,
             parameters: quizData,
             encoder: JSONParameterEncoder.default,
             headers: header
-        ).validate().responseDecodable(of: APIQuizResults.self) {
+        ).validate().responseDecodable(of: APIQuizByIDResults.self) {
             (response) in
             
             
@@ -83,11 +84,11 @@ class QuizDataAccess {
                 
                 print(response.error.debugDescription)
                 
-                print(response.error?.errorDescription)
+				print(response.error?.errorDescription as Any)
                 return
             }
             
-            finish(data)
+			finish(data.data)
         }
         
     }
