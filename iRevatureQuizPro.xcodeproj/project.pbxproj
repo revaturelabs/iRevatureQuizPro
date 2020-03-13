@@ -63,6 +63,8 @@
 		29B2F1A62416D6BB00FDDE57 /* QuizReturnStructs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29B2F1A32416D6BB00FDDE57 /* QuizReturnStructs.swift */; };
 		29B2F1A82416D6CA00FDDE57 /* QuizObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29B2F1A72416D6CA00FDDE57 /* QuizObject.swift */; };
 		29B495AD24195B6C00C44D26 /* QuizCategoryParse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29B495AC24195B6C00C44D26 /* QuizCategoryParse.swift */; };
+		2EDA7E58241BDC1000581F99 /* Help.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2EDA7E57241BDC1000581F99 /* Help.storyboard */; };
+		2EDA7E5B241BDCE000581F99 /* HelpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EDA7E5A241BDCE000581F99 /* HelpViewController.swift */; };
 		5F1E2DAF24191CEF00F2FAE3 /* AllQuestionAPIResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F1E2DAE24191CEF00F2FAE3 /* AllQuestionAPIResponse.swift */; };
 		5F1E2DB124191E1800F2FAE3 /* AllQuestionAPIData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F1E2DB024191E1800F2FAE3 /* AllQuestionAPIData.swift */; };
 		5F1E2DB324191EEA00F2FAE3 /* QuestionByIDAPIResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F1E2DB224191EEA00F2FAE3 /* QuestionByIDAPIResponse.swift */; };
@@ -198,6 +200,8 @@
 		29B2F1A32416D6BB00FDDE57 /* QuizReturnStructs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuizReturnStructs.swift; sourceTree = "<group>"; };
 		29B2F1A72416D6CA00FDDE57 /* QuizObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuizObject.swift; sourceTree = "<group>"; };
 		29B495AC24195B6C00C44D26 /* QuizCategoryParse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuizCategoryParse.swift; sourceTree = "<group>"; };
+		2EDA7E57241BDC1000581F99 /* Help.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Help.storyboard; sourceTree = "<group>"; };
+		2EDA7E5A241BDCE000581F99 /* HelpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpViewController.swift; sourceTree = "<group>"; };
 		5F1E2DAE24191CEF00F2FAE3 /* AllQuestionAPIResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllQuestionAPIResponse.swift; sourceTree = "<group>"; };
 		5F1E2DB024191E1800F2FAE3 /* AllQuestionAPIData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllQuestionAPIData.swift; sourceTree = "<group>"; };
 		5F1E2DB224191EEA00F2FAE3 /* QuestionByIDAPIResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionByIDAPIResponse.swift; sourceTree = "<group>"; };
@@ -513,6 +517,7 @@
 		09F2C05F240EE287004A6F47 /* Storyboard */ = {
 			isa = PBXGroup;
 			children = (
+				2EDA7E56241BDA4200581F99 /* Help */,
 				84492B51241A7D2200CC8E9A /* StartQuiz */,
 				84492B50241A7D1200CC8E9A /* EmployeeLogin */,
 				84492B4F241A7D0300CC8E9A /* AttendeeSignUp */,
@@ -708,6 +713,7 @@
 		09F2C074240EE2C7004A6F47 /* View-Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				2EDA7E59241BDCB500581F99 /* Help */,
 				84492B57241A7DDA00CC8E9A /* EmployeeLogin */,
 				84492B56241A7DD000CC8E9A /* Main */,
 				84492B55241A7DBC00CC8E9A /* QuizManagement */,
@@ -756,6 +762,22 @@
 				29B495AC24195B6C00C44D26 /* QuizCategoryParse.swift */,
 			);
 			path = QuizParseService;
+			sourceTree = "<group>";
+		};
+		2EDA7E56241BDA4200581F99 /* Help */ = {
+			isa = PBXGroup;
+			children = (
+				2EDA7E57241BDC1000581F99 /* Help.storyboard */,
+			);
+			path = Help;
+			sourceTree = "<group>";
+		};
+		2EDA7E59241BDCB500581F99 /* Help */ = {
+			isa = PBXGroup;
+			children = (
+				2EDA7E5A241BDCE000581F99 /* HelpViewController.swift */,
+			);
+			path = Help;
 			sourceTree = "<group>";
 		};
 		5F1E2DBA241921DD00F2FAE3 /* QuestionAPI */ = {
@@ -1089,6 +1111,7 @@
 				0940FE8624116145006F0E52 /* x86_64.swiftmodule in Resources */,
 				09F2C04E240EE1B9004A6F47 /* Assets.xcassets in Resources */,
 				0940FE8724116145006F0E52 /* arm.swiftdoc in Resources */,
+				2EDA7E58241BDC1000581F99 /* Help.storyboard in Resources */,
 				84DB87CC241049EB00958E75 /* StartQuiz.storyboard in Resources */,
 				0940FE8D24116145006F0E52 /* armv7-apple-ios.swiftdoc in Resources */,
 				0940FE8924116145006F0E52 /* arm64-apple-ios.swiftmodule in Resources */,
@@ -1174,6 +1197,7 @@
 				5F1E2DB124191E1800F2FAE3 /* AllQuestionAPIData.swift in Sources */,
 				5F901D8F2411A11700986FF5 /* TrainerLoginData.swift in Sources */,
 				0944AEDC241041CE00688C9B /* CreateEventCell.swift in Sources */,
+				2EDA7E5B241BDCE000581F99 /* HelpViewController.swift in Sources */,
 				95D8CF1E241190A100EB322E /* EventViewViewController.swift in Sources */,
 				5F897EE22412B749001B5C2B /* TrainerLoginAccess.swift in Sources */,
 				5F901D8024114A5200986FF5 /* DropdownPicker.swift in Sources */,

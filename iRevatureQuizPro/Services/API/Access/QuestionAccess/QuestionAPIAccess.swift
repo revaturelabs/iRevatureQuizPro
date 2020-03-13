@@ -17,9 +17,9 @@ class QuestionAPIAccess {
     static private let endpointByID = "https://dev3-ms.revature.com/apigateway/quiz/secure/question/"
     
     static func getAllQuestions(size: Int, page: Int, completionHandler: @escaping ([AllQuestionAPIData]?, Bool?) -> Void) {
-        
+        //Create question body struct to send as request
         let body: QuestionBody = QuestionBody(size: size, page: page, sortOrder: "asc", orderBy: "title", ownedContent: false, isOrdered: false)
-        
+        //get header for API request
         let header = API.getHTTPHeader()
         
         AF.request(
@@ -47,7 +47,9 @@ class QuestionAPIAccess {
     }
     
     static func getQuestionByID(id: Int, completionHandler: @escaping (QuestionByIDAPIData?, Bool?) -> Void) {
+        //append id to endpoint for request
         let endpoint = endpointByID + String(id)
+        //get header for API request
         let header = API.getHTTPHeader()
         
         AF.request(

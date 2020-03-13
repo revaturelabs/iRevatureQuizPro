@@ -8,6 +8,7 @@
 
 import Foundation
 
+//struct for body to request all questions
 struct QuestionBody: Codable  {
     var size: Int
     var page: Int
