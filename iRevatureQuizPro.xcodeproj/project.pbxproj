@@ -31,6 +31,7 @@
 		0944AEDA2410419100688C9B /* RevatureTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0944AED92410419100688C9B /* RevatureTableViewCell.swift */; };
 		0944AEDC241041CE00688C9B /* CreateEventCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0944AEDB241041CE00688C9B /* CreateEventCell.swift */; };
 		0944AEDE2410540400688C9B /* CreateEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0944AEDD2410540400688C9B /* CreateEventViewController.swift */; };
+		0946F3A5241BD29B00F898E9 /* DataTypeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0946F3A4241BD29B00F898E9 /* DataTypeTests.swift */; };
 		09525E0C2412D3430051D177 /* EventAttendeeTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09525E0B2412D3430051D177 /* EventAttendeeTable.swift */; };
 		09525E0E2412D4750051D177 /* TableProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09525E0D2412D4750051D177 /* TableProtocol.swift */; };
 		09525E102412D9AC0051D177 /* EventAttendeeStatements.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09525E0F2412D9AC0051D177 /* EventAttendeeStatements.swift */; };
@@ -162,6 +163,7 @@
 		0944AED92410419100688C9B /* RevatureTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RevatureTableViewCell.swift; sourceTree = "<group>"; };
 		0944AEDB241041CE00688C9B /* CreateEventCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateEventCell.swift; sourceTree = "<group>"; };
 		0944AEDD2410540400688C9B /* CreateEventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateEventViewController.swift; sourceTree = "<group>"; };
+		0946F3A4241BD29B00F898E9 /* DataTypeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataTypeTests.swift; sourceTree = "<group>"; };
 		09525E0B2412D3430051D177 /* EventAttendeeTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventAttendeeTable.swift; sourceTree = "<group>"; };
 		09525E0D2412D4750051D177 /* TableProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableProtocol.swift; sourceTree = "<group>"; };
 		09525E0F2412D9AC0051D177 /* EventAttendeeStatements.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventAttendeeStatements.swift; sourceTree = "<group>"; };
@@ -372,6 +374,7 @@
 				95C61747241AC859001E270E /* Questions */,
 				29105E312416DCE6005453CD /* Quiz */,
 				099150342412E6AF00E73B62 /* EventAttendee */,
+				0946F3A4241BD29B00F898E9 /* DataTypeTests.swift */,
 			);
 			path = Persistence;
 			sourceTree = "<group>";
@@ -1124,6 +1127,7 @@
 				099150362412E6E600E73B62 /* EventAttendeeTests.swift in Sources */,
 				5F1E2DD224192CDB00F2FAE3 /* QuestionAPI.swift in Sources */,
 				0991502C2412E69500E73B62 /* iRevatureQuizProTests.swift in Sources */,
+				0946F3A5241BD29B00F898E9 /* DataTypeTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
