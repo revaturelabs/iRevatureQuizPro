@@ -5,57 +5,42 @@
 //  Copyright © 2020 revature. All rights reserved.
 //
 
-//import Foundation
-//
-//struct CreateQuestionBody {
-//    var title: String
-//    var levelId: Int
-//    var categoryId: Int
-//    var noOfAttempts: Int
-//    var passPercentage: Int
-//    var mode: String
-//    var preSignupFlag: Bool
-//    var dashboardFlag: Bool
-//    var overrideFlag: Bool
-//    var quizPools: []
-//    var isActive: Bool
-//    var isStickyEnabled: Bool
-//    var isImageUploaded: Bool
-//    var quizDuration: Int
-//    var isDurationOverridden: Bool
-//    var isPublic: Bool
-//    var description: String
-//    var enableSaveResume: Bool
-//    var displayCorrectAnswerWhenPassed: Bool
-//    var displayCorrectAnswerWhenFailed: Bool
-//    var isReviewEnabled: Bool
-//    var showWhetherCorrect: Bool
-//    var displayScore: Bool
-//    var timerEnable: Bool
-//    var showExplanation: Bool
-//    var shuffleQsn: Bool
-//    var shuffleAns: Bool
-//    var iconDeleted: Bool
-//    var updatedTotalRecords: Bool
-//}
-//
-//
-//struct QuizPoolItem : Codable {
-//    var id: Int?
-//    var name: String
-//    var maxQstnToDisplay: Int
-//    var displayOrder: Int
-//    var quizPoolQuestions: QuizQuestionPool
-//    var isEdittedMaxQsnToDisp: Bool
-//}
-//struct AThing {
-//   var name: "General Questions",
-//   var maxQstnToDisplay: 1,
-//   var displayOrder: 1,
-//   var quizPoolQuestions:
-//   var isEdittedMaxQsnToDisp: false
-//}
-//
+import Foundation
+
+struct CreateQuestionBody: Codable {
+    var title: String
+    var levelId: Int
+    var categoryId: Int
+    var noOfAttempts: Int
+    var passPercentage: Int
+    var mode: String
+    var preSignupFlag: Bool
+    var dashboardFlag: Bool
+    var overrideFlag: Bool
+    var quizPools: [QuizPoolItem]
+    var isActive: Bool
+    var isStickyEnabled: Bool
+    var isImageUploaded: Bool
+    var quizDuration: Int
+    var isDurationOverridden: Bool
+    var isPublic: Bool
+    var description: String
+    var enableSaveResume: Bool
+    var displayCorrectAnswerWhenPassed: Bool
+    var displayCorrectAnswerWhenFailed: Bool
+    var isReviewEnabled: Bool
+    var showWhetherCorrect: Bool
+    var displayScore: Bool
+    var timerEnable: Bool
+    var showExplanation: Bool
+    var shuffleQsn: Bool
+    var shuffleAns: Bool
+    var iconDeleted: Bool
+    var updatedTotalRecords: Bool
+}
+
+
+
 //[{
 //        "question": {
 //            "id": 4811,
@@ -105,4 +90,4 @@
 //        "dontEvaluate": false
 //    }
 //],
-//
+

@@ -113,23 +113,29 @@ struct QuizAPIByIDData : Codable {
 		var categoryName: String
 		var createdName: String
 		var modifiedName: String
+}
 
-	struct QuizPoolItem : Codable {
-		var id: Int
-		var name: String
-		var maxQstnToDisplay: Int
-		var displayOrder: Int
-		var quizPoolQuestions: QuizQuestionPool //[QuizQuestionPool]
-		var isEdittedMaxQsnToDisp: Bool
-	}
 
-	struct QuizQuestionPool : Codable  {
-		var id: Int
-		var question: QuestionPoolItem
-		var order: Int
-		var isSticky: Bool
-		var dontEvaluate: Bool
-	}
+//Common / QuizPoolItem.swift
+
+//	struct QuizPoolItem : Codable {
+//		var id: Int
+//		var name: String
+//		var maxQstnToDisplay: Int
+//		var displayOrder: Int
+//		var quizPoolQuestions: QuizQuestionPool //[QuizQuestionPool]
+//		var isEdittedMaxQsnToDisp: Bool
+//	}
+
+//Common / QuizQuestionPool
+
+//	struct QuizQuestionPool : Codable  {
+//		var id: Int
+//		var question: QuestionPoolItem
+//		var order: Int
+//		var isSticky: Bool
+//		var dontEvaluate: Bool
+//	}
 
 	struct QuestionPoolItem : Codable  {
 		var id: Int
@@ -149,7 +155,7 @@ struct QuizAPIByIDData : Codable {
 		var validAnswers: Bool
 	}
     
-//Dupicate struct with QuestionAPI -> QuestionAnswer.swift
+//Dupicate struct with Common / QuestionAnswer.swift
 	
 //	struct AnswerItem : Codable  {
 //		var id: Int
@@ -159,14 +165,14 @@ struct QuizAPIByIDData : Codable {
 //		var sticky: Bool
 //	}
 	
-//Duplicate struct with QuestionAPI -> QuestionType.swift
+//Duplicate struct with Common / QuestionType.swift
     
 //	struct QuestionType : Codable  {
 //		var id: Int
 //		var code: String
 //		var qsnType: String
 //	}
-}
+
 
 
 // Body of the API request
