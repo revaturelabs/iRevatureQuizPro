@@ -8,6 +8,7 @@
 
 import Foundation
 
+//Stuct to handle json response from api for all questions
 struct AllQuestionAPIResponse: Codable {
     var statusCode: Int
     var description: String

@@ -8,6 +8,7 @@
 
 import Foundation
 
+//Stuct for json data from API
 struct QuestionByIDAPIData: Codable  {
     var id:Int
     var title: String
