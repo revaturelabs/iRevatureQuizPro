@@ -8,9 +8,10 @@
 
 import UIKit
 
-class QuestionManagementViewController: BaseViewController, UITableViewDelegate, UITableViewDataSource, UISearchResultsUpdating {
+class QuestionManagementViewController: BaseViewController, UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate {
     
     @IBOutlet weak var QuestionTableView: UITableView!
+    @IBOutlet weak var questionSearchBar: UISearchBar!
     
     var questions = [QuestionObject]()
     let searchController = UISearchController(searchResultsController: nil)
@@ -30,13 +31,16 @@ class QuestionManagementViewController: BaseViewController, UITableViewDelegate,
         
         self.QuestionTableView.delegate = self
         self.QuestionTableView.dataSource = self
+        self.questionSearchBar.delegate = self
+    }
+    
+    func filterContentForSearch(_ searchBar: UISearchBar, textDidChange searchText: String) {
         
-        self.searchController.searchResultsUpdater = self
-        self.searchController.obscuresBackgroundDuringPresentation = false
-        self.searchController.searchBar.placeholder = "Search Tags"
-        QuestionTableView.tableHeaderView = self.searchController.searchBar
-        self.navigationItem.searchController = searchController
-        self.definesPresentationContext = false
+        filteredQuestions = searchText.isEmpty ? questions : questions.filter { (Questions: QuestionObject) -> Bool in
+            return Questions.tags.range(of: searchText, options: .caseInsensitive, range: nil, locale: nil) != nil
+        }
+        
+        QuestionTableView.reloadData()
     }
     
     func filterContentForSearchText(_ searchText: String) {
@@ -50,11 +54,10 @@ class QuestionManagementViewController: BaseViewController, UITableViewDelegate,
     }
     
     
-    func updateSearchResults(for searchController: UISearchController) {
-        let searchBar = searchController.searchBar
-        filterContentForSearchText(searchBar.text!)
-        
-    }
+//    func updateSearchResults(for searchController: UISearchController) {
+//        let searchBar = questionSearchBar
+//        filterContentForSearch(searchBar, textDidChange: <#T##String#>)
+//    }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if isFiltering {
