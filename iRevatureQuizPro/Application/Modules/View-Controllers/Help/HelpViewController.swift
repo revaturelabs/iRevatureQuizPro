@@ -12,7 +12,7 @@ class HelpViewController : BaseViewController, WKNavigationDelegate{
     
     var webView: WKWebView!
     var backButton: UIButton = {
-        let button = UIButton(frame: CGRect(x: 100, y: 100, width: 44, height: 44))
+        let button = UIButton(frame: CGRect(x: 0, y: 0, width: 44, height: 44))
         button.addTarget(self, action: #selector(backButtonTapped), for: .touchDown)
         button.setTitle("Back", for: .normal)
         return button
@@ -33,7 +33,7 @@ class HelpViewController : BaseViewController, WKNavigationDelegate{
         
         webView.allowsBackForwardNavigationGestures = true
         
-        webView.addSubview(backButton)
+        webView.scrollView.addSubview(backButton)
         myButton()
     }
     
