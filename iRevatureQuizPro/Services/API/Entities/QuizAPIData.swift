@@ -119,7 +119,7 @@ struct QuizAPIByIDData : Codable {
 		var name: String
 		var maxQstnToDisplay: Int
 		var displayOrder: Int
-		var quizPoolQuestions: QuizQuestionPool
+		var quizPoolQuestions: QuizQuestionPool //[QuizQuestionPool]
 		var isEdittedMaxQsnToDisp: Bool
 	}
 
@@ -140,7 +140,7 @@ struct QuizAPIByIDData : Codable {
 		var tags: String
 		var durationInSec: Int
 		var categoryId: Int
-		var qsnAnswers: [AnswerItem]
+		var qsnAnswers: [QuestionAnswer]//[AnswerItem]
 		var qsnType: QuestionType
 		var categoryName: String
 		var isDeactivated: Bool
@@ -148,20 +148,24 @@ struct QuizAPIByIDData : Codable {
 		var lineNumber: Int
 		var validAnswers: Bool
 	}
+    
+//Dupicate struct with QuestionAPI -> QuestionAnswer.swift
 	
-	struct AnswerItem : Codable  {
-		var id: Int
-		var answer: String
-		var order: Int
-		var correct: Bool
-		var sticky: Bool
-	}
+//	struct AnswerItem : Codable  {
+//		var id: Int
+//		var answer: String
+//		var order: Int
+//		var correct: Bool
+//		var sticky: Bool
+//	}
 	
-	struct QuestionType : Codable  {
-		var id: Int
-		var code: String
-		var qsnType: String
-	}
+//Duplicate struct with QuestionAPI -> QuestionType.swift
+    
+//	struct QuestionType : Codable  {
+//		var id: Int
+//		var code: String
+//		var qsnType: String
+//	}
 }
 
 
