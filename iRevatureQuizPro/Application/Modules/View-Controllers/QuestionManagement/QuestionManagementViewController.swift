@@ -19,6 +19,7 @@ class QuestionManagementViewController: BaseViewController, UITableViewDelegate,
     var questions = [QuestionObject]()
     var filteredQuestions: [QuestionObject] = []
     
+    //Loads in the table view, search bar and grabs the data from API
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -29,10 +30,12 @@ class QuestionManagementViewController: BaseViewController, UITableViewDelegate,
         self.QuestionTableView.dataSource = self
         self.questionSearchBar.delegate = self
         
+        //needs to delay grabbing data or it will display empty table
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.75){
             self.filteredQuestions = self.questions
             self.QuestionTableView.reloadData()
         }
+        //
     }
     
     //new function that will live update filtered data
@@ -46,13 +49,13 @@ class QuestionManagementViewController: BaseViewController, UITableViewDelegate,
     }
     //
     
-    
+    //sets the number of table rows
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return filteredQuestions.count
     }
     
-    
     //small change
+    //populates the table view with the question data
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "QuestionCell", for: indexPath) as! QuestionTableViewCell
         var question: QuestionObject
@@ -72,6 +75,7 @@ class QuestionManagementViewController: BaseViewController, UITableViewDelegate,
     }
     //
     
+    //calls the API and creates an array of the questions
     func getQuestions() {
         QuestionAPIAccess.getAllQuestions(size: 10, page: 1) { (allQuestions, hasError) in
             guard let q = allQuestions else {
