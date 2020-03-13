@@ -38,7 +38,7 @@ class QuestionManagementViewController: BaseViewController, UITableViewDelegate,
     
     //grabs the last page of data from API and updates the table view
     @IBAction func previousPageButton(_ sender: Any) {
-        if currentPage != 1{
+        if currentPage > 1{
             currentPage -= 1
             getQuestions(page: currentPage)
             repopulateTable()
