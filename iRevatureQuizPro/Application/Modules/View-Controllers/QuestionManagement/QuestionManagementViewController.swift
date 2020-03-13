@@ -8,42 +8,74 @@
 
 import UIKit
 
-class QuestionManagementViewController: BaseViewController, UITableViewDelegate, UITableViewDataSource {
-
+class QuestionManagementViewController: BaseViewController, UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate {
+    
     @IBOutlet weak var QuestionTableView: UITableView!
     
-    var questions = [QuestionObject]()
+    //added search bar outlet
+    @IBOutlet weak var questionSearchBar: UISearchBar!
+    //
     
-
+    var questions = [QuestionObject]()
+    var filteredQuestions: [QuestionObject] = []
+    
+    //Loads in the table view, search bar and grabs the data from API
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
         self.getQuestions()
         
         self.QuestionTableView.delegate = self
         self.QuestionTableView.dataSource = self
-
+        self.questionSearchBar.delegate = self
+        
+        //needs to delay grabbing data or it will display empty table
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.75){
+            self.filteredQuestions = self.questions
+            self.QuestionTableView.reloadData()
+        }
+        //
     }
     
+    //new function that will live update filtered data
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        
+        filteredQuestions = searchText.isEmpty ? questions : questions.filter { (Questions: QuestionObject) -> Bool in
+            return Questions.tags.range(of: searchText, options: .caseInsensitive, range: nil, locale: nil) != nil
+        }
+        
+        QuestionTableView.reloadData()
+    }
+    //
+    
+    //sets the number of table rows
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.questions.count
+        return filteredQuestions.count
     }
     
+    //small change
+    //populates the table view with the question data
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "QuestionCell", for: indexPath) as! QuestionTableViewCell
-        let question = questions[indexPath.row]
+        var question: QuestionObject
+        
+        //no need to filter if empty anymore
+        question = filteredQuestions[indexPath.row]
+        //
         
         cell.TitleLabel.text = "Title: \(question.title)"
         cell.tagLabel.text = "Tags: \(question.tags)"
         cell.questionTypeLabel.text = "Question Type: \(question.questionType)"
-                
-        cell.TitleLabel.sizeToFit()
+        
+        cell.TitleLabel.lineBreakMode = .byWordWrapping
         cell.tagLabel.lineBreakMode = NSLineBreakMode.byWordWrapping
         cell.questionTypeLabel.lineBreakMode = NSLineBreakMode.byWordWrapping
         return cell
     }
+    //
     
+    //calls the API and creates an array of the questions
     func getQuestions() {
         QuestionAPIAccess.getAllQuestions(size: 10, page: 1) { (allQuestions, hasError) in
             guard let q = allQuestions else {
@@ -53,7 +85,7 @@ class QuestionManagementViewController: BaseViewController, UITableViewDelegate,
             self.questions = q.map{QuestionObject(id: $0.id, title: $0.title, tags: $0.tags, questionType: $0.questionType)}
             print(self.questions)
             self.QuestionTableView.reloadData()
-
+            
         }
     }
 }

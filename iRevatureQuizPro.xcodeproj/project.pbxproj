@@ -96,6 +96,7 @@
 		84F34FA42410437100D250BB /* iRevatureButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F34FA32410437100D250BB /* iRevatureButton.swift */; };
 		9544BF542416D0BC00BFC412 /* QuizDataAccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9544BF532416D0BC00BFC412 /* QuizDataAccess.swift */; };
 		95C6172024191D05001E270E /* QuizDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95C6171F24191D05001E270E /* QuizDataService.swift */; };
+		95C61749241AC892001E270E /* QuestionTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95C61748241AC892001E270E /* QuestionTest.swift */; };
 		95D8CF1424116B5B00EB322E /* MainStoryBoardController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D8CF1324116B5B00EB322E /* MainStoryBoardController.swift */; };
 		95D8CF1624117F9300EB322E /* EventManagement.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 95D8CF1524117F9300EB322E /* EventManagement.storyboard */; };
 		95D8CF182411849400EB322E /* QuizManagement.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 95D8CF172411849400EB322E /* QuizManagement.storyboard */; };
@@ -229,6 +230,7 @@
 		84F34FA32410437100D250BB /* iRevatureButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iRevatureButton.swift; sourceTree = "<group>"; };
 		9544BF532416D0BC00BFC412 /* QuizDataAccess.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizDataAccess.swift; sourceTree = "<group>"; };
 		95C6171F24191D05001E270E /* QuizDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizDataService.swift; sourceTree = "<group>"; };
+		95C61748241AC892001E270E /* QuestionTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionTest.swift; sourceTree = "<group>"; };
 		95D8CF1324116B5B00EB322E /* MainStoryBoardController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainStoryBoardController.swift; sourceTree = "<group>"; };
 		95D8CF1524117F9300EB322E /* EventManagement.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = EventManagement.storyboard; sourceTree = "<group>"; };
 		95D8CF172411849400EB322E /* QuizManagement.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = QuizManagement.storyboard; sourceTree = "<group>"; };
@@ -367,6 +369,7 @@
 		099150332412E6A700E73B62 /* Persistence */ = {
 			isa = PBXGroup;
 			children = (
+				95C61747241AC859001E270E /* Questions */,
 				29105E312416DCE6005453CD /* Quiz */,
 				099150342412E6AF00E73B62 /* EventAttendee */,
 			);
@@ -925,6 +928,14 @@
 			path = EmployeeLogin;
 			sourceTree = "<group>";
 		};
+		95C61747241AC859001E270E /* Questions */ = {
+			isa = PBXGroup;
+			children = (
+				95C61748241AC892001E270E /* QuestionTest.swift */,
+			);
+			path = Questions;
+			sourceTree = "<group>";
+		};
 		D50FC895241A8BC200BACABF /* Question */ = {
 			isa = PBXGroup;
 			children = (
@@ -1108,6 +1119,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				95C61749241AC892001E270E /* QuestionTest.swift in Sources */,
 				29105E332416DCF6005453CD /* QuizTests.swift in Sources */,
 				099150362412E6E600E73B62 /* EventAttendeeTests.swift in Sources */,
 				5F1E2DD224192CDB00F2FAE3 /* QuestionAPI.swift in Sources */,
@@ -1190,11 +1202,8 @@
 				5F1E2DB324191EEA00F2FAE3 /* QuestionByIDAPIResponse.swift in Sources */,
 				5F1E2DC12419290600F2FAE3 /* API.swift in Sources */,
 				0991503D2412F8C300E73B62 /* EventAttendeePersistenceService.swift in Sources */,
-
 				294F8ABB2419821400486498 /* QuizAPIData.swift in Sources */,
-
 				D50FC897241A8BE700BACABF /* QuestionReturnStructs.swift in Sources */,
-
 				5F901D912411A13700986FF5 /* CurrentSystemRole.swift in Sources */,
 				84F34FA42410437100D250BB /* iRevatureButton.swift in Sources */,
 				090A81402411969C008D7A12 /* DatabaseInteractions.swift in Sources */,
