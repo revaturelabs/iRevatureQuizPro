@@ -58,13 +58,13 @@ struct QuizAPIAllData: Codable {
 	var createdName: String
 }
 
-struct APIQuizByIDResults {
+struct APIQuizByIDResults : Codable  {
 	var statusCode: Int
 	var description: String
-	var data: [QuizAPIByIDData]
+	var data: QuizAPIByIDData
 }
 
-struct QuizAPIByIDData {
+struct QuizAPIByIDData : Codable {
 		var id: Int
 		var title: String
 		var levelId: Int
@@ -114,7 +114,7 @@ struct QuizAPIByIDData {
 		var createdName: String
 		var modifiedName: String
 
-	struct QuizPoolItem {
+	struct QuizPoolItem : Codable {
 		var id: Int
 		var name: String
 		var maxQstnToDisplay: Int
@@ -123,7 +123,7 @@ struct QuizAPIByIDData {
 		var isEdittedMaxQsnToDisp: Bool
 	}
 
-	struct QuizQuestionPool {
+	struct QuizQuestionPool : Codable  {
 		var id: Int
 		var question: QuestionPoolItem
 		var order: Int
@@ -131,7 +131,7 @@ struct QuizAPIByIDData {
 		var dontEvaluate: Bool
 	}
 
-	struct QuestionPoolItem {
+	struct QuestionPoolItem : Codable  {
 		var id: Int
 		var title: String
 		var levelId: Int
@@ -149,7 +149,7 @@ struct QuizAPIByIDData {
 		var validAnswers: Bool
 	}
 	
-	struct AnswerItem {
+	struct AnswerItem : Codable  {
 		var id: Int
 		var answer: String
 		var order: Int
@@ -157,7 +157,7 @@ struct QuizAPIByIDData {
 		var sticky: Bool
 	}
 	
-	struct QuestionType {
+	struct QuestionType : Codable  {
 		var id: Int
 		var code: String
 		var qsnType: String

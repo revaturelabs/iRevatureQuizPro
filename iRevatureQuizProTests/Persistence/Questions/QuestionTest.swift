@@ -32,9 +32,15 @@ class QuestionStatementsTest : XCTestCase {
         ==Tests==
      */
     
+    // Test record insertion
     func testInserQuestionRecord(){
-       XCTAssert(PQuestion.insert(questionObject: QuestionObject(id: 1, title: "Test", tags: "TestTag", questionType: "TestType")))
+       XCTAssertTrue(PQuestion.insert(questionObject: QuestionObject(id: 1, title: "Test", tags: "TestTag", questionType: "TestType")))
         
+    }
+    
+    // Test record update
+    func testUpdateQuestionRecord(){
+        PQuestion.insert(questionObject: QuestionObject(id: 1, title: "TestUpdate", tags: "TestTagUpdate", questionType: "TestTypeUpdate"))
     }
  
 
@@ -43,15 +49,19 @@ class QuestionStatementsTest : XCTestCase {
         ==TearDown==
      */
     
-    
+    override func tearDown() {
+        //Clean Up
+        
+        
+    }
     
     override class func tearDown() {
         // Clean Up
+        PQuestion.delete(id: 1)
+        Database.drop(table: PQuestion.table)
     }
     
-    override func tearDown() {
-        //Clean Up
-    }
+    
     
     
 }
