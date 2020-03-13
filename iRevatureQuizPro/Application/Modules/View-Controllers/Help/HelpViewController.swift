@@ -33,7 +33,7 @@ class HelpViewController : BaseViewController, WKNavigationDelegate{
         
         webView.allowsBackForwardNavigationGestures = true
         
-        webView.scrollView.addSubview(backButton)
+        webView.insertSubview(backButton, aboveSubview: webView)
         myButton()
     }
     
@@ -47,7 +47,7 @@ class HelpViewController : BaseViewController, WKNavigationDelegate{
 
     backButton.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
     backButton.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
-    backButton.widthAnchor.constraint(equalTo: view.widthAnchor, constant: -24).isActive = true
+    backButton.widthAnchor.constraint(equalTo: view.widthAnchor, constant: 24).isActive = true
     backButton.heightAnchor.constraint(equalToConstant: 150).isActive = true
         
     }
