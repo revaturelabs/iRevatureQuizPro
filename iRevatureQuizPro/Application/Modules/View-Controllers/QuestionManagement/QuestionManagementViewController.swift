@@ -11,7 +11,10 @@ import UIKit
 class QuestionManagementViewController: BaseViewController, UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate {
     
     @IBOutlet weak var QuestionTableView: UITableView!
+    
+    //added search bar outlet
     @IBOutlet weak var questionSearchBar: UISearchBar!
+    //
     
     var questions = [QuestionObject]()
     var filteredQuestions: [QuestionObject] = []
@@ -32,6 +35,7 @@ class QuestionManagementViewController: BaseViewController, UITableViewDelegate,
         }
     }
     
+    //new function that will live update filtered data
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         
         filteredQuestions = searchText.isEmpty ? questions : questions.filter { (Questions: QuestionObject) -> Bool in
@@ -40,16 +44,22 @@ class QuestionManagementViewController: BaseViewController, UITableViewDelegate,
         
         QuestionTableView.reloadData()
     }
+    //
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return filteredQuestions.count
     }
     
+    
+    //small change
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "QuestionCell", for: indexPath) as! QuestionTableViewCell
         var question: QuestionObject
+        
+        //no need to filter if empty anymore
         question = filteredQuestions[indexPath.row]
+        //
         
         cell.TitleLabel.text = "Title: \(question.title)"
         cell.tagLabel.text = "Tags: \(question.tags)"
@@ -60,6 +70,7 @@ class QuestionManagementViewController: BaseViewController, UITableViewDelegate,
         cell.questionTypeLabel.lineBreakMode = NSLineBreakMode.byWordWrapping
         return cell
     }
+    //
     
     func getQuestions() {
         QuestionAPIAccess.getAllQuestions(size: 10, page: 1) { (allQuestions, hasError) in
