@@ -100,8 +100,7 @@ class QuestionManagementViewController: BaseViewController, UITableViewDelegate,
                 return
             }
             
-            self.questions = q.map{QuestionObject(id: $0.id, title: $0.title, tags: $0.tags, questionType: $0.questionType)}
-            print(self.questions)
+            self.questions = q.map{QuestionObject(id: $0.id, title: $0.title, tags: $0.tags, questionType: $0.questionType!)}
             self.QuestionTableView.reloadData()
             
         }

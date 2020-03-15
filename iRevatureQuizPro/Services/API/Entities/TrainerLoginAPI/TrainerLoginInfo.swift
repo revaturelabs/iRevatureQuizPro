@@ -9,7 +9,6 @@
 import Foundation
 
 struct TrainerLoginInfo: Codable {
-    
     var userName:String
     var password:String
     var timeZone = TimeZone.current.identifier

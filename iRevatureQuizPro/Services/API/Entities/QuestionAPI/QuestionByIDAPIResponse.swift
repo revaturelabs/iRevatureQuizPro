@@ -12,5 +12,5 @@ import Foundation
 struct QuestionByIDAPIResponse: Codable  {
     var statusCode: Int
     var description: String
-    var data: QuestionByIDAPIData
+    var data: QuestionData
 }
