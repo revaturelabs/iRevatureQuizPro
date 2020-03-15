@@ -19,7 +19,7 @@ class QuestionAPIAccess {
     static private let endpointByID = "https://dev3-ms.revature.com/apigateway/quiz/secure/question/"
     
     //function to get all questions using size and page
-    static func getAllQuestions(size: Int, page: Int, completionHandler: @escaping ([AllQuestionAPIData]?, Bool?) -> Void) {
+    static func getAllQuestions(size: Int, page: Int, completionHandler: @escaping ([QuestionData]?, Bool?) -> Void) {
         //Create question body struct to send as request
         let body: QuestionBody = QuestionBody(size: size, page: page, sortOrder: "asc", orderBy: "title", ownedContent: false, isOrdered: false)
         //get header for API request
@@ -38,8 +38,10 @@ class QuestionAPIAccess {
                 let errorMessage = StatusCodeMessage.getMessage(code: response.response!.statusCode)
                 //log error
                 os_log(errorMessage)
+                print(response.debugDescription)
                 //set completionHandler to nil and true for no data and error
                 completionHandler(nil, true)
+                
                 
                 return
             }
@@ -51,7 +53,7 @@ class QuestionAPIAccess {
     
     
     //function to get questions using ID
-    static func getQuestionByID(id: Int, completionHandler: @escaping (QuestionByIDAPIData?, Bool?) -> Void) {
+    static func getQuestionByID(id: Int, completionHandler: @escaping (QuestionData?, Bool?) -> Void) {
         //append id to endpoint for request
         let endpoint = endpointByID + String(id)
         //get header for API request
@@ -67,6 +69,7 @@ class QuestionAPIAccess {
                 let errorMessage = StatusCodeMessage.getMessage(code: response.response!.statusCode)
                 //log error
                 os_log(errorMessage)
+                print(response.debugDescription)
                 //set completionHandler to nil and true for no data and error
                 completionHandler(nil, true)
                 

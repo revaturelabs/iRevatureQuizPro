@@ -44,10 +44,9 @@ class MainStoryBoardViewController: BaseViewController {
 		
       	// var sampleQuiz:QuizAPIData
         
-		QuizDataService.getQuizData(finish: {
-			quizdata in
-			
-		})
+
+//		QuizDataService.getQuizData()
+
     
         // Do any additional setup after loading the view.
         

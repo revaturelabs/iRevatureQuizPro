@@ -27,7 +27,7 @@ class QuizDataAccess {
     // Sends a request to the API for data
 
 
-    static func getAllQuizzes(numberOfRecords: Int, finish: @escaping ([QuizAPIAllData]) -> Void) {
+    static func getAllQuizzes(numberOfRecords: Int, finish: @escaping ([QuizAPIData]) -> Void) {
 
         //I'm assuming this is test hard coded data, if not this needs a configurable way of doing it
         let quizBody = QuizBody(size: numberOfRecords, page: 1, sortOrder: "desc", orderBy: "createdName", subscribedContent: false, publicContent: false, ownContent: false, isOrdered: false)
@@ -60,10 +60,10 @@ class QuizDataAccess {
     }
     
 
-    static func getQuizById(quizId: String, finish: @escaping (QuizAPIByIDData) -> Void) {
+    static func getQuizById(quizId: String, finish: @escaping (QuizAPIData) -> Void) {
         
         //I'm assuming this is test hard coded data, if not this needs a configurable way of doing it
-        let quizData = QuizBody(size: 1, page: 1, sortOrder: "desc", orderBy: "createdName", subscribedContent: false, publicContent: false, ownContent: false, isOrdered: false)
+//        let quizData = QuizBody(size: 1, page: 1, sortOrder: "desc", orderBy: "createdName", subscribedContent: false, publicContent: false, ownContent: false, isOrdered: false)
         
         let header = API.getHTTPHeader()
         
@@ -71,9 +71,9 @@ class QuizDataAccess {
         
         AF.request(
             endpointForSingleID,
-            method: .post,
-            parameters: quizData,
-            encoder: JSONParameterEncoder.default,
+//            method: .post,
+//            parameters: quizData,
+//            encoder: JSONParameterEncoder.default,
             headers: header
         ).validate().responseDecodable(of: APIQuizByIDResults.self) {
             (response) in
