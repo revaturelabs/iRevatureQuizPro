@@ -8,7 +8,7 @@
 
 import WebKit
 
-class HelpViewController : UIViewController, WKNavigationDelegate{
+class HelpViewController : BaseViewController, WKNavigationDelegate{
     
     var webView: WKWebView!
     
@@ -21,7 +21,7 @@ class HelpViewController : UIViewController, WKNavigationDelegate{
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let url = URL(string: "https://www.hackingwithswift.com")!
+        let url = URL(string: "https://www.revature.com/")!
         
         webView.load(URLRequest(url: url))
         
