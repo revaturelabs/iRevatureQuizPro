@@ -39,5 +39,4 @@ struct CQBody: Encodable {
     var shuffleAns: Bool
     var iconDeleted: Bool
     var updatedTotalRecords: Bool
-
 }

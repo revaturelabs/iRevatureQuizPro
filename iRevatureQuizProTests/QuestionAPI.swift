@@ -113,7 +113,7 @@ class QuestionAPITest: XCTestCase {
         let cqQuizPoolQuestion = CQQuizPoolQuestion(question: cqQuestionItem, dontEvaluate: false)
         
         let cqQuizPool = CQQuizPool(name: "iRevatureQuizPro", maxQstnToDisplay: 1, displayOrder: 1, quizPoolQuestions: [cqQuizPoolQuestion], isEdittedMaxQsnToDisp: false)
-        
+        //change title to test again
         let quiz = CQBody(title: "iRevatureQuizPro Test", levelId: 3, categoryId: 16, noOfAttempts: 1, passPercentage: 70, mode: "D", preSignupFlag: false, dashboardFlag: false, overrideFlag: false, quizPools: [cqQuizPool], isActive: true, isStickyEnabled: false, isImageUploaded: false, quizDuration: 120, isDurationOverridden: false, isPublic: true, description: "Test", enableSaveResume: false, displayCorrectAnswerWhenPassed: true, displayCorrectAnswerWhenFailed: true, isReviewEnabled: true, showWhetherCorrect: true, displayScore: true, timerEnable: true, showExplanation: true, shuffleQsn: true, shuffleAns: true, iconDeleted: true, updatedTotalRecords: true)
         
         CreateQuizAPI.createNewQuiz(quiz: quiz) { (didCreate) in
