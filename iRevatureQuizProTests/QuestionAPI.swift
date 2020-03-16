@@ -70,7 +70,7 @@ class QuestionAPITest: XCTestCase {
         let expectation = self.expectation(description: "This worked")
         
         var didPass:Bool = false
-        QuizDataAccess.getAllQuizzes(numberOfRecords: 10) { (quizzes) in
+        QuizAPI.getAllQuizzes(numberOfRecords: 10) { (quizzes) in
             for quiz in quizzes {
                 print(quiz.title)
             }
@@ -86,8 +86,8 @@ class QuestionAPITest: XCTestCase {
     func testGetQuizByID() {
         let expectation = self.expectation(description: "This worked")
         var didPass:Bool = false
-        QuizDataAccess.getQuizById(quizId: "3164") { (quiz) in
-            print(quiz.title)
+        QuizAPI.getQuizById(quizId: 3164) { (quiz) in
+			print(quiz.data.title)
             didPass = true
             expectation.fulfill()
         }
