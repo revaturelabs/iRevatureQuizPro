@@ -105,6 +105,7 @@
 		5FD4802D241A731600D1A0D1 /* QuestionManagement.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5FD4802C241A731600D1A0D1 /* QuestionManagement.storyboard */; };
 		5FD48030241A74BE00D1A0D1 /* QuestionManagementViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FD4802F241A74BE00D1A0D1 /* QuestionManagementViewController.swift */; };
 		5FD48033241A767900D1A0D1 /* QuestionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FD48032241A767900D1A0D1 /* QuestionTableViewCell.swift */; };
+		5FE4C327241FCBB8004AE267 /* APIEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FE4C326241FCBB8004AE267 /* APIEndpoint.swift */; };
 		84DB87CC241049EB00958E75 /* StartQuiz.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84DB87CB241049EB00958E75 /* StartQuiz.storyboard */; };
 		84DB87D024114A1000958E75 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DB87CF24114A1000958E75 /* BaseViewController.swift */; };
 		84DB87D4241159C300958E75 /* StartQuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DB87D3241159C300958E75 /* StartQuizViewController.swift */; };
@@ -257,6 +258,7 @@
 		5FD4802C241A731600D1A0D1 /* QuestionManagement.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = QuestionManagement.storyboard; sourceTree = "<group>"; };
 		5FD4802F241A74BE00D1A0D1 /* QuestionManagementViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionManagementViewController.swift; sourceTree = "<group>"; };
 		5FD48032241A767900D1A0D1 /* QuestionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = QuestionTableViewCell.swift; path = iRevatureQuizPro/Application/Modules/Views/QuestionTableViewCell.swift; sourceTree = SOURCE_ROOT; };
+		5FE4C326241FCBB8004AE267 /* APIEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIEndpoint.swift; sourceTree = "<group>"; };
 		84DB87CB241049EB00958E75 /* StartQuiz.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = StartQuiz.storyboard; sourceTree = "<group>"; };
 		84DB87CF24114A1000958E75 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		84DB87D3241159C300958E75 /* StartQuizViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartQuizViewController.swift; sourceTree = "<group>"; };
@@ -908,6 +910,7 @@
 			isa = PBXGroup;
 			children = (
 				5F1E2DC02419290600F2FAE3 /* API.swift */,
+				5FE4C326241FCBB8004AE267 /* APIEndpoint.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -1337,6 +1340,7 @@
 				5F64568F241D753700154E8B /* CQQuizPool.swift in Sources */,
 				5F901D8F2411A11700986FF5 /* TrainerLoginData.swift in Sources */,
 				0944AEDC241041CE00688C9B /* CreateEventCell.swift in Sources */,
+				5FE4C327241FCBB8004AE267 /* APIEndpoint.swift in Sources */,
 				2EDA7E5B241BDCE000581F99 /* HelpViewController.swift in Sources */,
 				95D8CF1E241190A100EB322E /* EventViewViewController.swift in Sources */,
 				5F897EE22412B749001B5C2B /* TrainerLoginAccess.swift in Sources */,
