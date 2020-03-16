@@ -19,13 +19,12 @@
         <scene sceneID="Hsa-91-yvs">
             <objects>
                 <viewController id="9Kd-4h-vsq" customClass="QuizMultipleChoiceViewCodntroller" customModule="iRevatureQuizPro" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="pqP-nC-gWY">
+                    <view key="view" contentMode="scaleToFill" ambiguous="YES" id="pqP-nC-gWY">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1hy-y5-Zca">
+                            <navigationBar contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1hy-y5-Zca">
                                 <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <color key="barTintColor" red="1" green="0.37647058823529411" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <textAttributes key="titleTextAttributes">
                                     <color key="textColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
@@ -38,40 +37,39 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Question Here" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O40-km-M6w">
-                                <rect key="frame" x="20" y="215" width="125" height="24"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Question:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2G5-Uu-SPl">
-                                <rect key="frame" x="20" y="101" width="74" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Question:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2G5-Uu-SPl">
+                                <rect key="frame" x="15" y="101" width="75" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="75" id="dQV-Sj-NFx"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0/0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bZK-ZW-glR">
-                                <rect key="frame" x="102" y="101" width="26" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="0/0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bZK-ZW-glR">
+                                <rect key="frame" x="100" y="101" width="30" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="30" id="Nas-Vg-bpz"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ENb-RI-t1b" customClass="RevatureButton" customModule="iRevatureQuizPro" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ENb-RI-t1b" customClass="RevatureButton" customModule="iRevatureQuizPro" customModuleProvider="target">
                                 <rect key="frame" x="82" y="816" width="125" height="40"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Previous"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="buttonWidth">
                                         <real key="value" value="2"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                        <color key="value" red="1" green="0.37647058820000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="value" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
                                         <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </button>
@@ -79,31 +77,102 @@
                                 <rect key="frame" x="215" y="816" width="125" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Next"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </button>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ECw-Q9-9YP">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ECw-Q9-9YP">
                                 <rect key="frame" x="20" y="437" width="374" height="361"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="8Nj-Lw-Qy7">
-                                        <rect key="frame" x="0.0" y="28" width="374" height="44"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="60" id="8Nj-Lw-Qy7">
+                                        <rect key="frame" x="0.0" y="28" width="374" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="8Nj-Lw-Qy7" id="XZr-Ud-xtW">
-                                            <rect key="frame" x="0.0" y="0.0" width="374" height="44"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="374" height="60"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="adJ-L6-GaH" customClass="RevatureButton" customModule="iRevatureQuizPro" customModuleProvider="target">
+                                                    <rect key="frame" x="15" y="5" width="325" height="50"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="325" id="9dx-Ak-Xho"/>
+                                                        <constraint firstAttribute="height" constant="45" id="EbK-Sk-XR7"/>
+                                                    </constraints>
+                                                    <state key="normal" title="Answer 1"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                            <real key="value" value="2"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                            <real key="value" value="20"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                            <color key="value" red="1" green="0.37647058820000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="adJ-L6-GaH" firstAttribute="leading" secondItem="XZr-Ud-xtW" secondAttribute="leading" constant="15" id="6Qe-bZ-l7V"/>
+                                                <constraint firstItem="adJ-L6-GaH" firstAttribute="centerX" secondItem="XZr-Ud-xtW" secondAttribute="centerX" id="B4D-x8-IUf"/>
+                                                <constraint firstItem="adJ-L6-GaH" firstAttribute="top" secondItem="XZr-Ud-xtW" secondAttribute="top" constant="5" id="jzc-Gy-K9n"/>
+                                                <constraint firstAttribute="bottom" secondItem="adJ-L6-GaH" secondAttribute="bottom" constant="5" id="kwH-Wg-JPv"/>
+                                                <constraint firstAttribute="trailing" secondItem="adJ-L6-GaH" secondAttribute="trailing" constant="15" id="lnH-j2-roE"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0/0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pUc-V2-V6g" customClass="TimerLabel">
-                                <rect key="frame" x="368" y="101" width="26" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="00:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pUc-V2-V6g" customClass="TimerLabel">
+                                <rect key="frame" x="344" y="100" width="55" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="55" id="b5E-b5-BDz"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" textAlignment="center" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kVS-8r-ldj">
+                                <rect key="frame" x="20" y="142" width="374" height="273"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="375" id="42P-u3-l27"/>
+                                    <constraint firstAttribute="height" constant="275" id="XCM-mX-L9M"/>
+                                </constraints>
+                                <string key="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam odio nunc, cursus accumsan vehicula non, commodo sit amet mauris. Pellentesque bibendum tincidunt finibus?</string>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="kVS-8r-ldj" firstAttribute="leading" secondItem="Ujo-M9-79C" secondAttribute="leading" constant="20" id="1hQ-iG-zSr"/>
+                            <constraint firstItem="bZK-ZW-glR" firstAttribute="leading" secondItem="2G5-Uu-SPl" secondAttribute="trailing" constant="10" id="2h3-hx-Kt4"/>
+                            <constraint firstItem="kVS-8r-ldj" firstAttribute="top" secondItem="2G5-Uu-SPl" secondAttribute="bottom" constant="20" id="3KW-zo-tcv"/>
+                            <constraint firstItem="2G5-Uu-SPl" firstAttribute="top" secondItem="1hy-y5-Zca" secondAttribute="bottom" constant="10" id="7Xv-8i-1MT"/>
+                            <constraint firstItem="ENb-RI-t1b" firstAttribute="top" secondItem="ECw-Q9-9YP" secondAttribute="bottom" constant="20" id="9Dn-dV-dhN"/>
+                            <constraint firstItem="Ujo-M9-79C" firstAttribute="trailing" secondItem="kVS-8r-ldj" secondAttribute="trailing" constant="20" id="9wN-aM-zwk"/>
+                            <constraint firstItem="ECw-Q9-9YP" firstAttribute="leading" secondItem="Ujo-M9-79C" secondAttribute="leading" constant="20" id="E5A-az-Qk2"/>
+                            <constraint firstItem="ECw-Q9-9YP" firstAttribute="top" secondItem="kVS-8r-ldj" secondAttribute="bottom" constant="20" id="HZh-23-6Qa"/>
+                            <constraint firstItem="kVS-8r-ldj" firstAttribute="top" secondItem="2G5-Uu-SPl" secondAttribute="bottom" constant="20" id="Iyt-z0-fSV"/>
+                            <constraint firstItem="Ujo-M9-79C" firstAttribute="trailing" secondItem="kVS-8r-ldj" secondAttribute="trailing" constant="20" id="QCy-Ss-gi5"/>
+                            <constraint firstItem="ECw-Q9-9YP" firstAttribute="top" secondItem="kVS-8r-ldj" secondAttribute="bottom" constant="20" id="brL-g8-MbX"/>
+                            <constraint firstItem="Ujo-M9-79C" firstAttribute="trailing" secondItem="pUc-V2-V6g" secondAttribute="trailing" constant="15" id="faF-O1-mas"/>
+                            <constraint firstItem="bZK-ZW-glR" firstAttribute="top" secondItem="1hy-y5-Zca" secondAttribute="bottom" constant="10" id="gOA-bw-vkG"/>
+                            <constraint firstItem="pUc-V2-V6g" firstAttribute="top" secondItem="1hy-y5-Zca" secondAttribute="bottom" constant="10" id="iXg-D4-D6n"/>
+                            <constraint firstItem="2G5-Uu-SPl" firstAttribute="leading" secondItem="Ujo-M9-79C" secondAttribute="leading" constant="15" id="iaq-Cx-8X5"/>
+                            <constraint firstItem="kVS-8r-ldj" firstAttribute="leading" secondItem="Ujo-M9-79C" secondAttribute="leading" constant="20" id="uMw-Nh-mh9"/>
+                            <constraint firstItem="Ujo-M9-79C" firstAttribute="trailing" secondItem="ECw-Q9-9YP" secondAttribute="trailing" constant="20" id="xNu-DC-EOr"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Ujo-M9-79C"/>
                     </view>
                 </viewController>
@@ -126,21 +195,6 @@
             </objects>
             <point key="canvasLocation" x="1487" y="597"/>
         </scene>
-        <!--Quiz Multiple Selection View Codntroller-->
-        <scene sceneID="AXB-4s-lbt">
-            <objects>
-                <viewController id="VEC-o7-upr" customClass="QuizMultipleSelectionViewCodntroller" customModule="iRevatureQuizPro" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="bjC-iR-Ffs">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="Onb-xb-Hh2"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="KZz-r4-bsL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1488" y="-84"/>
-        </scene>
         <!--Quiz True Or False View Codntroller-->
         <scene sceneID="vdP-1D-MGd">
             <objects>
@@ -155,6 +209,171 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UmN-hs-WKh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="787" y="597"/>
+        </scene>
+        <!--Quiz Multiple Choice View Codntroller-->
+        <scene sceneID="VZb-Fu-ksi">
+            <objects>
+                <viewController id="v5F-Cw-dic" customClass="QuizMultipleChoiceViewCodntroller" customModule="iRevatureQuizPro" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" ambiguous="YES" id="Mlr-cu-RTs">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fSj-DO-EX9">
+                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                <color key="barTintColor" red="1" green="0.37647058820000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <color key="textColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="Quiz Name" id="taa-NH-dUm">
+                                        <barButtonItem key="rightBarButtonItem" title="Item" image="list.number" catalog="system" id="7Uh-lX-iBJ">
+                                            <color key="tintColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Question:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fnh-Ff-24n">
+                                <rect key="frame" x="15" y="101" width="75" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="75" id="EIx-5I-KFj"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="0/0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fox-OG-2ZS">
+                                <rect key="frame" x="100" y="101" width="30" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="30" id="9NQ-Ig-MuV"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tyS-w2-XjX" customClass="RevatureButton" customModule="iRevatureQuizPro" customModuleProvider="target">
+                                <rect key="frame" x="82" y="816" width="125" height="40"/>
+                                <state key="normal" title="Previous"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="buttonWidth">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qBN-iN-LEm" customClass="RevatureButton" customModule="iRevatureQuizPro" customModuleProvider="target">
+                                <rect key="frame" x="215" y="816" width="125" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Next"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="TvC-0l-eqB">
+                                <rect key="frame" x="20" y="437" width="374" height="361"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="60" id="kYL-ik-faC">
+                                        <rect key="frame" x="0.0" y="28" width="374" height="60"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="kYL-ik-faC" id="TMJ-l2-p0F">
+                                            <rect key="frame" x="0.0" y="0.0" width="374" height="60"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZY7-tD-CVl" customClass="RevatureButton" customModule="iRevatureQuizPro" customModuleProvider="target">
+                                                    <rect key="frame" x="15" y="5" width="325" height="50"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="45" id="F2J-kv-uVG"/>
+                                                        <constraint firstAttribute="width" constant="325" id="QFS-vn-LGZ"/>
+                                                    </constraints>
+                                                    <state key="normal" title="Answer 1"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                            <real key="value" value="2"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                            <real key="value" value="20"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                            <color key="value" red="1" green="0.37647058820000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="ZY7-tD-CVl" secondAttribute="trailing" constant="15" id="8aE-14-eZW"/>
+                                                <constraint firstItem="ZY7-tD-CVl" firstAttribute="centerX" secondItem="TMJ-l2-p0F" secondAttribute="centerX" id="Nck-in-8uf"/>
+                                                <constraint firstItem="ZY7-tD-CVl" firstAttribute="leading" secondItem="TMJ-l2-p0F" secondAttribute="leading" constant="15" id="Qeg-tV-g5m"/>
+                                                <constraint firstAttribute="bottom" secondItem="ZY7-tD-CVl" secondAttribute="bottom" constant="5" id="ZAq-3H-S9K"/>
+                                                <constraint firstItem="ZY7-tD-CVl" firstAttribute="top" secondItem="TMJ-l2-p0F" secondAttribute="top" constant="5" id="lij-nx-l1T"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="00:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OGH-HY-chY" customClass="TimerLabel">
+                                <rect key="frame" x="344" y="100" width="55" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="55" id="RIt-5v-324"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" textAlignment="center" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gqK-Xm-jAg">
+                                <rect key="frame" x="20" y="142" width="374" height="273"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="275" id="HR6-w7-KgO"/>
+                                    <constraint firstAttribute="width" constant="375" id="r3X-Uh-bbo"/>
+                                </constraints>
+                                <string key="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam odio nunc, cursus accumsan vehicula non, commodo sit amet mauris. Pellentesque bibendum tincidunt finibus?</string>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="TvC-0l-eqB" firstAttribute="top" secondItem="gqK-Xm-jAg" secondAttribute="bottom" constant="20" id="1S7-n2-VL4"/>
+                            <constraint firstItem="Fnh-Ff-24n" firstAttribute="top" secondItem="fSj-DO-EX9" secondAttribute="bottom" constant="10" id="2wQ-3U-0QP"/>
+                            <constraint firstItem="lQK-jB-Jmt" firstAttribute="trailing" secondItem="gqK-Xm-jAg" secondAttribute="trailing" constant="20" id="C0k-cL-whl"/>
+                            <constraint firstItem="lQK-jB-Jmt" firstAttribute="trailing" secondItem="gqK-Xm-jAg" secondAttribute="trailing" constant="20" id="JaO-Qu-hzc"/>
+                            <constraint firstItem="gqK-Xm-jAg" firstAttribute="leading" secondItem="lQK-jB-Jmt" secondAttribute="leading" constant="20" id="KCK-Vz-gAi"/>
+                            <constraint firstItem="TvC-0l-eqB" firstAttribute="leading" secondItem="lQK-jB-Jmt" secondAttribute="leading" constant="20" id="MNk-vl-9Z8"/>
+                            <constraint firstItem="tyS-w2-XjX" firstAttribute="top" secondItem="TvC-0l-eqB" secondAttribute="bottom" constant="20" id="P2u-Yv-hy8"/>
+                            <constraint firstItem="gqK-Xm-jAg" firstAttribute="leading" secondItem="lQK-jB-Jmt" secondAttribute="leading" constant="20" id="Pk8-O7-m6T"/>
+                            <constraint firstItem="gqK-Xm-jAg" firstAttribute="top" secondItem="Fnh-Ff-24n" secondAttribute="bottom" constant="20" id="PwX-rZ-4xS"/>
+                            <constraint firstItem="Fnh-Ff-24n" firstAttribute="leading" secondItem="lQK-jB-Jmt" secondAttribute="leading" constant="15" id="X1O-BV-FaB"/>
+                            <constraint firstItem="OGH-HY-chY" firstAttribute="top" secondItem="fSj-DO-EX9" secondAttribute="bottom" constant="10" id="Zh7-If-4br"/>
+                            <constraint firstItem="Fox-OG-2ZS" firstAttribute="leading" secondItem="Fnh-Ff-24n" secondAttribute="trailing" constant="10" id="d7h-pg-skZ"/>
+                            <constraint firstItem="lQK-jB-Jmt" firstAttribute="trailing" secondItem="TvC-0l-eqB" secondAttribute="trailing" constant="20" id="e72-QO-Rgo"/>
+                            <constraint firstItem="gqK-Xm-jAg" firstAttribute="top" secondItem="Fnh-Ff-24n" secondAttribute="bottom" constant="20" id="gy9-hn-zgR"/>
+                            <constraint firstItem="TvC-0l-eqB" firstAttribute="top" secondItem="gqK-Xm-jAg" secondAttribute="bottom" constant="20" id="jla-YT-rH6"/>
+                            <constraint firstItem="Fox-OG-2ZS" firstAttribute="top" secondItem="fSj-DO-EX9" secondAttribute="bottom" constant="10" id="jwQ-SO-a1w"/>
+                            <constraint firstItem="lQK-jB-Jmt" firstAttribute="trailing" secondItem="OGH-HY-chY" secondAttribute="trailing" constant="15" id="w9w-37-2FC"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="lQK-jB-Jmt"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ONO-Wu-YCz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1487" y="-84"/>
         </scene>
     </scenes>
     <resources>
