@@ -10,9 +10,9 @@ import Foundation
 
 
 struct QuizQuestionPool : Codable  {
-    var id: Int?
+    var id: Int
     var question: QuestionPoolItem
-    var order: Int?
-    var isSticky: Bool?
+    var order: Int
+    var isSticky: Bool
     var dontEvaluate: Bool
 }
