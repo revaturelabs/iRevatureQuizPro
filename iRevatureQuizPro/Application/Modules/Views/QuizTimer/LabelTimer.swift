@@ -11,19 +11,26 @@ import UIKit
 class LabelTimer: UILabel{
     
     var timer = Timer()
-    var seconds: Int = 0
+    var timeLeft: Int = 0
     
     func setTimer(duration: Int){
-        seconds = duration * 60
+        timeLeft = duration * 60
     }
     
     func runTimer() {
-         timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: (#selector(LabelTimer.updateTimer)), userInfo: nil, repeats: false)
+        timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: (#selector(LabelTimer.updateTimer)), userInfo: nil, repeats: true)
     }
     
     @objc func updateTimer() {
-        seconds -= 1     //This will decrement(count down)the seconds.
-        self.text = "\(seconds)" //This will update the label.
+        timeLeft -= 1     //This will decrement(count down)the seconds.
+        self.text = timeString(time: TimeInterval(timeLeft)) //This will update the label.
+    }
+    
+    func timeString(time:TimeInterval) -> String {
+        let hours = Int(timeLeft) / 3600
+        let minutes = Int(timeLeft) / 60 % 60
+        let seconds = Int(timeLeft) % 60
+        return String(format:"%02i:%02i:%02i", hours, minutes, seconds)
     }
     
 }

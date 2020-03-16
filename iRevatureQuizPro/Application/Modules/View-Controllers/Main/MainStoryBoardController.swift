@@ -10,6 +10,8 @@ import UIKit
 
 class MainStoryBoardViewController: BaseViewController {
      
+    @IBOutlet weak var timer: LabelTimer!
+    
     @IBAction func memberLoginButton(_ sender: Any) {
         //check userdefaults for user
         var nextVC: UIViewController
@@ -50,6 +52,8 @@ class MainStoryBoardViewController: BaseViewController {
     
         // Do any additional setup after loading the view.
         
+        timer.setTimer(duration: 2)
+        timer.runTimer()
 
     }
     
