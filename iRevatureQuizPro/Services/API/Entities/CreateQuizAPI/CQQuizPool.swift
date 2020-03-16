@@ -13,7 +13,7 @@ import Foundation
 struct CQQuizPool: Encodable {
         var name: String
         var maxQstnToDisplay: Int
-        var displayOrder: Int
+        var displayOrder = 1 //Should not cause changes to quiz creation, but check if unknown errors occur
         var quizPoolQuestions: [CQQuizPoolQuestion]
         var isEdittedMaxQsnToDisp = false
 }
