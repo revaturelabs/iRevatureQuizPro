@@ -11,11 +11,15 @@ class BQuizManagement {
         
     }
     
-    func createQuiz(with data: BQuiz) -> QuizWrapper {
+    static func createQuiz(with data: BQuiz) -> QuizWrapper {
         return QuizWrapper(quizData: data, questions: [])
     }
     
-    func add(question: QuestionObject, to quiz: inout QuizWrapper) {
+    static func add(question: QuestionObject, to quiz: inout QuizWrapper) {
         quiz.add(question: question)
+    }
+    
+    static func remove(question: QuestionObject, from quiz: inout QuizWrapper) {
+        quiz.remove(question: question)
     }
 }

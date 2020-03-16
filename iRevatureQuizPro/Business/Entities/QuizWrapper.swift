@@ -13,4 +13,13 @@ struct QuizWrapper {
     mutating func add(question: QuestionObject) {
         self.questions.append(question)
     }
+    
+    mutating func remove(question: QuestionObject) {
+        for (index, q) in self.questions.enumerated() {
+            if q.id == question.id {
+                self.questions.remove(at: index)
+                return
+            }
+        }
+    }
 }
