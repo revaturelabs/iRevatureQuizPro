@@ -21,8 +21,8 @@ import os.log
 // Makes a request to API to gather all Quiz Data needed to persist
 class QuizDataAccess {
     
-    static private let endpoint = "https://dev3-ms.revature.com/apigateway/quiz/secure/quizzes"
-    static private let endpointByID = "https://dev3-ms.revature.com/apigateway/quiz/secure/"
+//    static private let endpoint = "https://dev3-ms.revature.com/apigateway/quiz/secure/quizzes"
+//    static private let endpointByID = "https://dev3-ms.revature.com/apigateway/quiz/secure/"
     
     // Sends a request to the API for data
 
@@ -35,7 +35,7 @@ class QuizDataAccess {
         let header = API.getHTTPHeader()
         
         AF.request(
-            endpoint,
+            APIEndpoint.allQuizzes,
             method: .post,
             parameters: quizBody,
             encoder: JSONParameterEncoder.default,
@@ -67,7 +67,7 @@ class QuizDataAccess {
         
         let header = API.getHTTPHeader()
         
-        let endpointForSingleID = endpointByID + quizId
+        let endpointForSingleID = APIEndpoint.quiz + "/" + quizId
         
         AF.request(
             endpointForSingleID,
