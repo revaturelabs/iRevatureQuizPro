@@ -100,7 +100,7 @@ class QuestionManagementViewController: BaseViewController, UITableViewDelegate,
                 return
             }
             
-            self.questions = q.map{QuestionObject(id: $0.id, title: $0.title, tags: $0.tags, qsnAnswers: $0.qsnAnswers!, questionType: $0.questionType!, qsnType: $0.qsnType!, validAnswers: $0.validAnswers)}
+            self.questions = q.map{QuestionObject(id: $0.id, title: $0.title, tags: $0.tags, qsnAnswers: $0.qsnAnswers ?? [QuestionAnswer](), questionType: $0.questionType!, qsnType: $0.qsnType ?? QuestionType(id: -1, code: "", qsnType: ""), validAnswers: $0.validAnswers)}
             self.QuestionTableView.reloadData()
             
         }
