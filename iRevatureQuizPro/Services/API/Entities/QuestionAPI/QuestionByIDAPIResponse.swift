@@ -8,8 +8,9 @@
 
 import Foundation
 
+//struct to handle json response from api for get question using id
 struct QuestionByIDAPIResponse: Codable  {
     var statusCode: Int
     var description: String
-    var data: QuestionByIDAPIData
+    var data: QuestionData
 }

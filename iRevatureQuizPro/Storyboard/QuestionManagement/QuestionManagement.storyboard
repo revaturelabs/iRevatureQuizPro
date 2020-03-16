@@ -26,24 +26,25 @@
                                 </textAttributes>
                                 <items>
                                     <navigationItem title="Questions" id="9wl-gi-Vkg">
-                                        <barButtonItem key="rightBarButtonItem" style="plain" id="moH-cw-wgU">
-                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="KeI-dX-aYN">
-                                                <rect key="frame" x="302" y="0.0" width="92" height="44"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
-                                                <state key="normal" title="...">
-                                                    <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                                                </state>
-                                            </button>
+                                        <barButtonItem key="leftBarButtonItem" title="Previous Page" id="phF-3f-OAX">
+                                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <connections>
+                                                <action selector="previousPageButton:" destination="B76-t9-Nr2" id="PF3-VW-Gat"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" title="Next Page" id="gl3-Ve-188">
+                                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <connections>
+                                                <action selector="nextPageButton:" destination="B76-t9-Nr2" id="pLc-vO-qAM"/>
+                                            </connections>
                                         </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <tableView clipsSubviews="YES" contentMode="scaleAspectFit" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="160" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ptB-vd-H5M">
-                                <rect key="frame" x="20" y="107" width="374" height="685"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleAspectFit" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="160" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ptB-vd-H5M">
+                                <rect key="frame" x="20" y="158" width="374" height="634"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="685" id="VFl-Kv-u1z"/>
                                     <constraint firstAttribute="width" constant="374" id="azu-dH-XYh"/>
                                 </constraints>
                                 <prototypes>
@@ -85,16 +86,24 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <searchBar contentMode="redraw" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OUm-2j-wys">
+                                <rect key="frame" x="0.0" y="100" width="414" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="ptB-vd-H5M" firstAttribute="top" secondItem="agP-oc-7pn" secondAttribute="bottom" constant="19" id="Klr-FN-w4d"/>
                             <constraint firstItem="4a2-4c-zMI" firstAttribute="bottom" secondItem="ptB-vd-H5M" secondAttribute="bottom" constant="21" id="OZX-RM-bjT"/>
+                            <constraint firstItem="OUm-2j-wys" firstAttribute="leading" secondItem="4a2-4c-zMI" secondAttribute="leading" id="Uhh-Pq-YFb"/>
                             <constraint firstItem="agP-oc-7pn" firstAttribute="top" secondItem="4a2-4c-zMI" secondAttribute="top" id="VOO-Lx-HXM"/>
                             <constraint firstItem="4a2-4c-zMI" firstAttribute="trailing" secondItem="ptB-vd-H5M" secondAttribute="trailing" constant="20" id="bKR-qp-zIb"/>
                             <constraint firstItem="ptB-vd-H5M" firstAttribute="leading" secondItem="4a2-4c-zMI" secondAttribute="leading" constant="20" id="dGJ-Q5-Izf"/>
                             <constraint firstItem="agP-oc-7pn" firstAttribute="trailing" secondItem="4a2-4c-zMI" secondAttribute="trailing" id="gEh-Kt-ozW"/>
+                            <constraint firstItem="ptB-vd-H5M" firstAttribute="top" secondItem="OUm-2j-wys" secondAttribute="bottom" constant="13" id="kkC-KG-ebL"/>
+                            <constraint firstItem="OUm-2j-wys" firstAttribute="top" secondItem="agP-oc-7pn" secondAttribute="bottom" constant="8" id="qhj-FN-m4K"/>
                             <constraint firstItem="agP-oc-7pn" firstAttribute="leading" secondItem="4a2-4c-zMI" secondAttribute="leading" id="tL9-kd-qoV"/>
+                            <constraint firstItem="OUm-2j-wys" firstAttribute="trailing" secondItem="4a2-4c-zMI" secondAttribute="trailing" id="x3v-eP-a9r"/>
+                            <constraint firstItem="ptB-vd-H5M" firstAttribute="top" secondItem="OUm-2j-wys" secondAttribute="bottom" constant="13" id="yxn-lV-IAW"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="4a2-4c-zMI"/>
                     </view>
@@ -102,6 +111,7 @@
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="QuestionTableView" destination="ptB-vd-H5M" id="qlP-K9-k7D"/>
+                        <outlet property="questionSearchBar" destination="OUm-2j-wys" id="vqO-pa-Thm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XHX-Nd-8Ry" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

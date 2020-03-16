@@ -107,25 +107,53 @@
                                     <action selector="attendeeSignUp:" destination="BYZ-38-t0r" eventType="touchDown" id="P2S-5G-T70"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wHu-fo-UcG" customClass="RevatureButton" customModule="iRevatureQuizPro" customModuleProvider="target">
+                                <rect key="frame" x="82" y="539" width="250" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="9hy-Es-P9u"/>
+                                    <constraint firstAttribute="height" constant="50" id="Opl-wj-5bs"/>
+                                </constraints>
+                                <state key="normal" title="Help">
+                                    <color key="titleColor" red="1" green="0.37647058820000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="1" green="0.37647058820000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="helpScreen:" destination="BYZ-38-t0r" eventType="touchDown" id="BBP-25-cT3"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="x8g-NG-WBD" secondAttribute="trailing" constant="82" id="1lg-V3-L7L"/>
                             <constraint firstItem="Xi8-zN-n16" firstAttribute="top" secondItem="QcI-cy-f1E" secondAttribute="bottom" constant="8" id="51O-Rr-gWE"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="wHu-fo-UcG" secondAttribute="trailing" constant="82" id="A9o-rk-LNA"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="WGR-sg-SUd" secondAttribute="trailing" constant="82" id="BXt-zQ-hca"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" relation="lessThanOrEqual" secondItem="x8g-NG-WBD" secondAttribute="bottom" constant="331" id="DFo-eG-ibt"/>
                             <constraint firstItem="WGR-sg-SUd" firstAttribute="top" secondItem="W5y-86-J8Y" secondAttribute="bottom" constant="8" id="IM6-fv-Gb4"/>
+                            <constraint firstItem="wHu-fo-UcG" firstAttribute="top" secondItem="x8g-NG-WBD" secondAttribute="bottom" constant="8" id="J5A-VC-U4l"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Xi8-zN-n16" secondAttribute="trailing" constant="99" id="SnT-HB-qbs"/>
                             <constraint firstItem="x8g-NG-WBD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="82" id="TGy-9J-SU5"/>
                             <constraint firstItem="QcI-cy-f1E" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="53" id="TlN-9O-1Uz"/>
                             <constraint firstItem="QcI-cy-f1E" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="43" id="UcZ-ae-i7j"/>
                             <constraint firstItem="x8g-NG-WBD" firstAttribute="top" secondItem="WGR-sg-SUd" secondAttribute="bottom" constant="8" id="VtL-AJ-zWS"/>
                             <constraint firstItem="W5y-86-J8Y" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="82" id="YWW-jd-WIW"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" relation="lessThanOrEqual" secondItem="wHu-fo-UcG" secondAttribute="bottom" constant="273" id="ctl-7C-2VQ"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="QcI-cy-f1E" secondAttribute="trailing" constant="53" id="h5a-Jt-j50"/>
                             <constraint firstItem="Xi8-zN-n16" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="99" id="kRP-hz-z3h"/>
+                            <constraint firstItem="wHu-fo-UcG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="82" id="lWF-yU-cNm"/>
                             <constraint firstItem="WGR-sg-SUd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="82" id="m4h-gZ-Oru"/>
                             <constraint firstItem="W5y-86-J8Y" firstAttribute="top" secondItem="Xi8-zN-n16" secondAttribute="bottom" constant="78" id="pkt-Rm-cZO"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="W5y-86-J8Y" secondAttribute="trailing" constant="82" id="xcp-az-N6I"/>
+                            <constraint firstItem="wHu-fo-UcG" firstAttribute="top" secondItem="x8g-NG-WBD" secondAttribute="bottom" constant="8" id="ztU-SM-WhT"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>

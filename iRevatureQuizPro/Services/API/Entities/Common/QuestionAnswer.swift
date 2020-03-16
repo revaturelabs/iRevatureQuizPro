@@ -8,9 +8,11 @@
 
 import Foundation
 
+//struct for JSON qsnAnswer object
 struct QuestionAnswer: Codable  {
     var id:Int
     var answer:String
+    var explanation: String?
     var order:Int
     var correct:Bool
     var sticky:Bool

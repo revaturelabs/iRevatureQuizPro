@@ -51,6 +51,11 @@
                BlueprintName = "iRevatureQuizProTests"
                ReferencedContainer = "container:iRevatureQuizPro.xcodeproj">
             </BuildableReference>
+            <SkippedTests>
+               <Test
+                  Identifier = "EventAttendeeStatementTests/testGetAll()">
+               </Test>
+            </SkippedTests>
          </TestableReference>
          <TestableReference
             skipped = "NO">
