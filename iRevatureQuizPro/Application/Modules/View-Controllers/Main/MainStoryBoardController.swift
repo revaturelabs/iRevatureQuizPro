@@ -52,7 +52,7 @@ class MainStoryBoardViewController: BaseViewController {
     
         // Do any additional setup after loading the view.
         
-        timer.setTimer(duration: 2)
+        timer.setTimer(duration: 1)
         timer.runTimer()
 
     }

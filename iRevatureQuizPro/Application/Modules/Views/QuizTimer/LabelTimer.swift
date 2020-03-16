@@ -18,12 +18,17 @@ class LabelTimer: UILabel{
     }
     
     func runTimer() {
+        
         timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: (#selector(LabelTimer.updateTimer)), userInfo: nil, repeats: true)
     }
     
     @objc func updateTimer() {
-        timeLeft -= 1     //This will decrement(count down)the seconds.
-        self.text = timeString(time: TimeInterval(timeLeft)) //This will update the label.
+        if timeLeft < 1 {
+            timer.invalidate()
+        }else{
+            timeLeft -= 1
+            self.text = timeString(time: TimeInterval(timeLeft))
+        }
     }
     
     func timeString(time:TimeInterval) -> String {
