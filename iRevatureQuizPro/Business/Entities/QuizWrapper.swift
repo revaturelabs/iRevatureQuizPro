@@ -7,9 +7,25 @@
 //
 
 struct QuizWrapper {
-    var quizData: BQuiz
-    var questions: [QuestionObject]
+    private var quizData: BQuiz
+    private var questions: [QuestionObject]
     
+    init(quizData: BQuiz) {
+        self.quizData = quizData
+        self.questions = [QuestionObject]()
+    }
+    
+    init (quizData: BQuiz, questions: [QuestionObject]) {
+        self.quizData = quizData
+        self.questions = questions
+    }
+}
+
+
+//============================
+    //Access and Modification functions
+//============================
+extension QuizWrapper {
     mutating func add(question: QuestionObject) {
         self.questions.append(question)
     }
@@ -21,5 +37,13 @@ struct QuizWrapper {
                 return
             }
         }
+    }
+    
+    var getQuizData: BQuiz {
+        return quizData
+    }
+    
+    var getAllQuestions: [QuestionObject] {
+        return questions
     }
 }
