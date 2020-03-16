@@ -33,6 +33,8 @@
 		0944AEDE2410540400688C9B /* CreateEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0944AEDD2410540400688C9B /* CreateEventViewController.swift */; };
 		0946F3A5241BD29B00F898E9 /* DataTypeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0946F3A4241BD29B00F898E9 /* DataTypeTests.swift */; };
 		0946F3AA241FCCE400F898E9 /* AttendeeSignupStaticData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0946F3A9241FCCE400F898E9 /* AttendeeSignupStaticData.swift */; };
+		0946F3AC241FDF7F00F898E9 /* QuizManagement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0946F3AB241FDF7F00F898E9 /* QuizManagement.swift */; };
+		0946F3AF241FE33D00F898E9 /* QuizWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0946F3AE241FE33D00F898E9 /* QuizWrapper.swift */; };
 		09525E0C2412D3430051D177 /* EventAttendeeTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09525E0B2412D3430051D177 /* EventAttendeeTable.swift */; };
 		09525E0E2412D4750051D177 /* TableProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09525E0D2412D4750051D177 /* TableProtocol.swift */; };
 		09525E102412D9AC0051D177 /* EventAttendeeStatements.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09525E0F2412D9AC0051D177 /* EventAttendeeStatements.swift */; };
@@ -180,6 +182,8 @@
 		0944AEDD2410540400688C9B /* CreateEventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateEventViewController.swift; sourceTree = "<group>"; };
 		0946F3A4241BD29B00F898E9 /* DataTypeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataTypeTests.swift; sourceTree = "<group>"; };
 		0946F3A9241FCCE400F898E9 /* AttendeeSignupStaticData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttendeeSignupStaticData.swift; sourceTree = "<group>"; };
+		0946F3AB241FDF7F00F898E9 /* QuizManagement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizManagement.swift; sourceTree = "<group>"; };
+		0946F3AE241FE33D00F898E9 /* QuizWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizWrapper.swift; sourceTree = "<group>"; };
 		09525E0B2412D3430051D177 /* EventAttendeeTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventAttendeeTable.swift; sourceTree = "<group>"; };
 		09525E0D2412D4750051D177 /* TableProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableProtocol.swift; sourceTree = "<group>"; };
 		09525E0F2412D9AC0051D177 /* EventAttendeeStatements.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventAttendeeStatements.swift; sourceTree = "<group>"; };
@@ -368,6 +372,14 @@
 				0940FE7F24116145006F0E52 /* armv7.swiftmodule */,
 			);
 			path = EasySQLite.swiftmodule;
+			sourceTree = "<group>";
+		};
+		0946F3AD241FDF9100F898E9 /* Quz */ = {
+			isa = PBXGroup;
+			children = (
+				0946F3AB241FDF7F00F898E9 /* QuizManagement.swift */,
+			);
+			path = Quz;
 			sourceTree = "<group>";
 		};
 		09525E0A2412D31B0051D177 /* EventAttendee */ = {
@@ -581,6 +593,7 @@
 		09F2C062240EE287004A6F47 /* Logic */ = {
 			isa = PBXGroup;
 			children = (
+				0946F3AD241FDF9100F898E9 /* Quz */,
 				293996DE241BDEE700B2B9C6 /* EntityManager */,
 			);
 			path = Logic;
@@ -613,6 +626,7 @@
 				5F897EEA2412F246001B5C2B /* UserInfo.swift */,
 				099150392412F7B900E73B62 /* EventAttendee.swift */,
 				84DB88172416CD9000958E75 /* Events.swift */,
+				0946F3AE241FE33D00F898E9 /* QuizWrapper.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -1314,6 +1328,7 @@
 				095E53C32418042B0009322C /* VIewControllerUtilities.swift in Sources */,
 				5F645693241D762E00154E8B /* CQQuestionItem.swift in Sources */,
 				29105E352416DE4F005453CD /* QuizAccess.swift in Sources */,
+				0946F3AC241FDF7F00F898E9 /* QuizManagement.swift in Sources */,
 				5F901D8224114E0C00986FF5 /* UITextFieldExtension.swift in Sources */,
 				5F645681241C071D00154E8B /* CQBody.swift in Sources */,
 				5F1E2DBD2419230D00F2FAE3 /* QuestionAPIAccess.swift in Sources */,
@@ -1359,6 +1374,7 @@
 				5F901D8C2411971700986FF5 /* TrainerLoginAPIResponse.swift in Sources */,
 				84DB881A2416CE0000958E75 /* EventsBusinessService.swift in Sources */,
 				5FD48033241A767900D1A0D1 /* QuestionTableViewCell.swift in Sources */,
+				0946F3AF241FE33D00F898E9 /* QuizWrapper.swift in Sources */,
 				5F1E2DB324191EEA00F2FAE3 /* QuestionByIDAPIResponse.swift in Sources */,
 				5F1E2DC12419290600F2FAE3 /* API.swift in Sources */,
 				0991503D2412F8C300E73B62 /* EventAttendeePersistenceService.swift in Sources */,
