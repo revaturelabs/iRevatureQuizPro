@@ -45,10 +45,17 @@ class AttendeeSignupTableController: UITableViewController {
         
         for index in 0...AttendeeSignupFields.allFields.count - 1 {
             guard let value = cells[AttendeeSignupFields.allFields[index].text]?.getInput() else { return nil }
+            if AttendeeSignupFields.allFields[index].text == AttendeeSignupFields.Email.text && !isValidEmail(value) { return nil }
             if !signUpInput.input(atIndex: index, value: value) { return nil }
         }
         
         return signUpInput
+    }
+    
+    func isValidEmail(_ email: String) -> Bool {
+        let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
+        let emailPred = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
+        return emailPred.evaluate(with: email)
     }
         
 }
