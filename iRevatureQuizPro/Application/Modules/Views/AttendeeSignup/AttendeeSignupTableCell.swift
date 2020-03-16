@@ -24,8 +24,12 @@ class AttendeeSignupTableCell: UITableViewCell {
         textInput.placeholder = name
     }
     
+    func setTextInputAsPicker(pickerValues: [String]) {
+        textInput.pickerSelector(data: pickerValues)
+    }
+    
     func getInput() -> String? {
-        return textInput.text
+        return textInput.text != "" ? textInput.text : nil
     }
     
     func setKeyboard(keyboardType: UIKeyboardType) {
