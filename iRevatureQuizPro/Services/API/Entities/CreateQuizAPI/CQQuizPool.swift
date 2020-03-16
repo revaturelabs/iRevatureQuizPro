@@ -15,5 +15,5 @@ struct CQQuizPool: Encodable {
         var maxQstnToDisplay: Int
         var displayOrder: Int
         var quizPoolQuestions: [CQQuizPoolQuestion]
-        var isEdittedMaxQsnToDisp: Bool
+        var isEdittedMaxQsnToDisp = false
 }
