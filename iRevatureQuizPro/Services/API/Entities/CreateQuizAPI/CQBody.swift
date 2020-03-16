@@ -16,27 +16,27 @@ struct CQBody: Encodable {
     var noOfAttempts: Int
     var passPercentage: Int
     var mode: String
-    var preSignupFlag: Bool
-    var dashboardFlag: Bool
-    var overrideFlag: Bool
+    var preSignupFlag = false
+    var dashboardFlag = false
+    var overrideFlag = false
     var quizPools: [CQQuizPool]
-    var isActive: Bool
-    var isStickyEnabled: Bool
-    var isImageUploaded: Bool
+    var isActive = true
+    var isStickyEnabled = false
+    var isImageUploaded = false
     var quizDuration: Int
-    var isDurationOverridden: Bool
-    var isPublic: Bool
+    var isDurationOverridden = false
+    var isPublic = false
     var description: String
-    var enableSaveResume: Bool
-    var displayCorrectAnswerWhenPassed: Bool
-    var displayCorrectAnswerWhenFailed: Bool
-    var isReviewEnabled: Bool
-    var showWhetherCorrect: Bool
-    var displayScore: Bool
-    var timerEnable: Bool
-    var showExplanation: Bool
-    var shuffleQsn: Bool
-    var shuffleAns: Bool
-    var iconDeleted: Bool
-    var updatedTotalRecords: Bool
+    var enableSaveResume = false
+    var displayCorrectAnswerWhenPassed = false
+    var displayCorrectAnswerWhenFailed = false
+    var isReviewEnabled = false
+    var showWhetherCorrect = false
+    var displayScore = false
+    var timerEnable = true
+    var showExplanation = false
+    var shuffleQsn = false
+    var shuffleAns = false
+    var iconDeleted = false
+    var updatedTotalRecords = false
 }
