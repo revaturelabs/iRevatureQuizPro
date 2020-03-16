@@ -20,21 +20,22 @@ class HelpViewController : BaseViewController, WKNavigationDelegate{
         button.setTitleColor(.black, for: .normal)
         return button
     }()
-    
+
+    // WKWebView setup
     override func loadView() {
         webView = WKWebView()
         webView.navigationDelegate = self
         view = webView
     }
     
+    // Displays revature website when view loads
     override func viewDidLoad() {
         super.viewDidLoad()
         
         let url = URL(string: "https://www.revature.com/")!
         
+        // Assigns the url to be displaued to the webView
         webView.load(URLRequest(url: url))
-        
-        webView.allowsBackForwardNavigationGestures = true
         
         webView.addSubview(backButton)
         myButton()
