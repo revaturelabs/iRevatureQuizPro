@@ -8,13 +8,16 @@
 
 import WebKit
 
+//class for a link to the revature website for more information
 class HelpViewController : BaseViewController, WKNavigationDelegate{
     
     var webView: WKWebView!
+    //create button with parameters in location and color
     var backButton: UIButton = {
-        let button = UIButton(frame: CGRect(x: 0, y: 0, width: 44, height: 44))
+        let button = UIButton(frame: CGRect(x: 0, y: 30, width: 100, height: 44))
         button.addTarget(self, action: #selector(backButtonTapped), for: .touchDown)
-        button.setTitle("Back", for: .normal)
+        button.setTitle("Back to app", for: .normal)
+        button.setTitleColor(.black, for: .normal)
         return button
     }()
     
@@ -33,16 +36,18 @@ class HelpViewController : BaseViewController, WKNavigationDelegate{
         
         webView.allowsBackForwardNavigationGestures = true
         
-        webView.insertSubview(backButton, aboveSubview: webView)
+        webView.addSubview(backButton)
         myButton()
     }
     
+    //action to go back to app when in Webview
     @objc func backButtonTapped(){
         let nextVC = MainStoryBoardViewController.instantiate(fromAppStoryboard: AppStoryboard.Main)
         nextVC.modalPresentationStyle = .fullScreen
         present(nextVC,animated: false, completion: nil)
     }
     
+    //sets constraints to backButton
     func myButton() {
 
     backButton.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
