@@ -8,10 +8,10 @@
 
 import Foundation
 
-struct QuizCategoryParse {
+class QuizCategoryParse {
 	
 	func loadData() {
-		QuizDataAccess.getAllQuizzes(numberOfRecords: 800, finish: {
+		QuizAPI.getAllQuizzes(numberOfRecords: 800, finish: {
 			results in
 			
 			print("should be results next")

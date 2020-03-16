@@ -17,7 +17,7 @@ class QuizDataService {
         
 		print("pulling quiz data")
 
-        QuizDataAccess.getAllQuizzes(numberOfRecords: 1000) {
+        QuizAPI.getAllQuizzes(numberOfRecords: 1000) {
 			quizzes in
             
 			for quiz in quizzes {
