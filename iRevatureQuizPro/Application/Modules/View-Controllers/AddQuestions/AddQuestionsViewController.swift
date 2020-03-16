@@ -18,6 +18,7 @@ class AddQuestionsViewController : BaseViewController, UITableViewDelegate, UITa
     var currentPage: Int = 1
     var questions: [QuestionObject] = []
     var filteredQuestions: [QuestionObject] = []
+    var questionCount = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -57,6 +58,14 @@ class AddQuestionsViewController : BaseViewController, UITableViewDelegate, UITa
         cell.tagsLabel.lineBreakMode = NSLineBreakMode.byWordWrapping
         cell.typeLabel.lineBreakMode = NSLineBreakMode.byWordWrapping
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let cell = tableView.cellForRow(at: indexPath) as! AddQuestionCell
+        if cell.addQuestionSwitch.isOn == true{
+            questionCount += 1
+            questionsPicked.text = "Quesions Picked: \(questionCount)"
+        }
     }
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
