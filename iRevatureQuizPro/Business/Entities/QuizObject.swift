@@ -8,6 +8,11 @@
 
 import Foundation
 
+#warning("Still need to refactor this as a class to avoid using a large amount of optionals.")
+// Consider using this as a class with a method that constructs the BQuiz struct from two smaller structs -
+//		each of which will be filled by the previous API calls in full.
+//
+
 // This Business Entity is the in-memory combination of the two separate API calls, AllQuizzes and QuizByID.
 /// Everything must be filled in with either the values returned from the API or 0 or "" (empty string). This avoids having to check for unwrapping optionals.
 // MARK: This is the Business Entity used for in-memory operations.
@@ -79,5 +84,4 @@ struct BQuiz {
 	var description: String
 	var instructions: String
 	var modifiedName: String
-	
 }
