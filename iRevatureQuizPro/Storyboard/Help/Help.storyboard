@@ -7,10 +7,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Help View Controller-->
         <scene sceneID="RCr-Ls-WR8">
             <objects>
-                <viewController id="lhs-ej-4SB" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HelpViewController_ID" useStoryboardIdentifierAsRestorationIdentifier="YES" id="lhs-ej-4SB" customClass="HelpViewController" customModule="iRevatureQuizPro" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="B5P-Ot-Wng">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

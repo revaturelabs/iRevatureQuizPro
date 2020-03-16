@@ -9,7 +9,7 @@
 
 class QuizDataService {
 	
-	static private var quizlist : [QuizAPIAllData]?
+	static private var quizlist : [QuizAPIData]?
 	static private var categories = [String]()
     
 	static func getQuizData(finish: @escaping ([String]) -> Void) {
@@ -30,7 +30,7 @@ class QuizDataService {
     }
 	
 	
-	static func getQuizDataForID(id: Int, finish: @escaping (QuizAPIByIDData) -> Void) {
+	static func getQuizDataForID(id: Int, finish: @escaping (QuizAPIData) -> Void) {
 		
 		print("updating all current quiz IDs into memory")
 		

@@ -12,5 +12,5 @@ import Foundation
 struct AllQuestionAPIResponse: Codable {
     var statusCode: Int
     var description: String
-    var data: [AllQuestionAPIData]
+    var data: [QuestionData]
 }

@@ -18,8 +18,6 @@ class StartQuizViewController: BaseViewController {
     }
 
     @IBAction func backbutton(_ sender: Any) {
-        guard let quizCode = eventCodeTextField.text, EventBusinessService.checkCode(eventCode: quizCode) else { return }
-        
         let nextVC = AttendeeSignUpViewController.instantiate(fromAppStoryboard: AppStoryboard.AttendeeSignUp)
         easyPresent(nextVC, animated: false, style: .fullScreen)
     }
@@ -28,6 +26,8 @@ class StartQuizViewController: BaseViewController {
         let alert = UIAlertController(title: "Start Quiz", message: "Feature coming soon", preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "Acknowledge", style: .default, handler: nil))
         self.present(alert, animated: true)
+        guard let quizCode = eventCodeTextField.text, EventBusinessService.checkCode(eventCode: quizCode) else { return }
+        
     }
     
 }

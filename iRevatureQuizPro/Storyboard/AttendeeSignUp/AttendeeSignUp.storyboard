@@ -46,7 +46,7 @@
                                 </items>
                             </navigationBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" bouncesZoom="NO" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="rt5-g0-ZTf">
-                                <rect key="frame" x="15" y="103" width="384" height="626.5"/>
+                                <rect key="frame" x="15" y="103" width="384" height="512"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="attendeeSignupTableCell" rowHeight="44" id="fuC-z0-w0u" customClass="AttendeeSignupTableCell" customModule="iRevatureQuizPro" customModuleProvider="target">
@@ -76,24 +76,8 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="MUj-pQ-qld">
-                                <rect key="frame" x="20" y="744.5" width="374" height="39.5"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="67" id="jnM-Er-jZz"/>
-                                </constraints>
-                                <attributedString key="attributedText">
-                                    <fragment content="By proceeding you also agree to the Terms of Service and Private Policy">
-                                        <attributes>
-                                            <color key="NSColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            <font key="NSFont" size="17" name="Helvetica"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                        </attributes>
-                                    </fragment>
-                                </attributedString>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="F3R-rm-b1q">
-                                <rect key="frame" x="20" y="804" width="374" height="48"/>
+                                <rect key="frame" x="20" y="782" width="374" height="48"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JrD-QG-Nax" customClass="RevatureButton" customModule="iRevatureQuizPro" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="182" height="48"/>
@@ -141,6 +125,22 @@
                                     </button>
                                 </subviews>
                             </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="MUj-pQ-qld">
+                                <rect key="frame" x="20" y="654" width="374" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="acI-P0-9oD"/>
+                                </constraints>
+                                <attributedString key="attributedText">
+                                    <fragment content="By proceeding you also agree to the Terms of Service and Private Policy">
+                                        <attributes>
+                                            <color key="NSColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <font key="NSFont" size="17" name="Helvetica"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -148,12 +148,12 @@
                             <constraint firstItem="rt5-g0-ZTf" firstAttribute="leading" secondItem="QpR-Lg-DTt" secondAttribute="leading" constant="15" id="0NO-5o-PLi"/>
                             <constraint firstItem="QpR-Lg-DTt" firstAttribute="trailing" secondItem="MUj-pQ-qld" secondAttribute="trailing" constant="20" id="87N-Mf-Fty"/>
                             <constraint firstItem="Mhr-Ng-dZX" firstAttribute="top" secondItem="QpR-Lg-DTt" secondAttribute="top" id="EBV-hy-HkD"/>
-                            <constraint firstItem="MUj-pQ-qld" firstAttribute="top" secondItem="rt5-g0-ZTf" secondAttribute="bottom" constant="15" id="JLh-if-GCp"/>
-                            <constraint firstItem="F3R-rm-b1q" firstAttribute="top" secondItem="MUj-pQ-qld" secondAttribute="bottom" constant="20" id="Jrs-02-pOR"/>
-                            <constraint firstItem="F3R-rm-b1q" firstAttribute="bottom" secondItem="QpR-Lg-DTt" secondAttribute="bottom" constant="-10" id="KIA-ZA-ZMM"/>
+                            <constraint firstItem="F3R-rm-b1q" firstAttribute="bottom" secondItem="QpR-Lg-DTt" secondAttribute="bottom" constant="-32" id="KIA-ZA-ZMM"/>
                             <constraint firstItem="QpR-Lg-DTt" firstAttribute="trailing" secondItem="rt5-g0-ZTf" secondAttribute="trailing" constant="15" id="MZt-lG-SDI"/>
                             <constraint firstItem="Mhr-Ng-dZX" firstAttribute="leading" secondItem="QpR-Lg-DTt" secondAttribute="leading" id="S41-aB-TU6"/>
+                            <constraint firstItem="MUj-pQ-qld" firstAttribute="top" secondItem="rt5-g0-ZTf" secondAttribute="bottom" constant="39" id="bzf-2H-IR5"/>
                             <constraint firstItem="F3R-rm-b1q" firstAttribute="leading" secondItem="QpR-Lg-DTt" secondAttribute="leading" constant="20" id="dZP-O1-9CR"/>
+                            <constraint firstItem="F3R-rm-b1q" firstAttribute="top" secondItem="MUj-pQ-qld" secondAttribute="bottom" constant="28" id="enJ-Md-TdQ"/>
                             <constraint firstItem="rt5-g0-ZTf" firstAttribute="top" secondItem="Mhr-Ng-dZX" secondAttribute="bottom" constant="15" id="mhw-5o-fkm"/>
                             <constraint firstItem="Mhr-Ng-dZX" firstAttribute="trailing" secondItem="QpR-Lg-DTt" secondAttribute="trailing" id="nuG-GF-I3k"/>
                             <constraint firstItem="QpR-Lg-DTt" firstAttribute="trailing" secondItem="F3R-rm-b1q" secondAttribute="trailing" constant="20" id="pgr-Gm-j7N"/>
