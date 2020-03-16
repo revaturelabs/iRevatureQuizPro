@@ -10,36 +10,26 @@ import UIKit
 
 class AttendeeSignupTableController: UITableViewController {
     
-    //Input field names
-    private let inputFieldNames: [String] = ["First Name",
-                                             "Last Name",
-                                             "Email",
-                                             "Phone Number",
-                                             "Major",
-                                             "Highest Level of Education",
-                                             "Work Authorization"]
-    
     //Hold reference to all the cells in the table to get data from later
     private var cells: [String : AttendeeSignupTableCell] = [String : AttendeeSignupTableCell]()
 
     //Set how many cells are going to be in the table
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return inputFieldNames.count
+        return AttendeeSignupFields.allFields.count
     }
     
     //Setup cells in table
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: AttendeeSignupTableCell.cellIdentifier, for: indexPath) as! AttendeeSignupTableCell
         
-        cell.setTextInput(name: "\(inputFieldNames[indexPath.row])*")
-        if inputFieldNames[indexPath.row] == "Email" {
-            cell.setKeyboard(keyboardType: .emailAddress)
-        }
-        if inputFieldNames[indexPath.row] == "Phone Number" {
-            cell.setKeyboard(keyboardType: .numberPad)
+        cell.setTextInput(name: "\(AttendeeSignupFields.allFields[indexPath.row].text)*")
+        cell.setKeyboard(keyboardType: AttendeeSignupFields.allFields[indexPath.row].keyboardType)
+        
+        if AttendeeSignupFields.allFields[indexPath.row].pickerValues.count > 0 {
+            cell.setTextInputAsPicker(pickerValues: AttendeeSignupFields.allFields[indexPath.row].pickerValues)
         }
         
-        cells[inputFieldNames[indexPath.row]] = cell
+        cells[AttendeeSignupFields.allFields[indexPath.row].text] = cell
         
         return cell
     }
@@ -53,8 +43,8 @@ class AttendeeSignupTableController: UITableViewController {
     func getInputData() -> BEventAttendeeSignUpInputData? {
         var signUpInput = BEventAttendeeSignUpInputData()
         
-        for index in 0...6 {
-            guard let value = cells[inputFieldNames[index]]?.getInput() else { return nil }
+        for index in 0...AttendeeSignupFields.allFields.count - 1 {
+            guard let value = cells[AttendeeSignupFields.allFields[index].text]?.getInput() else { return nil }
             if !signUpInput.input(atIndex: index, value: value) { return nil }
         }
         

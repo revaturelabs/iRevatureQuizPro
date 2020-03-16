@@ -32,6 +32,7 @@
 		0944AEDC241041CE00688C9B /* CreateEventCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0944AEDB241041CE00688C9B /* CreateEventCell.swift */; };
 		0944AEDE2410540400688C9B /* CreateEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0944AEDD2410540400688C9B /* CreateEventViewController.swift */; };
 		0946F3A5241BD29B00F898E9 /* DataTypeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0946F3A4241BD29B00F898E9 /* DataTypeTests.swift */; };
+		0946F3AA241FCCE400F898E9 /* AttendeeSignupStaticData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0946F3A9241FCCE400F898E9 /* AttendeeSignupStaticData.swift */; };
 		09525E0C2412D3430051D177 /* EventAttendeeTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09525E0B2412D3430051D177 /* EventAttendeeTable.swift */; };
 		09525E0E2412D4750051D177 /* TableProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09525E0D2412D4750051D177 /* TableProtocol.swift */; };
 		09525E102412D9AC0051D177 /* EventAttendeeStatements.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09525E0F2412D9AC0051D177 /* EventAttendeeStatements.swift */; };
@@ -178,6 +179,7 @@
 		0944AEDB241041CE00688C9B /* CreateEventCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateEventCell.swift; sourceTree = "<group>"; };
 		0944AEDD2410540400688C9B /* CreateEventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateEventViewController.swift; sourceTree = "<group>"; };
 		0946F3A4241BD29B00F898E9 /* DataTypeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataTypeTests.swift; sourceTree = "<group>"; };
+		0946F3A9241FCCE400F898E9 /* AttendeeSignupStaticData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttendeeSignupStaticData.swift; sourceTree = "<group>"; };
 		09525E0B2412D3430051D177 /* EventAttendeeTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventAttendeeTable.swift; sourceTree = "<group>"; };
 		09525E0D2412D4750051D177 /* TableProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableProtocol.swift; sourceTree = "<group>"; };
 		09525E0F2412D9AC0051D177 /* EventAttendeeStatements.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventAttendeeStatements.swift; sourceTree = "<group>"; };
@@ -436,6 +438,7 @@
 		09DD60A124168A17004E9583 /* AttendeeSignup */ = {
 			isa = PBXGroup;
 			children = (
+				0946F3A9241FCCE400F898E9 /* AttendeeSignupStaticData.swift */,
 				95D8CF1F241190BB00EB322E /* AttendeeSignUpViewController.swift */,
 				09C4D08324168ABB00DCDEC4 /* AttendeeSignupTableController.swift */,
 			);
@@ -1342,6 +1345,7 @@
 				29B495AD24195B6C00C44D26 /* QuizCategoryParse.swift in Sources */,
 				95D8CF20241190BB00EB322E /* AttendeeSignUpViewController.swift in Sources */,
 				5F897EEB2412F246001B5C2B /* UserInfo.swift in Sources */,
+				0946F3AA241FCCE400F898E9 /* AttendeeSignupStaticData.swift in Sources */,
 				09F2C047240EE1B5004A6F47 /* SceneDelegate.swift in Sources */,
 				095E53C12418041C0009322C /* StatusCodeMessage.swift in Sources */,
 				95D8CF22241190E900EB322E /* QuizViewViewController.swift in Sources */,
