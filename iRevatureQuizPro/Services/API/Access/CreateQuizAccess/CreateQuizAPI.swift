@@ -48,3 +48,26 @@ class CreateQuizAPI {
     }
     
 }
+
+extension QuizWrapper {
+    /// - Warning: There are missing fields that need to be addressed
+    var toAPIFormat: CQBody {
+        let quizData = self.getQuizData
+        let allQuestions = self.getAllQuestions
+        
+        var questionItemArray = [CQQuestionItem]()
+        var questionPoolQuestions = [CQQuizPoolQuestion]()
+        var quizPoolArray = [CQQuizPool]()
+        
+        questionItemArray = allQuestions.map({CQQuestionItem(id: $0.id, title: $0.title, tags: $0.tags, qsnAnswers: $0.qsnAnswers, qsnType: $0.qsnType, validAnswers: $0.validAnswers)})
+        
+        // TODO: Need to set a proper dontEvaluate
+        questionPoolQuestions = questionItemArray.map({CQQuizPoolQuestion(question: $0, dontEvaluate: false)})
+        
+        // TODO: Need someway to set name, displayOrder, isEdittedMaxQsnToDisp
+        quizPoolArray = questionPoolQuestions.map({CQQuizPool(name: quizData.createdName, maxQstnToDisplay: [$0].count, displayOrder: 1, quizPoolQuestions: [$0], isEdittedMaxQsnToDisp: false)})
+        
+        return CQBody(title: quizData.createdName, levelId: quizData.levelId, categoryId: quizData.categoryId, noOfAttempts: quizData.noOfAttempts, passPercentage: quizData.passPercentage, mode: quizData.mode, preSignupFlag: quizData.preSignupFlag, dashboardFlag: quizData.dashboardFlag, overrideFlag: quizData.overrideFlag, quizPools: quizPoolArray, isActive: quizData.isActive, isStickyEnabled: quizData.isStickyEnabled, isImageUploaded: quizData.isImageUploaded, quizDuration: quizData.quizDuration, isDurationOverridden: quizData.isDurationOverridden, isPublic: quizData.isPublic, description: quizData.description, enableSaveResume: quizData.enableSaveResume, displayCorrectAnswerWhenPassed: quizData.displayCorrectAnswerWhenPassed, displayCorrectAnswerWhenFailed: quizData.displayCorrectAnswerWhenFailed, isReviewEnabled: quizData.isReviewEnabled, showWhetherCorrect: quizData.showWhetherCorrect, displayScore: quizData.displayScore, timerEnable: quizData.timerEnable, showExplanation: quizData.showExplanation, shuffleQsn: quizData.shuffleQsn, shuffleAns: quizData.shuffleAns, iconDeleted: quizData.iconDeleted, updatedTotalRecords: quizData.updatedTotalRecords)
+        
+    }
+}

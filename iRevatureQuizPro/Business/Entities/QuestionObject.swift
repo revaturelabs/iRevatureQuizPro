@@ -12,5 +12,8 @@ struct QuestionObject{
     var id: Int
     var title: String
     var tags: String
+    var qsnAnswers: [QuestionAnswer]
     var questionType: String
+    var qsnType: QuestionType
+    var validAnswers: Bool
 }

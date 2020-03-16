@@ -24,7 +24,8 @@ class QuestionsParsingBusinessService{
             
 //            self.questions = q{QuestionObject(id: $0.id, title: $0.title, tags: $0.tags, questionType: $0.questionType)}
             for quest in q {
-                self.questions.append(QuestionObject(id: quest.id, title: quest.title, tags: quest.tags, questionType: quest.questionType!))
+                
+                self.questions.append(QuestionObject(id: quest.id, title: quest.title, tags: quest.tags, qsnAnswers: quest.qsnAnswers!, questionType: quest.questionType!, qsnType: quest.qsnType!, validAnswers: quest.validAnswers))
                 debugPrint(quest.title)
             }
             
