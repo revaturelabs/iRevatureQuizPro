@@ -7,35 +7,49 @@
 //  Copyright © 2020 revature. All rights reserved.
 //
 
+import Dispatch
+
 class QuizDataService {
 	
 	static private var quizlist : [QuizAPIData]?
 	static private var categories = [String]()
     
-	static func getQuizData(finish: @escaping ([String]) -> Void) {
-        // Do any additional setup after loading the view.
+	static func getQuizData(/*finish: @escaping ([QuizAPIData]) -> Void*/) {
         
-		print("pulling quiz data")
-
-        QuizAPI.getAllQuizzes(numberOfRecords: 1000) {
-			quizzes in
-            
-			for quiz in quizzes {
-				if(self.categories.contains(quiz.categoryName) == false) {
-					self.categories.append(quiz.categoryName)
-				}
-			}
-        }
-		finish(self.categories)
+		// Set up dispatch group
+		let apiqueue = DispatchGroup()
+		
+		// Closure with whatever work you want to be done when the thread finishes
+		let finalizeDispatch = DispatchWorkItem {
+			// in this instance I just want to print the count
+			// to be sure it actually finished retrieving all the quizzes from the api
+			print("Quiz amount = \(quizlist?.count)")
+		}
+		
+		// we tell the dispatch group we gonna start
+		apiqueue.enter()
+		
+		// We enter the following closure to the main thread to be run asynchronously
+		DispatchQueue.main.async {
+			QuizAPI.getAllQuizzes(numberOfRecords: 1200, finish: {
+				response in
+				
+				quizlist = response
+				
+				// at this point INSIDE the completion handler for the API function
+				// we notify the group we are finished
+				apiqueue.leave()
+			})
+		}
+		
+		// One enter and leave have evened out ( 1 to 1 in this example )
+		// We do whatever work item we created earlier
+		apiqueue.notify(queue: .main, work: finalizeDispatch)
     }
 	
 	
 	static func getQuizDataForID(id: Int, finish: @escaping (QuizAPIData) -> Void) {
 		
-		print("updating all current quiz IDs into memory")
-		
-		
-		
-		//QuizDataAccess.getQuizById(quizId: <#T##String#>, finish: <#T##(QuizAPIByIDData) -> Void#>)
+		//QuizAPI.getQuizById(quizId: <#T##Int#>, finish: <#T##(APIQuizByIDResults) -> Void#>)
 	}
 }
