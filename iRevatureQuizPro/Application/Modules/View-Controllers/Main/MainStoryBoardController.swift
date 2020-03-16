@@ -34,11 +34,19 @@ class MainStoryBoardViewController: BaseViewController {
         
     }
     
+    @IBAction func helpScreen(_ sender: Any) {
+        let nextVC = HelpViewController.instantiate(fromAppStoryboard:AppStoryboard.Help)
+        easyPresent(nextVC, animated: false, style: .fullScreen)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-      //  var sampleQuiz:QuizAPIData
+		
+      	// var sampleQuiz:QuizAPIData
         
-        //QuizDataAccess.getQuizzes(finish: <#T##(QuizAPIData) -> Void#>)
+
+//		QuizDataService.getQuizData()
+
     
         // Do any additional setup after loading the view.
         

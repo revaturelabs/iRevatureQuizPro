@@ -1,22 +1,17 @@
 //
-//  QuizAPIData.swift
+//  QuizBody.swift
 //  iRevatureQuizPro
 //
-//  Created by A Guest on 3/9/20.
+//  Created by Kyle Keck on 3/14/20.
 //  Copyright © 2020 revature. All rights reserved.
 //
 
 import Foundation
 
-struct QuizAPIData: Codable {
-    var id: Int
-    var title: String
-    var category: String
-    var metaTags: [String]
-    var quizDuration: Int
-}
-
-struct QuizBody: Codable{
+// Body of the API request
+struct QuizBody: Codable {
+    // Size is how many records are being requested
+    // Needs to be changed somehow to verify all records are received
     var size: Int
     var page: Int
     var sortOrder: String

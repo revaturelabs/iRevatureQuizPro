@@ -12,13 +12,12 @@ import Foundation
 class AttendeeSignupTableCell: UITableViewCell {
 
     static let cellIdentifier: String = "attendeeSignupTableCell"
-    static let cellHeight: CGFloat = 44
+    static let cellHeight: CGFloat = 70
     
     @IBOutlet private var textInput: UITextField!
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
 
     func setTextInput(name: String) {
