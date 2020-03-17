@@ -80,7 +80,7 @@
 		5F1E2DBF241926E500F2FAE3 /* QuestionBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F1E2DBE241926E500F2FAE3 /* QuestionBody.swift */; };
 		5F1E2DC12419290600F2FAE3 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F1E2DC02419290600F2FAE3 /* API.swift */; };
 		5F1E2DD224192CDB00F2FAE3 /* QuestionAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F1E2DD124192CDB00F2FAE3 /* QuestionAPI.swift */; };
-		5F2A3C502421044700F66C2A /* MultipleChoiceQuestionTableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F2A3C4F2421044700F66C2A /* MultipleChoiceQuestionTableController.swift */; };
+		5F2A3C502421044700F66C2A /* MCQuestionTableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F2A3C4F2421044700F66C2A /* MCQuestionTableController.swift */; };
 		5F2A3C552421090400F66C2A /* MCQuestionTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F2A3C542421090400F66C2A /* MCQuestionTableCell.swift */; };
 		5F645681241C071D00154E8B /* CQBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F645680241C071D00154E8B /* CQBody.swift */; };
 		5F645684241C235C00154E8B /* QuizPoolItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F645683241C235C00154E8B /* QuizPoolItem.swift */; };
@@ -242,7 +242,7 @@
 		5F1E2DC02419290600F2FAE3 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		5F1E2DC624192B9C00F2FAE3 /* QuestionAPITest.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QuestionAPITest.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5F1E2DD124192CDB00F2FAE3 /* QuestionAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionAPI.swift; sourceTree = "<group>"; };
-		5F2A3C4F2421044700F66C2A /* MultipleChoiceQuestionTableController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultipleChoiceQuestionTableController.swift; sourceTree = "<group>"; };
+		5F2A3C4F2421044700F66C2A /* MCQuestionTableController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCQuestionTableController.swift; sourceTree = "<group>"; };
 		5F2A3C542421090400F66C2A /* MCQuestionTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCQuestionTableCell.swift; sourceTree = "<group>"; };
 		5F645680241C071D00154E8B /* CQBody.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CQBody.swift; sourceTree = "<group>"; };
 		5F645683241C235C00154E8B /* QuizPoolItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizPoolItem.swift; sourceTree = "<group>"; };
@@ -850,7 +850,7 @@
 			isa = PBXGroup;
 			children = (
 				2E35372824201324009EDAE9 /* MultipleChoiceQuestionViewController.swift */,
-				5F2A3C4F2421044700F66C2A /* MultipleChoiceQuestionTableController.swift */,
+				5F2A3C4F2421044700F66C2A /* MCQuestionTableController.swift */,
 			);
 			path = QuestionTypeControllers;
 			sourceTree = "<group>";
@@ -1455,7 +1455,7 @@
 				D540960D2411538E00791C7E /* RevatureTextField.swift in Sources */,
 				D54096552412DFE500791C7E /* EventTable.swift in Sources */,
 				5F901D7C2411445600986FF5 /* DatePicker.swift in Sources */,
-				5F2A3C502421044700F66C2A /* MultipleChoiceQuestionTableController.swift in Sources */,
+				5F2A3C502421044700F66C2A /* MCQuestionTableController.swift in Sources */,
 				0944AED8241036BF00688C9B /* UIColorExtension.swift in Sources */,
 				84492B60241FFE4B00CC8E9A /* AddQuestionsViewController.swift in Sources */,
 				5F901D8C2411971700986FF5 /* TrainerLoginAPIResponse.swift in Sources */,

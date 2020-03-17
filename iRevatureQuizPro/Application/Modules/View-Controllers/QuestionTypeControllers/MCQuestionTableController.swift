@@ -8,24 +8,23 @@
 
 import UIKit
 
-class MultipleChoiceQuestionTableController: UITableViewController {
-
-    // MARK: - Table view data source
-
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
+class MCQuestionTableController: UITableViewController {
+    
+    private var answers = [QuestionAnswer]()
+    
+    func setAnswers(answers: [QuestionAnswer]) {
+        self.answers = answers
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return self.answers.count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "MCQuestionCell", for: indexPath) as! MCQuestionTableCell
 
-        // Configure the cell...
+        cell.answerText.text = answers[indexPath.row].answer
 
         return cell
     }
