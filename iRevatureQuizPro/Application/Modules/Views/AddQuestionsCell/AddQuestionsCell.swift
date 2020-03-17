@@ -21,6 +21,8 @@ class AddQuestionCell: UITableViewCell {
     
     @IBOutlet weak var addLabel: UILabel!
     
+    var callback : ((Bool)->())?
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -32,4 +34,7 @@ class AddQuestionCell: UITableViewCell {
         // Configure the view for the selected state
     }
 
+    @IBAction func switchChanged(_ sender: UISwitch) {
+        callback?(sender.isOn)
+    }
 }

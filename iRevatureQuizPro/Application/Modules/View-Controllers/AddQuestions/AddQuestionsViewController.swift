@@ -9,7 +9,7 @@
 import UIKit
 
 class AddQuestionsViewController : BaseViewController, UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate {
-
+    
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var questionsPicked: UITextView!
     @IBOutlet weak var questionsTableView: UITableView!
@@ -19,6 +19,8 @@ class AddQuestionsViewController : BaseViewController, UITableViewDelegate, UITa
     var questions: [QuestionObject] = []
     var filteredQuestions: [QuestionObject] = []
     var questionCount = 0
+    var switchState = questionSwitch()
+    var selectedQuestion: [QuestionObject] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -54,6 +56,10 @@ class AddQuestionsViewController : BaseViewController, UITableViewDelegate, UITa
         cell.addLabel.text = "Add to Quiz"
         cell.addQuestionSwitch.isOn = false
         
+        cell.callback = { newValue in
+            self.switchState.isSelected = newValue
+        }
+        
         cell.titleLabel.lineBreakMode = .byWordWrapping
         cell.tagsLabel.lineBreakMode = NSLineBreakMode.byWordWrapping
         cell.typeLabel.lineBreakMode = NSLineBreakMode.byWordWrapping
@@ -62,20 +68,20 @@ class AddQuestionsViewController : BaseViewController, UITableViewDelegate, UITa
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let cell = tableView.cellForRow(at: indexPath) as! AddQuestionCell
-        if cell.addQuestionSwitch.isOn == true{
-            questionCount += 1
-            questionsPicked.text = "Quesions Picked: \(questionCount)"
+        if cell.addQuestionSwitch.isOn == true { selectedQuestion.append(filteredQuestions[indexPath.row])
+            print(selectedQuestion)
         }
+        
     }
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-           
-           filteredQuestions = searchText.isEmpty ? questions : questions.filter { (Questions: QuestionObject) -> Bool in
-               return Questions.tags.range(of: searchText, options: .caseInsensitive, range: nil, locale: nil) != nil
-           }
-           
-           questionsTableView.reloadData()
-       }
+        
+        filteredQuestions = searchText.isEmpty ? questions : questions.filter { (Questions: QuestionObject) -> Bool in
+            return Questions.tags.range(of: searchText, options: .caseInsensitive, range: nil, locale: nil) != nil
+        }
+        
+        questionsTableView.reloadData()
+    }
     
     
     @IBAction func backButton(_ sender: Any) {
