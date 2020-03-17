@@ -6,16 +6,47 @@
 //  Copyright © 2020 revature. All rights reserved.
 //
 
+struct QuizInfo {
+    var title: String
+    var levelId: Int
+    var categoryId: Int
+    var noOfAttempts: Int
+    var passPercentage: Int
+    var mode: String
+    var preSignupFlag = false
+    var dashboardFlag = false
+    var overrideFlag = false
+    var isActive = true
+    var isStickyEnabled = false
+    var isImageUploaded = false
+    var quizDuration: Int
+    var isDurationOverridden = false
+    var isPublic = false
+    var description: String
+    var enableSaveResume = false
+    var displayCorrectAnswerWhenPassed = false
+    var displayCorrectAnswerWhenFailed = false
+    var isReviewEnabled = false
+    var showWhetherCorrect = false
+    var displayScore = false
+    var timerEnable = true
+    var showExplanation = false
+    var shuffleQsn = false
+    var shuffleAns = false
+    var iconDeleted = false
+    var updatedTotalRecords = false
+}
+
 struct QuizWrapper {
-    private var quizData: BQuiz
+    private var quizData: QuizInfo
     private var questions: [QuestionObject]
     
-    init(quizData: BQuiz) {
+    init(quizData: QuizInfo) {
         self.quizData = quizData
         self.questions = [QuestionObject]()
     }
     
-    init (quizData: BQuiz, questions: [QuestionObject]) {
+    init (quizData: QuizInfo, questions: [QuestionObject]) {
         self.quizData = quizData
         self.questions = questions
     }
@@ -27,6 +58,10 @@ struct QuizWrapper {
 //============================
 extension QuizWrapper {
     mutating func add(question: QuestionObject) {
+        for q in self.questions {
+            if q.id == question.id { return }
+        }
+        
         self.questions.append(question)
     }
     
@@ -39,7 +74,7 @@ extension QuizWrapper {
         }
     }
     
-    var getQuizData: BQuiz {
+    var getQuizData: QuizInfo {
         return quizData
     }
     
