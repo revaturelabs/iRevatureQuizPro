@@ -25,8 +25,15 @@ class MultipleChoiceQuestionViewController: BaseViewController {
         QuestionAnswer(id:987, answer: "Some Answer", explanation: "", order: 3, correct: false, sticky: false)
     ]
     
+    // Question object to be displayed
+    var question: Question?
+    
+    var questionIndex: Int = 0
+    
     override func viewDidLoad() {
-        // Your coce here
+        super.viewDidLoad()
+        
+        // Configures timer to a number of minutes
         timerLabel.setTimer(duration: 45)
         timerLabel.runTimer()
         
