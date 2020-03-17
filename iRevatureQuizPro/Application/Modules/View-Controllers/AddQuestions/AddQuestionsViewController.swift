@@ -16,6 +16,8 @@ class AddQuestionsViewController : BaseViewController {
     @IBOutlet weak var questionsTableView: UITableView!
     @IBOutlet weak var selectAllSwitch: UISwitch!
     
+    var quiz: QuizWrapper?
+    
     var currentPage: Int = 1
     var questions: [QuestionObject] = []
     var filteredQuestions: [QuestionObject] = []
@@ -53,6 +55,9 @@ class AddQuestionsViewController : BaseViewController {
     //will persist the questions selected and create the quiz
     @IBAction func submitButton(_ sender: Any) {
         //selectedQuestion is the end array
+        for q in selectedQuestion {
+            quiz!.add(question: q)
+        }
     }
     
     //removes all questions from array
