@@ -36,6 +36,7 @@ class QuestionPageViewController: UIPageViewController{
     
     // Current question user is on
     public var questionIndex: Int?
+    
     public var answerIndex: [String : Int] = [:]
     // List of questions
     public var questionList: [Question]? = []
@@ -105,16 +106,18 @@ extension QuestionPageViewController: UIPageViewControllerDataSource {
         // Instance of the storyboard that is going to be displayed
         let content: MultipleChoiceQuestionViewController = viewController as! MultipleChoiceQuestionViewController
         
+        // Updates to the current index
         var index = content.questionIndex
         
-        
+        // Updates the index
         index += 1
         
+        // Checks if it is out of bounds, to then send you back to the begining of the quiz
         if index == questionList?.count{
             return getViewControllerAtIndex(index: 0)
         }
         
-        
+        // If not out of bounds give you the next question
         return getViewControllerAtIndex(index: index)
     }
     
