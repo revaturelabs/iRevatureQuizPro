@@ -19,11 +19,14 @@ class QuizStatementTests : XCTestCase {
     let dateFormatter = ISO8601DateFormatter()
     var date1 : Date?
     var date2 : Date?
+	
+	var manager : EntityManager = EntityManager()
     
     var testQuiz : BQuiz?
     
     override func setUp() {
-        
+
+		// ===== persistence below ====== //
         date1 = dateFormatter.date(from: iso_date_1)
         date2 = dateFormatter.date(from: iso_date_2)
         
