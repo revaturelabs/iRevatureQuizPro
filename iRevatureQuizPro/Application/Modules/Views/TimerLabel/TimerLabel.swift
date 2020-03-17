@@ -21,7 +21,7 @@ class LabelTimer: UILabel{
     
     //overloaded to make it easier to display timer on next screen
     func setTimer(with duration: Float){
-        timeLeft = duration.rounded() * 60
+        timeLeft = (duration * 60).rounded()
     }
     
     //starts the timer and repeats counting
@@ -48,7 +48,7 @@ class LabelTimer: UILabel{
     
     //grabs the time left
     func getTimeLeft() -> Float {
-        return Float(timeLeft)
+        return (timeLeft / 60)
     }
     
 }
