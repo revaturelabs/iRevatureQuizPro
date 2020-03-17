@@ -23,11 +23,12 @@ class StartQuizViewController: BaseViewController {
     }
     
     @IBAction func submitButton(_ sender: Any) {
-        let alert = UIAlertController(title: "Start Quiz", message: "Feature coming soon", preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "Acknowledge", style: .default, handler: nil))
-        self.present(alert, animated: true)
-        guard let quizCode = eventCodeTextField.text, EventBusinessService.checkCode(eventCode: quizCode) else { return }
         
+        #warning("Remember To uncomment for validation")
+//        guard let quizCode = eventCodeTextField.text, EventBusinessService.checkCode(eventCode: quizCode) else { return }
+
+        let nextVC = QuestionPageViewController.instantiate(fromAppStoryboard:AppStoryboard.QuizQuestions)
+        easyPresent(nextVC, animated: false, style: .fullScreen)
     }
     
 }
