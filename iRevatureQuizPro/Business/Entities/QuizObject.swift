@@ -84,4 +84,5 @@ struct BQuiz {
 	var description: String
 	var instructions: String
 	var modifiedName: String
+
 }

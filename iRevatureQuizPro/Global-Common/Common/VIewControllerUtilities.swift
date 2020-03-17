@@ -18,6 +18,8 @@ enum AppStoryboard: String {
     case QuizManagement
     case StartQuiz
     case Help
+    case AddQuestions
+    case QuizQuestions
 }
 
 extension AppStoryboard {

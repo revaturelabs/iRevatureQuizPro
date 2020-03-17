@@ -9,7 +9,7 @@
 import Foundation
 
 struct QuizPoolItem : Codable {
-    var id: Int?
+    var id: Int
     var name: String
     var maxQstnToDisplay: Int
     var displayOrder: Int

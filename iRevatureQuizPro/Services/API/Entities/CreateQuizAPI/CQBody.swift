@@ -16,27 +16,50 @@ struct CQBody: Encodable {
     var noOfAttempts: Int
     var passPercentage: Int
     var mode: String
-    var preSignupFlag: Bool
-    var dashboardFlag: Bool
-    var overrideFlag: Bool
+    var preSignupFlag = false
+    var dashboardFlag = false
+    var overrideFlag = false
     var quizPools: [CQQuizPool]
-    var isActive: Bool
-    var isStickyEnabled: Bool
-    var isImageUploaded: Bool
+    var isActive = true
+    var isStickyEnabled = false
+    var isImageUploaded = false
     var quizDuration: Int
-    var isDurationOverridden: Bool
-    var isPublic: Bool
+    var isDurationOverridden = false
+    var isPublic = false
     var description: String
-    var enableSaveResume: Bool
-    var displayCorrectAnswerWhenPassed: Bool
-    var displayCorrectAnswerWhenFailed: Bool
-    var isReviewEnabled: Bool
-    var showWhetherCorrect: Bool
-    var displayScore: Bool
-    var timerEnable: Bool
-    var showExplanation: Bool
-    var shuffleQsn: Bool
-    var shuffleAns: Bool
-    var iconDeleted: Bool
-    var updatedTotalRecords: Bool
+    var enableSaveResume = false
+    var displayCorrectAnswerWhenPassed = false
+    var displayCorrectAnswerWhenFailed = false
+    var isReviewEnabled = false
+    var showWhetherCorrect = false
+    var displayScore = false
+    var timerEnable = true
+    var showExplanation = false
+    var shuffleQsn = false
+    var shuffleAns = false
+    var iconDeleted = false
+    var updatedTotalRecords = false
+}
+
+extension QuizWrapper {
+    /// - Warning: There are missing fields that need to be addressed
+    var toAPIFormat: CQBody {
+        let quizData = self.getQuizData
+        let allQuestions = self.getAllQuestions
+        
+        var questionItemArray = [CQQuestionItem]()
+        var questionPoolQuestions = [CQQuizPoolQuestion]()
+        var quizPoolArray = [CQQuizPool]()
+        
+        questionItemArray = allQuestions.map({CQQuestionItem(id: $0.id, title: $0.title, tags: $0.tags, qsnAnswers: $0.qsnAnswers, qsnType: $0.qsnType, validAnswers: $0.validAnswers)})
+        
+        // TODO: Need to set a proper dontEvaluate
+        questionPoolQuestions = questionItemArray.map({CQQuizPoolQuestion(question: $0, dontEvaluate: false)})
+        
+        // TODO: Need someway to set name, displayOrder, isEdittedMaxQsnToDisp
+        quizPoolArray = [CQQuizPool(name: quizData.title, maxQstnToDisplay: questionPoolQuestions.count, displayOrder: 1, quizPoolQuestions: questionPoolQuestions, isEdittedMaxQsnToDisp: false)]
+        
+        return CQBody(title: quizData.title, levelId: quizData.levelId, categoryId: quizData.categoryId, noOfAttempts: quizData.noOfAttempts, passPercentage: quizData.passPercentage, mode: quizData.mode, quizPools: quizPoolArray, quizDuration: quizData.quizDuration, description: quizData.description)
+        
+    }
 }

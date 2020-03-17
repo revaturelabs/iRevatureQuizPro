@@ -18,7 +18,9 @@ class CreateQuizViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        activityPointsTextField.keyboardType = .numberPad
+        durationTextField.keyboardType = .numberPad
+        maxNumberOfAttemptsTextField.keyboardType = .numberPad
     }
     
     @IBAction func optionsButton(_ sender: Any) {
@@ -32,10 +34,19 @@ class CreateQuizViewController: BaseViewController {
     }
     
     @IBAction func submitQuizButtton(_ sender: Any) {
-        let alert = UIAlertController(title: "Create Quiz", message: "Feature coming soon", preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "Acknowledge", style: .default, handler: nil))
-        self.present(alert, animated: true)
+        if !checkAllFieldFilled() { return }
         
+        let nextVC = AddQuestionsViewController.instantiate(fromAppStoryboard:AppStoryboard.AddQuestions)
+        
+        nextVC.quiz = QuizWrapper(quizData: QuizInfo(title: quizNameTextField.text!, levelId: 3, categoryId: 16, noOfAttempts: Int(maxNumberOfAttemptsTextField.text!) ?? 0, passPercentage: 1, mode: "D", quizDuration: 0, description: "Lorem Ipsum"))
+        
+        easyPresent(nextVC, animated: false, style: .fullScreen)
+        
+    }
+    
+    func checkAllFieldFilled() -> Bool {
+        if quizNameTextField.text != "" && tagsTextField.text != "" && activityPointsTextField.text != "" { return true }
+        return false
     }
     
 }

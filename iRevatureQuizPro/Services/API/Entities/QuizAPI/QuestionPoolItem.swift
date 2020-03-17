@@ -11,17 +11,17 @@ import Foundation
 struct QuestionPoolItem : Codable  {
     var id: Int
     var title: String
-    var levelId: Int?
-    var points: Int?
-    var score: Double?
+    var levelId: Int
+    var points: Int
+    var score: Double
     var tags: String
-    var durationInSec: Int?
-    var categoryId: Int?
+    var durationInSec: Int
+    var categoryId: Int
     var qsnAnswers: [QuestionAnswer]
     var qsnType: QuestionType
-    var categoryName: String?
-    var isDeactivated: Bool?
-    var updatedTotalRecords: Bool?
-    var lineNumber: Int?
+    var categoryName: String
+    var isDeactivated: Bool
+    var updatedTotalRecords: Bool
+    var lineNumber: Int
     var validAnswers: Bool
 }
