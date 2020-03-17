@@ -34,7 +34,7 @@ class MultipleChoiceQuestionViewController: BaseViewController {
         super.viewDidLoad()
         
         // Configures timer to a number of minutes
-        timerLabel.setTimer(duration: 45)
+		timerLabel.setTimer(with: 45)
         
         timerLabel.runTimer()
         
