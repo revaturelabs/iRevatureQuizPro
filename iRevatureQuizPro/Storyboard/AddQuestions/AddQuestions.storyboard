@@ -57,13 +57,6 @@
                                 <rect key="frame" x="0.0" y="100" width="414" height="56"/>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" editable="NO" text="Questions Picked: 0" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9RZ-5b-GPd">
-                                <rect key="frame" x="20" y="155" width="374" height="30"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="17"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="In4-WX-cr7" customClass="RevatureButton" customModule="iRevatureQuizPro" customModuleProvider="target">
                                 <rect key="frame" x="117" y="812" width="180" height="50"/>
                                 <constraints>
@@ -88,11 +81,11 @@
                                     <action selector="submitButton:" destination="nGq-9V-7Ju" eventType="touchDown" id="8si-wf-qQZ"/>
                                 </connections>
                             </button>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="wx5-Nz-hJL">
-                                <rect key="frame" x="16" y="202" width="382" height="593"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="wx5-Nz-hJL">
+                                <rect key="frame" x="16" y="216" width="382" height="579"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="AddQuestionCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="186" id="apn-Aa-5n8" customClass="AddQuestionCell" customModule="iRevatureQuizPro" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="AddQuestionCell" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="addQuestionCell" rowHeight="186" id="apn-Aa-5n8" customClass="AddQuestionCell" customModule="iRevatureQuizPro" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="382" height="186"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="apn-Aa-5n8" id="2Ik-VM-iR6">
@@ -120,7 +113,7 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ore-Ag-d4z">
+                                                <switch opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ore-Ag-d4z">
                                                     <rect key="frame" x="317" y="144" width="49" height="31"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </switch>
@@ -142,23 +135,35 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Questions Picked: 0" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9RZ-5b-GPd">
+                                <rect key="frame" x="20" y="169" width="374" height="30"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="lMi-Jn-KuQ"/>
+                                </constraints>
+                                <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="3gH-na-FvM" firstAttribute="leading" secondItem="CjS-Oq-zk4" secondAttribute="leading" id="3Ld-qc-rav"/>
+                            <constraint firstItem="wx5-Nz-hJL" firstAttribute="top" secondItem="9RZ-5b-GPd" secondAttribute="bottom" constant="17" id="5iP-fJ-Ios"/>
+                            <constraint firstItem="9RZ-5b-GPd" firstAttribute="top" secondItem="3gH-na-FvM" secondAttribute="bottom" constant="13" id="61J-k9-Uhf"/>
                             <constraint firstItem="CjS-Oq-zk4" firstAttribute="trailing" secondItem="wx5-Nz-hJL" secondAttribute="trailing" constant="16" id="8DQ-eW-NSu"/>
                             <constraint firstItem="mEQ-FD-CYh" firstAttribute="trailing" secondItem="CjS-Oq-zk4" secondAttribute="trailing" id="BGy-YF-4a7"/>
                             <constraint firstItem="3gH-na-FvM" firstAttribute="top" secondItem="mEQ-FD-CYh" secondAttribute="bottom" constant="12" id="Cao-zT-izP"/>
                             <constraint firstItem="wx5-Nz-hJL" firstAttribute="leading" secondItem="CjS-Oq-zk4" secondAttribute="leading" constant="16" id="DkO-Yf-s0D"/>
+                            <constraint firstItem="CjS-Oq-zk4" firstAttribute="trailing" secondItem="9RZ-5b-GPd" secondAttribute="trailing" constant="20" id="Gj6-hy-916"/>
                             <constraint firstItem="mEQ-FD-CYh" firstAttribute="top" secondItem="CjS-Oq-zk4" secondAttribute="top" id="M4M-ya-HLy"/>
+                            <constraint firstItem="9RZ-5b-GPd" firstAttribute="leading" secondItem="CjS-Oq-zk4" secondAttribute="leading" constant="20" id="MRa-4l-OYO"/>
                             <constraint firstItem="3gH-na-FvM" firstAttribute="trailing" secondItem="CjS-Oq-zk4" secondAttribute="trailing" id="Y2h-LI-nzY"/>
+                            <constraint firstItem="In4-WX-cr7" firstAttribute="top" secondItem="wx5-Nz-hJL" secondAttribute="bottom" constant="17" id="cNI-bf-CZU"/>
                             <constraint firstItem="mEQ-FD-CYh" firstAttribute="leading" secondItem="CjS-Oq-zk4" secondAttribute="leading" id="glg-yW-6OI"/>
-                            <constraint firstItem="9RZ-5b-GPd" firstAttribute="top" secondItem="3gH-na-FvM" secondAttribute="bottom" constant="11" id="mcJ-Lp-Bhj"/>
                             <constraint firstItem="In4-WX-cr7" firstAttribute="leading" secondItem="CjS-Oq-zk4" secondAttribute="leading" constant="117" id="rVt-6C-Kbt"/>
                             <constraint firstItem="In4-WX-cr7" firstAttribute="bottom" secondItem="CjS-Oq-zk4" secondAttribute="bottom" id="sjR-qn-Qj5"/>
-                            <constraint firstItem="In4-WX-cr7" firstAttribute="top" secondItem="wx5-Nz-hJL" secondAttribute="bottom" constant="17" id="uWu-3z-a3a"/>
                             <constraint firstItem="CjS-Oq-zk4" firstAttribute="trailing" secondItem="In4-WX-cr7" secondAttribute="trailing" constant="117" id="vfc-SR-tqQ"/>
-                            <constraint firstItem="wx5-Nz-hJL" firstAttribute="top" secondItem="9RZ-5b-GPd" secondAttribute="bottom" constant="17" id="yxM-nx-rtU"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="CjS-Oq-zk4"/>
                     </view>

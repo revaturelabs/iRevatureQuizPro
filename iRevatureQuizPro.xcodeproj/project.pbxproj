@@ -51,6 +51,7 @@
 		09C4D08424168ABB00DCDEC4 /* AttendeeSignupTableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C4D08324168ABB00DCDEC4 /* AttendeeSignupTableController.swift */; };
 		09C4D08724168C6400DCDEC4 /* AttendeeSignupTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C4D08624168C6400DCDEC4 /* AttendeeSignupTableCell.swift */; };
 		09C4D0A82416D92200DCDEC4 /* libEasySQLite.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0940FE8024116145006F0E52 /* libEasySQLite.a */; };
+		09DD066024211AA800782BDB /* AddQuestionTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09DD065F24211AA800782BDB /* AddQuestionTable.swift */; };
 		09F2C045240EE1B5004A6F47 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F2C044240EE1B5004A6F47 /* AppDelegate.swift */; };
 		09F2C047240EE1B5004A6F47 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F2C046240EE1B5004A6F47 /* SceneDelegate.swift */; };
 		09F2C049240EE1B5004A6F47 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F2C048240EE1B5004A6F47 /* ViewController.swift */; };
@@ -207,6 +208,7 @@
 		09C0837D24136D4B00D021F0 /* EndInputExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndInputExtension.swift; sourceTree = "<group>"; };
 		09C4D08324168ABB00DCDEC4 /* AttendeeSignupTableController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttendeeSignupTableController.swift; sourceTree = "<group>"; };
 		09C4D08624168C6400DCDEC4 /* AttendeeSignupTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttendeeSignupTableCell.swift; sourceTree = "<group>"; };
+		09DD065F24211AA800782BDB /* AddQuestionTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddQuestionTable.swift; sourceTree = "<group>"; };
 		09F2C041240EE1B5004A6F47 /* iRevatureQuizPro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iRevatureQuizPro.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		09F2C044240EE1B5004A6F47 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		09F2C046240EE1B5004A6F47 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -1134,6 +1136,7 @@
 			isa = PBXGroup;
 			children = (
 				84492B5F241FFE4B00CC8E9A /* AddQuestionsViewController.swift */,
+				09DD065F24211AA800782BDB /* AddQuestionTable.swift */,
 			);
 			path = AddQuestions;
 			sourceTree = "<group>";
@@ -1419,6 +1422,7 @@
 				09C0837E24136D4B00D021F0 /* EndInputExtension.swift in Sources */,
 				5F64569E241DC28F00154E8B /* APIQuizByIDResults.swift in Sources */,
 				29B2F1A52416D6BB00FDDE57 /* QuizTable.swift in Sources */,
+				09DD066024211AA800782BDB /* AddQuestionTable.swift in Sources */,
 				D50FC899241A8C5600BACABF /* QuestionStatements.swift in Sources */,
 				D5935E6F241943EC00512267 /* QuestionsParsingBusinessService.swift in Sources */,
 				09F2C045240EE1B5004A6F47 /* AppDelegate.swift in Sources */,

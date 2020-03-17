@@ -18,7 +18,9 @@ class CreateQuizViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        activityPointsTextField.keyboardType = .numberPad
+        durationTextField.keyboardType = .numberPad
+        maxNumberOfAttemptsTextField.keyboardType = .numberPad
     }
     
     @IBAction func optionsButton(_ sender: Any) {
@@ -32,9 +34,16 @@ class CreateQuizViewController: BaseViewController {
     }
     
     @IBAction func submitQuizButtton(_ sender: Any) {
+        if !checkAllFieldFilled() { return }
+        
         let nextVC = AddQuestionsViewController.instantiate(fromAppStoryboard:AppStoryboard.AddQuestions)
         easyPresent(nextVC, animated: false, style: .fullScreen)
         
+    }
+    
+    func checkAllFieldFilled() -> Bool {
+        if quizNameTextField.text != "" && tagsTextField.text != "" && activityPointsTextField.text != "" { return true }
+        return false
     }
     
 }
