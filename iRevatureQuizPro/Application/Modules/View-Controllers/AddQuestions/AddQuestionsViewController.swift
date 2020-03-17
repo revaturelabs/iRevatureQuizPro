@@ -74,6 +74,7 @@ extension AddQuestionsViewController: UITableViewDataSource, UITableViewDelegate
         questionsPicked.text = questionsPickedText + String(selectedQuestions.count)
     }
     
+    
     func addRemoveCellFromList(cell: AddQuestionCell) {
         if cell.addQuestionSwitch.isOn { selectedQuestions.append(cell) }
         else {
