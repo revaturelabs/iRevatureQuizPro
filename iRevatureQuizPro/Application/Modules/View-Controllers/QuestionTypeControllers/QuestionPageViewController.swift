@@ -12,22 +12,26 @@ import UIKit
 public struct Question{
     var title: String
     var answers: [String]
-    var duration: Int
 }
 
 class QuestionPageViewController: UIPageViewController{
     
     // Current question user is on
     public var questionIndex: Int?
-    
+    public var answerIndex: [String : Int] = [:]
     // List of questions
     public var questionList: [Question]? = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        questionList?.append(Question(title: "Hello World?", answers: ["True","False"], duration: 1))
+        questionList?.append(Question(title: "Hello World?", answers: ["True","False"]))
         
+        questionList?.append(Question(title: "Second Question?", answers: ["True","False"]))
+            
+        self.dataSource = self
+        
+        self.setViewControllers([getViewControllerAtIndex(index: questionIndex ?? 0)] as [UIViewController], direction: UIPageViewController.NavigationDirection.forward, animated: false, completion: nil)
     }
     
     // Grabs a reference to the MultChoiceVC and updates the question it currently displays
