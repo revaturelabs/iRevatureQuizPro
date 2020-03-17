@@ -52,12 +52,4 @@ class MainStoryBoardViewController: BaseViewController {
         
 
     }
-    
-    @IBAction func testButton(_ sender: Any) {
-        let storyboard:UIStoryboard = UIStoryboard(name: "QuizQuestions", bundle: nil)
-        let view = storyboard.instantiateInitialViewController()!
-        view.modalPresentationStyle = .fullScreen
-        self.present(view, animated: true)
-    }
-    
 }
