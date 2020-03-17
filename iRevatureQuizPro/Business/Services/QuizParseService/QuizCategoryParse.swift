@@ -7,26 +7,24 @@
 //
 
 import Foundation
+import UIKit
 
 class QuizCategoryParse {
 	
-	func loadData() {
-		QuizAPI.getAllQuizzes(numberOfRecords: 800, finish: {
-			results in
-			
-			print("should be results next")
-			print(results)
-			
-//			for object in results {
-//			}
-			
-		})
+	let dataManagerDelegate = UIApplication.shared.delegate as! AppDelegate
+	
+	var manager : EntityManager?
+	init() {
+		manager = dataManagerDelegate.manager!
+	}
+	
+	func parseCategories() -> [String] {
+		// can reference manager instance to get current list of all quizzes once the getter is available
+		// using that, can parse all of the categories out from whatever came from the API
 		
-		/* Ned to come back to this when the service is finished - cannot check quiz by ID until then
-		QuizDataAccess.getQuizById(quizId: <#T##String#>, finish: {
-			results in
-			
-		})
-		*/
+		
+		// currently returning empty string - will need to return based on the parsed catgories at this point - need a container for them
+		return [String]()
+		
 	}
 }
