@@ -10,16 +10,21 @@ import Foundation
 
 public struct Quiz {
     var title: String
-    var questions: [String]
+    var questions: [Question]
     var duration: Int
 }
+
 public struct Question{
     var question: String
-    var answers: [String]
+    var answers: [Answer]
     var isAnswered: Bool
     var numCorrect: Int
     var correctAnswer: Int
-    var totalQuestionsAnswered: Float
+    var totalQuestionsAnswered: Float {
+        get {
+            return Float( correctAnswer / numCorrect )
+        }
+    }
 }
 public struct Answer {
     var answer: String

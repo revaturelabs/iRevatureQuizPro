@@ -19,9 +19,9 @@ class QuestionPageViewController: UIPageViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        questionList?.append(Question(question: "question 1", answers: ["yes","no"], isAnswered: false, numCorrect: 1, correctAnswer: 1, totalQuestionsAnswered: 0))
+        questionList?.append(Question(question: "question 1", answers: [], isAnswered: false, numCorrect: 1, correctAnswer: 1))
         
-        questionList?.append(Question(question: "question 2", answers: ["maybe", "I suck", "BEEEEEEEEEEEEEER"], isAnswered: false, numCorrect: 1, correctAnswer: 1, totalQuestionsAnswered: 1))
+        questionList?.append(Question(question: "question 2", answers: [], isAnswered: false, numCorrect: 1, correctAnswer: 1))
             
         self.dataSource = self
         
