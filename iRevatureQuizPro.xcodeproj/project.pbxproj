@@ -111,7 +111,6 @@
 		84492B5D241FFBC400CC8E9A /* AddQuestions.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84492B5C241FFBC400CC8E9A /* AddQuestions.storyboard */; };
 		84492B60241FFE4B00CC8E9A /* AddQuestionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84492B5F241FFE4B00CC8E9A /* AddQuestionsViewController.swift */; };
 		84492B63242002F300CC8E9A /* AddQuestionsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84492B62242002F300CC8E9A /* AddQuestionsCell.swift */; };
-		8483960D2421072500A8F6D4 /* AddQuestionsStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8483960C2421072500A8F6D4 /* AddQuestionsStruct.swift */; };
 		84492B692420156000CC8E9A /* TimerLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84492B682420156000CC8E9A /* TimerLabel.swift */; };
 		84DB87CC241049EB00958E75 /* StartQuiz.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84DB87CB241049EB00958E75 /* StartQuiz.storyboard */; };
 		84DB87D024114A1000958E75 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DB87CF24114A1000958E75 /* BaseViewController.swift */; };
@@ -271,7 +270,6 @@
 		84492B5C241FFBC400CC8E9A /* AddQuestions.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddQuestions.storyboard; sourceTree = "<group>"; };
 		84492B5F241FFE4B00CC8E9A /* AddQuestionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddQuestionsViewController.swift; sourceTree = "<group>"; };
 		84492B62242002F300CC8E9A /* AddQuestionsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddQuestionsCell.swift; sourceTree = "<group>"; };
-		8483960C2421072500A8F6D4 /* AddQuestionsStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddQuestionsStruct.swift; sourceTree = "<group>"; };
 		84492B682420156000CC8E9A /* TimerLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerLabel.swift; sourceTree = "<group>"; };
 		84DB87CB241049EB00958E75 /* StartQuiz.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = StartQuiz.storyboard; sourceTree = "<group>"; };
 		84DB87CF24114A1000958E75 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
@@ -1135,7 +1133,6 @@
 		84492B5E241FFE3800CC8E9A /* AddQuestions */ = {
 			isa = PBXGroup;
 			children = (
-				8483960C2421072500A8F6D4 /* AddQuestionsStruct.swift */,
 				84492B5F241FFE4B00CC8E9A /* AddQuestionsViewController.swift */,
 			);
 			path = AddQuestions;
@@ -1372,7 +1369,6 @@
 				09C4D08424168ABB00DCDEC4 /* AttendeeSignupTableController.swift in Sources */,
 				84DB87D024114A1000958E75 /* BaseViewController.swift in Sources */,
 				84DB88182416CD9000958E75 /* Events.swift in Sources */,
-				8483960D2421072500A8F6D4 /* AddQuestionsStruct.swift in Sources */,
 				5F1E2DB52419217C00F2FAE3 /* QuestionByIDAPIData.swift in Sources */,
 				293996E0241BDF1D00B2B9C6 /* EntityManager.swift in Sources */,
 				5F1E2DBF241926E500F2FAE3 /* QuestionBody.swift in Sources */,

@@ -17,10 +17,6 @@ class AddQuestionCell: UITableViewCell {
     
     @IBOutlet weak var tagsLabel: UILabel!
     
-    @IBOutlet weak var addQuestionSwitch: UISwitch!
-    
-    @IBOutlet weak var addLabel: UILabel!
-    
     var callback : ((Bool)->())?
     
     override func awakeFromNib() {
@@ -34,7 +30,4 @@ class AddQuestionCell: UITableViewCell {
         // Configure the view for the selected state
     }
 
-    @IBAction func switchChanged(_ sender: UISwitch) {
-        callback?(sender.isOn)
-    }
 }
