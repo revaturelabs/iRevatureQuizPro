@@ -57,7 +57,7 @@ extension QuizWrapper {
         questionPoolQuestions = questionItemArray.map({CQQuizPoolQuestion(question: $0, dontEvaluate: false)})
         
         // TODO: Need someway to set name, displayOrder, isEdittedMaxQsnToDisp
-        quizPoolArray = questionPoolQuestions.map({CQQuizPool(name: quizData.title, maxQstnToDisplay: [$0].count, displayOrder: 1, quizPoolQuestions: [$0], isEdittedMaxQsnToDisp: false)})
+        quizPoolArray = [CQQuizPool(name: quizData.title, maxQstnToDisplay: questionPoolQuestions.count, displayOrder: 1, quizPoolQuestions: questionPoolQuestions, isEdittedMaxQsnToDisp: false)]
         
         return CQBody(title: quizData.title, levelId: quizData.levelId, categoryId: quizData.categoryId, noOfAttempts: quizData.noOfAttempts, passPercentage: quizData.passPercentage, mode: quizData.mode, quizPools: quizPoolArray, quizDuration: quizData.quizDuration, description: quizData.description)
         

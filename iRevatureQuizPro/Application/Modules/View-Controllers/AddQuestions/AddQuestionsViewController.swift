@@ -58,6 +58,10 @@ class AddQuestionsViewController : BaseViewController {
         for q in selectedQuestion {
             quiz!.add(question: q)
         }
+        
+        CreateQuizAPI.createNewQuiz(quiz: quiz!.toAPIFormat, completionHandler: {(leBool) in
+            print("IS COMPLETED: \(leBool)")
+        })
     }
     
     //removes all questions from array

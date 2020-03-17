@@ -37,7 +37,9 @@ class CreateQuizViewController: BaseViewController {
         if !checkAllFieldFilled() { return }
         
         let nextVC = AddQuestionsViewController.instantiate(fromAppStoryboard:AppStoryboard.AddQuestions)
-        nextVC.quiz = QuizWrapper(quizData: QuizInfo(title: quizNameTextField.text!, levelId: 0, categoryId: 0, noOfAttempts: Int(maxNumberOfAttemptsTextField.text!) ?? 0, passPercentage: 0, mode: "", quizDuration: 0, description: ""))
+        
+        nextVC.quiz = QuizWrapper(quizData: QuizInfo(title: quizNameTextField.text!, levelId: 3, categoryId: 16, noOfAttempts: Int(maxNumberOfAttemptsTextField.text!) ?? 0, passPercentage: 1, mode: "D", quizDuration: 0, description: "Lorem Ipsum"))
+        
         easyPresent(nextVC, animated: false, style: .fullScreen)
         
     }
