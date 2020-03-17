@@ -23,7 +23,7 @@ class QuizDataService {
 		let finalizeDispatch = DispatchWorkItem {
 			// in this instance I just want to print the count
 			// to be sure it actually finished retrieving all the quizzes from the api
-			print("Quiz amount = \(quizlist?.count)")
+			print("Quiz amount = \(quizlist?.count ?? 0)")
 		}
 		
 		// we tell the dispatch group we gonna start
