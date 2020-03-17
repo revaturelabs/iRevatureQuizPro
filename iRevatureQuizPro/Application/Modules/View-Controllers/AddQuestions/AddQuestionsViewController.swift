@@ -102,7 +102,7 @@ class AddQuestionsViewController : BaseViewController, UITableViewDelegate, UITa
                 return
             }
             
-            self.questions = q.map{QuestionObject(id: $0.id, title: $0.title, tags: $0.tags, questionType: $0.questionType!)}
+            self.questions = q.map{QuestionObject(id: $0.id, title: $0.title, tags: $0.tags, qsnAnswers: $0.qsnAnswers!, questionType: $0.questionType!, qsnType: $0.qsnType!, validAnswers: $0.validAnswers)}
             self.questionsTableView.reloadData()
             
         }
