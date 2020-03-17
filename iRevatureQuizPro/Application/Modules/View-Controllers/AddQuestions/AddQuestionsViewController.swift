@@ -9,7 +9,7 @@
 import UIKit
 
 //Class that controls the AddQuestions view
-class AddQuestionsViewController : BaseViewController, UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate {
+class AddQuestionsViewController : BaseViewController {
     
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var questionsPicked: UITextView!
@@ -19,7 +19,8 @@ class AddQuestionsViewController : BaseViewController, UITableViewDelegate, UITa
     var currentPage: Int = 1
     var questions: [QuestionObject] = []
     var filteredQuestions: [QuestionObject] = []
-    var questionCount = 0
+    
+    var selectedQuestionCountText = "Questions Picked: "
     var selectedQuestion: [QuestionObject] = []
     var selectedRow: Int = 0
     
@@ -34,48 +35,8 @@ class AddQuestionsViewController : BaseViewController, UITableViewDelegate, UITa
         self.questionsTableView.dataSource = self
         self.searchBar.delegate = self
         //needs to delay grabbing data or it will display empty table
-        repopulateTable()
+        //repopulateTable()
         //
-    }
-    
-    //determines the number of rows in table view
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return filteredQuestions.count
-    }
-    
-    //populates the table view with data from API
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "AddQuestionCell", for: indexPath) as! AddQuestionCell
-        var question: QuestionObject
-        
-        //no need to filter if empty anymore
-        question = filteredQuestions[indexPath.row]
-        //
-        
-        cell.titleLabel.text = "Title: \(question.title)"
-        cell.tagsLabel.text = "Tags: \(question.tags)"
-        cell.typeLabel.text = "Question Type: \(question.questionType)"
-        
-
-        cell.titleLabel.lineBreakMode = .byWordWrapping
-        cell.tagsLabel.lineBreakMode = NSLineBreakMode.byWordWrapping
-        cell.typeLabel.lineBreakMode = NSLineBreakMode.byWordWrapping
-        return cell
-    }
-    
-    //detects the row that is selected
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        selectedRow = indexPath.row
-    }
-    
-    //live filters the tableview for specified tag
-    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        
-        filteredQuestions = searchText.isEmpty ? questions : questions.filter { (Questions: QuestionObject) -> Bool in
-            return Questions.tags.range(of: searchText, options: .caseInsensitive, range: nil, locale: nil) != nil
-        }
-        
-        questionsTableView.reloadData()
     }
     
     //returns user to the create quiz view
@@ -97,24 +58,28 @@ class AddQuestionsViewController : BaseViewController, UITableViewDelegate, UITa
     //removes all questions from array
     @IBAction func removeAllButton(_ sender: Any) {
         let alert = UIAlertController(title: "Removing All Questions", message: "Are you sure you want to do this?", preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "Yes", style: .default, handler: {action in self.selectedQuestion = []}))
+        alert.addAction(UIAlertAction(title: "Yes", style: .default, handler: {action in
+            self.selectedQuestion.removeAll()
+            self.questionsPicked.text = self.selectedQuestionCountText + String(self.selectedQuestion.count)
+            
+        }))
         alert.addAction(UIAlertAction(title: "No", style: .cancel, handler: nil))
         self.present(alert, animated: true)
-        print(selectedQuestion)
     }
     
     //adds all currentlt displayed questions to quiz
     @IBAction func addAllButton(_ sender: Any) {
         for index in 0...9{
-            selectedQuestion.append(filteredQuestions[index])
-            print(selectedQuestion)
+            add(question: filteredQuestions[index])
         }
+        
+        questionsPicked.text = selectedQuestionCountText + String(selectedQuestion.count)
     }
     
     //adds single selected question to quiz
     @IBAction func addQuestionButton(_ sender: Any) {
-        selectedQuestion.append(filteredQuestions[selectedRow])
-        print(selectedQuestion)
+        add(question: filteredQuestions[selectedRow])
+        questionsPicked.text = selectedQuestionCountText + String(selectedQuestion.count)
     }
     
     //displays the next page in questions from API call
@@ -122,7 +87,7 @@ class AddQuestionsViewController : BaseViewController, UITableViewDelegate, UITa
         if currentPage > 1{
             currentPage -= 1
             getQuestions(page: currentPage)
-            repopulateTable()
+            //repopulateTable()
         }else{
             let alert = UIAlertController(title: "At Starting Page", message: "Cannot go further back a page", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "Acknowledge", style: .default, handler: nil))
@@ -134,7 +99,51 @@ class AddQuestionsViewController : BaseViewController, UITableViewDelegate, UITa
     @IBAction func nextPageButton(_ sender: Any) {
         currentPage += 1
         getQuestions(page: currentPage)
-        repopulateTable()
+        //repopulateTable()
+    }
+}
+
+extension AddQuestionsViewController: UITableViewDataSource, UITableViewDelegate {
+    //detects the row that is selected
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        selectedRow = indexPath.row
+    }
+    
+    //determines the number of rows in table view
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return filteredQuestions.count
+    }
+    
+    //populates the table view with data from API
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "AddQuestionCell", for: indexPath) as! AddQuestionCell
+        var question: QuestionObject
+        
+        //no need to filter if empty anymore
+        question = filteredQuestions[indexPath.row]
+        
+        cell.titleLabel.text = "Title: \(question.title)"
+        cell.tagsLabel.text = "Tags: \(question.tags)"
+        cell.typeLabel.text = "Question Type: \(question.questionType)"
+        
+
+        cell.titleLabel.lineBreakMode = .byWordWrapping
+        cell.tagsLabel.lineBreakMode = NSLineBreakMode.byWordWrapping
+        cell.typeLabel.lineBreakMode = NSLineBreakMode.byWordWrapping
+        return cell
+    }
+}
+
+
+extension AddQuestionsViewController: UISearchBarDelegate {
+    //live filters the tableview for specified tag
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        
+        filteredQuestions = searchText.isEmpty ? questions : questions.filter { (Questions: QuestionObject) -> Bool in
+            return Questions.tags.range(of: searchText, options: .caseInsensitive, range: nil, locale: nil) != nil
+        }
+        
+        questionsTableView.reloadData()
     }
     
     //API call to grab questions
@@ -147,6 +156,7 @@ class AddQuestionsViewController : BaseViewController, UITableViewDelegate, UITa
             self.questions = q.map{QuestionObject(id: $0.id, title: $0.title, tags: $0.tags, qsnAnswers: $0.qsnAnswers ?? [QuestionAnswer](), questionType: $0.questionType!, qsnType: $0.qsnType ?? QuestionType(id: -1, code: "", qsnType: ""), validAnswers: $0.validAnswers)}
             self.questionsTableView.reloadData()
             
+            self.repopulateTable()
         }
     }
     
@@ -157,5 +167,14 @@ class AddQuestionsViewController : BaseViewController, UITableViewDelegate, UITa
             self.questionsTableView.reloadData()
         }
     }
-    
+}
+
+extension AddQuestionsViewController {
+    func add(question: QuestionObject) {
+        for q in self.selectedQuestion {
+            if q.id == question.id { return }
+        }
+        
+        self.selectedQuestion.append(question)
+    }
 }
