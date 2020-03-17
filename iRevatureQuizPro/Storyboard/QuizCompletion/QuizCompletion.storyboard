@@ -10,7 +10,7 @@
         <!--Quiz Completion View Controller-->
         <scene sceneID="nof-kg-iVN">
             <objects>
-                <viewController id="9vd-QH-KJ2" customClass="QuizCompletionViewController" customModule="iRevatureQuizPro" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="QuizCompletionViewController_ID" id="9vd-QH-KJ2" customClass="QuizCompletionViewController" customModule="iRevatureQuizPro" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="AzA-7X-tO5">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

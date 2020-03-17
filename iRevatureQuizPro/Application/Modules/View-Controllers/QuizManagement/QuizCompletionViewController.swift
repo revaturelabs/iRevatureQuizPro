@@ -26,29 +26,34 @@ class QuizCompletionViewController: BaseViewController {
 	// May need to use viewDidAppear instead of load to ensure these are set after results is called
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		
-		labelPercentScore.text = "\(score) %"
-		
-		// Use a ternary operator to avoid DRY fault
-		if score < minimumscore {
-			labelCompletionPass.isHidden = true
-			labelCompletionFail.isHidden = false
-		}
-		else {
-			labelCompletionPass.isHidden = true
-			labelCompletionFail.isHidden = false
-		}
-		
+		updateDisplays()
 	}
 	
 	@IBAction func returnHome(_ sender: UIButton!) {
 		// Send to home storyboard/page
 		// Need to free resources after the call
+		dismiss(animated: true, completion: nil)
 	}
 	
 	func results(score: Float, minimumscore: Float, title: String) {
 		self.score = score
 		self.minimumscore = minimumscore
 		self.quiztitle = title
+
+	}
+	
+	func updateDisplays() {
+		// Use a ternary operator to avoid DRY fault
+		if score < minimumscore {
+			labelCompletionPass.isHidden = true
+			labelCompletionFail.isHidden = false
+		}
+		else {
+			labelCompletionPass.isHidden = false
+			labelCompletionFail.isHidden = true
+		}
+		
+		labelPercentScore.text = "\(score) %"
+		labelQuizTitle.text = title
 	}
 }
