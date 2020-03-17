@@ -17,11 +17,15 @@ class MultipleChoiceQuestionViewController: BaseViewController {
     @IBOutlet weak var questionTextView: UITextView!
     
     @IBOutlet weak var answerTableView: UITableView!
+    private let tableController = MultipleChoiceQuestionTableController()
     
     override func viewDidLoad() {
         // Your coce here
         timerLabel.setTimer(duration: 45)
         timerLabel.runTimer()
+        
+        answerTableView.dataSource = tableController
+        answerTableView.delegate = tableController
     }
     
     @IBAction func previousQuestionAction(_ sender: Any) {
