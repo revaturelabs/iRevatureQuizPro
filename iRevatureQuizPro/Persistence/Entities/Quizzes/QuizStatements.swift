@@ -31,6 +31,10 @@ extension PQuiz {
         //Select Statement
         var select = ESLSelectStatement()
 		select.specifyColumn(table: PQuiz.table, columnName: PQuiz.ColumnName.id.rawValue, asName: PQuiz.ColumnName.id.rawValue)
+		select.specifyColumn(table: PQuiz.table, columnName: PQuiz.ColumnName.title.rawValue, asName: PQuiz.ColumnName.title.rawValue)
+		select.specifyColumn(table: PQuiz.table, columnName: PQuiz.ColumnName.description.rawValue, asName: PQuiz.ColumnName.description.rawValue)
+		select.specifyColumn(table: PQuiz.table, columnName: PQuiz.ColumnName.metaTags.rawValue, asName: PQuiz.ColumnName.metaTags.rawValue)
+		select.specifyColumn(table: PQuiz.table, columnName: PQuiz.ColumnName.categoryName.rawValue, asName: PQuiz.ColumnName.categoryName.rawValue)
         
         //Where Statement
         var `where` =  ESLWhereStatement()
@@ -61,7 +65,7 @@ extension PQuiz {
 //=====================================
     //Insert Row Statement
 //=====================================
-    // Function takes a BQuiz object from the Business Layer. There are 6 fields that are .NOTNULL contraint which need to be checked during the API call conversion between the two calls -> business entity struct. By this point they shouldn't require any authentication/verification.
+    // Function takes a BQuiz object from the Business Layer. This struct is assembled prior in the business class itself.
     static func insertStatement(quizobject: BQuiz) -> ESLInsertStatement {
         
         var insert = ESLInsertStatement(table: PQuiz.table)
@@ -71,9 +75,7 @@ extension PQuiz {
 		insert.specifyValue(columnName: PQuiz.ColumnName.description.rawValue, columnValue: quizobject.description)
 		insert.specifyValue(columnName: PQuiz.ColumnName.metaTags.rawValue, columnValue: quizobject.metaTags ?? "none_given")
 		insert.specifyValue(columnName: PQuiz.ColumnName.categoryName.rawValue, columnValue: quizobject.categoryName)
-        
-//		insert.specifyValue(columnName: PQuiz.ColumnName.quiz_id.rawValue,                          columnValue: quizobject.quiz_id)
-//
+
         return insert
     }
     
@@ -98,9 +100,8 @@ extension PQuiz {
 //=====================================
     static func updateByStatement(quizobject: BQuiz) -> ESLUpdateStatement {
         //Update Statement
-        var update = ESLUpdateStatement(table: PQuiz.table)
+		var update = ESLUpdateStatement(table: PQuiz.table)
 		
-		update.addValueChange(columnToUpdate: PQuiz.ColumnName.id.rawValue, updatedValue: quizobject.id)
 		update.addValueChange(columnToUpdate: PQuiz.ColumnName.title.rawValue, updatedValue: quizobject.title)
 		update.addValueChange(columnToUpdate: PQuiz.ColumnName.description.rawValue, updatedValue: quizobject.description)
 		update.addValueChange(columnToUpdate: PQuiz.ColumnName.metaTags.rawValue, updatedValue: quizobject.metaTags ?? "none_given")

@@ -66,5 +66,20 @@ extension PQuiz {
         
         return true
     }
+	
+	
+	//=====================================
+	// Update a Quiz Row
+	//=====================================
+	static func update(bquiz: BQuiz) -> Bool {
+		let update = updateByStatement(quizobject: bquiz)
+		
+		if !Database.updateRow(withUpdateStatement: update) {
+			os_log(DatabaseErrorMessage.delete, log: OSLog.default, type: .error, PQuiz.tableName)
+			return false
+		}
+		
+		return true
+	}
     
 }
