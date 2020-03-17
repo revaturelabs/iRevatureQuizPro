@@ -43,7 +43,7 @@ class MultipleChoiceQuestionViewController: BaseViewController {
 
         currentQuestionLabel.text = String("\(questionIndex + 1)")
         
-        questionTextView.text = question?.title
+        questionTextView.text = question?.question
 
         
         answerTableView.dataSource = tableController

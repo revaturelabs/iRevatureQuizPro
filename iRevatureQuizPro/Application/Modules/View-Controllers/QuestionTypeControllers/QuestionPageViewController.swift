@@ -9,10 +9,28 @@
 import UIKit
 
 //Temporary struct, represents what the question should need to be displayed
-public struct Question{
+public struct Quiz {
     var title: String
-    var answers: [String]
+    var questions: [String]
+    var duration: Int
 }
+
+public struct Question{
+    var question: String
+    var answers: [String]
+//    var isAnswered: Bool
+//    var numCorrect: Int
+//    var correctAnswer: Int
+//
+//    var totalQuestionsAnswered: Float
+}
+
+public struct Answer {
+    var answer: String
+    var isCorrect: Bool
+    var isSelected: Bool
+}
+
 
 class QuestionPageViewController: UIPageViewController{
     
@@ -25,9 +43,9 @@ class QuestionPageViewController: UIPageViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        questionList?.append(Question(title: "Hello World?", answers: ["True","False"]))
+        questionList?.append(Question(question: "Hello World?", answers: ["True","False"]))
         
-        questionList?.append(Question(title: "Second Question?", answers: ["True","False"]))
+        questionList?.append(Question(question: "Second Question?", answers: ["True","False"]))
             
         self.dataSource = self
         
@@ -89,11 +107,13 @@ extension QuestionPageViewController: UIPageViewControllerDataSource {
         
         var index = content.questionIndex
         
-        if index == NSNotFound{
+        
+        index += 1
+        
+        if index == questionList?.count{
             return getViewControllerAtIndex(index: 0)
         }
         
-        index += 1
         
         return getViewControllerAtIndex(index: index)
     }
