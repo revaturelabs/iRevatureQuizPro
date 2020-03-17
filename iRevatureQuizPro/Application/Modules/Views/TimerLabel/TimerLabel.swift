@@ -12,11 +12,16 @@ import UIKit
 class LabelTimer: UILabel{
     
     var timer = Timer()
-    var timeLeft: Int = 0
+    var timeLeft: Float = 0
     
     //sets the duration of the timer in minutes
-    func setTimer(duration: Int){
-        timeLeft = duration * 60
+    func setTimer(with duration: Int){
+        timeLeft = Float(duration * 60)
+    }
+    
+    //overloaded to make it easier to display timer on next screen
+    func setTimer(with duration: Float){
+        timeLeft = duration.rounded() * 60
     }
     
     //starts the timer and repeats counting
@@ -39,6 +44,11 @@ class LabelTimer: UILabel{
         let minutes = Int(timeLeft) / 60 % 60
         let seconds = Int(timeLeft) % 60
         return String(format:"%02i:%02i", minutes, seconds)
+    }
+    
+    //grabs the time left
+    func getTimeLeft() -> Float {
+        return Float(timeLeft)
     }
     
 }
