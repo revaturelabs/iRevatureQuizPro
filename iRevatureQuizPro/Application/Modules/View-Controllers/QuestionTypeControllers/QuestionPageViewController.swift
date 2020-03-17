@@ -9,15 +9,34 @@
 import UIKit
 
 //Temporary struct, represents what the question should need to be displayed
-public struct Question{
+public struct Quiz {
     var title: String
-    var answers: [String]
+    var questions: [String]
+    var duration: Int
 }
+
+public struct Question{
+    var question: String
+    var answers: [String]
+//    var isAnswered: Bool
+//    var numCorrect: Int
+//    var correctAnswer: Int
+//
+//    var totalQuestionsAnswered: Float
+}
+
+public struct Answer {
+    var answer: String
+    var isCorrect: Bool
+    var isSelected: Bool
+}
+
 
 class QuestionPageViewController: UIPageViewController{
     
     // Current question user is on
     public var questionIndex: Int?
+    
     public var answerIndex: [String : Int] = [:]
     // List of questions
     public var questionList: [Question]? = []
@@ -25,9 +44,9 @@ class QuestionPageViewController: UIPageViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        questionList?.append(Question(title: "Hello World?", answers: ["True","False"]))
+        questionList?.append(Question(question: "Hello World?", answers: ["True","False"]))
         
-        questionList?.append(Question(title: "Second Question?", answers: ["True","False"]))
+        questionList?.append(Question(question: "Second Question?", answers: ["True","False"]))
             
         self.dataSource = self
         
@@ -87,14 +106,18 @@ extension QuestionPageViewController: UIPageViewControllerDataSource {
         // Instance of the storyboard that is going to be displayed
         let content: MultipleChoiceQuestionViewController = viewController as! MultipleChoiceQuestionViewController
         
+        // Updates to the current index
         var index = content.questionIndex
         
-        if index == NSNotFound{
+        // Updates the index
+        index += 1
+        
+        // Checks if it is out of bounds, to then send you back to the begining of the quiz
+        if index == questionList?.count{
             return getViewControllerAtIndex(index: 0)
         }
         
-        index += 1
-        
+        // If not out of bounds give you the next question
         return getViewControllerAtIndex(index: index)
     }
     
