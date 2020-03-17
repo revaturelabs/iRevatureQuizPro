@@ -46,4 +46,32 @@ extension QuizWrapper {
     var getAllQuestions: [QuestionObject] {
         return questions
     }
+    
+    func getQuestionBy(id: Int) -> QuestionObject? {
+        for q in self.questions {
+            if q.id == id { return q }
+        }
+        
+        return nil
+    }
+    
+    func getQuestionsBy(tag: String) -> [QuestionObject] {
+        var questionHolder = [QuestionObject]()
+        
+        for q in self.questions {
+            if q.tags == tag { questionHolder.append(q) }
+        }
+        
+        return questionHolder
+    }
+    
+    func getQuestionsBy(type: String) -> [QuestionObject] {
+        var questionHolder = [QuestionObject]()
+        
+        for q in self.questions {
+            if q.questionType == type { questionHolder.append(q) }
+        }
+        
+        return questionHolder
+    }
 }

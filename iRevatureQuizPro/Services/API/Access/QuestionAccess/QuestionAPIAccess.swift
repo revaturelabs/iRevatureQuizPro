@@ -14,9 +14,9 @@ import os.log
 class QuestionAPIAccess {
     
     //endpoint for get all questions
-    static private let allEndpoint = "https://dev3-ms.revature.com/apigateway/quiz/secure/questions"
+//    static private let allEndpoint = "https://dev3-ms.revature.com/apigateway/quiz/secure/questions"
     //endpoint for get questions by ID
-    static private let endpointByID = "https://dev3-ms.revature.com/apigateway/quiz/secure/question/"
+//    static private let endpointByID = "https://dev3-ms.revature.com/apigateway/quiz/secure/question/"
     
     //function to get all questions using size and page
     static func getAllQuestions(size: Int, page: Int, completionHandler: @escaping ([QuestionData]?, Bool?) -> Void) {
@@ -26,7 +26,7 @@ class QuestionAPIAccess {
         let header = API.getHTTPHeader()
         
         AF.request(
-            allEndpoint,
+            APIEndpoint.allQuestions,
             method: .post,
             parameters: body,
             encoder: JSONParameterEncoder.default,
@@ -55,7 +55,7 @@ class QuestionAPIAccess {
     //function to get questions using ID
     static func getQuestionByID(id: Int, completionHandler: @escaping (QuestionData?, Bool?) -> Void) {
         //append id to endpoint for request
-        let endpoint = endpointByID + String(id)
+        let endpoint = APIEndpoint.question + String(id)
         //get header for API request
         let header = API.getHTTPHeader()
         

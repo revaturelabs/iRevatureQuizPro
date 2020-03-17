@@ -12,5 +12,5 @@ import Foundation
 //struct for quizPoolQuestions key to create new quiz
 struct CQQuizPoolQuestion: Encodable {
     var question: CQQuestionItem
-    var dontEvaluate: Bool
+    var dontEvaluate = false
 }

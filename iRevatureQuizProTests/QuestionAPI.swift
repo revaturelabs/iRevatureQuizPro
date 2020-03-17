@@ -116,7 +116,9 @@ class QuestionAPITest: XCTestCase {
         let cqQuizPool = CQQuizPool(name: "iRevatureQuizPro", maxQstnToDisplay: 1, displayOrder: 1, quizPoolQuestions: [cqQuizPoolQuestion], isEdittedMaxQsnToDisp: false)
         
         //change title to test again
-        let quiz = CQBody(title: "iRevatureQuizPro Test", levelId: 3, categoryId: 16, noOfAttempts: 1, passPercentage: 70, mode: "D", preSignupFlag: false, dashboardFlag: false, overrideFlag: false, quizPools: [cqQuizPool], isActive: true, isStickyEnabled: false, isImageUploaded: false, quizDuration: 120, isDurationOverridden: false, isPublic: true, description: "Test", enableSaveResume: false, displayCorrectAnswerWhenPassed: true, displayCorrectAnswerWhenFailed: true, isReviewEnabled: true, showWhetherCorrect: true, displayScore: true, timerEnable: true, showExplanation: true, shuffleQsn: true, shuffleAns: true, iconDeleted: true, updatedTotalRecords: true)
+//        let quiz = CQBody(title: "iRevatureQuizPro Test1.1", levelId: 3, categoryId: 16, noOfAttempts: 1, passPercentage: 70, mode: "D", preSignupFlag: false, dashboardFlag: false, overrideFlag: false, quizPools: [cqQuizPool], isActive: true, isStickyEnabled: false, isImageUploaded: false, quizDuration: 120, isDurationOverridden: false, isPublic: true, description: "Test", enableSaveResume: false, displayCorrectAnswerWhenPassed: true, displayCorrectAnswerWhenFailed: true, isReviewEnabled: true, showWhetherCorrect: true, displayScore: true, timerEnable: true, showExplanation: true, shuffleQsn: true, shuffleAns: true, iconDeleted: true, updatedTotalRecords: true)
+        
+        let quiz = CQBody(title: "iRevatureQuizPro Test1", levelId: 3, categoryId: 16, noOfAttempts: 1, passPercentage: 70, mode: "D", quizPools: [cqQuizPool], quizDuration: 120, description: "Test")
         
         CreateQuizAPI.createNewQuiz(quiz: quiz) { (didCreate) in
             didPass = didCreate

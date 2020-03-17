@@ -53,7 +53,7 @@ class QuizAPI {
 	// API call returns a single QuizID object
 	static func getQuizById(quizId: Int, finish: @escaping (APIQuizByIDResults) -> Void) {
 		
-		let quizData = QuizBody(size: 1, page: 1, sortOrder: "desc", orderBy: "createdName", subscribedContent: false, publicContent: false, ownContent: false, isOrdered: false)
+//		let quizData = QuizBody(size: 1, page: 1, sortOrder: "desc", orderBy: "createdName", subscribedContent: false, publicContent: false, ownContent: false, isOrdered: false)
 		
 		let header = API.getHTTPHeader()
 		
@@ -62,9 +62,9 @@ class QuizAPI {
 		
 		AF.request(
 			endpointForSingleID,
-			method: .get,
-			parameters: quizData,
-			encoder: JSONParameterEncoder.default,
+//			method: .get,
+//			parameters: quizData,
+//			encoder: JSONParameterEncoder.default,
 			headers: header
 		).validate().responseDecodable(of: APIQuizByIDResults.self) {
 			(response) in
