@@ -12,7 +12,6 @@ import UIKit
 public struct Question{
     var title: String
     var answers: [String]
-    var duration: Int
 }
 
 class QuestionPageViewController: UIPageViewController{
@@ -26,7 +25,9 @@ class QuestionPageViewController: UIPageViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        questionList?.append(Question(title: "Hello World?", answers: ["True","False"], duration: 1))
+        questionList?.append(Question(title: "Hello World?", answers: ["True","False"]))
+        
+        questionList?.append(Question(title: "Second Question?", answers: ["True","False"]))
             
         self.dataSource = self
         
