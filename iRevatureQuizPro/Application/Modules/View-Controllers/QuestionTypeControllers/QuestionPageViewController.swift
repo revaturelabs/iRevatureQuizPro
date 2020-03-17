@@ -8,12 +8,6 @@
 
 import UIKit
 
-//Temporary struct, represents what the question should need to be displayed
-public struct Question{
-    var title: String
-    var answers: [String]
-}
-
 class QuestionPageViewController: UIPageViewController{
     
     // Current question user is on
