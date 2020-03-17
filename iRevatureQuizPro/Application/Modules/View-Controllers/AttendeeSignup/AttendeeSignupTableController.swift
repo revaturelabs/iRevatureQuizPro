@@ -8,53 +8,54 @@
 
 import UIKit
 
-class AttendeeSignupTableController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class AttendeeSignupTableController: UITableViewController {
     
-    private let inputFieldNames: [String] = ["First Name",
-                                             "Last Name",
-                                             "Email",
-                                             "Phone Number",
-                                             "Major",
-                                             "Highest Level of Education",
-                                             "Work Authorization"]
-    
+    //Hold reference to all the cells in the table to get data from later
     private var cells: [String : AttendeeSignupTableCell] = [String : AttendeeSignupTableCell]()
 
-    //Table funcs
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return inputFieldNames.count
+    //Set how many cells are going to be in the table
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return AttendeeSignupFields.allFields.count
     }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    //Setup cells in table
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: AttendeeSignupTableCell.cellIdentifier, for: indexPath) as! AttendeeSignupTableCell
         
-        cell.setTextInput(name: "\(inputFieldNames[indexPath.row])*")
-        if inputFieldNames[indexPath.row] == "Email" {
-            cell.setKeyboard(keyboardType: .emailAddress)
-        }
-        if inputFieldNames[indexPath.row] == "Phone Number" {
-            cell.setKeyboard(keyboardType: .numberPad)
+        cell.setTextInput(name: "\(AttendeeSignupFields.allFields[indexPath.row].text)*")
+        cell.setKeyboard(keyboardType: AttendeeSignupFields.allFields[indexPath.row].keyboardType)
+        
+        if AttendeeSignupFields.allFields[indexPath.row].pickerValues.count > 0 {
+            cell.setTextInputAsPicker(pickerValues: AttendeeSignupFields.allFields[indexPath.row].pickerValues)
         }
         
-        cells[inputFieldNames[indexPath.row]] = cell
+        cells[AttendeeSignupFields.allFields[indexPath.row].text] = cell
         
         return cell
     }
     
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+    //Set height for each cell
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return AttendeeSignupTableCell.cellHeight
     }
     
-    //Data func
+    //Get data from cells
     func getInputData() -> BEventAttendeeSignUpInputData? {
         var signUpInput = BEventAttendeeSignUpInputData()
         
-        for index in 0...6 {
-            guard let value = cells[inputFieldNames[index]]?.getInput() else { return nil }
+        for index in 0...AttendeeSignupFields.allFields.count - 1 {
+            guard let value = cells[AttendeeSignupFields.allFields[index].text]?.getInput() else { return nil }
+            if AttendeeSignupFields.allFields[index].text == AttendeeSignupFields.Email.text && !isValidEmail(value) { return nil }
             if !signUpInput.input(atIndex: index, value: value) { return nil }
         }
         
         return signUpInput
+    }
+    
+    func isValidEmail(_ email: String) -> Bool {
+        let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
+        let emailPred = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
+        return emailPred.evaluate(with: email)
     }
         
 }

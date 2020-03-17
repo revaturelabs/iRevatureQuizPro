@@ -30,6 +30,7 @@ extension BEventAttendeeInfo {
     }
 }
 
+//Used to assign input from Attendee Signup table
 struct BEventAttendeeSignUpInputData {
     var firstName: String?
     var lastName: String?
@@ -39,6 +40,7 @@ struct BEventAttendeeSignUpInputData {
     var highestEducation: String?
     var workAuthorization: String?
     
+    //Custom function to allow for iteration over data in struct
     mutating func input(atIndex: Int, value: String) -> Bool {
         switch atIndex {
         case 0:

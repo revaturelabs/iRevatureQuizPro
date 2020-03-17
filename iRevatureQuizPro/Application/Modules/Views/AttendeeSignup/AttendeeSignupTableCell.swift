@@ -12,21 +12,24 @@ import Foundation
 class AttendeeSignupTableCell: UITableViewCell {
 
     static let cellIdentifier: String = "attendeeSignupTableCell"
-    static let cellHeight: CGFloat = 44
+    static let cellHeight: CGFloat = 70
     
     @IBOutlet private var textInput: UITextField!
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
 
     func setTextInput(name: String) {
         textInput.placeholder = name
     }
     
+    func setTextInputAsPicker(pickerValues: [String]) {
+        textInput.pickerSelector(data: pickerValues)
+    }
+    
     func getInput() -> String? {
-        return textInput.text
+        return textInput.text != "" ? textInput.text : nil
     }
     
     func setKeyboard(keyboardType: UIKeyboardType) {

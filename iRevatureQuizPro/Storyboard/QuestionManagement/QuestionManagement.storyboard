@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Questions-->
+        <scene sceneID="7Ki-fh-cNR">
+            <objects>
+                <viewController storyboardIdentifier="QuestionManagement_ID" id="B76-t9-Nr2" customClass="QuestionManagementViewController" customModule="iRevatureQuizPro" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="I6p-j2-re6">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="agP-oc-7pn">
+                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                <color key="barTintColor" red="1" green="0.37647058820000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <color key="textColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                </textAttributes>
+                                <textAttributes key="largeTitleTextAttributes">
+                                    <color key="textColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="Questions" id="9wl-gi-Vkg">
+                                        <barButtonItem key="leftBarButtonItem" title="Previous Page" id="phF-3f-OAX">
+                                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <connections>
+                                                <action selector="previousPageButton:" destination="B76-t9-Nr2" id="PF3-VW-Gat"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" title="Next Page" id="gl3-Ve-188">
+                                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <connections>
+                                                <action selector="nextPageButton:" destination="B76-t9-Nr2" id="pLc-vO-qAM"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleAspectFit" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="160" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ptB-vd-H5M">
+                                <rect key="frame" x="20" y="158" width="374" height="634"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="374" id="azu-dH-XYh"/>
+                                </constraints>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="QuestionCell" rowHeight="170" id="d7Y-nx-uM8" customClass="QuestionTableViewCell" customModule="iRevatureQuizPro" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="374" height="170"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="d7Y-nx-uM8" id="lWO-wS-Tvc">
+                                            <rect key="frame" x="0.0" y="0.0" width="374" height="170"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Tags" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JfK-vA-zM8">
+                                                    <rect key="frame" x="14" y="80" width="346" height="40"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Question Type" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lzp-De-DLj">
+                                                    <rect key="frame" x="14" y="128" width="354" height="20"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="tBT-XH-aRH">
+                                                    <rect key="frame" x="14" y="2" width="346" height="70"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="20"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="TitleLabel" destination="tBT-XH-aRH" id="mg7-8y-Hhw"/>
+                                            <outlet property="questionTypeLabel" destination="Lzp-De-DLj" id="J2d-Pd-z5J"/>
+                                            <outlet property="tagLabel" destination="JfK-vA-zM8" id="LVU-yG-lhO"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <searchBar contentMode="redraw" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OUm-2j-wys">
+                                <rect key="frame" x="0.0" y="100" width="414" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="4a2-4c-zMI" firstAttribute="bottom" secondItem="ptB-vd-H5M" secondAttribute="bottom" constant="21" id="OZX-RM-bjT"/>
+                            <constraint firstItem="OUm-2j-wys" firstAttribute="leading" secondItem="4a2-4c-zMI" secondAttribute="leading" id="Uhh-Pq-YFb"/>
+                            <constraint firstItem="agP-oc-7pn" firstAttribute="top" secondItem="4a2-4c-zMI" secondAttribute="top" id="VOO-Lx-HXM"/>
+                            <constraint firstItem="4a2-4c-zMI" firstAttribute="trailing" secondItem="ptB-vd-H5M" secondAttribute="trailing" constant="20" id="bKR-qp-zIb"/>
+                            <constraint firstItem="ptB-vd-H5M" firstAttribute="leading" secondItem="4a2-4c-zMI" secondAttribute="leading" constant="20" id="dGJ-Q5-Izf"/>
+                            <constraint firstItem="agP-oc-7pn" firstAttribute="trailing" secondItem="4a2-4c-zMI" secondAttribute="trailing" id="gEh-Kt-ozW"/>
+                            <constraint firstItem="ptB-vd-H5M" firstAttribute="top" secondItem="OUm-2j-wys" secondAttribute="bottom" constant="13" id="kkC-KG-ebL"/>
+                            <constraint firstItem="OUm-2j-wys" firstAttribute="top" secondItem="agP-oc-7pn" secondAttribute="bottom" constant="8" id="qhj-FN-m4K"/>
+                            <constraint firstItem="agP-oc-7pn" firstAttribute="leading" secondItem="4a2-4c-zMI" secondAttribute="leading" id="tL9-kd-qoV"/>
+                            <constraint firstItem="OUm-2j-wys" firstAttribute="trailing" secondItem="4a2-4c-zMI" secondAttribute="trailing" id="x3v-eP-a9r"/>
+                            <constraint firstItem="ptB-vd-H5M" firstAttribute="top" secondItem="OUm-2j-wys" secondAttribute="bottom" constant="13" id="yxn-lV-IAW"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="4a2-4c-zMI"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Questions" image="questions_icon_on" id="SBj-77-GNk"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="QuestionTableView" destination="ptB-vd-H5M" id="qlP-K9-k7D"/>
+                        <outlet property="questionSearchBar" destination="OUm-2j-wys" id="vqO-pa-Thm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XHX-Nd-8Ry" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-49.275362318840585" y="33.482142857142854"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="questions_icon_on" width="48" height="48"/>
+    </resources>
+</document>

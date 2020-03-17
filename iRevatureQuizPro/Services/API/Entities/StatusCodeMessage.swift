@@ -14,11 +14,13 @@ class StatusCodeMessage {
         if code == 400 {
             return "400: Bad request"
         } else if code == 401 {
-            return "401: Invalid email or password"
+            return "401: Unauthorized"
         } else if code == 404 {
             return "404: Not found"
-        }else if code == 422 {
-            return "422: Missing mandatory fields"
+        } else if code == 422 {
+            return "422: Unprocessable Entity"
+        } else if code == 504 {
+            return "504: Gateway Timeout"
         } else if code >= 500 && code < 600 {
             return "Server Error"
         } else {
