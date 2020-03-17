@@ -52,6 +52,4 @@ class MainStoryBoardViewController: BaseViewController {
         
 
     }
-    
-    
 }

@@ -17,6 +17,13 @@ class MultipleChoiceQuestionViewController: BaseViewController {
     @IBOutlet weak var questionTextView: UITextView!
     
     @IBOutlet weak var answerTableView: UITableView!
+    private let tableController = MCQuestionTableController()
+    
+    let answers = [
+        QuestionAnswer(id: 123, answer: "Answer 1", explanation: "", order: 1, correct: false, sticky: false),
+        QuestionAnswer(id: 132, answer: "Answer 2", explanation: "", order: 2, correct: true, sticky: false),
+        QuestionAnswer(id:987, answer: "Some Answer", explanation: "", order: 3, correct: false, sticky: false)
+    ]
     
     // Question object to be displayed
     var question: Question?
@@ -30,7 +37,10 @@ class MultipleChoiceQuestionViewController: BaseViewController {
         timerLabel.setTimer(duration: 45)
         timerLabel.runTimer()
         
+        tableController.setAnswers(answers: answers)
         
+        answerTableView.dataSource = tableController
+        answerTableView.delegate = tableController
     }
     
     @IBAction func previousQuestionAction(_ sender: Any) {
