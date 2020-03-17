@@ -30,6 +30,12 @@ class MultipleChoiceQuestionViewController: BaseViewController {
         timerLabel.setTimer(duration: 45)
         timerLabel.runTimer()
         
+        currentQuestionLabel.text = String(questionIndex)
+        
+        questionTextView.text = question?.title
+        
+        
+        
         
     }
     

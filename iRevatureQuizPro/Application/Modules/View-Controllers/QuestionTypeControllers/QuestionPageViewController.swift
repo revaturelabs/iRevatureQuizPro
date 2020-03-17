@@ -19,7 +19,7 @@ class QuestionPageViewController: UIPageViewController{
     
     // Current question user is on
     public var questionIndex: Int?
-    
+    public var answerIndex: [String : Int] = [:]
     // List of questions
     public var questionList: [Question]? = []
     
@@ -27,7 +27,10 @@ class QuestionPageViewController: UIPageViewController{
         super.viewDidLoad()
         
         questionList?.append(Question(title: "Hello World?", answers: ["True","False"], duration: 1))
+            
+        self.dataSource = self
         
+        self.setViewControllers([getViewControllerAtIndex(index: questionIndex ?? 0)] as [UIViewController], direction: UIPageViewController.NavigationDirection.forward, animated: false, completion: nil)
     }
     
     // Grabs a reference to the MultChoiceVC and updates the question it currently displays
