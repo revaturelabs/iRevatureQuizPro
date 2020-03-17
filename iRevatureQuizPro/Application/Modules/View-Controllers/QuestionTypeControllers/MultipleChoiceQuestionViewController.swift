@@ -18,10 +18,19 @@ class MultipleChoiceQuestionViewController: BaseViewController {
     
     @IBOutlet weak var answerTableView: UITableView!
     
+    // Question object to be displayed
+    var question: Question?
+    
+    var questionIndex: Int = 0
+    
     override func viewDidLoad() {
-        // Your coce here
+        super.viewDidLoad()
+        
+        // Configures timer to a number of minutes
         timerLabel.setTimer(duration: 45)
         timerLabel.runTimer()
+        
+        
     }
     
     @IBAction func previousQuestionAction(_ sender: Any) {
