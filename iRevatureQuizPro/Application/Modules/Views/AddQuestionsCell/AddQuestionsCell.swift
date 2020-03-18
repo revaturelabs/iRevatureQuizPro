@@ -17,5 +17,17 @@ class AddQuestionCell: UITableViewCell {
     
     @IBOutlet weak var tagsLabel: UILabel!
     
-    @IBOutlet weak var addQuestionSwitch: UISwitch!
+    var callback : ((Bool)->())?
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        // Initialization code
+    }
+
+    override func setSelected(_ selected: Bool, animated: Bool) {
+        super.setSelected(selected, animated: animated)
+
+        // Configure the view for the selected state
+    }
+
 }
