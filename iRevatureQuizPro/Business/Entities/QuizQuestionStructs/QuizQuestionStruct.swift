@@ -26,6 +26,7 @@ public struct Question{
         }
     }
 }
+
 public struct Answer {
     var answer: String
     var isCorrect: Bool
