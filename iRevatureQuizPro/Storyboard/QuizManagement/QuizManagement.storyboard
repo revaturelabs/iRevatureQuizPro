@@ -75,7 +75,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quiz Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sEz-pS-NWW">
-                                                    <rect key="frame" x="20" y="11" width="265" height="23"/>
+                                                    <rect key="frame" x="20" y="11" width="346" height="23"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="346" id="VBm-YR-ksH"/>
                                                         <constraint firstAttribute="width" secondItem="sEz-pS-NWW" secondAttribute="height" multiplier="265:23" constant="81" id="tjX-P0-1aP"/>
@@ -173,6 +173,7 @@
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="quizSearchBar" destination="OB3-yk-dc0" id="EJu-Qv-Jii"/>
+                        <outlet property="tableQuizPreviews" destination="RfF-JD-amZ" id="faV-0P-KTa"/>
                         <outlet property="tableViewQuizzes" destination="RfF-JD-amZ" id="DIj-cG-XUx"/>
                     </connections>
                 </viewController>
