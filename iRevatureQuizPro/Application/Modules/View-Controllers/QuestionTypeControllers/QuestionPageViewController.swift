@@ -8,30 +8,6 @@
 
 import UIKit
 
-//Temporary struct, represents what the question should need to be displayed
-public struct Quiz {
-    var title: String
-    var questions: [String]
-    var duration: Int
-}
-
-public struct Question{
-    var question: String
-    var answers: [String]
-//    var isAnswered: Bool
-//    var numCorrect: Int
-//    var correctAnswer: Int
-//
-//    var totalQuestionsAnswered: Float
-}
-
-public struct Answer {
-    var answer: String
-    var isCorrect: Bool
-    var isSelected: Bool
-}
-
-
 class QuestionPageViewController: UIPageViewController{
     
     // Current question user is on
@@ -43,10 +19,10 @@ class QuestionPageViewController: UIPageViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        questionList?.append(Question(question: "question 1", answers: [], isAnswered: false, numCorrect: 1, correctAnswer: 1))
         
-        questionList?.append(Question(question: "Hello World?", answers: ["True","False"]))
-        
-        questionList?.append(Question(question: "Second Question?", answers: ["True","False"]))
+        questionList?.append(Question(question: "question 2", answers: [], isAnswered: false, numCorrect: 1, correctAnswer: 1))
             
         self.dataSource = self
         

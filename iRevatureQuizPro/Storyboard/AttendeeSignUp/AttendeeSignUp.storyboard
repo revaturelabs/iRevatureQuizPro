@@ -29,14 +29,12 @@
                                 </textAttributes>
                                 <items>
                                     <navigationItem title="Attendee Sign Up" id="ond-m6-WBl">
-                                        <barButtonItem key="leftBarButtonItem" style="plain" id="wuT-B0-38X">
-                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="qs3-XV-q0h">
+                                        <barButtonItem key="leftBarButtonItem" id="wuT-B0-38X">
+                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" id="qs3-XV-q0h">
                                                 <rect key="frame" x="20" y="11" width="20" height="22"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="tintColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                                                <state key="normal" image="arrow.left" catalog="system">
-                                                    <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                                                </state>
+                                                <state key="normal" image="arrow.left" catalog="system"/>
                                                 <connections>
                                                     <action selector="backButton:" destination="zG6-Ho-IqZ" eventType="touchDown" id="rNt-YB-nXa"/>
                                                 </connections>
