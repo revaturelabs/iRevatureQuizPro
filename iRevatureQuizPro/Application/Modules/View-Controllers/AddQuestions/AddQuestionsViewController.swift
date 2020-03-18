@@ -50,6 +50,8 @@ class AddQuestionsViewController : BaseViewController {
     
     //not used but in might be in later updates
     @IBAction func moreOptions(_ sender: Any) {
+        let nextVC = EmployeeLoginViewController.instantiate(fromAppStoryboard: AppStoryboard.EmployeeLogin)
+        easyPresent(nextVC, animated: true, style: .fullScreen)
     }
     
     //adds single selected question to quiz
