@@ -9,16 +9,16 @@
 import Foundation
 
 //Struct for the data from taking the quiz
-public struct TakeQuizQuiz {
+public struct Quiz {
     var title: String
-    var questions: [TakeQuizQuestion]
+    var questions: [Question]
     var duration: Int
 }
 
 //Struct that contains the question info for taking the quiz
-public struct TakeQuizQuestion{
+public struct Question{
     var question: String
-    var answers: [TakeQuizAnswer]
+    var answers: [Answer]
     var isAnswered: Bool
     var correctAnswer: Int {
         get {
@@ -50,7 +50,7 @@ public struct TakeQuizQuestion{
 }
 
 //Struct that contains the answer key for taking the quiz
-public struct TakeQuizAnswer {
+public struct Answer {
     var answer: String
     var isCorrect: Bool
     var isSelected: Bool
