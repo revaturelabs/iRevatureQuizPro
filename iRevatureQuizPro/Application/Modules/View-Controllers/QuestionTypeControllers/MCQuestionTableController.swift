@@ -10,9 +10,9 @@ import UIKit
 
 class MCQuestionTableController: UITableViewController {
     
-    private var answers = [TakeQuizAnswer]()
+    private var answers = [QuestionAnswer]()
     
-    func setAnswers(answers: [TakeQuizAnswer]) {
+    func setAnswers(answers: [QuestionAnswer]) {
         self.answers = answers
     }
 
