@@ -29,7 +29,8 @@ class CreateEventViewController: BaseViewController {
     @IBOutlet weak var quizIDTextField: UITextField!
     @IBOutlet weak var ambassadorEmailTextField: UITextField!
 
-    
+    var newQuizArray = [QuizAPIData]()
+    var quizNames = [String]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,15 +39,17 @@ class CreateEventViewController: BaseViewController {
         Database.create(table: Events.table)
         dateTextField.dateSelector()
 
+        QuizAPI.getAllQuizzes(numberOfRecords: 1000000000) { (allQuizzes) in
+            self.newQuizArray = allQuizzes
+            self.quizNames = allQuizzes.map({$0.title})
+            self.quizIDTextField.pickerSelector(data: self.quizNames)
+        }
         
-
-
 //        quizArray = ["Quiz 1", "Quiz 2", "Quiz 3", "Quiz 4"]
-        quizArray  = ["Quiz 1", "Quiz 2", "Quiz 3", "Quiz 4"]
-        
+        //quizArray  = ["Quiz 1", "Quiz 2", "Quiz 3", "Quiz 4"]
+        quizIDTextField.pickerSelector(data: ["Loading"])
         // Assigns the quiz a list of values to select from
 //        quizTextField.pickerSelector(data: quizArray)
-        quizIDTextField.pickerSelector(data: quizArray)
 
     }
     
@@ -60,11 +63,48 @@ class CreateEventViewController: BaseViewController {
     
     //Inserts a new row into the database based on the form on the view
     @IBAction func submitEventButton(_ sender: Any) {
+        if !validateFields() { return }
+        
         let DF = DateFormatter()
         DF.dateFormat = "MMM dd, yyyy"
         let date = DF.date(from: dateTextField.text!)
-        Events.insert(eventName: eventNametextField.text!, location: locationTextField.text!, eventCode: eventCodeTextField.text!, quizID: quizIDTextField.text!, ambassadorEmail: ambassadorEmailTextField.text!, date: date!)
+        guard let quizID = getQuizIDByName(quizName: quizIDTextField!.text!) else { return }
+        
+        Events.insert(eventName: eventNametextField.text!, location: locationTextField.text!, eventCode: eventCodeTextField.text!, quizID: quizID, ambassadorEmail: ambassadorEmailTextField.text!, date: date!)
         self.dismiss(animated: true, completion: nil)
+    }
+    
+    func validateFields() -> Bool {
+        var valid = true
+        var invalidString = ""
+        
+        if quizIDTextField.text == "Loading" { invalidString += "Quiz Field is still loading. Please Wait.\n\n"; valid = false }
+        
+        if eventCodeTextField.text == "" { invalidString += "Please Input a Valid Event Code\n"; valid = false }
+        if eventNametextField.text == "" { invalidString += "Please Input a Valid Event Name\n"; valid = false }
+        if locationTextField.text == "" { invalidString += "Please Input a Valid Location\n"; valid = false }
+        if ambassadorEmailTextField.text == "" || !ValidationUtilities.isValidEmail(ambassadorEmailTextField!.text!) { invalidString += "Please Input a Valid Ambassador Email\n"; valid = false }
+        
+        if !valid { showInvalidTextField(message: invalidString) }
+        
+        return valid
+    }
+    
+    func showInvalidTextField(message: String) {
+        let alert = UIAlertController(title: "Invalid Input", message: "", preferredStyle: .alert)
+        alert.message = message
+        alert.addAction(UIAlertAction(title: "Ok", style: .default))
+        self.present(alert, animated: true)
+    }
+    
+    func getQuizIDByName(quizName: String) -> String? {
+        if newQuizArray.isEmpty { return nil }
+        
+        for quiz in newQuizArray {
+            if quiz.title == quizName { return "\(quiz.id)" }
+        }
+        
+        return nil
     }
     
 }
