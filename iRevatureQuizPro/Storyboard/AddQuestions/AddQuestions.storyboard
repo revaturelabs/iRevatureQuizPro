@@ -112,7 +112,7 @@
                                     <constraint firstAttribute="width" constant="180" id="Am3-Ib-RhN"/>
                                     <constraint firstAttribute="height" constant="50" id="Kkx-3i-Jrd"/>
                                 </constraints>
-                                <state key="normal" title="Submit">
+                                <state key="normal" title="Publish">
                                     <color key="titleColor" red="1" green="0.37647058820000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
@@ -127,7 +127,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="submitButton:" destination="nGq-9V-7Ju" eventType="touchDown" id="8si-wf-qQZ"/>
+                                    <action selector="postPublishButton:" destination="nGq-9V-7Ju" eventType="touchDown" id="VJB-7b-DmU"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gwg-Kn-rin" customClass="RevatureButton" customModule="iRevatureQuizPro" customModuleProvider="target">
@@ -232,7 +232,7 @@
                                     <constraint firstAttribute="height" constant="50" id="TRe-h5-BYl"/>
                                     <constraint firstAttribute="width" constant="180" id="owV-tE-ram"/>
                                 </constraints>
-                                <state key="normal" title="Add Question">
+                                <state key="normal" title="Submit as Draft">
                                     <color key="titleColor" red="1" green="0.37647058820000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
@@ -247,7 +247,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="addQuestionButton:" destination="nGq-9V-7Ju" eventType="touchDown" id="ZWh-mH-RwX"/>
+                                    <action selector="postDraftButton:" destination="nGq-9V-7Ju" eventType="touchDown" id="YeJ-wQ-OUb"/>
                                 </connections>
                             </button>
                         </subviews>
