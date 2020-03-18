@@ -20,11 +20,11 @@ class MultipleChoiceQuestionViewController: BaseViewController {
     
     private let tableController = MCQuestionTableController()
     
-    let answers = [
-        QuestionAnswer(id: 123, answer: "Answer 1", explanation: "", order: 1, correct: false, sticky: false),
-        QuestionAnswer(id: 132, answer: "Answer 2", explanation: "", order: 2, correct: true, sticky: false),
-        QuestionAnswer(id:987, answer: "Some Answer", explanation: "", order: 3, correct: false, sticky: false)
-    ]
+//    let answers = [
+//        QuestionAnswer(id: 123, answer: "Answer 1", explanation: "", order: 1, correct: false, sticky: false),
+//        QuestionAnswer(id: 132, answer: "Answer 2", explanation: "", order: 2, correct: true, sticky: false),
+//        QuestionAnswer(id:987, answer: "Some Answer", explanation: "", order: 3, correct: false, sticky: false)
+//    ]
     
     // Question object to be displayed
     var question: TakeQuizQuestion?
@@ -38,7 +38,7 @@ class MultipleChoiceQuestionViewController: BaseViewController {
 
         timerLabel.runTimer()
         
-        tableController.setAnswers(answers: answers)
+        tableController.setAnswers(answers: question!.answers)
 
         currentQuestionLabel.text = String("\(questionIndex + 1)")
         
