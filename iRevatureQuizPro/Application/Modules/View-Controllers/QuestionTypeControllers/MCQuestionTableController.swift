@@ -12,6 +12,8 @@ class MCQuestionTableController: UITableViewController {
     
     private var answers = [TakeQuizAnswer]()
     
+    var selectedAnswers: [Int] = []
+    
     func setAnswers(answers: [TakeQuizAnswer]) {
         self.answers = answers
     }
@@ -43,6 +45,7 @@ class MCQuestionTableController: UITableViewController {
     //user touch event on cell
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let cell = tableView.cellForRow(at: indexPath) as! MCQuestionTableCell
+        selectedAnswers.append(indexPath.row)
     }
     
     //user deselect cell
