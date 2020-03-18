@@ -11,6 +11,7 @@
 		090A813E241195F5008D7A12 /* MetatagReturnStructs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 090A813D241195F5008D7A12 /* MetatagReturnStructs.swift */; };
 		090A81402411969C008D7A12 /* DatabaseInteractions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 090A813F2411969C008D7A12 /* DatabaseInteractions.swift */; };
 		091DC3972411972300C5D577 /* DatabaseInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 091DC3962411972300C5D577 /* DatabaseInformation.swift */; };
+		092066AD24229DC3009A4A9E /* ValidationUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 092066AC24229DC3009A4A9E /* ValidationUtilities.swift */; };
 		0940FE6E2411611D006F0E52 /* MetatagTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0940FE6D2411611D006F0E52 /* MetatagTable.swift */; };
 		0940FE8124116145006F0E52 /* arm64-apple-ios.swiftdoc in Resources */ = {isa = PBXBuildFile; fileRef = 0940FE7224116145006F0E52 /* arm64-apple-ios.swiftdoc */; };
 		0940FE8224116145006F0E52 /* x86_64-apple-ios-simulator.swiftdoc in Resources */ = {isa = PBXBuildFile; fileRef = 0940FE7324116145006F0E52 /* x86_64-apple-ios-simulator.swiftdoc */; };
@@ -174,6 +175,7 @@
 		090A813D241195F5008D7A12 /* MetatagReturnStructs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetatagReturnStructs.swift; sourceTree = "<group>"; };
 		090A813F2411969C008D7A12 /* DatabaseInteractions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseInteractions.swift; sourceTree = "<group>"; };
 		091DC3962411972300C5D577 /* DatabaseInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseInformation.swift; sourceTree = "<group>"; };
+		092066AC24229DC3009A4A9E /* ValidationUtilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationUtilities.swift; sourceTree = "<group>"; };
 		0940FE6D2411611D006F0E52 /* MetatagTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetatagTable.swift; sourceTree = "<group>"; };
 		0940FE7224116145006F0E52 /* arm64-apple-ios.swiftdoc */ = {isa = PBXFileReference; lastKnownFileType = file; path = "arm64-apple-ios.swiftdoc"; sourceTree = "<group>"; };
 		0940FE7324116145006F0E52 /* x86_64-apple-ios-simulator.swiftdoc */ = {isa = PBXFileReference; lastKnownFileType = file; path = "x86_64-apple-ios-simulator.swiftdoc"; sourceTree = "<group>"; };
@@ -731,6 +733,7 @@
 		09F2C06D240EE287004A6F47 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				092066AC24229DC3009A4A9E /* ValidationUtilities.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -1428,6 +1431,7 @@
 				2913A2AE241FB6C100A4CF2B /* QuizAPIAccess.swift in Sources */,
 				099150242412E2F800E73B62 /* EventAttendeeAccess.swift in Sources */,
 				D50FC89B241A8C8400BACABF /* QuestionTable.swift in Sources */,
+				092066AD24229DC3009A4A9E /* ValidationUtilities.swift in Sources */,
 				09A4679A2411A81100A4BB90 /* MetatagAccess.swift in Sources */,
 				099150222412E21D00E73B62 /* EventAttendeeReturnStructs.swift in Sources */,
 				09525E0C2412D3430051D177 /* EventAttendeeTable.swift in Sources */,

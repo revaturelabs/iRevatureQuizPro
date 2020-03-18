@@ -24,7 +24,7 @@ class QuestionPageViewController: UIPageViewController{
 
         self.dataSource = self
         
-        AttendeeQuizService.fetchCurrentQuiz(quizId: 4217)
+//        AttendeeQuizService.fetchCurrentQuiz(quizId: 4217)
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 4){
             self.questionList = self.getQuestionList()
