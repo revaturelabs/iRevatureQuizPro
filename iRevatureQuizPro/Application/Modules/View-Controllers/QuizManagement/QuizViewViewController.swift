@@ -47,19 +47,23 @@ class QuizViewViewController: BaseViewController, UITableViewDelegate, UITableVi
 		
 		print("updated")
 		
-		if(searchText.isEmpty == true) {
-			print("empty. should be copy of base data")
-			filteredquizlist = tempquizlist!
+		filteredquizlist = searchText.isEmpty ? tempquizlist! : tempquizlist!.filter { (quizobject: QuizAPIData) -> Bool in
+			return quizobject.categoryName.range(of: searchText, options: .caseInsensitive, range: nil, locale: nil) != nil
 		}
-		else {
-			filteredquizlist = [QuizAPIData]()
-			
-			for quiz in tempquizlist! {
-				if quiz.categoryName.contains(searchText) {
-					filteredquizlist.append(quiz)
-				}
-			}
-		}
+		
+//		if(searchText.isEmpty == true) {
+//			print("empty. should be copy of base data")
+//			filteredquizlist = tempquizlist!
+//		}
+//		else {
+//			filteredquizlist = [QuizAPIData]()
+//
+//			for quiz in tempquizlist! {
+//				if quiz.categoryName.contains(searchText) {
+//					filteredquizlist.append(quiz)
+//				}
+//			}
+//		}
 
 		tableQuizPreviews.reloadData()
 	}
