@@ -10,7 +10,7 @@
         <!--Question Page View Controller-->
         <scene sceneID="ynV-GG-BWZ">
             <objects>
-                <pageViewController storyboardIdentifier="QuestionPageViewController_ID" autoresizesArchivedViewToFullSize="NO" transitionStyle="pageCurl" navigationOrientation="horizontal" spineLocation="min" id="Gjv-6l-xy7" customClass="QuestionPageViewController" customModule="iRevatureQuizPro" customModuleProvider="target" sceneMemberID="viewController"/>
+                <pageViewController storyboardIdentifier="QuestionPageViewController_ID" autoresizesArchivedViewToFullSize="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" transitionStyle="pageCurl" navigationOrientation="horizontal" spineLocation="min" id="Gjv-6l-xy7" customClass="QuestionPageViewController" customModule="iRevatureQuizPro" customModuleProvider="target" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZA0-Rw-7Lp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-694" y="138"/>

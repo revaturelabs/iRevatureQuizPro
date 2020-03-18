@@ -37,12 +37,18 @@ class QuestionPageViewController: UIPageViewController{
     // Current question user is on
     public var questionIndex: Int?
     
+    public var masterTimer = LabelTimer()
+    
     public var answerIndex: [String : Int] = [:]
     // List of questions
     public var questionList: [Question]? = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        masterTimer.setTimer(with: 45.0)
+        
+//        masterTimer.runTimer()
         
         questionList?.append(Question(question: "Hello World?", answers: ["True","False"]))
         
@@ -86,6 +92,8 @@ extension QuestionPageViewController: UIPageViewControllerDataSource {
         // Index for the current content
         var index = content.questionIndex
         
+        content.timerLabel = masterTimer
+        
         // Checks if the current index is valid
         if index == 0 || index == NSNotFound {
             
@@ -109,6 +117,7 @@ extension QuestionPageViewController: UIPageViewControllerDataSource {
         // Updates to the current index
         var index = content.questionIndex
         
+        content.timerLabel = masterTimer
         // Updates the index
         index += 1
         
