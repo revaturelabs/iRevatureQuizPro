@@ -110,7 +110,7 @@ class EntityManager {
 		apicheck.enter()
 		
 		DispatchQueue.main.async {
-			QuizAPI.getAllQuizzes(numberOfRecords: 25, finish: {
+			QuizAPI.getAllQuizzes(numberOfRecords: 200, finish: {
 				response in
 				
 				for quiz in response {

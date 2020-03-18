@@ -8,29 +8,60 @@
 
 import UIKit
 
-class QuizViewViewController: BaseViewController, UITableViewDelegate, UITableViewDataSource {
+class QuizViewViewController: BaseViewController, UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate {
 	
-	var tempquizlist : [QuizAPIData]?
+	@IBOutlet weak var tableQuizPreviews: UITableView!
+	var tempquizlist: [QuizAPIData]?
+	var filteredquizlist: [QuizAPIData] = []
 	
 	var managerdelegate = UIApplication.shared.delegate as! AppDelegate
-	var manager : EntityManager?
+	var manager: EntityManager?
 	
 	@IBOutlet weak var tableViewQuizzes: UITableView!
 	
 	
 	func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-		return tempquizlist?.count ?? 0
+		return filteredquizlist.count
 	}
 	
 	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 		let cell = tableView.dequeueReusableCell(withIdentifier: "quizpreviewcell", for: indexPath) as! QuizItemTableViewCell
 		
-		cell.labelCategoryName.text = tempquizlist![indexPath.row].categoryName
-		cell.labelQuizName.text = tempquizlist![indexPath.row].title
-		cell.labelQuizTags.text = tempquizlist![indexPath.row].metaTags ?? "None provided."
+		var quiztodisplay: QuizAPIData
+		
+		quiztodisplay = filteredquizlist[indexPath.row]
+		
+		cell.labelCategoryName.text = quiztodisplay.categoryName
+		cell.labelQuizName.text = quiztodisplay.title
+		cell.labelQuizTags.text = quiztodisplay.metaTags ?? "None provided."
 		
 		return cell
+	}
+	
+	func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+		// select the quiz to show here
+	}
+	
+	//new function that will live update filtered data
+	func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
 		
+		print("updated")
+		
+		if(searchText.isEmpty == true) {
+			print("empty. should be copy of base data")
+			filteredquizlist = tempquizlist!
+		}
+		else {
+			filteredquizlist = [QuizAPIData]()
+			
+			for quiz in tempquizlist! {
+				if quiz.categoryName.contains(searchText) {
+					filteredquizlist.append(quiz)
+				}
+			}
+		}
+
+		tableQuizPreviews.reloadData()
 	}
 	
     
@@ -42,8 +73,10 @@ class QuizViewViewController: BaseViewController, UITableViewDelegate, UITableVi
         // Do any additional setup after loading the view.
 		manager = managerdelegate.manager
 		tempquizlist = manager?.getTempQuizList()
+		filteredquizlist = tempquizlist!
 		tableViewQuizzes.delegate = self
 		tableViewQuizzes.dataSource = self
+		quizSearchBar.delegate = self
 		print("controller quiz count: \(tempquizlist!.count)")
     }
     
