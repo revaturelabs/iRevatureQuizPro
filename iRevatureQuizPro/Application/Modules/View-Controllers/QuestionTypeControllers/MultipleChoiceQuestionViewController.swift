@@ -17,6 +17,7 @@ class MultipleChoiceQuestionViewController: BaseViewController {
     @IBOutlet weak var questionTextView: UITextView!
     
     @IBOutlet weak var answerTableView: UITableView!
+    
     private let tableController = MCQuestionTableController()
     
     let answers = [
@@ -34,26 +35,37 @@ class MultipleChoiceQuestionViewController: BaseViewController {
         super.viewDidLoad()
         
         // Configures timer to a number of minutes
-		timerLabel.setTimer(with: 45)
-        
+
         timerLabel.runTimer()
         
-
         tableController.setAnswers(answers: answers)
 
         currentQuestionLabel.text = String("\(questionIndex + 1)")
         
         questionTextView.text = question?.question
 
-        
         answerTableView.dataSource = tableController
+
         answerTableView.delegate = tableController
     }
     
     @IBAction func previousQuestionAction(_ sender: Any) {
+        
+            
+//            UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "IKDetailVC") as? IKDetailVC
+//        self.navigationController?.pushViewController(vc!, animated: true)
     }
     
     @IBAction func nextQuestionAction(_ sender: Any) {
+        
+//        let storyboardID = (viewControllerClass as UIViewController.Type).storyboardID
+//
+//        //Make sure that the view controller is properly instantiated
+//        guard let controller = instance.instantiateViewController(withIdentifier: storyboardID) as?
+        
+//        let vc = UIStoryboard.init(name: "QuizQuestions", bundle: Bundle.main).instantiateViewController(withIdentifier: "QuestionPageViewController_ID") as! QuestionPageViewController
+//        
+//        vc.getViewControllerAtIndex(index: 0)
     }
     
 }
