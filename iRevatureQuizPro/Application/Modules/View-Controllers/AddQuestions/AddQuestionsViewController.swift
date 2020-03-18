@@ -24,7 +24,7 @@ class AddQuestionsViewController : BaseViewController {
     
     var selectedQuestionCountText = "Questions Picked: "
     var selectedQuestion: [QuestionObject] = []
-    var selectedRow: Int = 0
+    var selectedRow: Int = -1
     
     //Creates the tableview, search bar and calls API
     override func viewDidLoad() {
@@ -61,6 +61,7 @@ class AddQuestionsViewController : BaseViewController {
         
         CreateQuizAPI.createNewQuiz(quiz: quiz!.toAPIFormat, completionHandler: {(leBool) in
             print("IS COMPLETED: \(leBool)")
+            self.dismiss(animated: true, completion: nil)
         })
     }
     
@@ -87,6 +88,7 @@ class AddQuestionsViewController : BaseViewController {
     
     //adds single selected question to quiz
     @IBAction func addQuestionButton(_ sender: Any) {
+        if selectedRow == -1 { return }
         add(question: filteredQuestions[selectedRow])
         questionsPicked.text = selectedQuestionCountText + String(selectedQuestion.count)
     }

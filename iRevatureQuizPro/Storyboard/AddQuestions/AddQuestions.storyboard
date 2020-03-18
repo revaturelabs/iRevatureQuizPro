@@ -176,7 +176,6 @@
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="nextPageButton:" destination="nGq-9V-7Ju" eventType="touchDown" id="MBb-8Q-r8C"/>
-                                    <action selector="submitButton:" destination="nGq-9V-7Ju" eventType="touchDown" id="h1Z-sN-Owp"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jdk-lH-wfV" customClass="RevatureButton" customModule="iRevatureQuizPro" customModuleProvider="target">
@@ -201,7 +200,6 @@
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="lastPageButton:" destination="nGq-9V-7Ju" eventType="touchDown" id="pOa-U5-3Gi"/>
-                                    <action selector="submitButton:" destination="nGq-9V-7Ju" eventType="touchDown" id="gGT-iP-rka"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="02h-On-0Cv" customClass="RevatureButton" customModule="iRevatureQuizPro" customModuleProvider="target">
@@ -250,7 +248,6 @@
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="addQuestionButton:" destination="nGq-9V-7Ju" eventType="touchDown" id="ZWh-mH-RwX"/>
-                                    <action selector="submitButton:" destination="nGq-9V-7Ju" eventType="touchDown" id="EaE-dz-qHW"/>
                                 </connections>
                             </button>
                         </subviews>
