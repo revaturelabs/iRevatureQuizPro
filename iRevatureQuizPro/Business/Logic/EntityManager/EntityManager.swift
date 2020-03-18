@@ -9,30 +9,36 @@
 import Foundation
 
 class EntityManager {
-	private static var quizzes : [BQuiz] = [BQuiz]()
-	private static var questions : [QuestionObject] = [QuestionObject]()
+	private var quizzes : [BQuiz] = [BQuiz]()
+	private var questions : [QuestionObject] = [QuestionObject]()
+	
+	private var tempquizlist : [QuizAPIData] = [QuizAPIData]()
 	
 	init() {
-		
+
 	}
 	
-	static func getQuizList() -> [BQuiz] {
+	func getQuizList() -> [BQuiz] {
 		return quizzes
 	}
 	
-	static func addQuizToList(quiz: BQuiz) {
+	func getTempQuizList() -> [QuizAPIData] {
+		return tempquizlist
+	}
+	
+	func addQuizToList(quiz: BQuiz) {
 		quizzes.append(quiz)
 	}
 	
-	static func getQuestionList() -> [QuestionObject] {
+	func getQuestionList() -> [QuestionObject] {
 		return questions
 	}
 	
-	static func addQuestionToLis(question: QuestionObject) {
+	func addQuestionToLis(question: QuestionObject) {
 		questions.append(question)
 	}
 	
-	static func assembleBQuizObject(allhalf: BQuizAllHalf, byidhalf: BQuizByIDHalf) -> BQuiz {
+	func assembleBQuizObject(allhalf: BQuizAllHalf, byidhalf: BQuizByIDHalf) -> BQuiz {
 		let newQuizItem = BQuiz(
 			
 			// May need more coalscing operators if items come back nil when not expected - unsure of what options in the API weren't necessary or unfilled (like metaTags)
@@ -98,8 +104,27 @@ class EntityManager {
 		let apicheck = DispatchGroup()
 		
 		let loaddata = DispatchWorkItem {
-			
+			print("Quiz amount = \(self.tempquizlist.count)")
 		}
+		
+		apicheck.enter()
+		
+		DispatchQueue.main.async {
+			QuizAPI.getAllQuizzes(numberOfRecords: 25, finish: {
+				response in
+				
+				for quiz in response {
+					if quiz.mode == "P" {
+						self.tempquizlist.append(quiz)
+					}
+				}
+				
+				apicheck.leave()
+			})
+		}
+		
+		
+		apicheck.notify(queue: .main, work: loaddata)
 	}
 	
 	func parseToAllHalf(quiz: QuizAPIData) -> BQuizAllHalf {

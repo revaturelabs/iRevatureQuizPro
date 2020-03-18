@@ -8,7 +8,31 @@
 
 import UIKit
 
-class QuizViewViewController: BaseViewController {
+class QuizViewViewController: BaseViewController, UITableViewDelegate, UITableViewDataSource {
+	
+	var tempquizlist : [QuizAPIData]?
+	
+	var managerdelegate = UIApplication.shared.delegate as! AppDelegate
+	var manager : EntityManager?
+	
+	@IBOutlet weak var tableViewQuizzes: UITableView!
+	
+	
+	func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+		return tempquizlist?.count ?? 0
+	}
+	
+	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+		let cell = tableView.dequeueReusableCell(withIdentifier: "quizpreviewcell", for: indexPath) as! QuizItemTableViewCell
+		
+		cell.labelCategoryName.text = tempquizlist![indexPath.row].categoryName
+		cell.labelQuizName.text = tempquizlist![indexPath.row].title
+		cell.labelQuizTags.text = tempquizlist![indexPath.row].metaTags ?? "None provided."
+		
+		return cell
+		
+	}
+	
     
     @IBOutlet weak var quizSearchBar: UISearchBar!
     @IBOutlet weak var managementTabBar: UITabBar!
@@ -16,6 +40,11 @@ class QuizViewViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+		manager = managerdelegate.manager
+		tempquizlist = manager?.getTempQuizList()
+		tableViewQuizzes.delegate = self
+		tableViewQuizzes.dataSource = self
+		print("controller quiz count: \(tempquizlist!.count)")
     }
     
     @IBAction func createQuizButton(_ sender: Any) {

@@ -69,6 +69,7 @@
 		29B2F1A62416D6BB00FDDE57 /* QuizReturnStructs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29B2F1A32416D6BB00FDDE57 /* QuizReturnStructs.swift */; };
 		29B2F1A82416D6CA00FDDE57 /* QuizObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29B2F1A72416D6CA00FDDE57 /* QuizObject.swift */; };
 		29B495AD24195B6C00C44D26 /* QuizCategoryParse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29B495AC24195B6C00C44D26 /* QuizCategoryParse.swift */; };
+		29EC72C5242284870005E317 /* QuizItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29EC72C4242284870005E317 /* QuizItemTableViewCell.swift */; };
 		2E2C03002421141100C1FC4E /* QuestionPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E2C02FF2421141100C1FC4E /* QuestionPageViewController.swift */; };
 		2E35372924201324009EDAE9 /* MultipleChoiceQuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E35372824201324009EDAE9 /* MultipleChoiceQuestionViewController.swift */; };
 		2E35372C2420138B009EDAE9 /* QuizQuestions.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E35372B2420138B009EDAE9 /* QuizQuestions.storyboard */; };
@@ -235,6 +236,7 @@
 		29B2F1A72416D6CA00FDDE57 /* QuizObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuizObject.swift; sourceTree = "<group>"; };
 		29B495AC24195B6C00C44D26 /* QuizCategoryParse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuizCategoryParse.swift; sourceTree = "<group>"; };
 		29CDB1B7241C0EC300C5CF10 /* QuizDataAccess.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = QuizDataAccess.swift; path = iRevatureQuizPro/Services/API/Access/QuizDataAccess.swift; sourceTree = SOURCE_ROOT; };
+		29EC72C4242284870005E317 /* QuizItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizItemTableViewCell.swift; sourceTree = "<group>"; };
 		2E2C02FF2421141100C1FC4E /* QuestionPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionPageViewController.swift; sourceTree = "<group>"; };
 		2E35372824201324009EDAE9 /* MultipleChoiceQuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultipleChoiceQuestionViewController.swift; sourceTree = "<group>"; };
 		2E35372B2420138B009EDAE9 /* QuizQuestions.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = QuizQuestions.storyboard; sourceTree = "<group>"; };
@@ -749,6 +751,7 @@
 				84F34FA32410437100D250BB /* iRevatureButton.swift */,
 				5F901D7D2411485100986FF5 /* OrangeToolbar.swift */,
 				D540960C2411538E00791C7E /* RevatureTextField.swift */,
+				29EC72C4242284870005E317 /* QuizItemTableViewCell.swift */,
 			);
 			path = "UI-Elements";
 			sourceTree = "<group>";
@@ -1484,6 +1487,7 @@
 				095E53C12418041C0009322C /* StatusCodeMessage.swift in Sources */,
 				95D8CF22241190E900EB322E /* QuizViewViewController.swift in Sources */,
 				2E35372924201324009EDAE9 /* MultipleChoiceQuestionViewController.swift in Sources */,
+				29EC72C5242284870005E317 /* QuizItemTableViewCell.swift in Sources */,
 				5F64568D241D58D900154E8B /* CreateQuizResponse.swift in Sources */,
 				5F901D7E2411485100986FF5 /* OrangeToolbar.swift in Sources */,
 				D54096572412E2AB00791C7E /* EventStatements.swift in Sources */,
