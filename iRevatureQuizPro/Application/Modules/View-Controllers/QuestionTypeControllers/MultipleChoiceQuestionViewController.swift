@@ -34,7 +34,7 @@ class MultipleChoiceQuestionViewController: BaseViewController {
 
         tableController.setAnswers(answers: question!.answers)
 
-        currentQuestionLabel.text = String("\(questionIndex + 1) / 10")
+        currentQuestionLabel.text = String("\(questionIndex + 1)")
         
         questionTextView.text = question?.question
 
