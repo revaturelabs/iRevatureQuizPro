@@ -21,8 +21,6 @@ class QuestionPageViewController: UIPageViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-
 
         questionList?.append(TakeQuizQuestion(question: "Is this working", answers: [TakeQuizAnswer(answer: "Yes", isCorrect: true, isSelected: false), TakeQuizAnswer(answer: "No", isCorrect: false, isSelected: false)], isAnswered: false))
         
