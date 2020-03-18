@@ -20,15 +20,8 @@ class MultipleChoiceQuestionViewController: BaseViewController {
     
     private let tableController = MCQuestionTableController()
     
-//    let answers = [
-//        QuestionAnswer(id: 123, answer: "Answer 1", explanation: "", order: 1, correct: false, sticky: false),
-//        QuestionAnswer(id: 132, answer: "Answer 2", explanation: "", order: 2, correct: true, sticky: false),
-//        QuestionAnswer(id:987, answer: "Some Answer", explanation: "", order: 3, correct: false, sticky: false)
-//    ]
-    
     // Question object to be displayed
     var question: TakeQuizQuestion?
-    
     var questionIndex: Int = 0
     
     public var questionList: [TakeQuizQuestion]? = []
@@ -37,21 +30,23 @@ class MultipleChoiceQuestionViewController: BaseViewController {
         super.viewDidLoad()
         
         // Configures timer to a number of minutes
-
         timerLabel.runTimer()
-        
-        tableController.setAnswers(answers: question!.answers)
 
+        //Sets the question label
         currentQuestionLabel.text = String("\(questionIndex + 1)")
         
+        //Fills the table controller with necessary information
+        tableController.setAnswers(answers: question!.answers)
         tableController.currentQuestion = questionIndex
         
+        //Set the Text of the question
         questionTextView.text = question?.question
 
+        //Assign delegate table controller
         answerTableView.dataSource = tableController
-
         answerTableView.delegate = tableController
     }
+    
     
     @IBAction func previousQuestionAction(_ sender: Any) {
         

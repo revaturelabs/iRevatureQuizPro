@@ -38,26 +38,30 @@ class MCQuestionTableController: UITableViewController {
             cell.backgroundColor = UIColor.green
         }
         
+        
+        
         //set background color for cell if it is selected
         let backgroundView = UIView()
         backgroundView.backgroundColor = UIColor.revatureOrange
         cell.selectedBackgroundView = backgroundView
-
+        
         return cell
     }
     
     //user touch event on cell
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let cell = tableView.cellForRow(at: indexPath) as! MCQuestionTableCell
-//        answers[indexPath.row].isSelected = true
-        AttendeeQuizService.quizInProgress[currentQuestion].answers[indexPath.row].isSelected = true
+        if let oldCell = tableView.cellForRow(at: AttendeeQuizService.quizQuestions[currentQuestion].chosenAnswer) as? MCQuestionTableCell {
+            oldCell.isSelected = false
+        }
+        
+        AttendeeQuizService.quizQuestions[currentQuestion].chosenAnswer.row = indexPath.row
     }
     
-    //user deselect cell
-    override func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
-        let cell = tableView.cellForRow(at: indexPath) as! MCQuestionTableCell
-//        answers[indexPath.row].isSelected = false
-        AttendeeQuizService.quizInProgress[currentQuestion].answers[indexPath.row].isSelected = false
+    
+    override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        if indexPath.row == AttendeeQuizService.quizQuestions[currentQuestion].chosenAnswer.row {
+            cell.isSelected = true
+        }
     }
     
 }
