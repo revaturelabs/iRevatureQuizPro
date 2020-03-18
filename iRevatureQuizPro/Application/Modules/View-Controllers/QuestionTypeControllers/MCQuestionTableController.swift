@@ -23,8 +23,14 @@ class MCQuestionTableController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "MCQuestionCell", for: indexPath) as! MCQuestionTableCell
-
-        cell.answerText.text = answers[indexPath.row].answer
+        let unfilteredAnswers = answers[indexPath.row].answer
+        var filteredAnswers = unfilteredAnswers.replacingOccurrences(of: "<[^>]+>", with: "", options: .regularExpression, range: nil)
+        filteredAnswers = filteredAnswers.replacingOccurrences(of: "&quot;", with: "", options: .regularExpression, range: nil)
+        filteredAnswers = filteredAnswers.replacingOccurrences(of: "&lt;", with: "", options: .regularExpression, range: nil)
+        filteredAnswers = filteredAnswers.replacingOccurrences(of: "&gt;", with: "", options: .regularExpression, range: nil)
+        filteredAnswers = filteredAnswers.replacingOccurrences(of: "&#39;", with: "", options: .regularExpression, range: nil)
+        
+        cell.answerText.text = filteredAnswers
         
         //set background color for cell if it is selected
         let backgroundView = UIView()
