@@ -12,6 +12,8 @@ class MCQuestionTableController: UITableViewController {
     
     private var answers = [TakeQuizAnswer]()
     
+    var selectedAnswers: [Int] = []
+    
     func setAnswers(answers: [TakeQuizAnswer]) {
         self.answers = answers
     }
@@ -23,8 +25,14 @@ class MCQuestionTableController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "MCQuestionCell", for: indexPath) as! MCQuestionTableCell
-
-        cell.answerText.text = answers[indexPath.row].answer
+        let unfilteredAnswers = answers[indexPath.row].answer
+        var filteredAnswers = unfilteredAnswers.replacingOccurrences(of: "<[^>]+>", with: "", options: .regularExpression, range: nil)
+        filteredAnswers = filteredAnswers.replacingOccurrences(of: "&quot;", with: "", options: .regularExpression, range: nil)
+        filteredAnswers = filteredAnswers.replacingOccurrences(of: "&lt;", with: "", options: .regularExpression, range: nil)
+        filteredAnswers = filteredAnswers.replacingOccurrences(of: "&gt;", with: "", options: .regularExpression, range: nil)
+        filteredAnswers = filteredAnswers.replacingOccurrences(of: "&#39;", with: "", options: .regularExpression, range: nil)
+        
+        cell.answerText.text = filteredAnswers
         
         //set background color for cell if it is selected
         let backgroundView = UIView()
@@ -37,6 +45,7 @@ class MCQuestionTableController: UITableViewController {
     //user touch event on cell
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let cell = tableView.cellForRow(at: indexPath) as! MCQuestionTableCell
+        selectedAnswers.append(indexPath.row)
     }
     
     //user deselect cell

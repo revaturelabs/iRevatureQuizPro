@@ -10,7 +10,13 @@ import Foundation
 
 class AttendeeQuizService {
 
-    private static var currentQuiz = TakeQuizQuiz(title: "No Quiz", questions: [], duration: 0)
+    private static var currentQuiz = TakeQuizQuiz(title: "No Quiz", questions: [
+        TakeQuizQuestion(question: "Is CoreData a RDBMS?", answers: [TakeQuizAnswer(answer: "True", isCorrect: false, isSelected: false), TakeQuizAnswer(answer: "False", isCorrect: true, isSelected: false)], isAnswered: false),
+        TakeQuizQuestion(question: "What does MVC stands for?", answers: [TakeQuizAnswer(answer: "Main View Controller", isCorrect: true, isSelected: false), TakeQuizAnswer(answer: "Model View Controller", isCorrect: true, isSelected: false), TakeQuizAnswer(answer: "Main Viewer Control", isCorrect: false, isSelected: false)], isAnswered: false),
+        TakeQuizQuestion(question: "Is Swift a Type Safe language?", answers: [TakeQuizAnswer(answer: "True", isCorrect: true, isSelected: false), TakeQuizAnswer(answer: "False", isCorrect: false, isSelected: false)], isAnswered: false),
+        TakeQuizQuestion(question: "What is the purpose of Info.plist?", answers: [TakeQuizAnswer(answer: "Contains API data.", isCorrect: false, isSelected: false), TakeQuizAnswer(answer: "Contains SQL persistence data.", isCorrect: false, isSelected: false), TakeQuizAnswer(answer: "Contains the configuration of the project.", isCorrect: true, isSelected: false)], isAnswered: false),
+        TakeQuizQuestion(question: "Is CoreData thread safe?", answers: [TakeQuizAnswer(answer: "True", isCorrect: false, isSelected: false), TakeQuizAnswer(answer: "False", isCorrect: true, isSelected: false)], isAnswered: false)
+    ], duration: 0)
 
     static func fetchCurrentQuiz(quizId: Int) {
         
