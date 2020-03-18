@@ -31,7 +31,7 @@ class QuizDataService {
 		
 		// We enter the following closure to the main thread to be run asynchronously
 		DispatchQueue.main.async {
-			QuizAPI.getAllQuizzes(numberOfRecords: 1200, finish: {
+			QuizAPI.getAllQuizzes(numberOfRecords: 200, finish: {
 				response in
 				
 				quizlist = response
