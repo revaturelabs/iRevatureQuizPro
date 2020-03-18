@@ -38,7 +38,7 @@ struct QuizInfo {
 }
 
 struct QuizWrapper {
-    private var quizData: QuizInfo
+    var quizData: QuizInfo
     private var questions: [QuestionObject]
     
     init(quizData: QuizInfo) {
