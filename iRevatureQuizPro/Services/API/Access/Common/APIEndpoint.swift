@@ -10,7 +10,7 @@ import Foundation
 
 struct APIEndpoint {
     //URL for all endpoints
-    static private let url = "https://preview-ms.revature.com/apigateway/"
+    static private let url = "https://dev3-ms.revature.com/apigateway/"
 
     //endpoint for trainer and ambassador login
     static var trainerLogin: String {

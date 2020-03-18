@@ -13,11 +13,6 @@ import os.log
 
 class QuestionAPIAccess {
     
-    //endpoint for get all questions
-//    static private let allEndpoint = "https://dev3-ms.revature.com/apigateway/quiz/secure/questions"
-    //endpoint for get questions by ID
-//    static private let endpointByID = "https://dev3-ms.revature.com/apigateway/quiz/secure/question/"
-    
     //function to get all questions using size and page
     static func getAllQuestions(size: Int, page: Int, completionHandler: @escaping ([QuestionData]?, Bool?) -> Void) {
         //Create question body struct to send as request
