@@ -13,6 +13,8 @@ class QuizDataService {
 	
 	static private var quizlist : [QuizAPIData]?
 	static private var categories = [String]()
+	
+	static private var returned : Bool = false
     
 	static func getQuizData(/*finish: @escaping ([QuizAPIData]) -> Void*/) {
         
@@ -24,6 +26,9 @@ class QuizDataService {
 			// in this instance I just want to print the count
 			// to be sure it actually finished retrieving all the quizzes from the api
 			print("Quiz amount = \(quizlist?.count ?? 0)")
+			
+			QuizDataService.updateStatus()
+			
 		}
 		
 		// we tell the dispatch group we gonna start
@@ -51,5 +56,13 @@ class QuizDataService {
 	static func getQuizDataForID(id: Int, finish: @escaping (QuizAPIData) -> Void) {
 		
 		//QuizAPI.getQuizById(quizId: <#T##Int#>, finish: <#T##(APIQuizByIDResults) -> Void#>)
+	}
+	
+	static func updateStatus() {
+		returned = true
+	}
+	
+	static func fetchAllAPIData() -> [QuizAPIData] {
+		return quizlist!
 	}
 }
