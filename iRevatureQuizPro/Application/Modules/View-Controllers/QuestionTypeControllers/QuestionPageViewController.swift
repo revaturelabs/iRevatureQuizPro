@@ -21,6 +21,14 @@ class QuestionPageViewController: UIPageViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
+<<<<<<< HEAD
+=======
+        
+
+//        questionList?.append(Question(question: "question 1", answers: [], isAnswered: false, correctAnswer: 1))
+//
+//        questionList?.append(Question(question: "question 2", answers: [], isAnswered: false, correctAnswer: 1))
+>>>>>>> parent of 78cb6d3... Merge branch 'quiz_question_Structs' into development
 
             
         self.dataSource = self
