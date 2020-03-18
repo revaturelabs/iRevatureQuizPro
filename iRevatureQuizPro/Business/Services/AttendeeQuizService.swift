@@ -43,5 +43,21 @@ class AttendeeQuizService {
         }
         
     }
+    
+    //Gets the percentage of for the test
+    static func getQuizPercentage() -> Float {
+        var correctCount: Float = 0.0
+        
+        for q in self.quizQuestions {
+            if checkCorrectAnswer(question: q.question, chosenAnswer: q.chosenAnswer.row) { correctCount += 1}
+        }
+        
+        return correctCount / Float(self.quizQuestions.count)
+    }
+    
+    //Checks whether or not a question was correct
+    static func checkCorrectAnswer(question: TakeQuizQuestion, chosenAnswer: Int) -> Bool {
+        return question.correctAnswer == chosenAnswer
+    }
 
 }
