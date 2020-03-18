@@ -19,16 +19,11 @@ class MultipleChoiceQuestionViewController: BaseViewController {
     @IBOutlet weak var answerTableView: UITableView!
     private let tableController = MCQuestionTableController()
     
-    let answers = [
-        QuestionAnswer(id: 123, answer: "Answer 1", explanation: "", order: 1, correct: false, sticky: false),
-        QuestionAnswer(id: 132, answer: "Answer 2", explanation: "", order: 2, correct: true, sticky: false),
-        QuestionAnswer(id:987, answer: "Some Answer", explanation: "", order: 3, correct: false, sticky: false)
-    ]
-    
     // Question object to be displayed
-    var question: Question?
+    var question: TakeQuizQuestion?
     
     var questionIndex: Int = 0
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,10 +33,10 @@ class MultipleChoiceQuestionViewController: BaseViewController {
         
         timerLabel.runTimer()
         
+        // Appends the set of answers to the table view
+        tableController.setAnswers(answers: question!.answers)
 
-        tableController.setAnswers(answers: answers)
-
-        currentQuestionLabel.text = String("\(questionIndex + 1)")
+        currentQuestionLabel.text = String("\(questionIndex + 1) / 10")
         
         questionTextView.text = question?.question
 
