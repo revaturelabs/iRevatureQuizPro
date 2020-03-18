@@ -19,7 +19,7 @@ class StartQuizViewController: BaseViewController {
         super.viewDidLoad()
         
         /// - Note: Ran on loading of Page to get all quizzes from API
-        QuizAPI.getAllQuizzes(numberOfRecords: Int.max, finish: {(allQuizzes) in
+        QuizAPI.getAllQuizzes(numberOfRecords: 250, finish: {(allQuizzes) in
             self.allQuizzes = allQuizzes
         })
     }
@@ -32,11 +32,8 @@ class StartQuizViewController: BaseViewController {
     @IBAction func submitButton(_ sender: Any) {
         //Checks to make sure that all quizes have been fetched and that there is a matching ID to fetched quizzes
         guard !allQuizzes.isEmpty, let quizID = getQuizID() else { return }
-        
-        /// - TODO: Write code that gets the quiz by its id from the API. The current implementation of the api calls only fire if the api call is successful. There needs to be a way to have completion handlers run even though it failed. so potentially send and extra Bool variable in the completion or try and send nil values
-        
-//        #warning("Remember To uncomment for validation")
-//        guard let quizCode = eventCodeTextField.text, EventBusinessService.checkCode(eventCode: quizCode) else { return }
+
+        AttendeeQuizService.fetchCurrentQuiz(quizId: quizID)
 
         let nextVC = QuestionPageViewController.instantiate(fromAppStoryboard:AppStoryboard.QuizQuestions)
         easyPresent(nextVC, animated: false, style: .fullScreen)
