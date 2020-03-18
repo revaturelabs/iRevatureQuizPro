@@ -12,9 +12,6 @@ import os.log
 
 class TrainerLoginAccess {
     
-    //endpoint for user login
-//    static private let endpoint = "https://dev3-ms.revature.com/apigateway/security/admin/login"
-    
     //function to log into API, completion handler has optional
     static func getUserLogin(email: String, password: String, completionHandler: @escaping (TrainerLoginData?, Bool?) -> Void) {
         
