@@ -29,6 +29,8 @@ class LabelTimer: UILabel{
         timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: (#selector(LabelTimer.updateTimer)), userInfo: nil, repeats: true)
     }
     
+    
+    
     //updates the timer with the time left and checks if there is no time left
     @objc func updateTimer() {
         if timeLeft < 1 {
