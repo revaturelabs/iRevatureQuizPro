@@ -27,7 +27,7 @@ class MultipleChoiceQuestionViewController: BaseViewController {
     ]
     
     // Question object to be displayed
-    var question: Question?
+    var question: TakeQuizQuestion?
     
     var questionIndex: Int = 0
     
