@@ -21,16 +21,22 @@ class QuestionPageViewController: UIPageViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-         questionList?.append(TakeQuizQuestion(question: "Is this working", answers: [TakeQuizAnswer(answer: "Yes", isCorrect: true, isSelected: false), TakeQuizAnswer(answer: "No", isCorrect: false, isSelected: false)], isAnswered: false))
-
 
         self.dataSource = self
+        
+        
         
         self.setViewControllers([getViewControllerAtIndex(index: questionIndex ?? 0)] as [UIViewController], direction: UIPageViewController.NavigationDirection.forward, animated: false, completion: nil)
     }
 
-//    func getQuestionList() -> [TakeQuizQuestion]
+    func getQuestionList() -> [TakeQuizQuestion]{
+        
+        var takeQuizQuestions: [TakeQuizQuestion]? = []
+        
+        takeQuizQuestions?.append(TakeQuizQuestion(question: "Is this working", answers: [TakeQuizAnswer(answer: "Yes", isCorrect: true, isSelected: false), TakeQuizAnswer(answer: "No", isCorrect: false, isSelected: false)], isAnswered: false))
+        
+        return takeQuizQuestions ?? []
+    }
     
     // Grabs a reference to the MultChoiceVC and updates the question it currently displays
     func getViewControllerAtIndex(index: NSInteger) -> MultipleChoiceQuestionViewController
