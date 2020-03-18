@@ -11,6 +11,8 @@ import Foundation
 class AttendeeQuizService {
 
     private static var currentQuiz = TakeQuizQuiz(title: "No Quiz", questions: [], duration: 0)
+    
+    static var quizInProgress:[TakeQuizQuestion] = []
 
     static func fetchCurrentQuiz(quizId: Int) {
         

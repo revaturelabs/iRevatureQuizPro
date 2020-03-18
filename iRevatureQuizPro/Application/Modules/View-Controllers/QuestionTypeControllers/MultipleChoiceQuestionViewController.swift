@@ -31,6 +31,8 @@ class MultipleChoiceQuestionViewController: BaseViewController {
     
     var questionIndex: Int = 0
     
+    public var questionList: [TakeQuizQuestion]? = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -41,6 +43,8 @@ class MultipleChoiceQuestionViewController: BaseViewController {
         tableController.setAnswers(answers: question!.answers)
 
         currentQuestionLabel.text = String("\(questionIndex + 1)")
+        
+        tableController.currentQuestion = questionIndex
         
         questionTextView.text = question?.question
 

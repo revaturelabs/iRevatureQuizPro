@@ -12,6 +12,8 @@ class MCQuestionTableController: UITableViewController {
     
     private var answers = [TakeQuizAnswer]()
     
+    var currentQuestion: Int = 0
+    
     func setAnswers(answers: [TakeQuizAnswer]) {
         self.answers = answers
     }
@@ -43,15 +45,15 @@ class MCQuestionTableController: UITableViewController {
     //user touch event on cell
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let cell = tableView.cellForRow(at: indexPath) as! MCQuestionTableCell
-        answers[indexPath.row].isSelected = true
-        print(answers)
+//        answers[indexPath.row].isSelected = true
+        AttendeeQuizService.quizInProgress[currentQuestion].answers[indexPath.row].isSelected = true
     }
     
     //user deselect cell
     override func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
         let cell = tableView.cellForRow(at: indexPath) as! MCQuestionTableCell
-        answers[indexPath.row].isSelected = false
-        print(answers)
+//        answers[indexPath.row].isSelected = false
+        AttendeeQuizService.quizInProgress[currentQuestion].answers[indexPath.row].isSelected = false
     }
     
 }

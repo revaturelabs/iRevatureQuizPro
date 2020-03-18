@@ -11,13 +11,13 @@ import UIKit
 class QuestionPageViewController: UIPageViewController{
     
     // Current question user is on
-    public var questionIndex: Int?
+    public var questionIndex: Int = 0
     
     public var masterTimer = LabelTimer()
     
     public var answerIndex: [String : Int] = [:]
     // List of questions
-    public var questionList: [TakeQuizQuestion]? = []
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,7 +27,7 @@ class QuestionPageViewController: UIPageViewController{
 //        AttendeeQuizService.fetchCurrentQuiz(quizId: 4217)
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 4){
-            self.questionList = self.getQuestionList()
+            AttendeeQuizService.quizInProgress = self.getQuestionList()
         
             self.setViewControllers([self.getViewControllerAtIndex(index: self.questionIndex ?? 0)] as [UIViewController], direction: UIPageViewController.NavigationDirection.forward, animated: false, completion: nil)
         }
@@ -49,7 +49,7 @@ class QuestionPageViewController: UIPageViewController{
         //This is where the API call should be right now is inflated by an array
         
         // Updates the question in the MultChoice View controller
-        pageContentViewController.question = questionList?[index]
+        pageContentViewController.question = AttendeeQuizService.quizInProgress[index]
         
         // Updates the current index
         pageContentViewController.questionIndex = index
@@ -77,7 +77,7 @@ extension QuestionPageViewController: UIPageViewControllerDataSource {
         // Checks if the current index is valid
         if index == 0 || index == NSNotFound {
             
-            return getViewControllerAtIndex(index: questionList!.count - 1)
+            return getViewControllerAtIndex(index: AttendeeQuizService.quizInProgress.count - 1)
             
         }
         
@@ -94,6 +94,7 @@ extension QuestionPageViewController: UIPageViewControllerDataSource {
         // Instance of the storyboard that is going to be displayed
         let content: MultipleChoiceQuestionViewController = viewController as! MultipleChoiceQuestionViewController
         
+        
         // Updates to the current index
         var index = content.questionIndex
         
@@ -102,7 +103,7 @@ extension QuestionPageViewController: UIPageViewControllerDataSource {
         index += 1
         
         // Checks if it is out of bounds, to then send you back to the begining of the quiz
-        if index == questionList?.count{
+        if index == AttendeeQuizService.quizInProgress.count{
             return getViewControllerAtIndex(index: 0)
         }
         
