@@ -63,6 +63,6 @@ extension UIViewController {
 extension UIViewController {
     func easyPresent(_ viewController: UIViewController, animated: Bool, style: UIModalPresentationStyle) {
         viewController.modalPresentationStyle = .fullScreen
-        self.present(viewController, animated: false)
+        self.present(viewController, animated: animated)
     }
 }

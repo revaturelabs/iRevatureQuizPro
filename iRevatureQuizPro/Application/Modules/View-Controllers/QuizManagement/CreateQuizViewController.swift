@@ -24,6 +24,8 @@ class CreateQuizViewController: BaseViewController {
     }
     
     @IBAction func optionsButton(_ sender: Any) {
+        let nextVC = EmployeeLoginViewController.instantiate(fromAppStoryboard: AppStoryboard.EmployeeLogin)
+        easyPresent(nextVC, animated: true, style: .fullScreen)
     }
     
     @IBAction func backButton(_ sender: Any) {
