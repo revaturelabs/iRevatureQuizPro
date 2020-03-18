@@ -15,16 +15,14 @@ class QuestionPageViewController: UIPageViewController{
     
     public var answerIndex: [String : Int] = [:]
     // List of questions
-    public var questionList: [Question]? = []
+    public var questionList: [TakeQuizQuestion]? = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        questionList?.append(Question(question: "question 1", answers: [], isAnswered: false, correctAnswer: 1))
-//
-//        questionList?.append(Question(question: "question 2", answers: [], isAnswered: false, correctAnswer: 1))
-
-            
+        questionList?.append(TakeQuizQuestion(question: "Is this working", answers: [TakeQuizAnswer(answer: "Yes", isCorrect: true, isSelected: false), TakeQuizAnswer(answer: "No", isCorrect: false, isSelected: false)], isAnswered: false))
+        
+        
         self.dataSource = self
         
         self.setViewControllers([getViewControllerAtIndex(index: questionIndex ?? 0)] as [UIViewController], direction: UIPageViewController.NavigationDirection.forward, animated: false, completion: nil)
