@@ -24,7 +24,7 @@ class AddQuestionsViewController : BaseViewController {
     
     var selectedQuestionCountText = "Questions Picked: "
     var selectedQuestion: [QuestionObject] = []
-    var selectedRow: Int = 0
+    var selectedRow: Int = -1
     
     //Creates the tableview, search bar and calls API
     override func viewDidLoad() {
@@ -52,15 +52,31 @@ class AddQuestionsViewController : BaseViewController {
     @IBAction func moreOptions(_ sender: Any) {
     }
     
-    //will persist the questions selected and create the quiz
-    @IBAction func submitButton(_ sender: Any) {
+    //adds single selected question to quiz
+    @IBAction func postDraftButton (_ sender: Any) {
         //selectedQuestion is the end array
         for q in selectedQuestion {
             quiz!.add(question: q)
         }
         
+        quiz?.quizData.mode = "D"
+        
         CreateQuizAPI.createNewQuiz(quiz: quiz!.toAPIFormat, completionHandler: {(leBool) in
-            print("IS COMPLETED: \(leBool)")
+            self.dismiss(animated: true, completion: nil)
+        })
+    }
+    
+    //will persist the questions selected and create the quiz
+    @IBAction func postPublishButton(_ sender: Any) {
+        //selectedQuestion is the end array
+        for q in selectedQuestion {
+            quiz!.add(question: q)
+        }
+        
+        quiz?.quizData.mode = "P"
+        
+        CreateQuizAPI.createNewQuiz(quiz: quiz!.toAPIFormat, completionHandler: {(leBool) in
+            self.dismiss(animated: true, completion: nil)
         })
     }
     
@@ -82,12 +98,6 @@ class AddQuestionsViewController : BaseViewController {
             add(question: filteredQuestions[index])
         }
         
-        questionsPicked.text = selectedQuestionCountText + String(selectedQuestion.count)
-    }
-    
-    //adds single selected question to quiz
-    @IBAction func addQuestionButton(_ sender: Any) {
-        add(question: filteredQuestions[selectedRow])
         questionsPicked.text = selectedQuestionCountText + String(selectedQuestion.count)
     }
     
@@ -115,7 +125,9 @@ class AddQuestionsViewController : BaseViewController {
 extension AddQuestionsViewController: UITableViewDataSource, UITableViewDelegate {
     //detects the row that is selected
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        selectedRow = indexPath.row
+        //selectedRow = indexPath.row
+        add(question: filteredQuestions[indexPath.row])
+        questionsPicked.text = selectedQuestionCountText + String(selectedQuestion.count)
     }
     
     //determines the number of rows in table view
