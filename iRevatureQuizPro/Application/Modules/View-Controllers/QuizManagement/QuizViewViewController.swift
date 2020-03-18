@@ -33,6 +33,10 @@ class QuizViewViewController: BaseViewController, UITableViewDelegate, UITableVi
 		
 	}
 	
+	func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+		// select the quiz to show here
+	}
+	
     
     @IBOutlet weak var quizSearchBar: UISearchBar!
     @IBOutlet weak var managementTabBar: UITabBar!
