@@ -11,7 +11,7 @@ import Dispatch
 
 class QuizDataService {
 	
-	static private var quizlist : [QuizAPIData]?
+	static private var quizlist = [QuizAPIData]()
 	static private var categories = [String]()
 	
 	static private var returned : Bool = false
@@ -25,7 +25,7 @@ class QuizDataService {
 		let finalizeDispatch = DispatchWorkItem {
 			// in this instance I just want to print the count
 			// to be sure it actually finished retrieving all the quizzes from the api
-			print("Quiz amount = \(quizlist?.count ?? 0)")
+			print("Quiz amount = \(quizlist.count ?? 0)")
 			
 			QuizDataService.updateStatus()
 			
@@ -39,7 +39,15 @@ class QuizDataService {
 			QuizAPI.getAllQuizzes(numberOfRecords: 1200, finish: {
 				response in
 				
-				quizlist = response
+				// only take quizzes in publish mode
+				for quiz in response {
+					if quiz.mode == "P" {
+						quizlist.append(quiz)
+					}
+				}
+				
+				// take all quizzes by copying the array
+				//quizlist = response
 				
 				// at this point INSIDE the completion handler for the API function
 				// we notify the group we are finished
@@ -63,6 +71,6 @@ class QuizDataService {
 	}
 	
 	static func fetchAllAPIData() -> [QuizAPIData] {
-		return quizlist!
+		return quizlist
 	}
 }

@@ -41,7 +41,7 @@ class EntityManager {
 			title: allhalf.title,
 			categoryId: allhalf.categoryId,
 			passPercentage: allhalf.passPercentage,
-			metaTags: allhalf.metaTags ?? "",
+			metaTags: allhalf.metaTags ?? "None provided",
 			mode: allhalf.mode,
 			orgId: allhalf.orgId,
 			version: allhalf.version,
