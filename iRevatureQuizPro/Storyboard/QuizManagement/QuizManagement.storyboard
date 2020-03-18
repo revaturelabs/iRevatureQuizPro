@@ -224,9 +224,12 @@
                                                 <state key="normal" title="...">
                                                     <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="optionsButton:" destination="VWc-QF-ZYf" eventType="touchDown" id="7S3-4r-Te2"/>
+                                                </connections>
                                             </button>
                                             <connections>
-                                                <action selector="optionsButton:" destination="VWc-QF-ZYf" id="Vjv-Sq-gU1"/>
+                                                <action selector="optionsButton:" destination="VWc-QF-ZYf" id="0lB-q7-4cQ"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>

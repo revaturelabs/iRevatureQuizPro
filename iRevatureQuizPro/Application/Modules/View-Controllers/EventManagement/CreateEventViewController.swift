@@ -64,7 +64,7 @@ class CreateEventViewController: BaseViewController {
         DF.dateFormat = "MMM dd, yyyy"
         let date = DF.date(from: dateTextField.text!)
         Events.insert(eventName: eventNametextField.text!, location: locationTextField.text!, eventCode: eventCodeTextField.text!, quizID: quizIDTextField.text!, ambassadorEmail: ambassadorEmailTextField.text!, date: date!)
-        
+        self.dismiss(animated: true, completion: nil)
     }
     
 }
