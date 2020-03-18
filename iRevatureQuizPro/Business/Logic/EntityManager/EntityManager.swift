@@ -9,30 +9,36 @@
 import Foundation
 
 class EntityManager {
-	private static var quizzes : [BQuiz] = [BQuiz]()
-	private static var questions : [QuestionObject] = [QuestionObject]()
+	private var quizzes : [BQuiz] = [BQuiz]()
+	private var questions : [QuestionObject] = [QuestionObject]()
+	
+	private var tempquizlist : [QuizAPIData] = [QuizAPIData]()
 	
 	init() {
-		
+
 	}
 	
-	static func getQuizList() -> [BQuiz] {
+	func getQuizList() -> [BQuiz] {
 		return quizzes
 	}
 	
-	static func addQuizToList(quiz: BQuiz) {
+	func getTempQuizList() -> [QuizAPIData] {
+		return tempquizlist
+	}
+	
+	func addQuizToList(quiz: BQuiz) {
 		quizzes.append(quiz)
 	}
 	
-	static func getQuestionList() -> [QuestionObject] {
+	func getQuestionList() -> [QuestionObject] {
 		return questions
 	}
 	
-	static func addQuestionToLis(question: QuestionObject) {
+	func addQuestionToLis(question: QuestionObject) {
 		questions.append(question)
 	}
 	
-	static func assembleBQuizObject(allhalf: BQuizAllHalf, byidhalf: BQuizByIDHalf) -> BQuiz {
+	func assembleBQuizObject(allhalf: BQuizAllHalf, byidhalf: BQuizByIDHalf) -> BQuiz {
 		let newQuizItem = BQuiz(
 			
 			// May need more coalscing operators if items come back nil when not expected - unsure of what options in the API weren't necessary or unfilled (like metaTags)
@@ -41,7 +47,7 @@ class EntityManager {
 			title: allhalf.title,
 			categoryId: allhalf.categoryId,
 			passPercentage: allhalf.passPercentage,
-			metaTags: allhalf.metaTags ?? "",
+			metaTags: allhalf.metaTags ?? "None provided",
 			mode: allhalf.mode,
 			orgId: allhalf.orgId,
 			version: allhalf.version,
@@ -93,6 +99,95 @@ class EntityManager {
 		
 		return newQuizItem
 	}
+	
+	func loadDataFromAPI() {
+		let apicheck = DispatchGroup()
+		
+		let loaddata = DispatchWorkItem {
+			print("Quiz amount = \(self.tempquizlist.count)")
+		}
+		
+		apicheck.enter()
+		
+		DispatchQueue.main.async {
+			QuizAPI.getAllQuizzes(numberOfRecords: 25, finish: {
+				response in
+				
+				for quiz in response {
+					if quiz.mode == "P" {
+						self.tempquizlist.append(quiz)
+					}
+				}
+				
+				apicheck.leave()
+			})
+		}
+		
+		
+		apicheck.notify(queue: .main, work: loaddata)
+	}
+	
+	func parseToAllHalf(quiz: QuizAPIData) -> BQuizAllHalf {
+		let lefthalf = BQuizAllHalf(id: quiz.id,
+									title: quiz.title,
+									categoryId: quiz.categoryId,
+									passPercentage: quiz.passPercentage,
+									metaTags: quiz.metaTags ?? "None Provided",
+									mode: quiz.mode,
+									orgId: quiz.orgId,
+									version: quiz.version,
+									superParentId: quiz.superParentId,
+									preSignupFlag: quiz.preSignupFlag,
+									dashboardFlag: quiz.dashboardFlag,
+									overrideFlag: quiz.overrideFlag,
+									createdBy: quiz.createdBy,
+									createdOn: quiz.createdOn ?? "Not provided",
+									isActive: quiz.isActive,
+									isStickyEnabled: quiz.isStickyEnabled,
+									isImageUploaded: quiz.isImageUploaded,
+									quizDuration: quiz.quizDuration,
+									isDurationOverridden: quiz.isDurationOverridden,
+									isPublic: quiz.isPublic,
+									updatedTotalRecords: quiz.updatedTotalRecords,
+									displayCorrectAnswerWhenPassed: quiz.displayCorrectAnswerWhenPassed,
+									displayCorrectAnswerWhenFailed: quiz.displayCorrectAnswerWhenFailed,
+									isReviewEnabled: quiz.isReviewEnabled,
+									showWhetherCorrect: quiz.showWhetherCorrect,
+									displayScore: quiz.displayScore,
+									timerEnable: quiz.timerEnable,
+									showExplanation: quiz.showExplanation,
+									shuffleQsn: quiz.shuffleQsn,
+									shuffleAns: quiz.shuffleAns,
+									contentType: quiz.contentType,
+									iconDeleted: quiz.iconDeleted,
+									enableSaveResume: quiz.enableSaveResume,
+									categoryName: quiz.categoryName,
+									createdName: quiz.createdName,
+									qsnCount: quiz.qsnCount ?? -1,
+									isChildAvailable: quiz.isChildAvailable ?? false,
+									totalRecords: quiz.totalRecords ?? -1)
+		return lefthalf
+	}
+	
+	#warning("forced unwrapping - doesn't every QuizAPI item have a quiz pool?")
+	func parseToByIDHalf(quiz: QuizAPIData) -> BQuizByIDHalf {
+		let righthalf = BQuizByIDHalf(levelId: quiz.levelId ?? -1,
+									  noOfAttempts: quiz.noOfAttempts ?? -1,
+									  metaDescription: quiz.metaDescription ?? "None provided",
+									  modifiedBy: quiz.modifiedBy ?? -1,
+									  modifiedOn: quiz.modifiedOn ?? "None provided",
+									  quizPools: quiz.quizPools!,
+									  activityPoints: quiz.activityPoints ?? -1,
+									  isReqForPublish: quiz.isReqForPublish ?? false,
+									  tags: quiz.tags ?? "None provided",
+									  slug: quiz.slug ?? "None provided",
+									  description: quiz.description ?? "None provided",
+									  instructions: quiz.instructions ?? "None provided",
+									  modifiedName: quiz.modifiedName ?? "None provided")
+		
+		return righthalf
+	}
+	//func mergeData(quizapidata: QuizAPIDat)
 }
 
 struct BQuizAllHalf {

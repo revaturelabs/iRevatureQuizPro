@@ -9,6 +9,9 @@
 import UIKit
 
 class MainStoryBoardViewController: BaseViewController {
+	
+	var managerdelegate = UIApplication.shared.delegate as! AppDelegate
+	var manager : EntityManager?
      
     @IBAction func memberLoginButton(_ sender: Any) {
         //check userdefaults for user
@@ -42,9 +45,11 @@ class MainStoryBoardViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 		
+		manager = managerdelegate.manager!
+		
       	// var sampleQuiz:QuizAPIData
-        
-
+		manager!.loadDataFromAPI()
+		
 //		QuizDataService.getQuizData()
 
     
