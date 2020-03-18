@@ -34,6 +34,10 @@ class MCQuestionTableController: UITableViewController {
         
         cell.answerText.text = filteredAnswers
         
+        if answers[indexPath.row].isSelected {
+            cell.backgroundColor = UIColor.green
+        }
+        
         //set background color for cell if it is selected
         let backgroundView = UIView()
         backgroundView.backgroundColor = UIColor.revatureOrange
