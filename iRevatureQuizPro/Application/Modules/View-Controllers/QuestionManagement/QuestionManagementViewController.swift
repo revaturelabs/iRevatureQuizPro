@@ -30,10 +30,6 @@ class QuestionManagementViewController: BaseViewController, UITableViewDelegate,
         self.QuestionTableView.delegate = self
         self.QuestionTableView.dataSource = self
         self.questionSearchBar.delegate = self
-        
-        //needs to delay grabbing data or it will display empty table
-        repopulateTable()
-        //
     }
     
     //grabs the last page of data from API and updates the table view
@@ -41,7 +37,6 @@ class QuestionManagementViewController: BaseViewController, UITableViewDelegate,
         if currentPage > 1{
             currentPage -= 1
             getQuestions(page: currentPage)
-            repopulateTable()
         }else{
             let alert = UIAlertController(title: "At Starting Page", message: "Cannot go further back a page", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "Acknowledge", style: .default, handler: nil))
@@ -53,7 +48,6 @@ class QuestionManagementViewController: BaseViewController, UITableViewDelegate,
     @IBAction func nextPageButton(_ sender: Any) {
         currentPage += 1
         getQuestions(page: currentPage)
-        repopulateTable()
     }
     
     //new function that will live update filtered data
@@ -101,14 +95,14 @@ class QuestionManagementViewController: BaseViewController, UITableViewDelegate,
             }
             
             self.questions = q.map{QuestionObject(id: $0.id, title: $0.title, tags: $0.tags, qsnAnswers: $0.qsnAnswers ?? [QuestionAnswer](), questionType: $0.questionType!, qsnType: $0.qsnType ?? QuestionType(id: -1, code: "", qsnType: ""), validAnswers: $0.validAnswers)}
-            self.QuestionTableView.reloadData()
+            self.repopulateTable()
             
         }
     }
     
     //grabs the data from the stored return of API and repopulates the table
     func repopulateTable(){
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.75){
+        DispatchQueue.main.asyncAfter(deadline: .now()){
             self.filteredQuestions = self.questions
             self.QuestionTableView.reloadData()
         }
