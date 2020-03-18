@@ -30,7 +30,6 @@ class CreateEventViewController: BaseViewController {
     @IBOutlet weak var ambassadorEmailTextField: UITextField!
 
     var newQuizArray = [QuizAPIData]()
-    var quizNames = [String]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,8 +40,7 @@ class CreateEventViewController: BaseViewController {
 
         QuizAPI.getAllQuizzes(numberOfRecords: 1000000000) { (allQuizzes) in
             self.newQuizArray = allQuizzes
-            self.quizNames = allQuizzes.map({$0.title})
-            self.quizIDTextField.pickerSelector(data: self.quizNames)
+            self.quizIDTextField.pickerSelector(data: allQuizzes.map({$0.title}))
         }
         
 //        quizArray = ["Quiz 1", "Quiz 2", "Quiz 3", "Quiz 4"]
