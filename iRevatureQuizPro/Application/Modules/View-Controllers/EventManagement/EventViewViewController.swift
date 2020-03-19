@@ -51,7 +51,9 @@ class EventViewViewController: BaseViewController {
         statement.specifyColumn(table: Events.table, columnName: Events.ColumnName.eventName.rawValue, asName: Events.ColumnName.eventName.rawValue)
         statement.specifyColumn(table: Events.table, columnName: Events.ColumnName.location.rawValue, asName: Events.ColumnName.location.rawValue)
 
-        self.eventsArray = Database.selectRow(withSelectStatement: statement, returnStruct: Events.EventsAllData.self)!
+        if let databaseArray = Database.selectRow(withSelectStatement: statement, returnStruct: Events.EventsAllData.self) {
+            self.eventsArray = databaseArray
+        }
         
         eventsTable.reloadData()
     }
@@ -59,7 +61,6 @@ class EventViewViewController: BaseViewController {
 
 extension EventViewViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        print(eventsArray.count)
         return eventsArray.count
     }
     
