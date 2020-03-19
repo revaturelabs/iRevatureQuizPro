@@ -31,7 +31,7 @@ class MultipleChoiceQuestionViewController: BaseViewController {
         
         // Configures timer to a number of minutes
         timerLabel.runTimer()
-
+        
         //Sets the question label
         currentQuestionLabel.text = String("\(questionIndex + 1)")
         
@@ -41,7 +41,7 @@ class MultipleChoiceQuestionViewController: BaseViewController {
         
         //Set the Text of the question
         questionTextView.text = question?.question
-
+        
         //Assign delegate table controller
         answerTableView.dataSource = tableController
         answerTableView.delegate = tableController
@@ -50,21 +50,22 @@ class MultipleChoiceQuestionViewController: BaseViewController {
     
     @IBAction func previousQuestionAction(_ sender: Any) {
         
-            
-//            UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "IKDetailVC") as? IKDetailVC
-//        self.navigationController?.pushViewController(vc!, animated: true)
     }
     
     @IBAction func nextQuestionAction(_ sender: Any) {
         
-//        let storyboardID = (viewControllerClass as UIViewController.Type).storyboardID
-//
-//        //Make sure that the view controller is properly instantiated
-//        guard let controller = instance.instantiateViewController(withIdentifier: storyboardID) as?
-        
-//        let vc = UIStoryboard.init(name: "QuizQuestions", bundle: Bundle.main).instantiateViewController(withIdentifier: "QuestionPageViewController_ID") as! QuestionPageViewController
-//        
-//        vc.getViewControllerAtIndex(index: 0)
     }
     
+    @IBAction func submitButton(_ sender: Any) {
+        let alert = UIAlertController(title: "Submitting the Quiz", message: "Please check that you answered all questions before continuing", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Yes", style: .default, handler: {action in
+            let nextVC = QuizCompletionViewController.instantiate(fromAppStoryboard: AppStoryboard.QuizCompletion)
+            nextVC.modalPresentationStyle = .fullScreen
+            nextVC.results(score: AttendeeQuizService.getQuizPercentage() , minimumscore: 70.0, title: "title")
+            self.present(nextVC, animated: false, completion: nil)
+            
+        }))
+        alert.addAction(UIAlertAction(title: "No", style: .cancel, handler: nil))
+        self.present(alert, animated: true)
+    }
 }
