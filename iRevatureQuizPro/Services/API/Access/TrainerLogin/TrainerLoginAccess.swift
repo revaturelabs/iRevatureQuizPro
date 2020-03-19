@@ -32,7 +32,8 @@ class TrainerLoginAccess {
             (response) in
             guard let user = response.value else {
                 //get staticstring message
-                let errorMessage = StatusCodeMessage.getMessage(code: response.response!.statusCode)
+                guard let response = response.response else { completionHandler(nil, false); return }
+                let errorMessage = StatusCodeMessage.getMessage(code: response.statusCode)
                 //log error
                 os_log(errorMessage)
                 //set completionHandler to nil and true for no data and error
