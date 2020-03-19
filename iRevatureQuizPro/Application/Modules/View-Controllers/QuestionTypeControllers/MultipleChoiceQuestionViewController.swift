@@ -20,52 +20,52 @@ class MultipleChoiceQuestionViewController: BaseViewController {
     
     private let tableController = MCQuestionTableController()
     
-//    let answers = [
-//        QuestionAnswer(id: 123, answer: "Answer 1", explanation: "", order: 1, correct: false, sticky: false),
-//        QuestionAnswer(id: 132, answer: "Answer 2", explanation: "", order: 2, correct: true, sticky: false),
-//        QuestionAnswer(id:987, answer: "Some Answer", explanation: "", order: 3, correct: false, sticky: false)
-//    ]
-    
     // Question object to be displayed
     var question: TakeQuizQuestion?
-    
     var questionIndex: Int = 0
+    
+    public var questionList: [TakeQuizQuestion]? = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // Configures timer to a number of minutes
-
         timerLabel.runTimer()
         
-        tableController.setAnswers(answers: question!.answers)
-
+        //Sets the question label
         currentQuestionLabel.text = String("\(questionIndex + 1)")
         
+        //Fills the table controller with necessary information
+        tableController.setAnswers(answers: question!.answers)
+        tableController.currentQuestion = questionIndex
+        
+        //Set the Text of the question
         questionTextView.text = question?.question
-
+        
+        //Assign delegate table controller
         answerTableView.dataSource = tableController
-
         answerTableView.delegate = tableController
     }
     
+    
     @IBAction func previousQuestionAction(_ sender: Any) {
         
-            
-//            UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "IKDetailVC") as? IKDetailVC
-//        self.navigationController?.pushViewController(vc!, animated: true)
     }
     
     @IBAction func nextQuestionAction(_ sender: Any) {
         
-//        let storyboardID = (viewControllerClass as UIViewController.Type).storyboardID
-//
-//        //Make sure that the view controller is properly instantiated
-//        guard let controller = instance.instantiateViewController(withIdentifier: storyboardID) as?
-        
-//        let vc = UIStoryboard.init(name: "QuizQuestions", bundle: Bundle.main).instantiateViewController(withIdentifier: "QuestionPageViewController_ID") as! QuestionPageViewController
-//        
-//        vc.getViewControllerAtIndex(index: 0)
     }
     
+    @IBAction func submitButton(_ sender: Any) {
+        let alert = UIAlertController(title: "Submitting the Quiz", message: "Please check that you answered all questions before continuing", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Yes", style: .default, handler: {action in
+            let nextVC = QuizCompletionViewController.instantiate(fromAppStoryboard: AppStoryboard.QuizCompletion)
+            nextVC.modalPresentationStyle = .fullScreen
+            nextVC.results(score: AttendeeQuizService.getQuizPercentage() , minimumscore: 70.0, title: "title")
+            self.present(nextVC, animated: false, completion: nil)
+            
+        }))
+        alert.addAction(UIAlertAction(title: "No", style: .cancel, handler: nil))
+        self.present(alert, animated: true)
+    }
 }

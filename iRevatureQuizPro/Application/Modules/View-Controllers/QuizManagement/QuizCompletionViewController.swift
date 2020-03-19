@@ -32,7 +32,9 @@ class QuizCompletionViewController: BaseViewController {
 	@IBAction func returnHome(_ sender: UIButton!) {
 		// Send to home storyboard/page
 		// Need to free resources after the call
-		dismiss(animated: true, completion: nil)
+        let nextVC = MainStoryBoardViewController.instantiate(fromAppStoryboard: AppStoryboard.Main)
+        nextVC.modalPresentationStyle = .fullScreen
+        present(nextVC, animated: false, completion: nil)
 	}
 	
 	func results(score: Float, minimumscore: Float, title: String) {
@@ -52,8 +54,8 @@ class QuizCompletionViewController: BaseViewController {
 			labelCompletionPass.isHidden = false
 			labelCompletionFail.isHidden = true
 		}
-		
-		labelPercentScore.text = "\(score) %"
+        let newScore = (score * 100).rounded()
+        labelPercentScore.text = "\(newScore) %"
 		labelQuizTitle.text = title
 	}
 }

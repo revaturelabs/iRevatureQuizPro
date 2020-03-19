@@ -20,6 +20,7 @@ enum AppStoryboard: String {
     case Help
     case AddQuestions
     case QuizQuestions
+    case QuizCompletion
 }
 
 extension AppStoryboard {
