@@ -12,6 +12,8 @@
 		090A81402411969C008D7A12 /* DatabaseInteractions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 090A813F2411969C008D7A12 /* DatabaseInteractions.swift */; };
 		091DC3972411972300C5D577 /* DatabaseInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 091DC3962411972300C5D577 /* DatabaseInformation.swift */; };
 		092066AD24229DC3009A4A9E /* ValidationUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 092066AC24229DC3009A4A9E /* ValidationUtilities.swift */; };
+		092066AF2423C157009A4A9E /* SearchQuizEventManagementTableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 092066AE2423C157009A4A9E /* SearchQuizEventManagementTableController.swift */; };
+		092066B12423C39E009A4A9E /* QuizTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 092066B02423C39E009A4A9E /* QuizTableViewCell.swift */; };
 		0940FE6E2411611D006F0E52 /* MetatagTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0940FE6D2411611D006F0E52 /* MetatagTable.swift */; };
 		0940FE8124116145006F0E52 /* arm64-apple-ios.swiftdoc in Resources */ = {isa = PBXBuildFile; fileRef = 0940FE7224116145006F0E52 /* arm64-apple-ios.swiftdoc */; };
 		0940FE8224116145006F0E52 /* x86_64-apple-ios-simulator.swiftdoc in Resources */ = {isa = PBXBuildFile; fileRef = 0940FE7324116145006F0E52 /* x86_64-apple-ios-simulator.swiftdoc */; };
@@ -176,6 +178,8 @@
 		090A813F2411969C008D7A12 /* DatabaseInteractions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseInteractions.swift; sourceTree = "<group>"; };
 		091DC3962411972300C5D577 /* DatabaseInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseInformation.swift; sourceTree = "<group>"; };
 		092066AC24229DC3009A4A9E /* ValidationUtilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationUtilities.swift; sourceTree = "<group>"; };
+		092066AE2423C157009A4A9E /* SearchQuizEventManagementTableController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchQuizEventManagementTableController.swift; sourceTree = "<group>"; };
+		092066B02423C39E009A4A9E /* QuizTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizTableViewCell.swift; sourceTree = "<group>"; };
 		0940FE6D2411611D006F0E52 /* MetatagTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetatagTable.swift; sourceTree = "<group>"; };
 		0940FE7224116145006F0E52 /* arm64-apple-ios.swiftdoc */ = {isa = PBXFileReference; lastKnownFileType = file; path = "arm64-apple-ios.swiftdoc"; sourceTree = "<group>"; };
 		0940FE7324116145006F0E52 /* x86_64-apple-ios-simulator.swiftdoc */ = {isa = PBXFileReference; lastKnownFileType = file; path = "x86_64-apple-ios-simulator.swiftdoc"; sourceTree = "<group>"; };
@@ -1126,6 +1130,8 @@
 			children = (
 				95D8CF1D241190A100EB322E /* EventViewViewController.swift */,
 				0944AEDD2410540400688C9B /* CreateEventViewController.swift */,
+				092066AE2423C157009A4A9E /* SearchQuizEventManagementTableController.swift */,
+				092066B02423C39E009A4A9E /* QuizTableViewCell.swift */,
 			);
 			path = EventManagement;
 			sourceTree = "<group>";
@@ -1436,6 +1442,7 @@
 				099150222412E21D00E73B62 /* EventAttendeeReturnStructs.swift in Sources */,
 				09525E0C2412D3430051D177 /* EventAttendeeTable.swift in Sources */,
 				5F901D8224114E0C00986FF5 /* UITextFieldExtension.swift in Sources */,
+				092066AF2423C157009A4A9E /* SearchQuizEventManagementTableController.swift in Sources */,
 				D54096592412E42100791C7E /* EventReturnStructs.swift in Sources */,
 				09A4679824119C8700A4BB90 /* DatabaseError.swift in Sources */,
 				090A813E241195F5008D7A12 /* MetatagReturnStructs.swift in Sources */,
@@ -1513,6 +1520,7 @@
 				5F901D912411A13700986FF5 /* CurrentSystemRole.swift in Sources */,
 				84F34FA42410437100D250BB /* iRevatureButton.swift in Sources */,
 				5F645688241D416B00154E8B /* QuestionPoolItem.swift in Sources */,
+				092066B12423C39E009A4A9E /* QuizTableViewCell.swift in Sources */,
 				090A81402411969C008D7A12 /* DatabaseInteractions.swift in Sources */,
 				5F1E2DB9241921BB00F2FAE3 /* QuestionType.swift in Sources */,
 				5F645684241C235C00154E8B /* QuizPoolItem.swift in Sources */,

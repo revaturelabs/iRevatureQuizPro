@@ -330,6 +330,9 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="17"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="selectingQuiz:" destination="7da-JE-Mua" eventType="touchDown" id="zlA-sX-2dR"/>
+                                </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="*Ambassador Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B7A-rt-S3x">
                                 <rect key="frame" x="20" y="466" width="160" height="20"/>
@@ -436,6 +439,117 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QJ2-ul-0P7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="666.66666666666674" y="52.901785714285715"/>
+        </scene>
+        <!--Search Quiz Event Management Table Controller-->
+        <scene sceneID="PAA-2G-yqO">
+            <objects>
+                <viewController storyboardIdentifier="SearchQuizEventManagementTableController_ID" id="o35-p6-8tN" customClass="SearchQuizEventManagementTableController" customModule="iRevatureQuizPro" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Dfh-3a-8nt">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VKR-ql-z1o" customClass="RevatureButton" customModule="iRevatureQuizPro" customModuleProvider="target">
+                                <rect key="frame" x="117" y="797" width="180" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="859-Rr-lmF"/>
+                                    <constraint firstAttribute="width" constant="180" id="Twl-6Y-5jv"/>
+                                </constraints>
+                                <state key="normal" title="Select">
+                                    <color key="titleColor" red="1" green="0.37647058820000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="1" green="0.37647058820000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="returnChosenQuiz:" destination="o35-p6-8tN" eventType="touchDown" id="gJL-Qn-WaP"/>
+                                </connections>
+                            </button>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="r3H-Oj-xkm">
+                                <rect key="frame" x="0.0" y="98" width="414" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7Sc-13-62T">
+                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="Bns-cN-EKR"/>
+                                </constraints>
+                                <color key="barTintColor" red="1" green="0.37647058820000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <color key="textColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                </textAttributes>
+                                <textAttributes key="largeTitleTextAttributes">
+                                    <color key="textColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="Create Event" id="jwF-sK-wQ7"/>
+                                </items>
+                            </navigationBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="6CE-0N-07Y">
+                                <rect key="frame" x="15" y="169" width="384" height="613"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="SearchQuizCell" rowHeight="59" id="f7E-OE-enS" customClass="QuizTableViewCell" customModule="iRevatureQuizPro" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="384" height="59"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="f7E-OE-enS" id="QDa-wu-PT6">
+                                            <rect key="frame" x="0.0" y="0.0" width="384" height="59"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0cR-2j-Ylp">
+                                                    <rect key="frame" x="5" y="5" width="374" height="49"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="0cR-2j-Ylp" firstAttribute="top" secondItem="QDa-wu-PT6" secondAttribute="top" constant="5" id="X8D-4E-hEl"/>
+                                                <constraint firstAttribute="bottom" secondItem="0cR-2j-Ylp" secondAttribute="bottom" constant="5" id="aHM-nb-g92"/>
+                                                <constraint firstAttribute="trailing" secondItem="0cR-2j-Ylp" secondAttribute="trailing" constant="5" id="h3L-WA-ph4"/>
+                                                <constraint firstItem="0cR-2j-Ylp" firstAttribute="leading" secondItem="QDa-wu-PT6" secondAttribute="leading" constant="5" id="wAn-Ry-7dh"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="quizTitle" destination="0cR-2j-Ylp" id="SrA-Da-GpQ"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="7Sc-13-62T" firstAttribute="trailing" secondItem="hi4-uB-7qb" secondAttribute="trailing" id="23h-lK-Od0"/>
+                            <constraint firstItem="hi4-uB-7qb" firstAttribute="trailing" secondItem="VKR-ql-z1o" secondAttribute="trailing" constant="117" id="3dj-cq-swZ"/>
+                            <constraint firstItem="hi4-uB-7qb" firstAttribute="bottom" secondItem="VKR-ql-z1o" secondAttribute="bottom" constant="15" id="5lt-aS-FDV"/>
+                            <constraint firstItem="VKR-ql-z1o" firstAttribute="leading" secondItem="hi4-uB-7qb" secondAttribute="leading" constant="117" id="J0b-Bu-X2g"/>
+                            <constraint firstItem="r3H-Oj-xkm" firstAttribute="top" secondItem="7Sc-13-62T" secondAttribute="bottom" constant="10" id="KYz-05-WYg"/>
+                            <constraint firstItem="hi4-uB-7qb" firstAttribute="trailing" secondItem="r3H-Oj-xkm" secondAttribute="trailing" id="M5s-ER-cWe"/>
+                            <constraint firstItem="hi4-uB-7qb" firstAttribute="trailing" secondItem="6CE-0N-07Y" secondAttribute="trailing" constant="15" id="apo-CL-Kvg"/>
+                            <constraint firstItem="6CE-0N-07Y" firstAttribute="top" secondItem="r3H-Oj-xkm" secondAttribute="bottom" constant="15" id="fGH-wW-OHB"/>
+                            <constraint firstItem="7Sc-13-62T" firstAttribute="top" secondItem="hi4-uB-7qb" secondAttribute="top" id="jD3-4p-dEr"/>
+                            <constraint firstItem="7Sc-13-62T" firstAttribute="leading" secondItem="hi4-uB-7qb" secondAttribute="leading" id="oqQ-NS-X15"/>
+                            <constraint firstItem="r3H-Oj-xkm" firstAttribute="leading" secondItem="hi4-uB-7qb" secondAttribute="leading" id="wXL-8o-ag3"/>
+                            <constraint firstItem="6CE-0N-07Y" firstAttribute="leading" secondItem="hi4-uB-7qb" secondAttribute="leading" constant="15" id="x7T-pL-8qr"/>
+                            <constraint firstItem="VKR-ql-z1o" firstAttribute="top" secondItem="6CE-0N-07Y" secondAttribute="bottom" constant="15" id="xZQ-6a-dtK"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="hi4-uB-7qb"/>
+                    </view>
+                    <connections>
+                        <outlet property="quizTable" destination="6CE-0N-07Y" id="B2p-cy-KXU"/>
+                        <outlet property="searchBar" destination="r3H-Oj-xkm" id="6dh-2o-iXp"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uw7-aj-TIe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1466.6666666666667" y="52.901785714285715"/>
         </scene>
     </scenes>
     <resources>
