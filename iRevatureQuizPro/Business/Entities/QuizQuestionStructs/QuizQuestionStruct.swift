@@ -44,7 +44,7 @@ public struct TakeQuizQuestion{
     }
     var totalQuestionsAnswered: Float {
         get {
-            return Float( correctAnswer / numCorrect )
+            return Float(correctAnswer) / Float(numCorrect)
         }
     }
 }

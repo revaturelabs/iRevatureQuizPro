@@ -52,9 +52,11 @@ class MCQuestionTableController: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if let oldCell = tableView.cellForRow(at: AttendeeQuizService.quizQuestions[currentQuestion].chosenAnswer) as? MCQuestionTableCell {
             oldCell.isSelected = false
+            AttendeeQuizService.quizQuestions[currentQuestion].question.answers[indexPath.row].isSelected = false
         }
         
         AttendeeQuizService.quizQuestions[currentQuestion].chosenAnswer.row = indexPath.row
+        AttendeeQuizService.quizQuestions[currentQuestion].question.answers[indexPath.row].isSelected = true
     }
     
     

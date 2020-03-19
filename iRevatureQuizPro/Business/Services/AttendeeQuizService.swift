@@ -49,7 +49,7 @@ class AttendeeQuizService {
         var correctCount: Float = 0.0
         
         for q in self.quizQuestions {
-            if checkCorrectAnswer(question: q.question, chosenAnswer: q.chosenAnswer.row) { correctCount += 1}
+            correctCount += q.question.totalQuestionsAnswered
         }
         
         return correctCount / Float(self.quizQuestions.count)
