@@ -10,8 +10,11 @@ import Foundation
 
 class AttendeeQuizService {
 
-    private static var currentQuiz = TakeQuizQuiz(title: "No Quiz", questions: [], duration: 0)
+    static var currentQuiz = TakeQuizQuiz(title: "No Quiz", questions: [], duration: 0)
 
+    //Storage of questions and index of each table to keep selection in memory
+    static var quizQuestions = [(question: TakeQuizQuestion, chosenAnswer: IndexPath)]()
+    
     static func fetchCurrentQuiz(quizId: Int) {
         
         QuizAPI.getQuizById(quizId: quizId) { (result) in
@@ -34,12 +37,27 @@ class AttendeeQuizService {
             }
             
             self.currentQuiz = TakeQuizQuiz(title: result.data.title, questions: questions, duration: result.data.quizDuration)
+            
+            //Question holder used to populate pages and tables
+            self.quizQuestions = questions.map({(question: $0, chosenAnswer: IndexPath(row: -1, section: 0))})
         }
         
     }
     
-    static func getCurrentQuiz() -> TakeQuizQuiz {
-        return self.currentQuiz
+    //Gets the percentage of for the test
+    static func getQuizPercentage() -> Float {
+        var correctCount: Float = 0.0
+        
+        for q in self.quizQuestions {
+            correctCount += q.question.totalQuestionsAnswered
+        }
+        
+        return correctCount / Float(self.quizQuestions.count)
+    }
+    
+    //Checks whether or not a question was correct
+    static func checkCorrectAnswer(question: TakeQuizQuestion, chosenAnswer: Int) -> Bool {
+        return question.correctAnswer == chosenAnswer
     }
 
 }

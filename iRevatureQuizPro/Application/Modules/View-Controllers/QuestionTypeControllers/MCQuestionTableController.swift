@@ -12,6 +12,8 @@ class MCQuestionTableController: UITableViewController {
     
     private var answers = [TakeQuizAnswer]()
     
+    var currentQuestion: Int = 0
+    
     func setAnswers(answers: [TakeQuizAnswer]) {
         self.answers = answers
     }
@@ -32,26 +34,36 @@ class MCQuestionTableController: UITableViewController {
         
         cell.answerText.text = filteredAnswers
         
+        if answers[indexPath.row].isSelected {
+            cell.backgroundColor = UIColor.green
+        }
+        
+        
+        
         //set background color for cell if it is selected
         let backgroundView = UIView()
         backgroundView.backgroundColor = UIColor.revatureOrange
         cell.selectedBackgroundView = backgroundView
-
+        
         return cell
     }
     
     //user touch event on cell
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let cell = tableView.cellForRow(at: indexPath) as! MCQuestionTableCell
-        answers[indexPath.row].isSelected = true
-        print(answers)
+        if let oldCell = tableView.cellForRow(at: AttendeeQuizService.quizQuestions[currentQuestion].chosenAnswer) as? MCQuestionTableCell {
+            oldCell.isSelected = false
+            AttendeeQuizService.quizQuestions[currentQuestion].question.answers[indexPath.row].isSelected = false
+        }
+        
+        AttendeeQuizService.quizQuestions[currentQuestion].chosenAnswer.row = indexPath.row
+        AttendeeQuizService.quizQuestions[currentQuestion].question.answers[indexPath.row].isSelected = true
     }
     
-    //user deselect cell
-    override func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
-        let cell = tableView.cellForRow(at: indexPath) as! MCQuestionTableCell
-        answers[indexPath.row].isSelected = false
-        print(answers)
+    
+    override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        if indexPath.row == AttendeeQuizService.quizQuestions[currentQuestion].chosenAnswer.row {
+            cell.isSelected = true
+        }
     }
     
 }

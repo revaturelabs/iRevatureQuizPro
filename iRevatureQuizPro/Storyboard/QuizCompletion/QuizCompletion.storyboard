@@ -22,19 +22,7 @@
                                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </textAttributes>
                                 <items>
-                                    <navigationItem title="Quiz" id="8X1-Wj-Lmi" userLabel="Quiz Title Bar">
-                                        <barButtonItem key="leftBarButtonItem" style="plain" id="Ad7-j4-TNa">
-                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="0hS-r2-WFI">
-                                                <rect key="frame" x="20" y="11" width="20" height="22"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <state key="normal" image="arrow.left" catalog="system">
-                                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                </state>
-                                            </button>
-                                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </barButtonItem>
-                                    </navigationItem>
+                                    <navigationItem title="Quiz" id="8X1-Wj-Lmi" userLabel="Quiz Title Bar"/>
                                 </items>
                             </navigationBar>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(quiz title)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Afr-Nx-odB">
@@ -140,7 +128,4 @@
             <point key="canvasLocation" x="105.79710144927537" y="99.776785714285708"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="arrow.left" catalog="system" width="64" height="48"/>
-    </resources>
 </document>
