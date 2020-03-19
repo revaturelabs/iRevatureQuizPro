@@ -38,7 +38,7 @@ class CreateEventViewController: BaseViewController {
         Database.create(table: Events.table)
         dateTextField.dateSelector()
 
-        QuizAPI.getAllQuizzes(numberOfRecords: 1000000000) { (allQuizzes) in
+        QuizAPI.getAllQuizzes(numberOfRecords: 200) { (allQuizzes) in
             self.newQuizArray = allQuizzes
             self.quizIDTextField.pickerSelector(data: allQuizzes.map({$0.title}))
         }
