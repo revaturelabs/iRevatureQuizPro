@@ -45,10 +45,10 @@ class MainStoryBoardViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 		
-		manager = managerdelegate.manager!
-		
-      	// var sampleQuiz:QuizAPIData
-		manager!.loadDataFromAPI()
+//		manager = managerdelegate.manager!
+//		
+//      	// var sampleQuiz:QuizAPIData
+//		manager!.loadDataFromAPI()
 		
 //		QuizDataService.getQuizData()
 

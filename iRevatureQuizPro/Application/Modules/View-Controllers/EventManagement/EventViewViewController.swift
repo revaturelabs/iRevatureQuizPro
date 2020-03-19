@@ -15,11 +15,19 @@ class EventViewViewController: BaseViewController {
     @IBOutlet weak var eventSearchBar: UISearchBar!
     @IBOutlet weak var eventsTable: UITableView!
     
+    var managerdelegate = UIApplication.shared.delegate as! AppDelegate
+    var manager : EntityManager?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         eventsTable.dataSource = self
         eventsTable.delegate = self
+        
+        manager = managerdelegate.manager!
+        
+          // var sampleQuiz:QuizAPIData
+        manager!.loadDataFromAPI()
         
         initArray()
     }
