@@ -38,14 +38,15 @@ class CreateEventViewController: BaseViewController {
         Database.create(table: Events.table)
         dateTextField.dateSelector()
 
-        QuizAPI.getAllQuizzes(numberOfRecords: 200) { (allQuizzes) in
+        QuizAPI.getAllQuizzes(numberOfRecords: 1000000000) { (allQuizzes) in
             self.newQuizArray = allQuizzes
-            self.quizIDTextField.pickerSelector(data: allQuizzes.map({$0.title}))
+            self.quizIDTextField.text = "Loaded"
+            //self.quizIDTextField.pickerSelector(data: allQuizzes.map({$0.title}))
         }
         
 //        quizArray = ["Quiz 1", "Quiz 2", "Quiz 3", "Quiz 4"]
         //quizArray  = ["Quiz 1", "Quiz 2", "Quiz 3", "Quiz 4"]
-        quizIDTextField.pickerSelector(data: ["Loading"])
+        quizIDTextField.text = "Loading"
         // Assigns the quiz a list of values to select from
 //        quizTextField.pickerSelector(data: quizArray)
 
@@ -76,7 +77,7 @@ class CreateEventViewController: BaseViewController {
         var valid = true
         var invalidString = ""
         
-        if quizIDTextField.text == "Loading" { invalidString += "Quiz Field is still loading. Please Wait.\n\n"; valid = false }
+        if quizIDTextField.text == "Loading" || quizIDTextField.text == "Loaded" { invalidString += "Quiz Field is still loading. Please Wait.\n\n"; valid = false }
         
         if eventCodeTextField.text == "" { invalidString += "Please Input a Valid Event Code\n"; valid = false }
         if eventNametextField.text == "" { invalidString += "Please Input a Valid Event Name\n"; valid = false }
@@ -105,4 +106,28 @@ class CreateEventViewController: BaseViewController {
         return nil
     }
     
+    func loadQuizSearch() {
+        let sb = UIStoryboard(name: "EventManagement", bundle: nil)
+        let vc = sb.instantiateViewController(identifier: "SearchQuizEventManagementTableController_ID") as SearchQuizEventManagementTableController
+        vc.createEventController = self
+        easyPresent(vc, animated: true, style: .pageSheet)
+    }
+    
+    @IBAction func selectingQuiz(_ sender: UITextField) {
+        if quizIDTextField.text == "Loading" { return }
+        loadQuizSearch()
+    }
 }
+//
+//extension CreateEventViewController: UITextFieldDelegate {
+//
+//
+//
+//
+//
+//    func textFieldDidBeginEditing(_ textField: UITextField) {
+//        print("Started EDITING")
+//        if textField != quizIDTextField { return }
+//        loadQuizSearch()
+//    }
+//}
