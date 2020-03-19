@@ -20,32 +20,29 @@ public struct TakeQuizQuestion{
     var question: String
     var answers: [TakeQuizAnswer]
     var isAnswered: Bool
+    
     var correctAnswer: Int {
-        get {
-            var count: Int = 0
-            for index in answers {
-                if (index.isCorrect == index.isSelected && index.isCorrect == true){
-                    count += 1
-                }
+        var count: Int = 0
+        for answer in answers {
+            if (answer.isCorrect && answer.isSelected){
+                count += 1
             }
-            return count
         }
+        return count
     }
+    
     var numCorrect: Int {
-        get {
-            var count = 0
-            for index in answers {
-                if index.isCorrect == true {
-                    count += 1
-                }
+        var count = 0
+        for answer in answers {
+            if answer.isCorrect == true {
+                count += 1
             }
-            return count
         }
+        return count
     }
+    
     var totalQuestionsAnswered: Float {
-        get {
-            return Float(correctAnswer) / Float(numCorrect)
-        }
+        return Float(correctAnswer) / Float(numCorrect)
     }
 }
 
