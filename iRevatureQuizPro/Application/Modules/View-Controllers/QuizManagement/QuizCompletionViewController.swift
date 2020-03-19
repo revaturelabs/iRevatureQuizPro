@@ -54,8 +54,8 @@ class QuizCompletionViewController: BaseViewController {
 			labelCompletionPass.isHidden = false
 			labelCompletionFail.isHidden = true
 		}
-		
-        labelPercentScore.text = "\(score.rounded()) %"
+        let newScore = (score * 100).rounded()
+        labelPercentScore.text = "\(newScore) %"
 		labelQuizTitle.text = title
 	}
 }

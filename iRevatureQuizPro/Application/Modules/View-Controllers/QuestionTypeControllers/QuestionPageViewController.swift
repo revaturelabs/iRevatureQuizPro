@@ -19,7 +19,7 @@ class QuestionPageViewController: UIPageViewController{
         
 //        AttendeeQuizService.fetchCurrentQuiz(quizId: 4217)
         
-        DispatchQueue.main.asyncAfter(deadline: .now() + 4){
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2){
         
             self.setViewControllers([self.getViewControllerAtIndex(index: 0)] as [UIViewController], direction: UIPageViewController.NavigationDirection.forward, animated: false, completion: nil)
         }
